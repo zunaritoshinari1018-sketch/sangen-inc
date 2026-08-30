@@ -4,1930 +4,1819 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>株式会社山源｜再生可能エネルギー事業</title>
+<title>株式会社山源 | 再生可能エネルギー事業</title>
 
-<meta name="description" content="株式会社山源は、太陽光発電・蓄電池を中心とした再生可能エネルギー事業を主軸に、住まいと暮らしに関わるサービスを提供する会社です。">
-
-<meta name="theme-color" content="#071525">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description"
+content="株式会社山源は、太陽光発電・蓄電池を中心とした再生可能エネルギー事業を主軸に、住まいと暮らしに関わるサービスを提供する会社です。">
 
 <style>
 
 /* =========================================================
-   SANGEN CORPORATE WEBSITE
-   BLACK × NAVY × GOLD
+   ROOT
 ========================================================= */
 
-:root{
-  --black:#05070A;
-  --black-soft:#0A0E14;
-  --navy:#071525;
-  --navy-mid:#0C2038;
-  --navy-light:#173451;
+:root {
+  --white: #ffffff;
+  --white-soft: #faf9f6;
+  --ivory: #f6f3ec;
 
-  --gold:#C9A55C;
-  --gold-light:#E5CC96;
-  --gold-dark:#9D742D;
+  --gold: #c8a45d;
+  --gold-light: #dfc995;
+  --gold-dark: #9f7935;
 
-  --white:#FFFFFF;
-  --off-white:#F7F6F2;
-  --gray:#A8AFB9;
-  --gray-dark:#56606D;
+  --navy: #14253d;
+  --black: #111111;
 
-  --line:rgba(201,165,92,.28);
+  --text: #242424;
+  --text-light: #666666;
 
-  --max:1180px;
+  --line: #e5e0d5;
+
+  --max-width: 1180px;
 }
 
-/* =========================
+
+/* =========================================================
    RESET
-========================= */
+========================================================= */
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-  scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-  font-family:'Noto Sans JP',sans-serif;
-  background:var(--black);
-  color:var(--white);
-  line-height:1.9;
-  font-weight:300;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    "Noto Sans JP",
+    Arial,
+    sans-serif;
+
+  background: var(--white);
+  color: var(--text);
+
+  line-height: 1.9;
+  font-weight: 400;
+
+  -webkit-font-smoothing: antialiased;
+
+  overflow-x: hidden;
 }
 
-img{
-  display:block;
-  width:100%;
-  max-width:100%;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-a{
-  color:inherit;
-  text-decoration:none;
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
-button{
-  font-family:inherit;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-::selection{
-  background:var(--gold);
-  color:var(--black);
-}
 
-/* =========================
+/* =========================================================
    COMMON
-========================= */
+========================================================= */
 
-.container{
-  width:min(var(--max), calc(100% - 64px));
-  margin:0 auto;
+.container {
+  width: min(var(--max-width), calc(100% - 64px));
+  margin: 0 auto;
 }
 
-section{
-  position:relative;
+section {
+  position: relative;
+  padding: 120px 0;
 }
 
-.serif{
-  font-family:'Shippori Mincho',serif;
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 22px;
+
+  color: var(--gold-dark);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: .28em;
 }
 
-.gold{
-  color:var(--gold);
+.section-label::before {
+  content: "";
+
+  width: 32px;
+  height: 1px;
+
+  background: var(--gold);
 }
 
-.section-label{
-  display:flex;
-  align-items:center;
-  gap:14px;
+.section-title {
+  font-family:
+    "Times New Roman",
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
 
-  color:var(--gold);
-  font-size:11px;
-  letter-spacing:.34em;
-  font-weight:500;
+  font-size: clamp(30px, 4vw, 48px);
 
-  margin-bottom:22px;
+  line-height: 1.5;
+
+  font-weight: 600;
+
+  letter-spacing: .04em;
 }
 
-.section-label::before{
-  content:"";
-  width:32px;
-  height:1px;
-  background:var(--gold);
+.section-description {
+  max-width: 700px;
+
+  margin-top: 24px;
+
+  color: var(--text-light);
+
+  font-size: 15px;
+
+  line-height: 2.1;
 }
 
-.section-title{
-  font-family:'Shippori Mincho',serif;
 
-  font-size:clamp(30px,4vw,48px);
-  line-height:1.55;
-
-  letter-spacing:.06em;
-  font-weight:600;
-}
-
-.section-lead{
-  color:#AEB6C0;
-  font-size:15px;
-  line-height:2.15;
-
-  max-width:700px;
-  margin-top:22px;
-}
-
-.gold-line{
-  width:60px;
-  height:1px;
-  background:var(--gold);
-  margin:28px 0;
-}
-
-/* =========================
+/* =========================================================
    HEADER
-========================= */
+========================================================= */
 
-.header{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
+.header {
+  position: fixed;
 
-  height:82px;
+  top: 0;
+  left: 0;
+  right: 0;
 
-  z-index:999;
+  z-index: 999;
 
-  background:rgba(5,7,10,.78);
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
+  background: rgba(255,255,255,.94);
 
-  border-bottom:1px solid rgba(201,165,92,.16);
+  backdrop-filter: blur(14px);
 
-  transition:.35s ease;
+  border-bottom: 1px solid rgba(200,164,93,.18);
 }
 
-.header.scrolled{
-  background:rgba(5,7,10,.96);
-  height:70px;
+.header-inner {
+
+  width: min(var(--max-width), calc(100% - 64px));
+
+  height: 82px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
 }
 
-.header-inner{
-  height:100%;
+.logo {
+  display: flex;
 
-  width:min(var(--max), calc(100% - 64px));
-  margin:auto;
+  align-items: center;
 
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+  gap: 13px;
 }
 
-/* LOGO */
+.logo-mark {
 
-.logo{
-  display:flex;
-  align-items:center;
-  gap:13px;
+  width: 38px;
+  height: 38px;
+
+  position: relative;
+
+  border: 1px solid var(--gold);
+
+  border-radius: 50%;
 }
 
-.logo-symbol{
-  width:38px;
-  height:38px;
-  flex-shrink:0;
+.logo-mark::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 17px;
+  height: 17px;
+
+  left: 9px;
+  top: 8px;
+
+  border-left: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+
+  transform: rotate(-45deg);
 }
 
-.logo-text{
-  font-family:'Shippori Mincho',serif;
-  font-size:20px;
-  letter-spacing:.13em;
-  font-weight:700;
+.logo-text {
+
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size: 19px;
+
+  font-weight: 700;
+
+  letter-spacing: .15em;
 }
 
-.logo-sub{
-  display:block;
+.logo-text span {
 
-  font-family:'Noto Sans JP',sans-serif;
+  display: block;
 
-  font-size:8px;
-  letter-spacing:.28em;
+  margin-top: -4px;
 
-  color:var(--gold);
+  color: var(--gold-dark);
 
-  margin-top:-3px;
+  font-family: Arial, sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing: .25em;
 }
 
-/* NAV */
+.nav {
 
-.nav{
-  display:flex;
-  align-items:center;
-  gap:30px;
+  display: flex;
+
+  align-items: center;
+
+  gap: 34px;
 }
 
-.nav a{
-  position:relative;
+.nav a {
 
-  font-size:12px;
-  letter-spacing:.12em;
+  position: relative;
 
-  color:#D8DCE1;
+  font-size: 12px;
 
-  transition:.3s ease;
+  letter-spacing: .08em;
+
+  color: #333;
+
+  transition: color .3s ease;
 }
 
-.nav a::after{
-  content:"";
+.nav a::after {
 
-  position:absolute;
-  left:0;
-  bottom:-7px;
+  content: "";
 
-  width:0;
-  height:1px;
+  position: absolute;
 
-  background:var(--gold);
+  left: 0;
+  bottom: -7px;
 
-  transition:.3s ease;
+  width: 0;
+
+  height: 1px;
+
+  background: var(--gold);
+
+  transition: width .3s ease;
 }
 
-.nav a:hover{
-  color:var(--gold);
+.nav a:hover {
+
+  color: var(--gold-dark);
 }
 
-.nav a:hover::after{
-  width:100%;
+.nav a:hover::after {
+
+  width: 100%;
 }
 
-.header-contact{
-  padding:10px 17px;
 
-  border:1px solid var(--gold);
-
-  color:var(--gold)!important;
-
-  font-size:11px!important;
-}
-
-.header-contact:hover{
-  background:var(--gold);
-  color:var(--black)!important;
-}
-
-.header-contact::after{
-  display:none;
-}
-
-/* =========================
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
-.hero{
-  min-height:100svh;
+.hero {
 
-  display:flex;
-  align-items:center;
+  min-height: 100vh;
 
-  overflow:hidden;
+  padding-top: 82px;
 
-  background:var(--black);
-}
+  display: flex;
 
-.hero-image{
-  position:absolute;
-  inset:0;
-
-  z-index:0;
-}
-
-.hero-image img{
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-  object-position:center;
-
-  filter:saturate(.92);
-}
-
-.hero-overlay{
-  position:absolute;
-  inset:0;
+  align-items: center;
 
   background:
-    linear-gradient(
-      90deg,
-      rgba(5,7,10,.96) 0%,
-      rgba(5,7,10,.84) 28%,
-      rgba(7,21,37,.54) 55%,
-      rgba(7,21,37,.15) 80%,
-      rgba(7,21,37,.18) 100%
-    );
 
-  z-index:1;
-}
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(200,164,93,.10),
+      transparent 28%
+    ),
 
-.hero-overlay::after{
-  content:"";
-
-  position:absolute;
-  inset:0;
-
-  background:
-    linear-gradient(
-      0deg,
-      rgba(5,7,10,.88),
-      transparent 30%
-    );
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
-
-  padding-top:100px;
-  padding-bottom:80px;
-}
-
-.hero-kicker{
-  display:flex;
-  align-items:center;
-  gap:14px;
-
-  color:var(--gold);
-
-  font-size:12px;
-  letter-spacing:.38em;
-
-  margin-bottom:26px;
-}
-
-.hero-kicker::before{
-  content:"";
-
-  width:45px;
-  height:1px;
-
-  background:var(--gold);
-}
-
-.hero h1{
-  font-family:'Shippori Mincho',serif;
-
-  font-size:clamp(42px,6vw,78px);
-
-  line-height:1.42;
-
-  letter-spacing:.07em;
-
-  font-weight:600;
-
-  max-width:760px;
-}
-
-.hero h1 span{
-  color:var(--gold);
-}
-
-.hero-copy{
-  margin-top:28px;
-
-  max-width:600px;
-
-  color:#D5D9DE;
-
-  font-size:15px;
-
-  line-height:2.2;
-}
-
-.hero-buttons{
-  display:flex;
-  gap:14px;
-
-  margin-top:42px;
-
-  flex-wrap:wrap;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-
-  min-height:52px;
-
-  padding:0 28px;
-
-  border:1px solid var(--gold);
-
-  font-size:12px;
-  letter-spacing:.16em;
-
-  transition:.3s ease;
-}
-
-.btn-gold{
-  background:var(--gold);
-  color:var(--black);
-}
-
-.btn-gold:hover{
-  background:var(--gold-light);
-}
-
-.btn-outline{
-  color:var(--white);
-  background:rgba(0,0,0,.18);
-}
-
-.btn-outline:hover{
-  background:var(--white);
-  color:var(--black);
-}
-
-.hero-bottom{
-  position:absolute;
-
-  bottom:35px;
-  left:0;
-
-  display:flex;
-  align-items:center;
-  gap:13px;
-
-  color:#AEB5BE;
-
-  font-size:10px;
-  letter-spacing:.3em;
-}
-
-.hero-bottom-line{
-  width:1px;
-  height:42px;
-  background:var(--gold);
-}
-
-/* =========================
-   IMAGE PROFILE
-========================= */
-
-.profile{
-  background:var(--off-white);
-  color:var(--navy);
-
-  padding:110px 0;
-}
-
-.profile-heading{
-  display:grid;
-
-  grid-template-columns:.75fr 1.25fr;
-
-  gap:80px;
-
-  align-items:end;
-
-  margin-bottom:55px;
-}
-
-.profile .section-label{
-  color:var(--gold-dark);
-}
-
-.profile .section-label::before{
-  background:var(--gold-dark);
-}
-
-.profile .section-title{
-  color:var(--navy);
-}
-
-.profile-intro{
-  color:#5D6672;
-  font-size:14px;
-  line-height:2.1;
-}
-
-/* IMAGE FULL */
-
-.profile-image{
-  position:relative;
-
-  margin-bottom:26px;
-
-  overflow:hidden;
-
-  background:#EAE8E2;
-
-  border:1px solid rgba(7,21,37,.1);
-}
-
-.profile-image img{
-  width:100%;
-  height:auto;
-
-  object-fit:contain;
-
-  transition:transform .7s ease;
-}
-
-.profile-image:hover img{
-  transform:scale(1.01);
-}
-
-.profile-image::after{
-  content:"";
-
-  position:absolute;
-  inset:0;
-
-  pointer-events:none;
-
-  border:1px solid rgba(201,165,92,.18);
-}
-
-/* =========================
-   DARK IMAGE SECTION
-========================= */
-
-.visual-story{
-  background:var(--navy);
-
-  padding:0;
-}
-
-.visual-item{
-  position:relative;
-
-  width:100%;
-
-  overflow:hidden;
-
-  border-bottom:1px solid rgba(201,165,92,.22);
-}
-
-.visual-item img{
-  width:100%;
-  height:auto;
-
-  object-fit:contain;
-}
-
-.visual-caption{
-  position:absolute;
-
-  left:0;
-  right:0;
-  bottom:0;
-
-  padding:40px 7% 34px;
-
-  background:
-    linear-gradient(
-      0deg,
-      rgba(5,7,10,.86),
-      rgba(5,7,10,0)
-    );
-
-  pointer-events:none;
-}
-
-.visual-caption span{
-  display:block;
-
-  color:var(--gold);
-
-  font-size:10px;
-  letter-spacing:.28em;
-
-  margin-bottom:8px;
-}
-
-.visual-caption strong{
-  font-family:'Shippori Mincho',serif;
-
-  font-size:clamp(18px,2.5vw,30px);
-
-  letter-spacing:.06em;
-
-  font-weight:500;
-}
-
-/* =========================
-   ABOUT
-========================= */
-
-.about{
-  background:var(--black);
-
-  padding:125px 0;
-}
-
-.about-grid{
-  display:grid;
-
-  grid-template-columns:1fr 1fr;
-
-  gap:80px;
-
-  align-items:start;
-}
-
-.about-copy{
-  color:#AEB6C0;
-
-  font-size:15px;
-  line-height:2.15;
-}
-
-.about-copy p + p{
-  margin-top:25px;
-}
-
-.about-copy strong{
-  color:var(--white);
-  font-weight:500;
-}
-
-.about-quote{
-  padding:44px;
-
-  border:1px solid rgba(201,165,92,.35);
-
-  background:
     linear-gradient(
       135deg,
-      rgba(201,165,92,.07),
-      rgba(7,21,37,.5)
+      #ffffff 0%,
+      #ffffff 62%,
+      #f8f5ee 100%
     );
 }
 
-.about-quote-label{
-  color:var(--gold);
+.hero::before {
 
-  font-size:10px;
-  letter-spacing:.28em;
+  content: "";
 
-  margin-bottom:20px;
+  position: absolute;
+
+  right: 7%;
+
+  top: 18%;
+
+  width: 360px;
+  height: 360px;
+
+  border: 1px solid rgba(200,164,93,.24);
+
+  border-radius: 50%;
 }
 
-.about-quote h3{
-  font-family:'Shippori Mincho',serif;
+.hero::after {
 
-  font-size:clamp(24px,3vw,34px);
+  content: "";
 
-  line-height:1.8;
+  position: absolute;
 
-  font-weight:500;
+  right: 13%;
+  top: 25%;
 
-  color:var(--white);
+  width: 230px;
+  height: 230px;
+
+  border: 1px solid rgba(200,164,93,.18);
+
+  border-radius: 50%;
 }
 
-.about-quote p{
-  color:#8E98A4;
+.hero-content {
 
-  font-size:12px;
+  position: relative;
 
-  line-height:2;
+  z-index: 2;
 
-  margin-top:20px;
+  width: min(var(--max-width), calc(100% - 64px));
+
+  margin: 0 auto;
 }
 
-/* =========================
-   MESSAGE
-========================= */
+.hero-label {
 
-.message{
-  background:var(--off-white);
+  color: var(--gold-dark);
 
-  color:var(--navy);
+  font-size: 12px;
 
-  padding:120px 0;
+  font-weight: 600;
+
+  letter-spacing: .3em;
+
+  margin-bottom: 30px;
 }
 
-.message-grid{
-  display:grid;
+.hero-title {
 
-  grid-template-columns:.5fr 1.5fr;
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
 
-  gap:70px;
+  font-size: clamp(42px, 6vw, 78px);
+
+  line-height: 1.4;
+
+  font-weight: 600;
+
+  letter-spacing: .06em;
 }
 
-.message-card{
-  background:var(--navy);
+.hero-title strong {
 
-  padding:42px 30px;
+  color: var(--gold-dark);
 
-  text-align:center;
-
-  color:var(--white);
+  font-weight: 600;
 }
 
-.message-avatar{
-  width:92px;
-  height:92px;
+.hero-line {
 
-  margin:0 auto 24px;
+  width: 70px;
 
-  border-radius:50%;
+  height: 1px;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  background: var(--gold);
 
-  border:1px solid var(--gold);
-
-  background:var(--black);
+  margin: 34px 0;
 }
 
-.message-avatar svg{
-  width:55px;
-  height:55px;
+.hero-description {
+
+  max-width: 610px;
+
+  color: #555;
+
+  font-size: 15px;
+
+  line-height: 2.15;
 }
 
-.message-role{
-  color:var(--gold);
+.hero-buttons {
 
-  font-size:10px;
-  letter-spacing:.25em;
+  display: flex;
 
-  margin-bottom:10px;
+  gap: 14px;
+
+  margin-top: 42px;
+
+  flex-wrap: wrap;
 }
 
-.message-name{
-  font-family:'Shippori Mincho',serif;
+.button {
 
-  font-size:23px;
+  display: inline-flex;
 
-  letter-spacing:.1em;
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 190px;
+
+  padding: 15px 25px;
+
+  border: 1px solid var(--gold);
+
+  font-size: 12px;
+
+  letter-spacing: .13em;
+
+  transition:
+    background .3s ease,
+    color .3s ease,
+    transform .3s ease;
 }
 
-.message-name-en{
-  color:#89929D;
+.button:hover {
 
-  font-size:10px;
-
-  letter-spacing:.2em;
-
-  margin-top:4px;
+  transform: translateY(-2px);
 }
 
-.message-position{
-  border-top:1px solid rgba(201,165,92,.25);
+.button-primary {
 
-  margin-top:22px;
-  padding-top:20px;
+  background: var(--gold);
 
-  font-size:12px;
-
-  color:#AEB5BE;
+  color: white;
 }
 
-.message-body{
-  color:#58616C;
+.button-primary:hover {
 
-  font-size:15px;
-
-  line-height:2.15;
+  background: var(--gold-dark);
 }
 
-.message-body .message-lead{
-  font-family:'Shippori Mincho',serif;
+.button-secondary {
 
-  color:var(--navy);
+  background: white;
 
-  font-size:clamp(22px,3vw,30px);
-
-  line-height:1.8;
-
-  margin-bottom:30px;
+  color: var(--gold-dark);
 }
 
-.message-body p + p{
-  margin-top:23px;
+.button-secondary:hover {
+
+  background: var(--ivory);
 }
 
-.message-sign{
-  margin-top:32px;
 
-  color:var(--navy);
+/* =========================================================
+   HERO SIDE PANEL
+========================================================= */
 
-  font-family:'Shippori Mincho',serif;
+.hero-panel {
 
-  font-size:18px;
+  position: absolute;
+
+  right: 0;
+
+  bottom: 0;
+
+  width: 38%;
+
+  min-height: 260px;
+
+  background: var(--navy);
+
+  color: white;
+
+  padding: 55px 60px;
 }
 
-/* =========================
+.hero-panel-label {
+
+  color: var(--gold-light);
+
+  font-size: 10px;
+
+  letter-spacing: .25em;
+
+  margin-bottom: 16px;
+}
+
+.hero-panel-title {
+
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size: 23px;
+
+  line-height: 1.8;
+}
+
+.hero-panel-text {
+
+  margin-top: 14px;
+
+  color: rgba(255,255,255,.65);
+
+  font-size: 12px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+
+  background: var(--white);
+}
+
+.about-grid {
+
+  display: grid;
+
+  grid-template-columns: 1.05fr .95fr;
+
+  gap: 90px;
+
+  margin-top: 65px;
+
+  align-items: start;
+}
+
+.about-copy p {
+
+  color: var(--text-light);
+
+  font-size: 15px;
+
+  line-height: 2.2;
+
+  margin-bottom: 24px;
+}
+
+.about-copy strong {
+
+  color: var(--text);
+
+  font-weight: 600;
+}
+
+.about-card {
+
+  position: relative;
+
+  background: var(--ivory);
+
+  padding: 50px 45px;
+
+  border-top: 2px solid var(--gold);
+}
+
+.about-card-label {
+
+  color: var(--gold-dark);
+
+  font-size: 10px;
+
+  letter-spacing: .25em;
+
+  margin-bottom: 20px;
+}
+
+.about-card h3 {
+
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size: 26px;
+
+  line-height: 1.8;
+
+  font-weight: 600;
+}
+
+.about-card p {
+
+  margin-top: 20px;
+
+  color: var(--text-light);
+
+  font-size: 13px;
+
+  line-height: 2;
+}
+
+
+/* =========================================================
    PHILOSOPHY
-========================= */
+========================================================= */
 
-.philosophy{
-  background:var(--navy);
+.philosophy {
 
-  padding:125px 0;
+  background: var(--navy);
+
+  color: white;
 }
 
-.philosophy-head{
-  max-width:760px;
+.philosophy .section-title {
 
-  margin-bottom:55px;
+  color: white;
 }
 
-.philosophy-grid{
-  display:grid;
+.philosophy .section-description {
 
-  grid-template-columns:repeat(3,1fr);
-
-  gap:1px;
-
-  background:rgba(201,165,92,.3);
-
-  border:1px solid rgba(201,165,92,.3);
+  color: rgba(255,255,255,.68);
 }
 
-.philosophy-card{
-  background:#0A1A2C;
+.philosophy .section-label {
 
-  padding:48px 35px;
-
-  transition:.35s ease;
+  color: var(--gold-light);
 }
 
-.philosophy-card:hover{
-  background:#102842;
+.philosophy-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3,1fr);
+
+  gap: 1px;
+
+  margin-top: 65px;
+
+  background: rgba(255,255,255,.12);
 }
 
-.philosophy-number{
-  color:var(--gold);
+.philosophy-card {
 
-  font-family:'Shippori Mincho',serif;
+  padding: 48px 36px;
 
-  font-size:13px;
+  background: var(--navy);
 
-  letter-spacing:.2em;
+  border-top: 2px solid transparent;
 
-  margin-bottom:22px;
+  transition:
+    border-color .3s ease,
+    background .3s ease;
 }
 
-.philosophy-card h3{
-  font-family:'Shippori Mincho',serif;
+.philosophy-card:hover {
 
-  font-size:21px;
+  border-top-color: var(--gold);
 
-  line-height:1.75;
-
-  font-weight:500;
-
-  margin-bottom:18px;
+  background: #1a304d;
 }
 
-.philosophy-card p{
-  color:#929DA9;
+.philosophy-number {
 
-  font-size:13px;
+  color: var(--gold);
 
-  line-height:2;
+  font-family:
+    "Times New Roman",
+    serif;
+
+  font-size: 13px;
+
+  letter-spacing: .15em;
+
+  margin-bottom: 24px;
 }
 
-/* =========================
+.philosophy-card h3 {
+
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size: 21px;
+
+  line-height: 1.7;
+
+  margin-bottom: 18px;
+}
+
+.philosophy-card p {
+
+  color: rgba(255,255,255,.65);
+
+  font-size: 13px;
+
+  line-height: 2;
+}
+
+
+/* =========================================================
    BUSINESS
-========================= */
+========================================================= */
 
-.business{
-  background:var(--off-white);
+.business {
 
-  color:var(--navy);
-
-  padding:120px 0;
+  background: var(--white);
 }
 
-.business .section-label{
-  color:var(--gold-dark);
+.business-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(2,1fr);
+
+  gap: 24px;
+
+  margin-top: 65px;
 }
 
-.business .section-label::before{
-  background:var(--gold-dark);
+.business-card {
+
+  padding: 52px 45px;
+
+  border: 1px solid var(--line);
+
+  position: relative;
+
+  transition:
+    box-shadow .3s ease,
+    transform .3s ease;
 }
 
-.business .section-title{
-  color:var(--navy);
+.business-card:hover {
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 18px 50px rgba(20,37,61,.08);
 }
 
-.business-grid{
-  display:grid;
+.business-number {
 
-  grid-template-columns:1fr 1fr;
+  color: var(--gold);
 
-  gap:2px;
+  font-family:
+    "Times New Roman",
+    serif;
 
-  margin-top:55px;
+  font-size: 14px;
 
-  background:#D8D7D2;
+  letter-spacing: .2em;
+
+  margin-bottom: 20px;
 }
 
-.business-card{
-  background:white;
+.business-card h3 {
 
-  padding:52px 42px;
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
 
-  position:relative;
+  font-size: 25px;
 
-  overflow:hidden;
+  margin-bottom: 18px;
 }
 
-.business-card::before{
-  content:"";
+.business-card > p {
 
-  position:absolute;
+  color: var(--text-light);
 
-  top:0;
-  left:0;
+  font-size: 14px;
 
-  width:100%;
-  height:3px;
-
-  background:var(--gold);
+  margin-bottom: 28px;
 }
 
-.business-number{
-  color:var(--gold-dark);
+.business-list {
 
-  font-family:'Shippori Mincho',serif;
+  list-style: none;
 
-  font-size:12px;
-
-  letter-spacing:.2em;
-
-  margin-bottom:20px;
+  border-top: 1px solid var(--line);
 }
 
-.business-card h3{
-  font-family:'Shippori Mincho',serif;
+.business-list li {
 
-  font-size:26px;
+  padding: 13px 0;
 
-  line-height:1.6;
+  border-bottom: 1px solid var(--line);
 
-  margin-bottom:15px;
+  color: #555;
+
+  font-size: 13px;
+
+  display: flex;
+
+  gap: 10px;
 }
 
-.business-card .lead{
-  color:#69727C;
+.business-list li::before {
 
-  font-size:14px;
+  content: "—";
 
-  margin-bottom:25px;
+  color: var(--gold);
+
+  font-weight: bold;
 }
 
-.business-card ul{
-  list-style:none;
-}
 
-.business-card li{
-  border-top:1px solid #E1E1DD;
-
-  padding:13px 0;
-
-  color:#56606A;
-
-  font-size:13px;
-
-  display:flex;
-  gap:10px;
-}
-
-.business-card li::before{
-  content:"—";
-
-  color:var(--gold-dark);
-}
-
-/* =========================
+/* =========================================================
    STRENGTHS
-========================= */
+========================================================= */
 
-.strengths{
-  background:var(--black);
+.strengths {
 
-  padding:120px 0;
+  background: var(--ivory);
 }
 
-.strength-grid{
-  display:grid;
+.strength-grid {
 
-  grid-template-columns:repeat(3,1fr);
+  display: grid;
 
-  gap:1px;
+  grid-template-columns: repeat(3,1fr);
 
-  margin-top:55px;
+  gap: 1px;
 
-  background:rgba(201,165,92,.2);
+  margin-top: 65px;
 
-  border:1px solid rgba(201,165,92,.2);
+  background: var(--line);
+
+  border: 1px solid var(--line);
 }
 
-.strength-card{
-  background:var(--black-soft);
+.strength-card {
 
-  padding:42px 32px;
+  background: white;
 
-  min-height:220px;
-
-  transition:.35s ease;
+  padding: 40px 32px;
 }
 
-.strength-card:hover{
-  background:#0D1722;
+.strength-number {
+
+  color: var(--gold-light);
+
+  font-family:
+    "Times New Roman",
+    serif;
+
+  font-size: 32px;
+
+  margin-bottom: 20px;
 }
 
-.strength-number{
-  color:var(--gold);
+.strength-card h3 {
 
-  font-family:'Shippori Mincho',serif;
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
 
-  font-size:26px;
+  font-size: 18px;
 
-  margin-bottom:18px;
+  margin-bottom: 12px;
 }
 
-.strength-card h4{
-  font-family:'Shippori Mincho',serif;
+.strength-card p {
 
-  font-size:18px;
+  color: var(--text-light);
 
-  font-weight:500;
+  font-size: 13px;
 
-  margin-bottom:13px;
+  line-height: 2;
 }
 
-.strength-card p{
-  color:#87919C;
 
-  font-size:13px;
+/* =========================================================
+   MESSAGE
+========================================================= */
 
-  line-height:2;
+.message {
+
+  background: white;
 }
 
-/* =========================
+.message-grid {
+
+  display: grid;
+
+  grid-template-columns: .65fr 1.35fr;
+
+  gap: 80px;
+
+  margin-top: 65px;
+}
+
+.message-profile {
+
+  padding: 45px 30px;
+
+  background: var(--ivory);
+
+  text-align: center;
+
+  border-top: 2px solid var(--gold);
+}
+
+.profile-symbol {
+
+  width: 90px;
+  height: 90px;
+
+  margin: 0 auto 25px;
+
+  border-radius: 50%;
+
+  border: 1px solid var(--gold);
+
+  position: relative;
+}
+
+.profile-symbol::before {
+
+  content: "山";
+
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: var(--gold-dark);
+
+  font-family:
+    "Yu Mincho",
+    serif;
+
+  font-size: 30px;
+}
+
+.profile-role {
+
+  color: var(--gold-dark);
+
+  font-size: 10px;
+
+  letter-spacing: .25em;
+
+  margin-bottom: 10px;
+}
+
+.profile-name {
+
+  font-family:
+    "Yu Mincho",
+    serif;
+
+  font-size: 22px;
+
+  font-weight: 600;
+}
+
+.profile-name-en {
+
+  margin-top: 3px;
+
+  color: #777;
+
+  font-size: 10px;
+
+  letter-spacing: .16em;
+}
+
+.message-content p {
+
+  color: var(--text-light);
+
+  font-size: 14px;
+
+  line-height: 2.2;
+
+  margin-bottom: 22px;
+}
+
+.message-lead {
+
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  color: var(--text) !important;
+
+  font-size: 22px !important;
+
+  font-weight: 600;
+
+  line-height: 1.9 !important;
+}
+
+.message-sign {
+
+  margin-top: 35px;
+
+  color: #777;
+
+  font-size: 13px;
+}
+
+.message-sign strong {
+
+  display: block;
+
+  color: var(--text);
+
+  font-family:
+    "Yu Mincho",
+    serif;
+
+  font-size: 17px;
+
+  margin-top: 5px;
+}
+
+
+/* =========================================================
    HISTORY
-========================= */
+========================================================= */
 
-.history{
-  background:var(--navy);
+.history {
 
-  padding:120px 0;
+  background: var(--white);
 }
 
-.history-list{
-  margin-top:50px;
+.history-list {
 
-  border-top:1px solid rgba(201,165,92,.25);
+  margin-top: 60px;
+
+  border-top: 1px solid var(--line);
 }
 
-.history-row{
-  display:grid;
+.history-row {
 
-  grid-template-columns:180px 1fr;
+  display: grid;
 
-  gap:45px;
+  grid-template-columns: 180px 1fr;
 
-  padding:30px 0;
+  gap: 40px;
 
-  border-bottom:1px solid rgba(201,165,92,.18);
+  padding: 30px 0;
+
+  border-bottom: 1px solid var(--line);
 }
 
-.history-date{
-  color:var(--gold);
+.history-date {
 
-  font-family:'Shippori Mincho',serif;
+  color: var(--gold-dark);
 
-  font-size:15px;
+  font-family:
+    "Yu Mincho",
+    serif;
+
+  font-size: 14px;
 }
 
-.history-event strong{
-  display:block;
+.history-event strong {
 
-  color:var(--white);
+  display: block;
 
-  font-family:'Shippori Mincho',serif;
+  color: var(--text);
 
-  font-size:17px;
+  font-family:
+    "Yu Mincho",
+    serif;
 
-  margin-bottom:6px;
+  font-size: 16px;
+
+  margin-bottom: 5px;
 }
 
-.history-event{
-  color:#8E99A5;
+.history-event span {
 
-  font-size:13px;
+  color: var(--text-light);
 
-  line-height:2;
+  font-size: 13px;
 }
 
-/* =========================
+
+/* =========================================================
    COMPANY OVERVIEW
-========================= */
+========================================================= */
 
-.overview{
-  background:var(--off-white);
+.overview {
 
-  color:var(--navy);
-
-  padding:120px 0;
+  background: var(--ivory);
 }
 
-.overview .section-label{
-  color:var(--gold-dark);
+.overview-layout {
+
+  margin-top: 65px;
+
+  display: grid;
+
+  grid-template-columns: .7fr 1.3fr;
+
+  gap: 70px;
 }
 
-.overview .section-label::before{
-  background:var(--gold-dark);
+.overview-intro {
+
+  padding-top: 10px;
 }
 
-.overview .section-title{
-  color:var(--navy);
+.overview-intro h3 {
+
+  font-family:
+    "Yu Mincho",
+    serif;
+
+  font-size: 25px;
+
+  line-height: 1.8;
+
+  margin-bottom: 20px;
 }
 
-.overview-grid{
-  display:grid;
+.overview-intro p {
 
-  grid-template-columns:.8fr 1.2fr;
+  color: var(--text-light);
 
-  gap:55px;
+  font-size: 13px;
 
-  margin-top:55px;
-
-  align-items:start;
+  line-height: 2.1;
 }
 
-.overview-side{
-  position:sticky;
+.company-table {
 
-  top:110px;
+  width: 100%;
+
+  border-collapse: collapse;
+
+  background: white;
 }
 
-.overview-image{
-  overflow:hidden;
+.company-table tr {
 
-  border:1px solid rgba(7,21,37,.15);
-
-  margin-bottom:28px;
-}
-
-.overview-image img{
-  width:100%;
-  height:auto;
-}
-
-.overview-side h3{
-  font-family:'Shippori Mincho',serif;
-
-  font-size:23px;
-
-  line-height:1.8;
-
-  margin-bottom:16px;
-}
-
-.overview-side p{
-  color:#69727C;
-
-  font-size:13px;
-
-  line-height:2;
-}
-
-/* TABLE */
-
-.company-table{
-  width:100%;
-
-  border-collapse:collapse;
-
-  background:#FFFFFF;
-}
-
-.company-table tr{
-  border-bottom:1px solid #E2E1DD;
-}
-
-.company-table tr:last-child{
-  border-bottom:none;
+  border-bottom: 1px solid var(--line);
 }
 
 .company-table th,
-.company-table td{
-  text-align:left;
+.company-table td {
 
-  vertical-align:top;
+  padding: 21px 24px;
 
-  padding:23px 24px;
+  text-align: left;
 
-  font-size:14px;
+  vertical-align: top;
 
-  line-height:1.9;
+  font-size: 13px;
+
+  line-height: 1.9;
 }
 
-.company-table th{
-  width:28%;
+.company-table th {
 
-  color:var(--gold-dark);
+  width: 28%;
 
-  font-weight:600;
+  color: var(--gold-dark);
 
-  letter-spacing:.08em;
+  font-weight: 600;
 
-  white-space:nowrap;
+  letter-spacing: .08em;
 }
 
-.company-table td{
-  color:var(--navy);
+.company-table td {
 
-  font-weight:500;
+  color: #333;
 }
 
-.purpose-list{
-  list-style:none;
-}
 
-.purpose-list li{
-  display:flex;
-
-  gap:10px;
-
-  padding:3px 0;
-}
-
-.purpose-list li::before{
-  content:"";
-
-  width:5px;
-  height:5px;
-
-  border-radius:50%;
-
-  background:var(--gold);
-
-  margin-top:10px;
-
-  flex-shrink:0;
-}
-
-/* =========================
+/* =========================================================
    VISION
-========================= */
+========================================================= */
 
-.vision{
-  background:var(--black);
+.vision {
 
-  padding:130px 0;
+  background: white;
 
-  text-align:center;
+  text-align: center;
+
+  padding: 140px 0;
 }
 
-.vision .section-label{
-  justify-content:center;
+.vision .section-label {
+
+  justify-content: center;
 }
 
-.vision .section-label::before{
-  display:none;
+.vision .section-label::before {
+
+  display: none;
 }
 
-.vision h2{
-  font-family:'Shippori Mincho',serif;
+.vision h2 {
 
-  font-size:clamp(27px,4vw,45px);
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
 
-  line-height:1.9;
+  font-size: clamp(27px,4vw,43px);
 
-  letter-spacing:.08em;
+  line-height: 1.8;
+
+  font-weight: 600;
+
+  margin-bottom: 28px;
 }
 
-.vision h2 span{
-  color:var(--gold);
+.vision p {
+
+  max-width: 620px;
+
+  margin: 0 auto;
+
+  color: var(--text-light);
+
+  font-size: 14px;
+
+  line-height: 2.1;
 }
 
-.vision p{
-  color:#89939E;
 
-  font-size:14px;
-
-  line-height:2.1;
-
-  max-width:650px;
-
-  margin:25px auto 0;
-}
-
-/* =========================
+/* =========================================================
    CONTACT
-========================= */
+========================================================= */
 
-.contact{
-  position:relative;
+.contact {
 
-  padding:120px 0;
+  background: var(--navy);
 
-  overflow:hidden;
+  color: white;
 }
 
-.contact-background{
-  position:absolute;
+.contact-layout {
 
-  inset:0;
+  display: grid;
 
-  z-index:0;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 70px;
+
+  align-items: center;
 }
 
-.contact-background img{
-  width:100%;
-  height:100%;
+.contact .section-label {
 
-  object-fit:cover;
-
-  object-position:center;
+  color: var(--gold-light);
 }
 
-.contact-overlay{
-  position:absolute;
+.contact h2 {
 
-  inset:0;
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5,7,10,.96),
-      rgba(5,7,10,.78) 45%,
-      rgba(7,21,37,.68)
-    );
+  font-size: clamp(27px,3.5vw,42px);
+
+  line-height: 1.7;
+
+  margin-bottom: 25px;
 }
 
-.contact-inner{
-  position:relative;
+.contact-intro p {
 
-  z-index:2;
+  color: rgba(255,255,255,.65);
+
+  font-size: 14px;
+
+  line-height: 2.1;
 }
 
-.contact-grid{
-  display:grid;
+.contact-box {
 
-  grid-template-columns:1fr 1fr;
+  border: 1px solid rgba(255,255,255,.18);
 
-  gap:70px;
-
-  align-items:center;
+  padding: 40px;
 }
 
-.contact h2{
-  font-family:'Shippori Mincho',serif;
+.contact-row {
 
-  font-size:clamp(27px,4vw,43px);
+  display: flex;
 
-  line-height:1.7;
+  justify-content: space-between;
 
-  letter-spacing:.06em;
+  gap: 20px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid rgba(255,255,255,.12);
 }
 
-.contact-description{
-  color:#AAB2BB;
+.contact-row:last-of-type {
 
-  font-size:14px;
-
-  line-height:2.1;
-
-  margin-top:22px;
+  border-bottom: none;
 }
 
-.contact-card{
-  padding:40px;
+.contact-row-label {
 
-  border:1px solid rgba(201,165,92,.4);
+  color: var(--gold-light);
 
-  background:rgba(5,7,10,.55);
+  font-size: 10px;
 
-  backdrop-filter:blur(10px);
+  letter-spacing: .2em;
 }
 
-.contact-row{
-  display:flex;
+.contact-row-value {
 
-  justify-content:space-between;
+  color: white;
 
-  gap:25px;
+  font-size: 13px;
 
-  padding:18px 0;
-
-  border-bottom:1px solid rgba(201,165,92,.18);
+  text-align: right;
 }
 
-.contact-row:first-child{
-  padding-top:0;
+.contact-button {
+
+  display: block;
+
+  margin-top: 30px;
+
+  padding: 17px;
+
+  background: var(--gold);
+
+  color: var(--navy);
+
+  text-align: center;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: .14em;
+
+  transition: background .3s ease;
 }
 
-.contact-row:last-of-type{
-  border-bottom:none;
+.contact-button:hover {
+
+  background: var(--gold-light);
 }
 
-.contact-key{
-  color:var(--gold);
 
-  font-size:10px;
-
-  letter-spacing:.2em;
-
-  flex-shrink:0;
-}
-
-.contact-value{
-  color:#E7E9EC;
-
-  font-size:13px;
-
-  text-align:right;
-
-  line-height:1.8;
-}
-
-.contact-button{
-  width:100%;
-
-  margin-top:22px;
-
-  padding:17px;
-
-  display:block;
-
-  text-align:center;
-
-  background:var(--gold);
-
-  color:var(--black);
-
-  font-size:12px;
-
-  letter-spacing:.16em;
-
-  transition:.3s ease;
-}
-
-.contact-button:hover{
-  background:var(--gold-light);
-}
-
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
-.footer{
-  background:#030405;
+.footer {
 
-  border-top:1px solid rgba(201,165,92,.2);
+  background: #0b0b0b;
 
-  padding:35px 0;
+  color: white;
+
+  padding: 38px 0;
 }
 
-.footer-inner{
-  display:flex;
+.footer-inner {
 
-  align-items:center;
+  width: min(var(--max-width), calc(100% - 64px));
 
-  justify-content:space-between;
+  margin: 0 auto;
 
-  gap:20px;
+  display: flex;
 
-  flex-wrap:wrap;
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
 }
 
-.footer-logo{
-  display:flex;
+.footer-logo {
 
-  align-items:center;
+  font-family:
+    "Yu Mincho",
+    serif;
 
-  gap:10px;
+  font-size: 14px;
 
-  color:#D6D9DE;
-
-  font-family:'Shippori Mincho',serif;
-
-  font-size:13px;
-
-  letter-spacing:.08em;
+  letter-spacing: .1em;
 }
 
-.footer-logo svg{
-  width:25px;
-  height:25px;
+.footer-copy {
+
+  color: rgba(255,255,255,.4);
+
+  font-size: 10px;
+
+  letter-spacing: .06em;
 }
 
-.footer-copy{
-  color:#626A73;
 
-  font-size:10px;
-
-  letter-spacing:.08em;
-}
-
-/* =========================
-   MOBILE FIXED CTA
-========================= */
-
-.mobile-cta{
-  display:none;
-}
-
-/* =========================
+/* =========================================================
    SCROLL ANIMATION
-========================= */
+========================================================= */
 
-.reveal{
-  opacity:0;
+.reveal {
 
-  transform:translateY(25px);
+  opacity: 0;
+
+  transform: translateY(25px);
 
   transition:
     opacity .8s ease,
     transform .8s ease;
 }
 
-.reveal.show{
-  opacity:1;
+.reveal.active {
 
-  transform:none;
+  opacity: 1;
+
+  transform: translateY(0);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
 
-@media(max-width:1000px){
+/* =========================================================
+   MOBILE
+========================================================= */
 
-  .nav{
-    gap:17px;
+@media (max-width: 900px) {
+
+  section {
+
+    padding: 90px 0;
   }
-
-  .nav a{
-    font-size:10px;
-  }
-
-  .profile-heading{
-    grid-template-columns:1fr;
-
-    gap:25px;
-  }
-
-  .about-grid{
-    gap:45px;
-  }
-
-  .message-grid{
-    grid-template-columns:.65fr 1.35fr;
-
-    gap:40px;
-  }
-
-  .overview-grid{
-    gap:35px;
-  }
-
-}
-
-@media(max-width:820px){
 
   .container,
-  .header-inner{
-    width:min(100% - 40px, var(--max));
+  .header-inner,
+  .hero-content,
+  .footer-inner {
+
+    width: min(100% - 40px, var(--max-width));
   }
 
-  .header{
-    height:70px;
+  .nav {
+
+    display: none;
   }
 
-  .header-inner{
-    width:calc(100% - 40px);
+  .hero {
+
+    min-height: 760px;
+
+    align-items: center;
   }
 
-  .nav{
-    display:none;
+  .hero::before {
+
+    width: 280px;
+    height: 280px;
+
+    right: -100px;
+    top: 18%;
   }
 
-  .logo-text{
-    font-size:18px;
+  .hero::after {
+
+    display: none;
   }
 
-  .logo-symbol{
-    width:34px;
-    height:34px;
+  .hero-title {
+
+    font-size: clamp(39px,10vw,58px);
   }
 
-  .hero-content{
-    padding-top:100px;
+  .hero-panel {
+
+    position: relative;
+
+    right: auto;
+
+    bottom: auto;
+
+    width: 100%;
+
+    margin-top: 70px;
+
+    padding: 35px 25px;
+
+    min-height: auto;
   }
 
-  .hero h1{
-    font-size:clamp(38px,10vw,60px);
+  .about-grid,
+  .message-grid,
+  .overview-layout,
+  .contact-layout {
+
+    grid-template-columns: 1fr;
+
+    gap: 45px;
   }
 
-  .hero-copy{
-    font-size:13px;
+  .philosophy-grid,
+  .strength-grid {
+
+    grid-template-columns: 1fr;
   }
 
-  .profile,
-  .about,
-  .message,
-  .philosophy,
-  .business,
-  .strengths,
-  .history,
-  .overview,
-  .vision,
-  .contact{
-    padding:85px 0;
+  .business-grid {
+
+    grid-template-columns: 1fr;
   }
 
-  .about-grid{
-    grid-template-columns:1fr;
+  .message-grid {
+
+    gap: 35px;
   }
 
-  .philosophy-grid{
-    grid-template-columns:1fr;
+  .overview-layout {
+
+    gap: 35px;
   }
 
-  .business-grid{
-    grid-template-columns:1fr;
+  .contact-layout {
+
+    gap: 40px;
   }
-
-  .strength-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .message-grid{
-    grid-template-columns:1fr;
-  }
-
-  .overview-grid{
-    grid-template-columns:1fr;
-  }
-
-  .overview-side{
-    position:static;
-  }
-
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-
-  .visual-caption{
-    padding:35px 5% 25px;
-  }
-
-  .mobile-cta{
-    display:flex;
-
-    position:fixed;
-
-    z-index:998;
-
-    left:0;
-    right:0;
-    bottom:0;
-
-    height:58px;
-
-    background:rgba(5,7,10,.97);
-
-    border-top:1px solid rgba(201,165,92,.4);
-  }
-
-  .mobile-cta a{
-    flex:1;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    color:var(--gold);
-
-    font-size:11px;
-
-    letter-spacing:.1em;
-  }
-
-  .mobile-cta a + a{
-    border-left:1px solid rgba(201,165,92,.25);
-  }
-
-  .mobile-cta a:last-child{
-    background:var(--gold);
-
-    color:var(--black);
-  }
-
-  .footer{
-    padding-bottom:80px;
-  }
-
 }
 
-@media(max-width:600px){
 
-  .container{
-    width:calc(100% - 32px);
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  section {
+
+    padding: 75px 0;
   }
 
-  .hero{
-    min-height:100svh;
+  .container,
+  .header-inner,
+  .hero-content,
+  .footer-inner {
+
+    width: calc(100% - 32px);
   }
 
-  .hero-image img{
-    object-position:62% center;
+  .header-inner {
+
+    height: 68px;
   }
 
-  .hero-overlay{
-    background:
-      linear-gradient(
-        90deg,
-        rgba(5,7,10,.94),
-        rgba(5,7,10,.67)
-      );
+  .logo-text {
+
+    font-size: 16px;
   }
 
-  .hero h1{
-    font-size:40px;
+  .logo-mark {
 
-    line-height:1.6;
+    width: 32px;
+    height: 32px;
   }
 
-  .hero-copy{
-    font-size:12.5px;
+  .hero {
 
-    line-height:2;
+    padding-top: 68px;
+
+    min-height: auto;
+
+    padding-bottom: 0;
   }
 
-  .hero-buttons{
-    margin-top:30px;
+  .hero-content {
 
-    flex-direction:column;
-
-    align-items:stretch;
+    padding: 80px 0 0;
   }
 
-  .btn{
-    width:100%;
+  .hero-title {
+
+    font-size: 39px;
+
+    line-height: 1.5;
   }
 
-  .hero-bottom{
-    display:none;
+  .hero-description {
+
+    font-size: 13px;
+
+    line-height: 2;
   }
 
-  .section-title{
-    font-size:30px;
+  .hero-buttons {
+
+    flex-direction: column;
+
+    gap: 10px;
   }
 
-  .section-lead{
-    font-size:13px;
+  .button {
+
+    width: 100%;
+
+    min-width: 0;
   }
 
-  .profile-heading{
-    margin-bottom:35px;
+  .hero-panel {
+
+    margin-top: 60px;
+
+    padding: 35px 20px;
   }
 
-  .profile-image{
-    margin-bottom:12px;
+  .section-title {
+
+    font-size: 30px;
   }
 
-  .visual-caption{
-    position:relative;
+  .section-description {
 
-    background:var(--navy);
-
-    padding:24px 20px;
+    font-size: 13px;
   }
 
-  .visual-caption strong{
-    font-size:17px;
+  .about-card {
+
+    padding: 35px 25px;
   }
 
-  .about-quote{
-    padding:30px 24px;
+  .about-card h3 {
+
+    font-size: 22px;
   }
 
-  .message-card{
-    padding:35px 25px;
+  .philosophy-card {
+
+    padding: 38px 25px;
   }
 
-  .message-body{
-    font-size:13.5px;
+  .business-card {
+
+    padding: 38px 25px;
   }
 
-  .philosophy-card{
-    padding:38px 25px;
+  .strength-card {
+
+    padding: 35px 25px;
   }
 
-  .business-card{
-    padding:40px 25px;
+  .message-profile {
+
+    padding: 40px 20px;
   }
 
-  .strength-grid{
-    grid-template-columns:1fr;
+  .message-content p {
+
+    font-size: 13px;
+
+    line-height: 2;
   }
 
-  .strength-card{
-    min-height:auto;
+  .message-lead {
+
+    font-size: 20px !important;
   }
 
-  .history-row{
-    grid-template-columns:1fr;
+  .history-row {
 
-    gap:8px;
+    grid-template-columns: 1fr;
 
-    padding:25px 0;
+    gap: 8px;
+
+    padding: 22px 0;
   }
 
   .company-table,
   .company-table tbody,
   .company-table tr,
   .company-table th,
-  .company-table td{
-    display:block;
+  .company-table td {
 
-    width:100%;
+    display: block;
+
+    width: 100%;
   }
 
-  .company-table tr{
-    padding:20px;
+  .company-table tr {
+
+    padding: 18px 18px;
   }
 
-  .company-table th{
-    padding:0 0 8px;
+  .company-table th {
 
-    font-size:12px;
+    padding: 0 0 7px;
+
+    font-size: 11px;
   }
 
-  .company-table td{
-    padding:0;
+  .company-table td {
 
-    font-size:14px;
+    padding: 0;
+
+    font-size: 14px;
   }
 
-  .contact-card{
-    padding:28px 20px;
+  .vision {
+
+    padding: 90px 0;
   }
 
-  .contact-row{
-    flex-direction:column;
+  .vision h2 {
 
-    gap:6px;
+    font-size: 27px;
   }
 
-  .contact-value{
-    text-align:left;
+  .contact-box {
 
-    font-size:12px;
+    padding: 25px 20px;
   }
 
-  .footer-inner{
-    align-items:flex-start;
+  .contact-row {
 
-    flex-direction:column;
+    display: block;
   }
 
+  .contact-row-value {
+
+    margin-top: 6px;
+
+    text-align: left;
+
+    line-height: 1.8;
+  }
+
+  .footer-inner {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
 }
 
-/* =========================
+
+/* =========================================================
    ACCESSIBILITY
-========================= */
+========================================================= */
 
-@media(prefers-reduced-motion:reduce){
+@media (prefers-reduced-motion: reduce) {
 
-  html{
-    scroll-behavior:auto;
+  html {
+
+    scroll-behavior: auto;
   }
 
   *,
   *::before,
-  *::after{
-    animation-duration:.01ms!important;
-    animation-iteration-count:1!important;
-    transition-duration:.01ms!important;
-  }
+  *::after {
 
-  .reveal{
-    opacity:1;
-    transform:none;
-  }
+    animation-duration: .01ms !important;
 
+    animation-iteration-count: 1 !important;
+
+    transition-duration: .01ms !important;
+  }
 }
 
 </style>
@@ -1936,62 +1825,34 @@ section{
 
 <body>
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
 
-<header class="header" id="header">
+<!-- =======================================================
+     HEADER
+======================================================= -->
+
+<header class="header">
 
   <div class="header-inner">
 
-    <a href="#top" class="logo" aria-label="株式会社山源">
+    <a href="#top" class="logo">
 
-      <svg class="logo-symbol" viewBox="0 0 100 100" aria-hidden="true">
+      <div class="logo-mark"></div>
 
-        <circle
-          cx="50"
-          cy="50"
-          r="42"
-          fill="none"
-          stroke="#C9A55C"
-          stroke-width="6"
-          stroke-dasharray="220 264"
-          stroke-dashoffset="-40"
-          transform="rotate(-90 50 50)"
-        />
-
-        <path
-          d="M18 66 L42 30 L54 46 L62 34 L84 66 Z"
-          fill="none"
-          stroke="#FFFFFF"
-          stroke-width="6"
-          stroke-linejoin="round"
-          stroke-linecap="round"
-        />
-
-      </svg>
-
-      <span class="logo-text">
+      <div class="logo-text">
         山源
-        <small class="logo-sub">SANGEN CO., LTD.</small>
-      </span>
+        <span>SANGEN CO., LTD.</span>
+      </div>
 
     </a>
-
 
     <nav class="nav">
 
       <a href="#about">山源とは</a>
-
       <a href="#message">代表メッセージ</a>
-
       <a href="#philosophy">理念</a>
-
       <a href="#business">事業内容</a>
-
       <a href="#overview">会社概要</a>
-
-      <a href="#contact" class="header-contact">お問い合わせ</a>
+      <a href="#contact">お問い合わせ</a>
 
     </nav>
 
@@ -2000,298 +1861,149 @@ section{
 </header>
 
 
+
 <main id="top">
 
 
-<!-- =========================================================
+<!-- =======================================================
      HERO
-========================================================= -->
+======================================================= -->
 
 <section class="hero">
 
-  <div class="hero-image">
+  <div class="hero-content">
 
-    <img
-      src="https://i.gyazo.com/270e0d151169f3a2d03f76c919125031.jpg"
-      alt="株式会社山源 会社紹介"
-      loading="eager"
-    >
+    <div class="hero-label">
+      RENEWABLE ENERGY COMPANY
+    </div>
 
-  </div>
+    <h1 class="hero-title">
+      正しい在り方で、<br>
+      <strong>正しく勝つ。</strong>
+    </h1>
 
-  <div class="hero-overlay"></div>
+    <div class="hero-line"></div>
 
+    <p class="hero-description">
 
-  <div class="container">
+      株式会社山源は、太陽光発電・蓄電池を中心とした
+      再生可能エネルギー事業を通じて、
+      人を育て、信頼を積み、人と資源が集まる
+      「源」となることを目指す会社です。
 
-    <div class="hero-content reveal">
+    </p>
 
-      <div class="hero-kicker">
-        RENEWABLE ENERGY COMPANY
-      </div>
+    <div class="hero-buttons">
 
-      <h1>
-        正しい在り方で、<br>
-        <span>正しく勝つ。</span>
-      </h1>
+      <a href="#business"
+         class="button button-primary">
+        事業内容を見る
+      </a>
 
-      <p class="hero-copy">
-        株式会社山源は、太陽光発電・蓄電池を中心とした
-        再生可能エネルギー事業を主軸に、
-        住まいと暮らしに関わるサービスを提供する会社です。
-      </p>
-
-      <div class="hero-buttons">
-
-        <a href="#business" class="btn btn-gold">
-          事業内容を見る
-        </a>
-
-        <a href="#overview" class="btn btn-outline">
-          会社概要を見る
-        </a>
-
-      </div>
-
-      <div class="hero-bottom">
-
-        <span class="hero-bottom-line"></span>
-
-        SCROLL TO EXPLORE
-
-      </div>
+      <a href="#contact"
+         class="button button-secondary">
+        お問い合わせ
+      </a>
 
     </div>
 
   </div>
 
-</section>
 
+  <div class="hero-panel">
 
-<!-- =========================================================
-     COMPANY PROFILE IMAGE
-========================================================= -->
-
-<section class="profile">
-
-  <div class="container">
-
-    <div class="profile-heading reveal">
-
-      <div>
-
-        <div class="section-label">
-          COMPANY PROFILE
-        </div>
-
-        <h2 class="section-title">
-          未来の暮らしを、<br>
-          正しい選択から。
-        </h2>
-
-      </div>
-
-      <p class="profile-intro">
-
-        太陽光発電・蓄電池を中心に、
-        お客様の暮らしに本当に必要な選択肢を考える。
-
-        山源は、ただ商品を販売するのではなく、
-        正しい情報と適正な価格をもとに、
-        長く安心していただける提案を目指します。
-
-      </p>
-
+    <div class="hero-panel-label">
+      CORPORATE PHILOSOPHY
     </div>
 
-
-    <div class="profile-image reveal">
-
-      <img
-        src="https://i.gyazo.com/8dd81fa78e006dd83972a2613876dd86.jpg"
-        alt="山源が目指す業界への想い"
-        loading="lazy"
-      >
-
+    <div class="hero-panel-title">
+      人を育て、信頼を積み、<br>
+      人と資源が集まる源となる。
     </div>
+
+    <p class="hero-panel-text">
+      良い人、良い情報、良い取引先、良い商品や技術が集まり、
+      それらを社会にとって新しい価値へと変えていく。
+    </p>
 
   </div>
 
 </section>
 
 
-<!-- =========================================================
-     VISUAL STORY 01
-========================================================= -->
 
-<section class="visual-story">
-
-  <div class="visual-item reveal">
-
-    <img
-      src="https://i.gyazo.com/437e30049d7ca7fa8cf352358a0a199a.jpg"
-      alt="株式会社山源の価値最大化への取り組み"
-      loading="lazy"
-    >
-
-    <div class="visual-caption">
-
-      <span>
-        VALUE CREATION
-      </span>
-
-      <strong>
-        見えない部分まで、こだわり抜く。
-      </strong>
-
-    </div>
-
-  </div>
-
-
-  <div class="visual-item reveal">
-
-    <img
-      src="https://i.gyazo.com/f763f636cc45d326b1ad1d5fc8373487.jpg"
-      alt="株式会社山源の提案プロセス"
-      loading="lazy"
-    >
-
-    <div class="visual-caption">
-
-      <span>
-        PROPOSAL PROCESS
-      </span>
-
-      <strong>
-        正しい提案を、正しいプロセスで。
-      </strong>
-
-    </div>
-
-  </div>
-
-
-  <div class="visual-item reveal">
-
-    <img
-      src="https://i.gyazo.com/39d9d3506c95b52cb03d47477e9b4d1a.jpg"
-      alt="株式会社山源の理念"
-      loading="lazy"
-    >
-
-    <div class="visual-caption">
-
-      <span>
-        MISSION / VISION / VALUES
-      </span>
-
-      <strong>
-        人・情報・資源が集まり、価値が生まれる源へ。
-      </strong>
-
-    </div>
-
-  </div>
-
-
-  <div class="visual-item reveal">
-
-    <img
-      src="https://i.gyazo.com/a9ef0dff089af4433d103da0f5ea8725.jpg"
-      alt="株式会社山源 会社紹介資料"
-      loading="lazy"
-    >
-
-    <div class="visual-caption">
-
-      <span>
-        SANGEN COMPANY
-      </span>
-
-      <strong>
-        山源の考え方と事業への想い。
-      </strong>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
+<!-- =======================================================
      ABOUT
-========================================================= -->
+======================================================= -->
 
 <section class="about" id="about">
 
   <div class="container">
 
-    <div class="section-label reveal">
-      ABOUT SANGEN
+    <div class="reveal">
+
+      <div class="section-label">
+        ABOUT SANGEN
+      </div>
+
+      <h2 class="section-title">
+        山源とは、何者か。
+      </h2>
+
     </div>
+
 
     <div class="about-grid">
 
-      <div class="reveal">
+      <div class="about-copy reveal">
 
-        <h2 class="section-title">
-          山源とは、<br>
-          何者か。
-        </h2>
+        <p>
+          株式会社山源は、
+          <strong>
+            太陽光発電・蓄電池を中心とした
+            再生可能エネルギー事業
+          </strong>
+          を主軸に、住まいと暮らしに関わるサービスを提供する会社です。
+        </p>
 
-        <div class="gold-line"></div>
+        <p>
+          現在の主力事業は住宅用太陽光発電・蓄電池。
+          その周辺領域として、新電力、ウォーターサーバー、
+          不動産仲介、生活関連商品など、
+          暮らしに関係するサービスを展開しています。
+        </p>
 
-        <div class="about-copy">
+        <p>
+          山源が目指しているのは、
+          単に商品を販売する会社でも、
+          単に売上の大きな会社でもありません。
+        </p>
 
-          <p>
-            株式会社山源は、
-            <strong>太陽光発電・蓄電池を中心とした再生可能エネルギー事業</strong>
-            を主軸に、住まいと暮らしに関わるサービスを提供する会社です。
-          </p>
+        <p>
+          <strong>
+            人を育て、信頼を積み、
+            人と資源が集まる「源」となる。
+          </strong>
+        </p>
 
-          <p>
-            現在の主力事業は住宅用太陽光発電・蓄電池。
-            その周辺領域として、新電力、ウォーターサーバー、
-            不動産仲介、生活関連商品など、
-            暮らしに関係するサービスを展開しています。
-          </p>
-
-          <p>
-            山源が目指しているのは、
-            単に商品を販売する会社でも、
-            単に売上の大きな会社でもありません。
-          </p>
-
-          <p>
-            <strong>
-              人を育て、信頼を積み、
-              人と資源が集まる「源」となる。
-            </strong>
-          </p>
-
-          <p>
-            良い人、良い情報、良い取引先、
-            良い商品や技術が集まり、
-            それらを社会にとって新しい価値へと変えていく。
-          </p>
-
-        </div>
+        <p>
+          良い人、良い情報、良い取引先、
+          良い商品や技術が集まり、
+          それらを社会にとって新しい価値へと変えていく。
+        </p>
 
       </div>
 
 
-      <div class="about-quote reveal">
+      <div class="about-card reveal">
 
-        <div class="about-quote-label">
+        <div class="about-card-label">
           CORPORATE PHILOSOPHY
         </div>
 
         <h3>
           人を育て、信頼を積み、<br>
-          人と資源が集まる<br>
-          「源」となる。
+          人と資源が集まる源となる。
         </h3>
 
         <p>
@@ -2310,89 +2022,71 @@ section{
 </section>
 
 
-<!-- =========================================================
+
+<!-- =======================================================
      MESSAGE
-========================================================= -->
+======================================================= -->
 
 <section class="message" id="message">
 
   <div class="container">
 
-    <div class="section-label reveal">
-      MESSAGE
+    <div class="reveal">
+
+      <div class="section-label">
+        MESSAGE
+      </div>
+
+      <h2 class="section-title">
+        代表メッセージ
+      </h2>
+
     </div>
 
-    <h2 class="section-title reveal">
-      代表メッセージ
-    </h2>
+
+    <div class="message-grid">
 
 
-    <div class="message-grid" style="margin-top:55px;">
+      <div class="message-profile reveal">
 
-      <div class="message-card reveal">
+        <div class="profile-symbol"></div>
 
-        <div class="message-avatar">
-
-          <svg viewBox="0 0 100 100" aria-hidden="true">
-
-            <circle
-              cx="50"
-              cy="50"
-              r="42"
-              fill="none"
-              stroke="#C9A55C"
-              stroke-width="6"
-              stroke-dasharray="220 264"
-              stroke-dashoffset="-40"
-              transform="rotate(-90 50 50)"
-            />
-
-            <path
-              d="M18 66 L42 30 L54 46 L62 34 L84 66 Z"
-              fill="none"
-              stroke="#FFFFFF"
-              stroke-width="6"
-              stroke-linejoin="round"
-              stroke-linecap="round"
-            />
-
-          </svg>
-
-        </div>
-
-        <div class="message-role">
+        <div class="profile-role">
           REPRESENTATIVE DIRECTOR
         </div>
 
-        <div class="message-name">
+        <div class="profile-name">
           渕上 哲汰
         </div>
 
-        <div class="message-name-en">
+        <div class="profile-name-en">
           TETSUTA FUCHIKAMI
         </div>
 
-        <div class="message-position">
+        <p style="
+          margin-top:25px;
+          color:#777;
+          font-size:12px;
+        ">
           代表取締役<br>
           株式会社山源
-        </div>
+        </p>
 
       </div>
 
 
-      <div class="message-body reveal">
+      <div class="message-content reveal">
 
         <p class="message-lead">
-          「正しい在り方で、<br>
-          正しく勝つ。」
+          「正しい在り方で、正しく勝つ。」
         </p>
 
         <p>
           山源は、太陽光発電・蓄電池という
           高額な商品を扱う会社です。
-          だからこそ、お客様との間に生まれやすい情報格差を
-          利用するのではなく、
-          知ってもらったうえで選んでいただく——
+          だからこそ、お客様との間に生まれやすい
+          情報格差を利用するのではなく、
+          知ってもらったうえで選んでいただく。
           そういう商売のかたちにこだわっています。
         </p>
 
@@ -2400,9 +2094,6 @@ section{
           強引な営業をしない。
           嘘をついて売らない。
           お客様が理解していない状態で契約を取らない。
-        </p>
-
-        <p>
           当たり前のことのようですが、
           この業界において簡単なことではないと感じています。
         </p>
@@ -2417,13 +2108,8 @@ section{
           仕入れ・流通・販売のコストを見直し、
           企業努力によって生まれた余力を
           お客様への価格に還元する。
-        </p>
-
-        <p>
           安売りではなく、
           正しい商品を正しい価格でお届けする。
-          その姿勢を貫いた先で、
-          選ばれる会社になりたいと思っています。
         </p>
 
         <p>
@@ -2436,13 +2122,18 @@ section{
           目の前の一件だけでなく信頼を積み重ね、
           人を育てることで会社を育てていく。
           良い人、良い情報、良い取引先が自然と集まる
-          「源」となり、
-          そこで生まれたものを社会への価値に変えていく。
+          「源」となり、そこで生まれたものを
+          社会への価値に変えていく。
         </p>
 
         <div class="message-sign">
-          株式会社山源<br>
-          代表取締役　渕上 哲汰
+
+          株式会社山源
+
+          <strong>
+            代表取締役　渕上 哲汰
+          </strong>
+
         </div>
 
       </div>
@@ -2454,15 +2145,16 @@ section{
 </section>
 
 
-<!-- =========================================================
+
+<!-- =======================================================
      PHILOSOPHY
-========================================================= -->
+======================================================= -->
 
 <section class="philosophy" id="philosophy">
 
   <div class="container">
 
-    <div class="philosophy-head reveal">
+    <div class="reveal">
 
       <div class="section-label">
         OUR STANCE
@@ -2470,11 +2162,10 @@ section{
 
       <h2 class="section-title">
         誠実であることと、<br>
-        強い会社であることは<br>
-        両立できる。
+        強い会社であることは両立できる。
       </h2>
 
-      <p class="section-lead">
+      <p class="section-description">
         特に太陽光発電は高額な商品であり、
         お客様には「適正価格が分からない」
         「本当に必要か判断しづらい」といった
@@ -2487,6 +2178,7 @@ section{
 
 
     <div class="philosophy-grid reveal">
+
 
       <div class="philosophy-card">
 
@@ -2504,7 +2196,7 @@ section{
           強引な営業をしない。
           情報格差を利用して高く売らない。
           お客様が理解し、納得したうえで
-          選んでいただく。
+          選んでいただくことを大切にしています。
         </p>
 
       </div>
@@ -2546,10 +2238,11 @@ section{
           すでに他社から提案を受けている
           お客様も歓迎します。
           メーカー・容量・施工内容・保証などを
-          同等条件で比較します。
+          同等条件で比較し、ご提案します。
         </p>
 
       </div>
+
 
     </div>
 
@@ -2558,50 +2251,55 @@ section{
 </section>
 
 
-<!-- =========================================================
+
+<!-- =======================================================
      BUSINESS
-========================================================= -->
+======================================================= -->
 
 <section class="business" id="business">
 
   <div class="container">
 
-    <div class="section-label reveal">
-      BUSINESS
+    <div class="reveal">
+
+      <div class="section-label">
+        BUSINESS
+      </div>
+
+      <h2 class="section-title">
+        事業内容
+      </h2>
+
+      <p class="section-description">
+        太陽光を入口として商品を売り込むのではなく、
+        「住まいと暮らしについて相談できる会社」へ。
+        二つの事業領域で、暮らしに関わる価値を提供します。
+      </p>
+
     </div>
-
-    <h2 class="section-title reveal">
-      事業内容
-    </h2>
-
-    <p class="section-lead reveal">
-      太陽光を入口として商品を売り込むのではなく、
-      「住まいと暮らしについて相談できる会社」へ。
-      二つの事業領域で、暮らしに関わる価値を提供します。
-    </p>
 
 
     <div class="business-grid reveal">
 
+
       <div class="business-card">
 
         <div class="business-number">
-          MAIN BUSINESS
+          01 / MAIN BUSINESS
         </div>
 
         <h3>
           再生可能エネルギー事業
         </h3>
 
-        <p class="lead">
+        <p>
           山源ブランドの中心となる事業領域です。
         </p>
 
-        <ul>
+        <ul class="business-list">
 
           <li>
-            住宅用太陽光発電・蓄電池設備の設置、
-            施工、販売、メンテナンス
+            住宅用太陽光発電・蓄電池設備の設置、施工、販売、メンテナンス
           </li>
 
           <li>
@@ -2624,27 +2322,26 @@ section{
       <div class="business-card">
 
         <div class="business-number">
-          LIFE SUPPORT BUSINESS
+          02 / LIFE SUPPORT
         </div>
 
         <h3>
           ライフライン・生活支援事業
         </h3>
 
-        <p class="lead">
+        <p>
           太陽光の先にある、
           暮らし全体への広がりです。
         </p>
 
-        <ul>
+        <ul class="business-list">
 
           <li>
             新電力・電力小売事業の取次
           </li>
 
           <li>
-            ウォーターサーバー・
-            ミネラルウォーターの販売
+            ウォーターサーバー・ミネラルウォーターの販売
           </li>
 
           <li>
@@ -2659,6 +2356,7 @@ section{
 
       </div>
 
+
     </div>
 
   </div>
@@ -2666,24 +2364,30 @@ section{
 </section>
 
 
-<!-- =========================================================
+
+<!-- =======================================================
      STRENGTHS
-========================================================= -->
+======================================================= -->
 
 <section class="strengths">
 
   <div class="container">
 
-    <div class="section-label reveal">
-      STRENGTHS
-    </div>
+    <div class="reveal">
 
-    <h2 class="section-title reveal">
-      山源の強み
-    </h2>
+      <div class="section-label">
+        STRENGTHS
+      </div>
+
+      <h2 class="section-title">
+        山源の強み
+      </h2>
+
+    </div>
 
 
     <div class="strength-grid reveal">
+
 
       <div class="strength-card">
 
@@ -2691,9 +2395,9 @@ section{
           01
         </div>
 
-        <h4>
+        <h3>
           価格競争力
-        </h4>
+        </h3>
 
         <p>
           仕入れ・流通・販売コストを
@@ -2710,12 +2414,13 @@ section{
           02
         </div>
 
-        <h4>
+        <h3>
           営業力・実行力
-        </h4>
+        </h3>
 
         <p>
-          訪問、電話、紹介など複数の顧客接点を持ち、
+          訪問、電話、紹介など
+          複数の顧客接点を持ち、
           自ら市場を開拓できます。
         </p>
 
@@ -2728,13 +2433,14 @@ section{
           03
         </div>
 
-        <h4>
+        <h3>
           提案力
-        </h4>
+        </h3>
 
         <p>
           単一商品を売るのではなく、
-          住宅や生活状況に合わせて提案します。
+          住宅や生活状況に合わせて
+          提案します。
         </p>
 
       </div>
@@ -2746,9 +2452,9 @@ section{
           04
         </div>
 
-        <h4>
+        <h3>
           暮らしへの横断的な対応
-        </h4>
+        </h3>
 
         <p>
           太陽光だけでなく、
@@ -2765,9 +2471,9 @@ section{
           05
         </div>
 
-        <h4>
+        <h3>
           人材育成
-        </h4>
+        </h3>
 
         <p>
           営業を属人的な能力だけにせず、
@@ -2783,9 +2489,9 @@ section{
           06
         </div>
 
-        <h4>
+        <h3>
           信頼
-        </h4>
+        </h3>
 
         <p>
           一度の契約より、
@@ -2794,6 +2500,7 @@ section{
 
       </div>
 
+
     </div>
 
   </div>
@@ -2801,24 +2508,30 @@ section{
 </section>
 
 
-<!-- =========================================================
+
+<!-- =======================================================
      HISTORY
-========================================================= -->
+======================================================= -->
 
 <section class="history">
 
   <div class="container">
 
-    <div class="section-label reveal">
-      HISTORY
-    </div>
+    <div class="reveal">
 
-    <h2 class="section-title reveal">
-      沿革
-    </h2>
+      <div class="section-label">
+        HISTORY
+      </div>
+
+      <h2 class="section-title">
+        沿革
+      </h2>
+
+    </div>
 
 
     <div class="history-list reveal">
+
 
       <div class="history-row">
 
@@ -2832,9 +2545,11 @@ section{
             株式会社山源 設立
           </strong>
 
-          福岡県福岡市博多区にて、
-          太陽光発電・蓄電池を中心とした
-          再生可能エネルギー事業を目的に設立。
+          <span>
+            福岡県福岡市博多区にて、
+            太陽光発電・蓄電池を中心とした
+            再生可能エネルギー事業を目的に設立。
+          </span>
 
         </div>
 
@@ -2853,15 +2568,18 @@ section{
             暮らしに関わる事業領域へ
           </strong>
 
-          住宅用太陽光発電・蓄電池を主軸に、
-          新電力、ウォーターサーバー、
-          不動産仲介など、
-          住まいと暮らしに関わるサービスへ
-          事業を広げてまいります。
+          <span>
+            住宅用太陽光発電・蓄電池を主軸に、
+            新電力、ウォーターサーバー、
+            不動産仲介など、
+            住まいと暮らしに関わるサービスへ
+            事業を広げてまいります。
+          </span>
 
         </div>
 
       </div>
+
 
     </div>
 
@@ -2870,36 +2588,32 @@ section{
 </section>
 
 
-<!-- =========================================================
+
+<!-- =======================================================
      COMPANY OVERVIEW
-========================================================= -->
+======================================================= -->
 
 <section class="overview" id="overview">
 
   <div class="container">
 
-    <div class="section-label reveal">
-      COMPANY OVERVIEW
+    <div class="reveal">
+
+      <div class="section-label">
+        COMPANY OVERVIEW
+      </div>
+
+      <h2 class="section-title">
+        会社概要
+      </h2>
+
     </div>
 
-    <h2 class="section-title reveal">
-      会社概要
-    </h2>
+
+    <div class="overview-layout">
 
 
-    <div class="overview-grid">
-
-      <div class="overview-side reveal">
-
-        <div class="overview-image">
-
-          <img
-            src="https://i.gyazo.com/270e0d151169f3a2d03f76c919125031.jpg"
-            alt="株式会社山源"
-            loading="lazy"
-          >
-
-        </div>
+      <div class="overview-intro reveal">
 
         <h3>
           再生可能エネルギーを、<br>
@@ -2910,6 +2624,9 @@ section{
           一軒の太陽光発電設備は小さくても、
           それが何千、何万世帯と広がれば
           社会は変わります。
+        </p>
+
+        <p style="margin-top:15px;">
           目の前の家庭の暮らしと、
           その先にある未来。
           その両方に価値を提供することが、
@@ -2977,41 +2694,21 @@ section{
 
           <tr>
             <th>事業内容</th>
-
             <td>
-
-              <ul class="purpose-list">
-
-                <li>
-                  太陽光発電システム・蓄電池の販売・施工・保守
-                </li>
-
-                <li>
-                  電力・ガス・通信等ライフライン商材の販売
-                </li>
-
-                <li>
-                  法人向け営業支援・コンサルティング
-                </li>
-
-                <li>
-                  住宅リフォーム・省エネ関連機器の販売
-                </li>
-
-                <li>
-                  不動産の売買・仲介・コンサルティング
-                </li>
-
-              </ul>
-
+              太陽光発電システム・蓄電池の販売・施工・保守<br>
+              電力・ガス・通信等ライフライン商材の販売<br>
+              法人向け営業支援・コンサルティング<br>
+              住宅リフォーム・省エネ関連機器の販売<br>
+              不動産の売買・仲介・コンサルティング
             </td>
-
           </tr>
 
           <tr>
             <th>取引銀行</th>
             <td>
-              福岡銀行、PayPay銀行、西日本シティ銀行
+              福岡銀行<br>
+              PayPay銀行<br>
+              西日本シティ銀行
             </td>
           </tr>
 
@@ -3041,36 +2738,31 @@ section{
 </section>
 
 
-<!-- =========================================================
+
+<!-- =======================================================
      VISION
-========================================================= -->
+======================================================= -->
 
 <section class="vision">
 
-  <div class="container">
+  <div class="container reveal">
 
-    <div class="section-label reveal">
+    <div class="section-label">
       BRAND VISION
     </div>
 
-    <h2 class="reveal">
-
+    <h2>
       人・情報・資源が集まり、<br>
-      新しい価値が生まれる<span>源</span>へ。
-
+      新しい価値が生まれる源へ。
     </h2>
 
-    <p class="reveal">
-
+    <p>
       山源だから相談する。<br>
       山源だから買う。<br>
       山源だから一緒に仕事をする。
-
       <br><br>
-
       そう言っていただける会社を、
       長期的なゴールとして目指しています。
-
     </p>
 
   </div>
@@ -3078,30 +2770,19 @@ section{
 </section>
 
 
-<!-- =========================================================
+
+<!-- =======================================================
      CONTACT
-========================================================= -->
+======================================================= -->
 
 <section class="contact" id="contact">
 
-  <div class="contact-background">
+  <div class="container">
 
-    <img
-      src="https://i.gyazo.com/270e0d151169f3a2d03f76c919125031.jpg"
-      alt=""
-      loading="lazy"
-    >
-
-    <div class="contact-overlay"></div>
-
-  </div>
+    <div class="contact-layout">
 
 
-  <div class="container contact-inner">
-
-    <div class="contact-grid">
-
-      <div class="reveal">
+      <div class="contact-intro reveal">
 
         <div class="section-label">
           CONTACT
@@ -3113,7 +2794,7 @@ section{
           まずはご相談ください。
         </h2>
 
-        <p class="contact-description">
+        <p>
           太陽光発電・蓄電池の導入、
           電気料金のご相談など、
           お気軽にお問い合わせください。
@@ -3122,59 +2803,54 @@ section{
       </div>
 
 
-      <div class="contact-card reveal">
+      <div class="contact-box reveal">
 
         <div class="contact-row">
 
-          <span class="contact-key">
+          <div class="contact-row-label">
             TEL
-          </span>
+          </div>
 
-          <a
-            href="tel:07053057600"
-            class="contact-value"
-          >
+          <div class="contact-row-value">
             070-5305-7600
-          </a>
+          </div>
 
         </div>
 
 
         <div class="contact-row">
 
-          <span class="contact-key">
+          <div class="contact-row-label">
             MAIL
-          </span>
+          </div>
 
-          <a
-            href="mailto:info@yamagen21.co.jp"
-            class="contact-value"
-          >
+          <div class="contact-row-value">
             info@yamagen21.co.jp
-          </a>
+          </div>
 
         </div>
 
 
         <div class="contact-row">
 
-          <span class="contact-key">
+          <div class="contact-row-label">
             ADDRESS
-          </span>
+          </div>
 
-          <span class="contact-value">
+          <div class="contact-row-value">
             福岡県福岡市博多区博多駅前1丁目23-2<br>
             Park Front 博多駅前 8F
-          </span>
+          </div>
 
         </div>
 
 
         <a
           href="mailto:info@yamagen21.co.jp"
-          class="contact-button"
-        >
+          class="contact-button">
+
           メールでお問い合わせする
+
         </a>
 
       </div>
@@ -3189,67 +2865,18 @@ section{
 </main>
 
 
-<!-- =========================================================
-     MOBILE CTA
-========================================================= -->
 
-<div class="mobile-cta">
-
-  <a href="tel:07053057600">
-    電話する
-  </a>
-
-  <a href="#overview">
-    会社概要
-  </a>
-
-  <a href="mailto:info@yamagen21.co.jp">
-    お問い合わせ
-  </a>
-
-</div>
-
-
-<!-- =========================================================
+<!-- =======================================================
      FOOTER
-========================================================= -->
+======================================================= -->
 
 <footer class="footer">
 
-  <div class="container footer-inner">
+  <div class="footer-inner">
 
     <div class="footer-logo">
-
-      <svg viewBox="0 0 100 100" aria-hidden="true">
-
-        <circle
-          cx="50"
-          cy="50"
-          r="42"
-          fill="none"
-          stroke="#C9A55C"
-          stroke-width="6"
-          stroke-dasharray="220 264"
-          stroke-dashoffset="-40"
-          transform="rotate(-90 50 50)"
-        />
-
-        <path
-          d="M18 66 L42 30 L54 46 L62 34 L84 66 Z"
-          fill="none"
-          stroke="#FFFFFF"
-          stroke-width="6"
-          stroke-linejoin="round"
-          stroke-linecap="round"
-        />
-
-      </svg>
-
-      株式会社山源
-      SANGEN Co., Ltd.
-
+      株式会社山源　SANGEN Co., Ltd.
     </div>
-
 
     <div class="footer-copy">
       © 2026 SANGEN Co., Ltd. All Rights Reserved.
@@ -3260,31 +2887,15 @@ section{
 </footer>
 
 
+
+<!-- =======================================================
+     JAVASCRIPT
+======================================================= -->
+
 <script>
 
-/* =========================================================
-   HEADER SCROLL
-========================================================= */
-
-const header = document.getElementById('header');
-
-window.addEventListener('scroll', () => {
-
-  if(window.scrollY > 40){
-    header.classList.add('scrolled');
-  }else{
-    header.classList.remove('scrolled');
-  }
-
-});
-
-
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
-
 const revealElements =
-  document.querySelectorAll('.reveal');
+  document.querySelectorAll(".reveal");
 
 const observer =
   new IntersectionObserver(
@@ -3293,9 +2904,9 @@ const observer =
 
       entries.forEach((entry) => {
 
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
 
-          entry.target.classList.add('show');
+          entry.target.classList.add("active");
 
           observer.unobserve(entry.target);
 
@@ -3306,7 +2917,7 @@ const observer =
     },
 
     {
-      threshold:.12
+      threshold: 0.12
     }
 
   );
@@ -3319,53 +2930,8 @@ revealElements.forEach((element) => {
 });
 
 
-/* =========================================================
-   IMAGE FALLBACK
-========================================================= */
-
-document.querySelectorAll('img').forEach((img) => {
-
-  img.addEventListener('error', () => {
-
-    img.style.background =
-      'linear-gradient(135deg,#071525,#05070A)';
-
-    img.style.minHeight = '180px';
-
-    img.alt = '株式会社山源';
-
-  });
-
-});
-
-
-/* =========================================================
-   SMOOTH ANCHOR
-========================================================= */
-
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-
-  anchor.addEventListener('click', function(e){
-
-    const target =
-      document.querySelector(this.getAttribute('href'));
-
-    if(target){
-
-      e.preventDefault();
-
-      target.scrollIntoView({
-        behavior:'smooth',
-        block:'start'
-      });
-
-    }
-
-  });
-
-});
-
 </script>
+
 
 </body>
 </html>
