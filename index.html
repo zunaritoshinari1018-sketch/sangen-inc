@@ -40,10 +40,20 @@
 
   --red:#E63946;
 
-  /* 黒みのある落ち着いたゴールド */
-  --muted-gold:#75684D;
+  /*
+  ========================================
+  メタリックゴールド
+  指定カラーを基準に調整
+  ========================================
+  */
+  --gold:#B8860B;
+  --gold-light:#E6CA65;
+  --gold-highlight:#FFF8DC;
+  --gold-dark:#AA771C;
 
-  --muted-gold-light:#A79A7B;
+  /* 既存コードとの互換用 */
+  --muted-gold:#B8860B;
+  --muted-gold-light:#E6CA65;
 
   --gray:#64748B;
 
@@ -57,6 +67,17 @@
   --shadow:0 14px 34px rgba(59,46,22,.055);
 
   --shadow-soft:0 6px 18px rgba(59,46,22,.035);
+
+  /* 指定されたメタリックゴールド */
+  --metallic-gold:
+    linear-gradient(
+      135deg,
+      #B8860B 0%,
+      #E6CA65 30%,
+      #FFF8DC 50%,
+      #E6CA65 70%,
+      #AA771C 100%
+    );
 
 }
 
@@ -193,7 +214,7 @@ header{
 
   backdrop-filter:blur(18px);
 
-  border-bottom:1px solid rgba(117,104,77,.16);
+  border-bottom:1px solid rgba(184,134,11,.24);
 
 }
 
@@ -297,9 +318,9 @@ nav a::after{
 
   width:0;
 
-  height:1px;
+  height:2px;
 
-  background:var(--muted-gold);
+  background:var(--metallic-gold);
 
   transition:.3s;
 
@@ -426,9 +447,12 @@ HERO
 
   width:42px;
 
-  height:1px;
+  height:2px;
 
-  background:var(--muted-gold-light);
+  background:var(--metallic-gold);
+
+  box-shadow:
+    0 0 8px rgba(230,202,101,.16);
 
 }
 
@@ -500,19 +524,27 @@ HERO
 
 .btn-primary{
 
-  background:var(--blue);
+  background:var(--metallic-gold);
 
-  color:var(--white);
+  color:#2D1E08;
 
-  border-color:var(--blue);
+  border-color:#B8860B;
+
+  font-weight:800;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.45),
+    inset 0 -1px 0 rgba(120,75,0,.28);
 
 }
 
 .btn-primary:hover{
 
-  background:#006FD6;
+  filter:brightness(1.06);
 
-  border-color:#006FD6;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.52),
+    0 6px 16px rgba(184,134,11,.16);
 
 }
 
@@ -522,15 +554,17 @@ HERO
 
   color:var(--white);
 
-  border-color:rgba(255,255,255,.60);
+  border-color:rgba(230,202,101,.72);
 
 }
 
 .btn-outline:hover{
 
-  background:var(--white);
+  background:var(--metallic-gold);
 
-  color:var(--navy);
+  color:#2D1E08;
+
+  border-color:#B8860B;
 
 }
 
@@ -551,7 +585,7 @@ SECTION TITLE
 
 .eyebrow{
 
-  color:var(--muted-gold);
+  color:var(--gold);
 
   font-size:11px;
 
@@ -600,9 +634,9 @@ PHOTO SYSTEM
 
   min-width:0;
 
-  border-top:1px solid rgba(117,104,77,.30);
+  border-top:1px solid rgba(184,134,11,.46);
 
-  border-bottom:1px solid rgba(117,104,77,.30);
+  border-bottom:1px solid rgba(170,119,28,.38);
 
 }
 
@@ -662,7 +696,7 @@ PHOTO SYSTEM
 
 .photo-caption small{
 
-  color:var(--muted-gold-light);
+  color:var(--gold-light);
 
   display:block;
 
@@ -731,11 +765,13 @@ ABOUT
 
   background:var(--light);
 
-  border-left:3px solid var(--muted-gold);
+  border-left:3px solid #B8860B;
 
   padding:28px 27px;
 
   box-shadow:var(--shadow-soft);
+
+  border-image:var(--metallic-gold) 1;
 
 }
 
@@ -743,7 +779,7 @@ ABOUT
 
   display:block;
 
-  color:var(--muted-gold);
+  color:var(--gold);
 
   font-size:10px;
 
@@ -862,7 +898,7 @@ SOLAR VISUAL
 
 .solar-content .eyebrow{
 
-  color:var(--muted-gold-light);
+  color:var(--gold-light);
 
 }
 
@@ -941,7 +977,7 @@ MESSAGE
 
 .person-role{
 
-  color:var(--muted-gold);
+  color:var(--gold);
 
   font-size:10px;
 
@@ -1113,7 +1149,7 @@ PHILOSOPHY
 
 .card-number{
 
-  color:var(--muted-gold);
+  color:var(--gold);
 
   font-size:11px;
 
@@ -1164,9 +1200,9 @@ PHILOSOPHY VISUAL
 
   overflow:hidden;
 
-  border-top:1px solid rgba(117,104,77,.35);
+  border-top:1px solid rgba(184,134,11,.55);
 
-  border-bottom:1px solid rgba(117,104,77,.35);
+  border-bottom:1px solid rgba(170,119,28,.42);
 
 }
 
@@ -1210,7 +1246,7 @@ PHILOSOPHY VISUAL
 
 .philosophy-visual-head .eyebrow{
 
-  color:var(--muted-gold-light);
+  color:var(--gold-light);
 
 }
 
@@ -1284,9 +1320,9 @@ PHILOSOPHY VISUAL
 
   border-radius:50%;
 
-  background:var(--muted-gold);
+  background:var(--metallic-gold);
 
-  color:var(--white);
+  color:#362307;
 
   display:flex;
 
@@ -1299,6 +1335,10 @@ PHILOSOPHY VISUAL
   font-weight:800;
 
   font-size:11px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.55),
+    inset 0 -1px 0 rgba(110,66,0,.32);
 
 }
 
@@ -1314,7 +1354,7 @@ PHILOSOPHY VISUAL
 
   letter-spacing:.18em;
 
-  color:var(--muted-gold-light);
+  color:var(--gold-light);
 
   font-weight:800;
 
@@ -1372,7 +1412,7 @@ PHILOSOPHY VISUAL
 
   gap:10px;
 
-  border-top:1px solid rgba(117,104,77,.32);
+  border-top:1px solid rgba(184,134,11,.44);
 
 }
 
@@ -1392,13 +1432,17 @@ PHILOSOPHY VISUAL
 
   border-radius:50%;
 
-  background:rgba(117,104,77,.12);
+  background:var(--metallic-gold);
 
-  color:var(--muted-gold);
+  color:#4A310C;
 
   font-size:11px;
 
   font-weight:900;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.55),
+    inset 0 -1px 0 rgba(100,55,0,.25);
 
 }
 
@@ -1520,7 +1564,7 @@ ISSUE VISUAL
 
   box-shadow:var(--shadow);
 
-  border-top:1px solid rgba(117,104,77,.35);
+  border-top:1px solid rgba(184,134,11,.48);
 
 }
 
@@ -1602,9 +1646,9 @@ ISSUE VISUAL
 
   height:16px;
 
-  border-top:2px solid var(--muted-gold-light);
+  border-top:2px solid #E6CA65;
 
-  border-right:2px solid var(--muted-gold-light);
+  border-right:2px solid #E6CA65;
 
   transform:translateY(-50%) rotate(45deg);
 
@@ -1618,7 +1662,7 @@ ISSUE VISUAL
 
   font-size:10px;
 
-  color:var(--muted-gold);
+  color:var(--gold);
 
   letter-spacing:.14em;
 
@@ -1704,7 +1748,7 @@ ISSUE VISUAL
 
 .margin-meter-label strong{
 
-  color:var(--muted-gold);
+  color:var(--gold);
 
   font-size:12px;
 
@@ -1873,7 +1917,7 @@ STRUCTURE
 
 .flow-arrow{
 
-  color:var(--muted-gold);
+  color:var(--gold);
 
   font-weight:700;
 
@@ -2159,11 +2203,11 @@ STRUCTURE
 
   border-radius:50%;
 
-  background:var(--navy);
+  background:var(--metallic-gold);
 
-  color:var(--muted-gold-light);
+  color:#3E2A08;
 
-  border:1px solid rgba(167,154,123,.4);
+  border:1px solid rgba(184,134,11,.72);
 
   display:flex;
 
@@ -2180,6 +2224,11 @@ STRUCTURE
   position:relative;
 
   z-index:2;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.55),
+    inset 0 -1px 0 rgba(100,55,0,.28),
+    0 2px 8px rgba(120,75,0,.12);
 
 }
 
@@ -2217,11 +2266,15 @@ STRUCTURE
 
   padding:16px;
 
-  background:var(--navy);
+  background:var(--metallic-gold);
 
   text-align:center;
 
-  border-top:1px solid rgba(167,154,123,.28);
+  border-top:1px solid rgba(255,255,255,.25);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.36),
+    inset 0 -1px 0 rgba(110,66,0,.24);
 
 }
 
@@ -2229,7 +2282,7 @@ STRUCTURE
 
   display:block;
 
-  color:var(--muted-gold-light);
+  color:#3B2805;
 
   font-size:22px;
 
@@ -2245,7 +2298,7 @@ STRUCTURE
 
   display:block;
 
-  color:var(--white);
+  color:#2D1E08;
 
   font-size:11px;
 
@@ -2255,7 +2308,7 @@ STRUCTURE
 
 .result-box span{
 
-  color:rgba(255,255,255,.52);
+  color:rgba(45,30,8,.68);
 
   font-size:8px;
 
@@ -2298,7 +2351,7 @@ BUSINESS
 
 .business-number{
 
-  color:var(--muted-gold);
+  color:var(--gold);
 
   font-size:11px;
 
@@ -2393,7 +2446,7 @@ BUSINESS PHOTO
 
 .business-gallery .photo-caption small{
 
-  color:var(--muted-gold-light);
+  color:var(--gold-light);
 
 }
 
@@ -2442,7 +2495,7 @@ STRENGTHS
 
 .strength-number{
 
-  color:var(--muted-gold);
+  color:var(--gold);
 
   font-size:25px;
 
@@ -2534,7 +2587,7 @@ HISTORY
 
 .history-date{
 
-  color:var(--muted-gold);
+  color:var(--gold);
 
   font-weight:700;
 
@@ -2595,9 +2648,9 @@ COMPANY
 
   margin-bottom:18px;
 
-  border-top:1px solid rgba(117,104,77,.30);
+  border-top:1px solid rgba(184,134,11,.46);
 
-  border-bottom:1px solid rgba(117,104,77,.30);
+  border-bottom:1px solid rgba(170,119,28,.38);
 
 }
 
@@ -2678,7 +2731,7 @@ GOOGLE MAP
 
 .company-map-head span{
 
-  color:var(--muted-gold);
+  color:var(--gold);
 
   font-size:10px;
 
@@ -2767,9 +2820,9 @@ VISION
 
   padding:65px 0;
 
-  border-top:1px solid rgba(117,104,77,.16);
+  border-top:1px solid rgba(184,134,11,.28);
 
-  border-bottom:1px solid rgba(117,104,77,.16);
+  border-bottom:1px solid rgba(170,119,28,.22);
 
 }
 
@@ -2830,7 +2883,7 @@ CONTACT
 
 .contact .eyebrow{
 
-  color:var(--muted-gold-light);
+  color:var(--gold-light);
 
 }
 
@@ -2862,7 +2915,7 @@ CONTACT
 
   padding:29px;
 
-  border-top:1px solid rgba(167,154,123,.38);
+  border-top:1px solid rgba(184,134,11,.58);
 
 }
 
@@ -2888,7 +2941,7 @@ CONTACT
 
 .contact-label{
 
-  color:var(--muted-gold-light);
+  color:var(--gold-light);
 
   font-size:10px;
 
@@ -2918,9 +2971,9 @@ CONTACT
 
   padding:15px;
 
-  background:var(--blue);
+  background:var(--metallic-gold);
 
-  color:var(--white);
+  color:#2D1E08;
 
   text-align:center;
 
@@ -2928,13 +2981,23 @@ CONTACT
 
   letter-spacing:.12em;
 
+  font-weight:800;
+
   transition:.3s;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.45),
+    inset 0 -1px 0 rgba(110,66,0,.24);
 
 }
 
 .mail-button:hover{
 
-  background:#006FD6;
+  filter:brightness(1.06);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.55),
+    0 6px 16px rgba(184,134,11,.15);
 
 }
 
@@ -2951,7 +3014,7 @@ footer{
 
   padding:27px 0;
 
-  border-top:1px solid rgba(167,154,123,.25);
+  border-top:1px solid rgba(184,134,11,.42);
 
 }
 
@@ -2994,6 +3057,194 @@ footer small{
   color:rgba(255,255,255,.4);
 
   font-size:10px;
+
+}
+
+
+/* =========================
+
+SVG GOLD ACCENTS
+
+========================= */
+
+.brand-mark circle,
+.person-logo circle:last-of-type{
+
+  stroke:url(#goldGradient);
+
+}
+
+
+/* =========================================================
+   METALLIC GOLD FINISH
+   指定カラーを既存デザインへ反映
+   レイアウト・文章・画像・構造は変更しない
+   ========================================================= */
+
+/* ゴールド系テキスト */
+.eyebrow,
+.card-number,
+.business-number,
+.strength-number,
+.history-date,
+.margin-node-number,
+.person-role,
+.quote-label,
+.product-step-number,
+.contact-label,
+.photo-caption small,
+.solar-content .eyebrow,
+.philosophy-visual-head .eyebrow,
+.company-map-head span,
+.flow-arrow,
+.margin-meter-label strong{
+
+  background:var(--metallic-gold);
+
+  -webkit-background-clip:text;
+
+  background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+
+  color:transparent;
+
+}
+
+/* ゴールドのライン・罫線 */
+
+nav a::after{
+
+  background:var(--metallic-gold);
+
+}
+
+.hero-eyebrow::before{
+
+  background:var(--metallic-gold);
+
+}
+
+.quote{
+
+  border-left:3px solid #B8860B;
+
+  border-image:var(--metallic-gold) 1;
+
+}
+
+.vision{
+
+  border-top-color:rgba(184,134,11,.28);
+
+  border-bottom-color:rgba(170,119,28,.22);
+
+}
+
+.contact-card{
+
+  border-top-color:rgba(184,134,11,.58);
+
+}
+
+.photo-frame{
+
+  border-top-color:rgba(184,134,11,.46);
+
+  border-bottom-color:rgba(170,119,28,.38);
+
+}
+
+.overview-image{
+
+  border-top-color:rgba(184,134,11,.46);
+
+  border-bottom-color:rgba(170,119,28,.38);
+
+}
+
+.philosophy-visual{
+
+  border-top-color:rgba(184,134,11,.55);
+
+  border-bottom-color:rgba(170,119,28,.42);
+
+}
+
+.issue-visual{
+
+  border-top-color:rgba(184,134,11,.48);
+
+}
+
+/* ゴールドボタン */
+
+.btn-primary,
+.mail-button{
+
+  background:var(--metallic-gold);
+
+  border-color:#B8860B;
+
+}
+
+/* ゴールド円形アクセント */
+
+.product-step::after{
+
+  background:var(--metallic-gold);
+
+}
+
+.product-point-icon{
+
+  background:var(--metallic-gold);
+
+}
+
+.compare-middle::before{
+
+  background:var(--metallic-gold);
+
+  border-color:rgba(184,134,11,.72);
+
+}
+
+/* 結果ボックス */
+
+.result-box{
+
+  background:var(--metallic-gold);
+
+}
+
+/* 矢印 */
+
+.margin-node:not(:last-child)::after{
+
+  border-top-color:#E6CA65;
+
+  border-right-color:#E6CA65;
+
+}
+
+/* フッター */
+
+footer{
+
+  background:
+
+    linear-gradient(
+
+      145deg,
+
+      #171006 0%,
+
+      #2A1C09 48%,
+
+      #120D04 100%
+
+    );
 
 }
 
@@ -3322,11 +3573,7 @@ RESPONSIVE
   }
 
 
-  /* MESSAGE
-
-  スマホでも3枚を横並びで固定
-
-  */
+  /* MESSAGE */
 
   .message-photo-grid{
 
@@ -3558,8 +3805,6 @@ RESPONSIVE
 
   }
 
-  /* スマホでは縦に見やすくする */
-
   .business-gallery{
 
     grid-template-columns:1fr;
@@ -3740,116 +3985,138 @@ RESPONSIVE
     gap:4px;
 
   }
+
 }
 
 
 /* =========================================================
-   METALLIC GOLD FINISH — VISUAL ONLY
-   Existing HTML structure/layout/content remains unchanged.
+   SVG用ゴールド定義
    ========================================================= */
-:root{
-  --metal-gold-1:#6F4B16;
-  --metal-gold-2:#A87A28;
-  --metal-gold-3:#E1BD68;
-  --metal-gold-4:#9A6E22;
-  --metal-gold-5:#5A3B10;
+
+svg{
+
+  --svg-gold-start:#B8860B;
+
+  --svg-gold-mid:#E6CA65;
+
+  --svg-gold-highlight:#FFF8DC;
+
+  --svg-gold-end:#AA771C;
+
 }
 
-/* Fine metallic highlight for existing gold accents */
-.eyebrow,
-.card-number,
-.business-number,
-.strength-number,
-.history-date,
-.margin-node-number,
-.person-role,
-.quote-label,
-.product-step-number,
-.result-number,
-.contact-label,
-.photo-caption small,
-.solar-content .eyebrow,
-.philosophy-visual-head .eyebrow{
-  background:linear-gradient(
-    135deg,
-    var(--metal-gold-1) 0%,
-    var(--metal-gold-2) 22%,
-    var(--metal-gold-3) 47%,
-    var(--metal-gold-4) 67%,
-    var(--metal-gold-5) 100%
-  );
-  -webkit-background-clip:text;
-  background-clip:text;
-  -webkit-text-fill-color:transparent;
-  color:transparent;
-  text-shadow:0 0 .01px rgba(255,245,210,.35);
+
+/* =========================================================
+   ゴールドアクセント強化
+   ========================================================= */
+
+.brand-text{
+
+  text-shadow:
+    0 0 18px rgba(184,134,11,.04);
+
 }
 
-nav a::after,
-.quote{
-  border-left-color:transparent;
-}
+.section-head .eyebrow,
+.contact .eyebrow,
+.solar-content .eyebrow{
 
-.quote{
-  border-left:3px solid var(--metal-gold-2);
-}
+  text-shadow:
+    0 1px 12px rgba(230,202,101,.08);
 
-.hero-eyebrow::before,
-.margin-node:not(:last-child)::after,
-.photo-frame,
-.overview-image{
-  /* preserve original geometry; only reinforce existing gold edge */
-}
-
-.hero-eyebrow::before{
-  background:linear-gradient(90deg,var(--metal-gold-1),var(--metal-gold-3),var(--metal-gold-2));
-}
-
-nav a::after{
-  background:linear-gradient(90deg,var(--metal-gold-1),var(--metal-gold-3),var(--metal-gold-2));
-}
-
-.product-step::after{
-  background:linear-gradient(145deg,var(--metal-gold-1) 0%,var(--metal-gold-2) 28%,var(--metal-gold-3) 50%,var(--metal-gold-4) 72%,var(--metal-gold-5) 100%);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.42),
-    inset 0 -1px 0 rgba(50,28,0,.28);
-}
-
-.product-point-icon{
-  background:linear-gradient(145deg,#7B571C 0%,#C09A4D 44%,#E7CA83 58%,#8B6220 100%);
-  color:#4A310C;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.42);
-}
-
-.compare-middle::before{
-  background:linear-gradient(145deg,#3D290C 0%,#6E4C16 31%,#B3852F 50%,#5A3C10 73%,#2D1E08 100%);
-  border-color:rgba(225,189,104,.62);
-  box-shadow:inset 0 1px 0 rgba(255,246,214,.28),0 2px 8px rgba(55,34,5,.16);
 }
 
 .result-box{
-  background:linear-gradient(145deg,#3B280C 0%,#5F4112 42%,#8A6120 56%,#2B1C08 100%);
-  box-shadow:inset 0 1px 0 rgba(231,202,131,.14);
+
+  position:relative;
+
+  overflow:hidden;
+
 }
 
-footer{
-  background:linear-gradient(145deg,#171006 0%,#2A1C09 48%,#120D04 100%);
+.result-box::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+
+    linear-gradient(
+
+      110deg,
+
+      rgba(255,255,255,0) 30%,
+
+      rgba(255,255,255,.20) 50%,
+
+      rgba(255,255,255,0) 70%
+
+    );
+
+  transform:translateX(-100%);
+
+  transition:transform .8s ease;
+
+  pointer-events:none;
+
 }
 
-/* Existing gold borders/lines: make their highlight slightly more metallic */
-.vision,
-.contact-card,
-.photo-frame,
-.overview-image,
-.philosophy-visual,
-.issue-visual{
-  border-top-color:rgba(184,145,67,.36);
-  border-bottom-color:rgba(184,145,67,.30);
+.result-box:hover::before{
+
+  transform:translateX(100%);
+
 }
 
-/* No layout, spacing, typography, content, media, or interaction changes. */
+.btn-primary,
+.mail-button{
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+.btn-primary::before,
+.mail-button::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+
+    linear-gradient(
+
+      110deg,
+
+      rgba(255,255,255,0) 30%,
+
+      rgba(255,255,255,.26) 50%,
+
+      rgba(255,255,255,0) 70%
+
+    );
+
+  transform:translateX(-100%);
+
+  transition:transform .75s ease;
+
+}
+
+.btn-primary:hover::before,
+.mail-button:hover::before{
+
+  transform:translateX(100%);
+
+}
+
 </style>
+
 </head>
 
 <body>
@@ -3861,6 +4128,24 @@ footer{
 <a href="#top" class="brand">
 
 <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
+
+<defs>
+
+  <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+
+    <stop offset="0%" stop-color="#B8860B"/>
+
+    <stop offset="30%" stop-color="#E6CA65"/>
+
+    <stop offset="50%" stop-color="#FFF8DC"/>
+
+    <stop offset="70%" stop-color="#E6CA65"/>
+
+    <stop offset="100%" stop-color="#AA771C"/>
+
+  </linearGradient>
+
+</defs>
 
 <circle
 
@@ -3941,9 +4226,7 @@ stroke-linecap="round"
 
 
 <!-- =========================
-
 HERO
-
 ========================= -->
 
 <section class="hero">
@@ -4025,9 +4308,7 @@ RENEWABLE ENERGY COMPANY
 
 
 <!-- =========================
-
 ABOUT
-
 ========================= -->
 
 <section class="about" id="about">
@@ -4171,9 +4452,7 @@ loading="lazy"
 
 
 <!-- =========================
-
 SOLAR VISUAL
-
 ========================= -->
 
 <section class="solar-visual">
@@ -4220,9 +4499,7 @@ SOLAR POWER GENERATION
 
 
 <!-- =========================
-
 MESSAGE
-
 ========================= -->
 
 <section class="message" id="message">
@@ -4282,7 +4559,7 @@ r="32"
 
 fill="none"
 
-stroke="#0084FF"
+stroke="url(#goldGradient)"
 
 stroke-width="5"
 
@@ -4526,9 +4803,7 @@ loading="lazy"
 
 
 <!-- =========================
-
 PHILOSOPHY
-
 ========================= -->
 
 <section class="philosophy" id="philosophy">
@@ -4866,9 +5141,7 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 
 
 <!-- =========================
-
 ISSUES
-
 ========================= -->
 
 <section class="issue">
@@ -5215,9 +5488,7 @@ COST STACKING
 
 
 <!-- =========================
-
 STRUCTURE
-
 ========================= -->
 
 <section class="structure">
@@ -5663,9 +5934,7 @@ SANGEN MODEL
 
 
 <!-- =========================
-
 BUSINESS
-
 ========================= -->
 
 <section class="business" id="business">
@@ -5805,12 +6074,6 @@ LIFE SUPPORT BUSINESS
 </div>
 
 
-<!--
-
-3枚の異なる写真を完全横並び
-
--->
-
 <div class="business-gallery">
 
 <div class="photo-frame">
@@ -5907,9 +6170,7 @@ loading="lazy"
 
 
 <!-- =========================
-
 STRENGTHS
-
 ========================= -->
 
 <section class="strengths">
@@ -6087,14 +6348,6 @@ STRENGTHS
 </div>
 
 
-<!--
-
-3枚完全横並び
-
-すべて異なる写真
-
--->
-
 <div class="strength-photo-band">
 
 <div class="photo-frame">
@@ -6191,9 +6444,7 @@ loading="lazy"
 
 
 <!-- =========================
-
 HISTORY
-
 ========================= -->
 
 <section class="history">
@@ -6280,9 +6531,7 @@ HISTORY
 
 
 <!-- =========================
-
 COMPANY
-
 ========================= -->
 
 <section class="overview" id="overview">
@@ -6538,9 +6787,7 @@ info@yamagen21.co.jp
 
 
 <!-- =========================
-
 VISION
-
 ========================= -->
 
 <section class="vision">
@@ -6583,9 +6830,7 @@ BRAND VISION
 
 
 <!-- =========================
-
 CONTACT
-
 ========================= -->
 
 <section class="contact" id="contact">
@@ -6699,9 +6944,7 @@ href="mailto:info@yamagen21.co.jp"
 
 
 <!-- =========================
-
 FOOTER
-
 ========================= -->
 
 <footer>
@@ -6711,6 +6954,24 @@ FOOTER
 <div class="footer-brand">
 
 <svg viewBox="0 0 100 100">
+
+<defs>
+
+  <linearGradient id="footerGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+
+    <stop offset="0%" stop-color="#B8860B"/>
+
+    <stop offset="30%" stop-color="#E6CA65"/>
+
+    <stop offset="50%" stop-color="#FFF8DC"/>
+
+    <stop offset="70%" stop-color="#E6CA65"/>
+
+    <stop offset="100%" stop-color="#AA771C"/>
+
+  </linearGradient>
+
+</defs>
 
 <circle
 
@@ -6722,7 +6983,7 @@ r="42"
 
 fill="none"
 
-stroke="#0084FF"
+stroke="url(#footerGoldGradient)"
 
 stroke-width="6"
 
