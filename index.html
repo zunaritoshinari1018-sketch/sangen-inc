@@ -17,9 +17,12 @@
 
 :root{
   --white:#FFFFFF;
-  --luxury-white:#F7F5F0;
-  --light:#F0F2F3;
-  --light-gray:#E5E9EC;
+
+  /* 高級感のある白 */
+  --luxury-white:#F5F2EA;
+
+  --light:#F0F1F0;
+  --light-gray:#E7E7E3;
 
   --navy:#0E1A2A;
   --charcoal:#1F2937;
@@ -29,14 +32,20 @@
 
   --red:#E63946;
 
+  /* くすみのある黒系ゴールド */
+  --muted-gold:#8B8064;
+  --muted-gold-light:#B0A58B;
+
   --gray:#64748B;
-  --gray-light:#CBD5E1;
-  --line:#D7DDE2;
+  --gray-light:#C9C8C2;
+
+  /* 暖色系の細い境界線 */
+  --line:#D8D4CB;
 
   --max:1180px;
 
-  --shadow:0 12px 30px rgba(14,26,42,.06);
-  --shadow-soft:0 6px 18px rgba(14,26,42,.04);
+  --shadow:0 12px 30px rgba(14,26,42,.055);
+  --shadow-soft:0 6px 18px rgba(14,26,42,.035);
 }
 
 *{
@@ -58,9 +67,11 @@ body{
   sans-serif;
 
   color:var(--charcoal);
+
   background:var(--luxury-white);
 
   line-height:1.82;
+
   font-weight:400;
 
   -webkit-font-smoothing:antialiased;
@@ -98,13 +109,17 @@ h2,
 h3,
 h4{
   font-family:'Shippori Mincho',serif;
+
   color:var(--navy);
+
   font-weight:700;
+
   letter-spacing:.04em;
 }
 
 strong{
   font-weight:800;
+
   color:inherit;
 }
 
@@ -115,12 +130,15 @@ HEADER
 
 header{
   position:fixed;
+
   top:0;
   left:0;
+
   width:100%;
+
   z-index:1000;
 
-  background:rgba(247,245,240,.96);
+  background:rgba(245,242,234,.96);
 
   backdrop-filter:blur(18px);
 
@@ -211,7 +229,7 @@ nav a::after{
   width:0;
   height:1px;
 
-  background:var(--blue);
+  background:var(--muted-gold);
 
   transition:.3s;
 }
@@ -255,6 +273,7 @@ HERO
 
 .hero-video video{
   width:100%;
+
   height:100%;
 
   object-fit:cover;
@@ -314,7 +333,7 @@ HERO
 
   height:1px;
 
-  background:var(--blue);
+  background:var(--muted-gold-light);
 }
 
 .hero h1{
@@ -457,6 +476,7 @@ PHOTO SYSTEM
 
 .photo-frame img{
   width:100%;
+
   height:100%;
 
   object-fit:cover;
@@ -476,7 +496,7 @@ PHOTO SYSTEM
   background:
     linear-gradient(
       180deg,
-      transparent 30%,
+      transparent 28%,
       rgba(14,26,42,.84)
     );
 }
@@ -494,7 +514,7 @@ PHOTO SYSTEM
 }
 
 .photo-caption small{
-  color:#8EC8FF;
+  color:var(--muted-gold-light);
 
   display:block;
 
@@ -549,7 +569,7 @@ ABOUT
 .quote{
   background:var(--light);
 
-  border-left:3px solid var(--blue);
+  border-left:3px solid var(--muted-gold);
 
   padding:28px 27px;
 
@@ -559,7 +579,7 @@ ABOUT
 .quote-label{
   display:block;
 
-  color:var(--blue);
+  color:var(--muted-gold);
 
   font-size:10px;
 
@@ -588,10 +608,10 @@ ABOUT
   margin-top:28px;
 
   height:390px;
-}
 
-.about-photo-wide img{
-  object-position:center 55%;
+  border-top:1px solid rgba(139,128,100,.35);
+
+  border-bottom:1px solid rgba(139,128,100,.35);
 }
 
 
@@ -718,7 +738,7 @@ MESSAGE
 }
 
 .person-role{
-  color:var(--blue);
+  color:var(--muted-gold);
 
   font-size:10px;
 
@@ -803,9 +823,8 @@ MESSAGE
 
 
 /* =========================
-MESSAGE PHOTO GRID
-3枚 → 3列横並び
-6枚 → 3列×2行
+MESSAGE PHOTO
+3枚横並び
 ========================= */
 
 .message-photo-grid{
@@ -815,11 +834,15 @@ MESSAGE PHOTO GRID
 
   gap:8px;
 
-  margin-top:28px;
+  margin-top:25px;
 }
 
 .message-photo-grid .photo-frame{
   height:255px;
+
+  border-top:1px solid rgba(139,128,100,.30);
+
+  border-bottom:1px solid rgba(139,128,100,.30);
 }
 
 
@@ -858,7 +881,7 @@ PHILOSOPHY
 }
 
 .card-number{
-  color:var(--blue);
+  color:var(--muted-gold);
 
   font-size:11px;
 
@@ -900,6 +923,10 @@ PHILOSOPHY VISUAL
   position:relative;
 
   overflow:hidden;
+
+  border-top:1px solid rgba(139,128,100,.22);
+
+  border-bottom:1px solid rgba(139,128,100,.22);
 }
 
 .philosophy-visual::before{
@@ -934,6 +961,10 @@ PHILOSOPHY VISUAL
   gap:25px;
 
   margin-bottom:22px;
+}
+
+.philosophy-visual-head .eyebrow{
+  color:var(--muted-gold-light);
 }
 
 .philosophy-visual-title{
@@ -1023,7 +1054,7 @@ PHILOSOPHY VISUAL
 
   letter-spacing:.18em;
 
-  color:var(--blue);
+  color:var(--muted-gold-light);
 
   font-weight:800;
 
@@ -1072,6 +1103,8 @@ PHILOSOPHY VISUAL
   align-items:center;
 
   gap:10px;
+
+  border-top:1px solid rgba(139,128,100,.25);
 }
 
 .product-point-icon{
@@ -1089,9 +1122,9 @@ PHILOSOPHY VISUAL
 
   border-radius:50%;
 
-  background:rgba(0,132,255,.1);
+  background:rgba(139,128,100,.12);
 
-  color:var(--blue);
+  color:var(--muted-gold);
 
   font-size:11px;
 
@@ -1501,11 +1534,6 @@ STRUCTURE
   border-left:3px solid var(--blue);
 }
 
-
-/* =========================
-STRUCTURE VISUAL
-========================= */
-
 .structure-visual{
   margin-top:31px;
 
@@ -1780,7 +1808,7 @@ STRUCTURE VISUAL
 .result-number{
   display:block;
 
-  color:var(--blue);
+  color:var(--muted-gold-light);
 
   font-size:22px;
 
@@ -1835,7 +1863,7 @@ BUSINESS
 }
 
 .business-number{
-  color:var(--blue);
+  color:var(--muted-gold);
 
   font-size:11px;
 
@@ -1892,33 +1920,33 @@ BUSINESS
 
 /* =========================
 BUSINESS PHOTO
-3列を基本化
+3枚の視覚ブロック
 ========================= */
 
 .business-gallery{
   display:grid;
 
-  grid-template-columns:1.4fr .8fr .8fr;
+  grid-template-columns:1.15fr .925fr .925fr;
 
   gap:8px;
 
   margin-top:28px;
 }
 
+.business-gallery .photo-frame{
+  height:285px;
+
+  border-top:1px solid rgba(139,128,100,.32);
+
+  border-bottom:1px solid rgba(139,128,100,.32);
+}
+
+.business-gallery .photo-caption small{
+  color:var(--muted-gold-light);
+}
+
 .business-gallery-large{
-  height:375px;
-}
-
-.business-gallery-small{
-  display:grid;
-
-  grid-template-rows:1fr 1fr;
-
-  gap:8px;
-}
-
-.business-gallery-small .photo-frame{
-  min-height:183px;
+  height:375px !important;
 }
 
 
@@ -1955,7 +1983,7 @@ STRENGTHS
 }
 
 .strength-number{
-  color:var(--blue);
+  color:var(--muted-gold);
 
   font-size:25px;
 
@@ -1983,7 +2011,7 @@ STRENGTHS
 
 /* =========================
 STRENGTH PHOTO
-3列横並び
+3枚横並び
 ========================= */
 
 .strength-photo-band{
@@ -1998,6 +2026,10 @@ STRENGTH PHOTO
 
 .strength-photo-band .photo-frame{
   height:240px;
+
+  border-top:1px solid rgba(139,128,100,.30);
+
+  border-bottom:1px solid rgba(139,128,100,.30);
 }
 
 
@@ -2026,7 +2058,7 @@ HISTORY
 }
 
 .history-date{
-  color:var(--blue);
+  color:var(--muted-gold);
 
   font-weight:700;
 
@@ -2074,6 +2106,10 @@ COMPANY
   background:var(--navy);
 
   margin-bottom:18px;
+
+  border-top:1px solid rgba(139,128,100,.30);
+
+  border-bottom:1px solid rgba(139,128,100,.30);
 }
 
 .overview-image img{
@@ -2099,11 +2135,6 @@ COMPANY
 
   line-height:1.92;
 }
-
-
-/* =========================
-GOOGLE MAP
-========================= */
 
 .company-map{
   margin-top:23px;
@@ -2138,7 +2169,7 @@ GOOGLE MAP
 }
 
 .company-map-head span{
-  color:var(--gray);
+  color:var(--muted-gold);
 
   font-size:10px;
 
@@ -2207,6 +2238,10 @@ VISION
   text-align:center;
 
   padding:65px 0;
+
+  border-top:1px solid rgba(139,128,100,.16);
+
+  border-bottom:1px solid rgba(139,128,100,.16);
 }
 
 .vision-inner{
@@ -2253,7 +2288,7 @@ CONTACT
 }
 
 .contact .eyebrow{
-  color:var(--blue);
+  color:var(--muted-gold-light);
 }
 
 .contact h2{
@@ -2278,6 +2313,8 @@ CONTACT
   border:1px solid rgba(255,255,255,.15);
 
   padding:29px;
+
+  border-top:1px solid rgba(176,165,139,.38);
 }
 
 .contact-row{
@@ -2297,7 +2334,7 @@ CONTACT
 }
 
 .contact-label{
-  color:var(--blue);
+  color:var(--muted-gold-light);
 
   font-size:10px;
 
@@ -2350,7 +2387,7 @@ footer{
 
   padding:27px 0;
 
-  border-top:1px solid rgba(255,255,255,.1);
+  border-top:1px solid rgba(176,165,139,.22);
 }
 
 .footer-inner{
@@ -2451,6 +2488,7 @@ RESPONSIVE
 
   .margin-flow{
     grid-template-columns:repeat(2,1fr);
+
     gap:7px;
   }
 
@@ -2460,6 +2498,7 @@ RESPONSIVE
 
   .structure-compare{
     grid-template-columns:1fr;
+
     gap:12px;
   }
 
@@ -2481,7 +2520,15 @@ RESPONSIVE
   }
 
   .business-gallery-large{
-    height:330px;
+    height:330px !important;
+  }
+
+  .business-gallery-small{
+    display:grid;
+
+    grid-template-rows:1fr 1fr;
+
+    gap:8px;
   }
 
   .strength-photo-band{
@@ -2512,6 +2559,7 @@ RESPONSIVE
 
   .brand-mark{
     width:32px;
+
     height:32px;
   }
 
@@ -2612,7 +2660,7 @@ RESPONSIVE
   /* MESSAGE */
 
   .message-photo-grid{
-    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns:repeat(3,1fr);
 
     gap:5px;
 
@@ -2624,9 +2672,9 @@ RESPONSIVE
   }
 
   .message-photo-grid .photo-caption{
-    left:10px;
-    right:10px;
-    bottom:10px;
+    left:8px;
+    right:8px;
+    bottom:8px;
   }
 
   .message-photo-grid .photo-caption small{
@@ -2634,7 +2682,7 @@ RESPONSIVE
   }
 
   .message-photo-grid .photo-caption strong{
-    font-size:12px;
+    font-size:11px;
   }
 
 
@@ -2777,10 +2825,15 @@ RESPONSIVE
 
   .business-gallery{
     grid-template-columns:1fr;
+
+    gap:6px;
   }
 
+  .business-gallery .photo-frame,
   .business-gallery-large{
-    height:260px;
+    height:250px !important;
+
+    min-height:250px;
   }
 
   .business-gallery-small{
@@ -2788,11 +2841,11 @@ RESPONSIVE
 
     grid-template-rows:1fr;
 
-    gap:7px;
+    gap:6px;
   }
 
   .business-gallery-small .photo-frame{
-    min-height:170px;
+    min-height:165px;
   }
 
 
@@ -2825,7 +2878,7 @@ RESPONSIVE
   }
 
   .strength-photo-band .photo-caption strong{
-    font-size:11px;
+    font-size:10px;
   }
 
 
@@ -3022,6 +3075,10 @@ stroke-linecap="round"
 <main id="top">
 
 
+<!-- =========================
+HERO
+========================= -->
+
 <section class="hero">
 
 <div class="hero-video">
@@ -3077,6 +3134,10 @@ RENEWABLE ENERGY COMPANY
 
 </section>
 
+
+<!-- =========================
+ABOUT
+========================= -->
 
 <section class="about" id="about">
 
@@ -3180,6 +3241,10 @@ loading="lazy"
 </section>
 
 
+<!-- =========================
+SOLAR VISUAL
+========================= -->
+
 <section class="solar-visual">
 
 <div class="solar-visual-image"></div>
@@ -3212,6 +3277,10 @@ SOLAR POWER GENERATION
 
 </section>
 
+
+<!-- =========================
+MESSAGE
+========================= -->
 
 <section class="message" id="message">
 
@@ -3350,8 +3419,6 @@ Tetsuta Fuchikami
 </div>
 
 
-<!-- 3枚は完全横並び -->
-
 <div class="message-photo-grid">
 
 <div class="photo-frame">
@@ -3428,6 +3495,10 @@ loading="lazy"
 
 </section>
 
+
+<!-- =========================
+PHILOSOPHY
+========================= -->
 
 <section class="philosophy" id="philosophy">
 
@@ -3672,6 +3743,10 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 
 </section>
 
+
+<!-- =========================
+ISSUES
+========================= -->
 
 <section class="issue">
 
@@ -3934,6 +4009,10 @@ COST STACKING
 
 </section>
 
+
+<!-- =========================
+STRUCTURE
+========================= -->
 
 <section class="structure">
 
@@ -4282,6 +4361,10 @@ SANGEN MODEL
 </section>
 
 
+<!-- =========================
+BUSINESS
+========================= -->
+
 <section class="business" id="business">
 
 <div class="wrap">
@@ -4408,8 +4491,6 @@ loading="lazy"
 </div>
 
 
-<div class="business-gallery-small">
-
 <div class="photo-frame">
 
 <img
@@ -4457,35 +4538,14 @@ loading="lazy"
 
 </div>
 
-
-<div class="photo-frame">
-
-<img
-src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=85"
-alt="住宅設備工事"
-loading="lazy"
->
-
-<div class="photo-overlay"></div>
-
-<div class="photo-caption">
-
-<small>SUPPORT</small>
-
-<strong>
-住まいに寄り添う。
-</strong>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </section>
 
+
+<!-- =========================
+STRENGTHS
+========================= -->
 
 <section class="strengths">
 
@@ -4693,6 +4753,10 @@ loading="lazy"
 </section>
 
 
+<!-- =========================
+HISTORY
+========================= -->
+
 <section class="history">
 
 <div class="wrap">
@@ -4759,6 +4823,10 @@ HISTORY
 
 </section>
 
+
+<!-- =========================
+COMPANY
+========================= -->
 
 <section class="overview" id="overview">
 
@@ -4926,6 +4994,10 @@ info@yamagen21.co.jp
 </section>
 
 
+<!-- =========================
+VISION
+========================= -->
+
 <section class="vision">
 
 <div class="wrap vision-inner">
@@ -4952,6 +5024,10 @@ BRAND VISION
 
 </section>
 
+
+<!-- =========================
+CONTACT
+========================= -->
 
 <section class="contact" id="contact">
 
@@ -5057,7 +5133,7 @@ transform="rotate(-90 50 50)"
 />
 
 <path
-d="M18 66 L42 30 L54 34 L62 34 L84 66 Z"
+d="M18 66 L42 30 L54 46 L62 34 L84 66 Z"
 fill="none"
 stroke="#ffffff"
 stroke-width="6"
