@@ -17,86 +17,75 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+
 <style>
+
+/* =========================================================
+   SANGEN BRAND COLOR PALETTE
+   ========================================================= */
 
 :root{
 
+  --color-main:#0E1D38;
+
+  --color-accent:#C29B38;
+
+  --color-bg-card:#F5F6F8;
+
+  --color-text:#333333;
+
+  --color-alert:#D32F2F;
+
   --white:#FFFFFF;
 
-  --luxury-white:#F3F0E8;
+  --gray:#6B7280;
 
-  --light:#EDEEEB;
+  --gray-light:#D9DDE4;
 
-  --light-gray:#E3E4DF;
-
-  --navy:#3B2E16;
-
-  --charcoal:#1F2937;
-
-  --blue:#0084FF;
-
-  --emerald:#00A896;
-
-  --red:#E63946;
-
-  --gold:#B8860B;
-
-  --gold-light:#E6CA65;
-
-  --gold-highlight:#FFF8DC;
-
-  --gold-dark:#AA771C;
-
-  --muted-gold:#B8860B;
-
-  --muted-gold-light:#E6CA65;
-
-  --gray:#64748B;
-
-  --gray-light:#C6C5BE;
-
-  --line:#D7D2C6;
+  --line:#D9DDE4;
 
   --max:1180px;
 
-  --shadow:0 14px 34px rgba(59,46,22,.055);
+  --shadow:0 14px 34px rgba(14,29,56,.07);
 
-  --shadow-soft:0 6px 18px rgba(59,46,22,.035);
-
-  --metallic-gold:
-    linear-gradient(
-      135deg,
-      #B8860B 0%,
-      #E6CA65 30%,
-      #FFF8DC 50%,
-      #E6CA65 70%,
-      #AA771C 100%
-    );
+  --shadow-soft:0 6px 18px rgba(14,29,56,.045);
 
 }
 
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
 *{
+
   margin:0;
+
   padding:0;
+
   box-sizing:border-box;
+
 }
 
 html{
+
   scroll-behavior:smooth;
+
 }
 
 body{
 
-  font-family:'Noto Sans JP',
-  -apple-system,
-  BlinkMacSystemFont,
-  'Helvetica Neue',
-  Arial,
-  sans-serif;
+  font-family:
+    'Noto Sans JP',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
 
-  color:var(--charcoal);
+  color:var(--color-text);
 
-  background:var(--luxury-white);
+  background:var(--white);
 
   line-height:1.82;
 
@@ -110,18 +99,26 @@ body{
 
 img,
 video{
+
   display:block;
+
   max-width:100%;
+
 }
 
 a{
+
   color:inherit;
+
   text-decoration:none;
+
 }
 
 button,
 a{
+
   -webkit-tap-highlight-color:transparent;
+
 }
 
 .wrap{
@@ -133,7 +130,9 @@ a{
 }
 
 section{
+
   padding:42px 0;
+
 }
 
 h1,
@@ -143,7 +142,7 @@ h4{
 
   font-family:'Shippori Mincho',serif;
 
-  color:var(--navy);
+  color:var(--color-main);
 
   font-weight:700;
 
@@ -152,14 +151,17 @@ h4{
 }
 
 strong{
+
   font-weight:800;
+
   color:inherit;
+
 }
 
 
-/* =========================
-HEADER
-========================= */
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 header{
 
@@ -173,11 +175,11 @@ header{
 
   z-index:1000;
 
-  background:rgba(243,240,232,.96);
+  background:rgba(255,255,255,.96);
 
   backdrop-filter:blur(18px);
 
-  border-bottom:1px solid rgba(184,134,11,.24);
+  border-bottom:1px solid rgba(14,29,56,.10);
 
 }
 
@@ -225,7 +227,7 @@ header{
 
   letter-spacing:.12em;
 
-  color:var(--navy);
+  color:var(--color-main);
 
 }
 
@@ -263,7 +265,7 @@ nav a{
 
   letter-spacing:.06em;
 
-  color:var(--charcoal);
+  color:var(--color-main);
 
   padding:4px 0;
 
@@ -283,20 +285,22 @@ nav a::after{
 
   height:2px;
 
-  background:var(--metallic-gold);
+  background:var(--color-accent);
 
   transition:.3s;
 
 }
 
 nav a:hover::after{
+
   width:100%;
+
 }
 
 
-/* =========================
-HERO
-========================= */
+/* =========================================================
+   HERO
+   ========================================================= */
 
 .hero{
 
@@ -312,7 +316,7 @@ HERO
 
   overflow:hidden;
 
-  background:var(--navy);
+  background:var(--color-main);
 
 }
 
@@ -401,9 +405,7 @@ HERO
 
   height:2px;
 
-  background:var(--metallic-gold);
-
-  box-shadow:0 0 8px rgba(230,202,101,.16);
+  background:var(--color-accent);
 
 }
 
@@ -475,54 +477,46 @@ HERO
 
 .btn-primary{
 
-  background:var(--metallic-gold);
+  background:var(--color-accent);
 
-  color:#2D1E08;
+  color:var(--color-main);
 
-  border-color:#B8860B;
+  border-color:var(--color-accent);
 
   font-weight:800;
-
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.45),
-    inset 0 -1px 0 rgba(120,75,0,.28);
 
 }
 
 .btn-primary:hover{
 
-  filter:brightness(1.06);
+  background:#AD882F;
 
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.52),
-    0 6px 16px rgba(184,134,11,.16);
+  border-color:#AD882F;
 
 }
 
 .btn-outline{
 
-  background:rgba(255,255,255,.05);
+  background:rgba(255,255,255,.04);
 
   color:var(--white);
 
-  border-color:rgba(230,202,101,.72);
+  border-color:rgba(255,255,255,.62);
 
 }
 
 .btn-outline:hover{
 
-  background:var(--metallic-gold);
+  background:var(--white);
 
-  color:#2D1E08;
-
-  border-color:#B8860B;
+  color:var(--color-main);
 
 }
 
 
-/* =========================
-SECTION TITLE
-========================= */
+/* =========================================================
+   SECTION TITLE
+   ========================================================= */
 
 .section-head{
 
@@ -534,13 +528,13 @@ SECTION TITLE
 
 .eyebrow{
 
-  color:var(--gold);
+  color:var(--color-accent);
 
   font-size:11px;
 
   letter-spacing:.25em;
 
-  font-weight:700;
+  font-weight:800;
 
   margin-bottom:7px;
 
@@ -567,23 +561,23 @@ SECTION TITLE
 }
 
 
-/* =========================
-PHOTO SYSTEM
-========================= */
+/* =========================================================
+   PHOTO SYSTEM
+   ========================================================= */
 
 .photo-frame{
 
   overflow:hidden;
 
-  background:var(--navy);
+  background:var(--color-main);
 
   position:relative;
 
   min-width:0;
 
-  border-top:1px solid rgba(184,134,11,.46);
+  border-top:1px solid rgba(194,155,56,.38);
 
-  border-bottom:1px solid rgba(170,119,28,.38);
+  border-bottom:1px solid rgba(194,155,56,.25);
 
 }
 
@@ -600,7 +594,9 @@ PHOTO SYSTEM
 }
 
 .photo-frame:hover img{
+
   transform:scale(1.035);
+
 }
 
 .photo-overlay{
@@ -613,7 +609,7 @@ PHOTO SYSTEM
     linear-gradient(
       180deg,
       transparent 28%,
-      rgba(59,46,22,.84)
+      rgba(14,29,56,.86)
     );
 
 }
@@ -636,7 +632,7 @@ PHOTO SYSTEM
 
 .photo-caption small{
 
-  color:var(--gold-light);
+  color:var(--color-accent);
 
   display:block;
 
@@ -661,12 +657,14 @@ PHOTO SYSTEM
 }
 
 
-/* =========================
-ABOUT
-========================= */
+/* =========================================================
+   ABOUT
+   ========================================================= */
 
 .about{
-  background:var(--luxury-white);
+
+  background:var(--white);
+
 }
 
 .about-grid{
@@ -683,7 +681,7 @@ ABOUT
 
 .about-text p{
 
-  color:var(--gray);
+  color:var(--color-text);
 
   font-size:15px;
 
@@ -692,16 +690,16 @@ ABOUT
 }
 
 .about-text strong{
-  color:var(--navy);
+
+  color:var(--color-main);
+
 }
 
 .quote{
 
-  background:var(--light);
+  background:var(--color-bg-card);
 
-  border-left:3px solid #B8860B;
-
-  border-image:var(--metallic-gold) 1;
+  border-left:3px solid var(--color-accent);
 
   padding:28px 27px;
 
@@ -713,13 +711,13 @@ ABOUT
 
   display:block;
 
-  color:var(--gold);
+  color:var(--color-accent);
 
   font-size:10px;
 
   letter-spacing:.24em;
 
-  font-weight:700;
+  font-weight:800;
 
   margin-bottom:11px;
 
@@ -752,9 +750,9 @@ ABOUT
 }
 
 
-/* =========================
-SOLAR VISUAL
-========================= */
+/* =========================================================
+   SOLAR VISUAL
+   ========================================================= */
 
 .solar-visual{
 
@@ -764,7 +762,7 @@ SOLAR VISUAL
 
   overflow:hidden;
 
-  background:var(--navy);
+  background:var(--color-main);
 
   padding:0;
 
@@ -794,9 +792,9 @@ SOLAR VISUAL
   background:
     linear-gradient(
       90deg,
-      rgba(59,46,22,.90) 0%,
-      rgba(59,46,22,.54) 42%,
-      rgba(59,46,22,.08) 100%
+      rgba(14,29,56,.92) 0%,
+      rgba(14,29,56,.61) 42%,
+      rgba(14,29,56,.12) 100%
     );
 
 }
@@ -816,11 +814,15 @@ SOLAR VISUAL
 }
 
 .solar-content-inner{
+
   max-width:680px;
+
 }
 
 .solar-content .eyebrow{
-  color:var(--gold-light);
+
+  color:var(--color-accent);
+
 }
 
 .solar-content h2{
@@ -848,12 +850,14 @@ SOLAR VISUAL
 }
 
 
-/* =========================
-MESSAGE
-========================= */
+/* =========================================================
+   MESSAGE
+   ========================================================= */
 
 .message{
-  background:var(--light);
+
+  background:var(--color-bg-card);
+
 }
 
 .message-grid{
@@ -870,7 +874,7 @@ MESSAGE
 
 .person{
 
-  background:var(--luxury-white);
+  background:var(--white);
 
   border:1px solid var(--line);
 
@@ -894,13 +898,13 @@ MESSAGE
 
 .person-role{
 
-  color:var(--gold);
+  color:var(--color-accent);
 
   font-size:10px;
 
   letter-spacing:.2em;
 
-  font-weight:700;
+  font-weight:800;
 
   margin-bottom:6px;
 
@@ -914,7 +918,7 @@ MESSAGE
 
   font-weight:700;
 
-  color:var(--navy);
+  color:var(--color-main);
 
   margin-bottom:3px;
 
@@ -946,7 +950,7 @@ MESSAGE
 
 .message-body p{
 
-  color:var(--gray);
+  color:var(--color-text);
 
   font-size:15px;
 
@@ -956,7 +960,7 @@ MESSAGE
 
 .message-body p:first-child{
 
-  color:var(--navy);
+  color:var(--color-main);
 
   font-family:'Shippori Mincho',serif;
 
@@ -982,7 +986,7 @@ MESSAGE
 
   display:block;
 
-  color:var(--navy);
+  color:var(--color-main);
 
   font-family:'Shippori Mincho',serif;
 
@@ -1005,16 +1009,20 @@ MESSAGE
 }
 
 .message-photo-grid .photo-frame{
+
   height:255px;
+
 }
 
 
-/* =========================
-PHILOSOPHY
-========================= */
+/* =========================================================
+   PHILOSOPHY
+   ========================================================= */
 
 .philosophy{
-  background:var(--luxury-white);
+
+  background:var(--white);
+
 }
 
 .philosophy-grid{
@@ -1033,7 +1041,7 @@ PHILOSOPHY
 
   padding:28px 23px;
 
-  background:var(--luxury-white);
+  background:var(--white);
 
   border-right:1px solid var(--line);
 
@@ -1044,12 +1052,14 @@ PHILOSOPHY
 }
 
 .philosophy-card:hover{
-  background:var(--light);
+
+  background:var(--color-bg-card);
+
 }
 
 .card-number{
 
-  color:var(--gold);
+  color:var(--color-accent);
 
   font-size:11px;
 
@@ -1082,9 +1092,9 @@ PHILOSOPHY
 }
 
 
-/* =========================
-PHILOSOPHY VISUAL
-========================= */
+/* =========================================================
+   PHILOSOPHY VISUAL
+   ========================================================= */
 
 .philosophy-visual{
 
@@ -1092,15 +1102,15 @@ PHILOSOPHY VISUAL
 
   padding:32px;
 
-  background:var(--navy);
+  background:var(--color-main);
 
   position:relative;
 
   overflow:hidden;
 
-  border-top:1px solid rgba(184,134,11,.55);
+  border-top:1px solid rgba(194,155,56,.5);
 
-  border-bottom:1px solid rgba(170,119,28,.42);
+  border-bottom:1px solid rgba(194,155,56,.32);
 
 }
 
@@ -1143,7 +1153,9 @@ PHILOSOPHY VISUAL
 }
 
 .philosophy-visual-head .eyebrow{
-  color:var(--gold-light);
+
+  color:var(--color-accent);
+
 }
 
 .philosophy-visual-title{
@@ -1160,7 +1172,7 @@ PHILOSOPHY VISUAL
 
 .philosophy-visual-sub{
 
-  color:rgba(255,255,255,.50);
+  color:rgba(255,255,255,.52);
 
   font-size:10px;
 
@@ -1190,7 +1202,7 @@ PHILOSOPHY VISUAL
 
   padding:19px 17px;
 
-  background:rgba(255,255,255,.065);
+  background:rgba(255,255,255,.055);
 
   border:1px solid rgba(255,255,255,.12);
 
@@ -1216,9 +1228,9 @@ PHILOSOPHY VISUAL
 
   border-radius:50%;
 
-  background:var(--metallic-gold);
+  background:var(--color-accent);
 
-  color:#362307;
+  color:var(--color-main);
 
   display:flex;
 
@@ -1232,14 +1244,12 @@ PHILOSOPHY VISUAL
 
   font-size:11px;
 
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.55),
-    inset 0 -1px 0 rgba(110,66,0,.32);
-
 }
 
 .product-step:last-child::after{
+
   display:none;
+
 }
 
 .product-step-number{
@@ -1248,7 +1258,7 @@ PHILOSOPHY VISUAL
 
   letter-spacing:.18em;
 
-  color:var(--gold-light);
+  color:var(--color-accent);
 
   font-weight:800;
 
@@ -1270,7 +1280,7 @@ PHILOSOPHY VISUAL
 
 .product-step p{
 
-  color:rgba(255,255,255,.61);
+  color:rgba(255,255,255,.62);
 
   font-size:11px;
 
@@ -1298,7 +1308,7 @@ PHILOSOPHY VISUAL
 
   padding:13px 16px;
 
-  background:var(--luxury-white);
+  background:var(--white);
 
   display:flex;
 
@@ -1306,7 +1316,7 @@ PHILOSOPHY VISUAL
 
   gap:10px;
 
-  border-top:1px solid rgba(184,134,11,.44);
+  border-top:1px solid rgba(194,155,56,.34);
 
 }
 
@@ -1326,17 +1336,13 @@ PHILOSOPHY VISUAL
 
   border-radius:50%;
 
-  background:var(--metallic-gold);
+  background:rgba(194,155,56,.14);
 
-  color:#4A310C;
+  color:var(--color-accent);
 
   font-size:11px;
 
   font-weight:900;
-
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.55),
-    inset 0 -1px 0 rgba(100,55,0,.25);
 
 }
 
@@ -1344,7 +1350,7 @@ PHILOSOPHY VISUAL
 
   display:block;
 
-  color:var(--navy);
+  color:var(--color-main);
 
   font-size:12px;
 
@@ -1359,12 +1365,14 @@ PHILOSOPHY VISUAL
 }
 
 
-/* =========================
-ISSUES
-========================= */
+/* =========================================================
+   ISSUES
+   ========================================================= */
 
 .issue{
-  background:var(--light);
+
+  background:var(--color-bg-card);
+
 }
 
 .issue-grid{
@@ -1381,7 +1389,7 @@ ISSUES
 
   position:relative;
 
-  background:var(--luxury-white);
+  background:var(--white);
 
   padding:23px 19px;
 
@@ -1403,9 +1411,9 @@ ISSUES
 
   justify-content:center;
 
-  border:1px solid rgba(230,57,70,.20);
+  border:1px solid rgba(211,47,47,.22);
 
-  color:var(--red);
+  color:var(--color-alert);
 
   font-weight:900;
 
@@ -1436,9 +1444,9 @@ ISSUES
 }
 
 
-/* =========================
-ISSUE VISUAL
-========================= */
+/* =========================================================
+   ISSUE VISUAL
+   ========================================================= */
 
 .issue-visual{
 
@@ -1446,13 +1454,13 @@ ISSUE VISUAL
 
   padding:31px;
 
-  background:var(--luxury-white);
+  background:var(--white);
 
   border:1px solid var(--line);
 
   box-shadow:var(--shadow);
 
-  border-top:1px solid rgba(184,134,11,.48);
+  border-top:1px solid rgba(194,155,56,.38);
 
 }
 
@@ -1472,7 +1480,7 @@ ISSUE VISUAL
 
 .issue-visual-title{
 
-  color:var(--navy);
+  color:var(--color-main);
 
   font-family:'Shippori Mincho',serif;
 
@@ -1516,7 +1524,7 @@ ISSUE VISUAL
 
   border:1px solid var(--line);
 
-  background:var(--light);
+  background:var(--color-bg-card);
 
 }
 
@@ -1534,13 +1542,13 @@ ISSUE VISUAL
 
   height:16px;
 
-  border-top:2px solid #E6CA65;
+  border-top:2px solid var(--color-accent);
 
-  border-right:2px solid #E6CA65;
+  border-right:2px solid var(--color-accent);
 
   transform:translateY(-50%) rotate(45deg);
 
-  background:var(--light);
+  background:var(--color-bg-card);
 
   z-index:3;
 
@@ -1550,7 +1558,7 @@ ISSUE VISUAL
 
   font-size:10px;
 
-  color:var(--gold);
+  color:var(--color-accent);
 
   letter-spacing:.14em;
 
@@ -1580,14 +1588,16 @@ ISSUE VISUAL
 
 .margin-node.cost{
 
-  background:#FFF8F8;
+  background:#FFF7F7;
 
-  border-color:rgba(230,57,70,.20);
+  border-color:rgba(211,47,47,.20);
 
 }
 
 .margin-node.cost h4{
-  color:var(--red);
+
+  color:var(--color-alert);
+
 }
 
 .margin-bar{
@@ -1608,7 +1618,7 @@ ISSUE VISUAL
 
   border:1px solid var(--line);
 
-  background:var(--light);
+  background:var(--color-bg-card);
 
 }
 
@@ -1634,7 +1644,7 @@ ISSUE VISUAL
 
 .margin-meter-label strong{
 
-  color:var(--gold);
+  color:var(--color-accent);
 
   font-size:12px;
 
@@ -1644,7 +1654,7 @@ ISSUE VISUAL
 
   height:8px;
 
-  background:var(--light-gray);
+  background:var(--gray-light);
 
   overflow:hidden;
 
@@ -1654,7 +1664,7 @@ ISSUE VISUAL
 
   height:100%;
 
-  background:var(--red);
+  background:var(--color-alert);
 
 }
 
@@ -1667,12 +1677,14 @@ ISSUE VISUAL
 }
 
 
-/* =========================
-STRUCTURE
-========================= */
+/* =========================================================
+   STRUCTURE
+   ========================================================= */
 
 .structure{
-  background:var(--luxury-white);
+
+  background:var(--white);
+
 }
 
 .structure-intro{
@@ -1717,13 +1729,13 @@ STRUCTURE
 
   border:1px solid var(--line);
 
-  background:var(--luxury-white);
+  background:var(--white);
 
 }
 
 .structure-card.good{
 
-  border:2px solid var(--blue);
+  border:2px solid var(--color-accent);
 
   box-shadow:var(--shadow);
 
@@ -1743,17 +1755,17 @@ STRUCTURE
 
   padding:6px 10px;
 
-  background:var(--light-gray);
+  background:var(--gray-light);
 
-  color:var(--charcoal);
+  color:var(--color-main);
 
 }
 
 .structure-card.good .structure-label{
 
-  background:rgba(0,132,255,.08);
+  background:rgba(194,155,56,.13);
 
-  color:var(--blue);
+  color:var(--color-accent);
 
 }
 
@@ -1775,27 +1787,27 @@ STRUCTURE
 
   padding:8px 11px;
 
-  background:var(--light);
+  background:var(--color-bg-card);
 
   border:1px solid var(--line);
 
   font-size:11px;
 
-  color:var(--charcoal);
+  color:var(--color-main);
 
 }
 
 .structure-card.good .flow-item{
 
-  background:#F8FBFF;
+  background:#FBFAF5;
 
-  border-color:rgba(0,132,255,.2);
+  border-color:rgba(194,155,56,.25);
 
 }
 
 .flow-arrow{
 
-  color:var(--gold);
+  color:var(--color-accent);
 
   font-weight:700;
 
@@ -1807,7 +1819,7 @@ STRUCTURE
 
   padding:13px;
 
-  background:var(--light);
+  background:var(--color-bg-card);
 
   color:var(--gray);
 
@@ -1819,7 +1831,7 @@ STRUCTURE
 
 .structure-card.good .structure-note{
 
-  border-left:3px solid var(--blue);
+  border-left:3px solid var(--color-accent);
 
 }
 
@@ -1881,7 +1893,7 @@ STRUCTURE
 
   border:1px solid var(--line);
 
-  background:var(--light);
+  background:var(--color-bg-card);
 
   padding:23px;
 
@@ -1889,9 +1901,9 @@ STRUCTURE
 
 .compare-side.good{
 
-  border:2px solid var(--blue);
+  border:2px solid var(--color-accent);
 
-  background:#F8FBFF;
+  background:#FBFAF5;
 
   box-shadow:var(--shadow);
 
@@ -1922,7 +1934,9 @@ STRUCTURE
 }
 
 .compare-side.good .compare-title span{
-  color:var(--blue);
+
+  color:var(--color-accent);
+
 }
 
 .compare-title strong{
@@ -1931,7 +1945,7 @@ STRUCTURE
 
   font-size:19px;
 
-  color:var(--navy);
+  color:var(--color-main);
 
 }
 
@@ -1951,7 +1965,7 @@ STRUCTURE
 
   padding:13px 15px;
 
-  background:var(--luxury-white);
+  background:var(--white);
 
   border:1px solid var(--line);
 
@@ -1987,7 +2001,7 @@ STRUCTURE
 
   border-radius:50%;
 
-  background:var(--navy);
+  background:var(--color-main);
 
   color:var(--white);
 
@@ -1998,7 +2012,11 @@ STRUCTURE
 }
 
 .compare-side.good .compare-node:not(:last-child)::after{
-  background:var(--blue);
+
+  background:var(--color-accent);
+
+  color:var(--color-main);
+
 }
 
 .compare-icon{
@@ -2015,9 +2033,9 @@ STRUCTURE
 
   justify-content:center;
 
-  background:var(--light-gray);
+  background:var(--gray-light);
 
-  color:var(--navy);
+  color:var(--color-main);
 
   font-size:10px;
 
@@ -2027,9 +2045,9 @@ STRUCTURE
 
 .compare-side.good .compare-icon{
 
-  background:rgba(0,132,255,.1);
+  background:rgba(194,155,56,.12);
 
-  color:var(--blue);
+  color:var(--color-accent);
 
 }
 
@@ -2039,7 +2057,7 @@ STRUCTURE
 
   font-size:12px;
 
-  color:var(--navy);
+  color:var(--color-main);
 
 }
 
@@ -2077,11 +2095,11 @@ STRUCTURE
 
   border-radius:50%;
 
-  background:var(--metallic-gold);
+  background:var(--color-main);
 
-  color:#3E2A08;
+  color:var(--color-accent);
 
-  border:1px solid rgba(184,134,11,.72);
+  border:1px solid rgba(194,155,56,.62);
 
   display:flex;
 
@@ -2098,11 +2116,6 @@ STRUCTURE
   position:relative;
 
   z-index:2;
-
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.55),
-    inset 0 -1px 0 rgba(100,55,0,.28),
-    0 2px 8px rgba(120,75,0,.12);
 
 }
 
@@ -2140,19 +2153,11 @@ STRUCTURE
 
   padding:16px;
 
-  background:var(--metallic-gold);
+  background:var(--color-main);
 
   text-align:center;
 
-  border-top:1px solid rgba(255,255,255,.25);
-
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.36),
-    inset 0 -1px 0 rgba(110,66,0,.24);
-
-  position:relative;
-
-  overflow:hidden;
+  border-top:2px solid var(--color-accent);
 
 }
 
@@ -2160,7 +2165,7 @@ STRUCTURE
 
   display:block;
 
-  color:#3B2805;
+  color:var(--color-accent);
 
   font-size:22px;
 
@@ -2176,7 +2181,7 @@ STRUCTURE
 
   display:block;
 
-  color:#2D1E08;
+  color:var(--white);
 
   font-size:11px;
 
@@ -2186,19 +2191,21 @@ STRUCTURE
 
 .result-box span{
 
-  color:rgba(45,30,8,.68);
+  color:rgba(255,255,255,.56);
 
   font-size:8px;
 
 }
 
 
-/* =========================
-BUSINESS
-========================= */
+/* =========================================================
+   BUSINESS
+   ========================================================= */
 
 .business{
-  background:var(--light);
+
+  background:var(--color-bg-card);
+
 }
 
 .business-grid{
@@ -2213,7 +2220,7 @@ BUSINESS
 
 .business-card{
 
-  background:var(--luxury-white);
+  background:var(--white);
 
   padding:34px 30px;
 
@@ -2225,7 +2232,7 @@ BUSINESS
 
 .business-number{
 
-  color:var(--gold);
+  color:var(--color-accent);
 
   font-size:11px;
 
@@ -2256,12 +2263,14 @@ BUSINESS
 }
 
 .business-card ul{
+
   list-style:none;
+
 }
 
 .business-card li{
 
-  color:var(--gray);
+  color:var(--color-text);
 
   font-size:13px;
 
@@ -2285,7 +2294,7 @@ BUSINESS
 
   border-radius:50%;
 
-  background:var(--emerald);
+  background:var(--color-accent);
 
 }
 
@@ -2302,20 +2311,20 @@ BUSINESS
 }
 
 .business-gallery .photo-frame{
+
   height:280px;
-}
 
-.business-gallery .photo-caption small{
-  color:var(--gold-light);
 }
 
 
-/* =========================
-STRENGTHS
-========================= */
+/* =========================================================
+   STRENGTHS
+   ========================================================= */
 
 .strengths{
-  background:var(--luxury-white);
+
+  background:var(--white);
+
 }
 
 .strength-grid{
@@ -2330,7 +2339,7 @@ STRENGTHS
 
 .strength-card{
 
-  background:var(--light);
+  background:var(--color-bg-card);
 
   padding:27px 21px;
 
@@ -2350,7 +2359,7 @@ STRENGTHS
 
 .strength-number{
 
-  color:var(--gold);
+  color:var(--color-accent);
 
   font-size:25px;
 
@@ -2393,20 +2402,26 @@ STRENGTHS
 }
 
 .strength-photo-band .photo-frame{
+
   height:240px;
+
 }
 
 
-/* =========================
-HISTORY
-========================= */
+/* =========================================================
+   HISTORY
+   ========================================================= */
 
 .history{
-  background:var(--light);
+
+  background:var(--color-bg-card);
+
 }
 
 .history-list{
+
   border-top:1px solid var(--line);
+
 }
 
 .history-row{
@@ -2425,7 +2440,7 @@ HISTORY
 
 .history-date{
 
-  color:var(--gold);
+  color:var(--color-accent);
 
   font-weight:700;
 
@@ -2435,7 +2450,7 @@ HISTORY
 
 .history-event{
 
-  color:var(--gray);
+  color:var(--color-text);
 
   font-size:13px;
 
@@ -2445,19 +2460,21 @@ HISTORY
 
   display:block;
 
-  color:var(--navy);
+  color:var(--color-main);
 
   margin-bottom:2px;
 
 }
 
 
-/* =========================
-COMPANY
-========================= */
+/* =========================================================
+   COMPANY
+   ========================================================= */
 
 .overview{
-  background:var(--luxury-white);
+
+  background:var(--white);
+
 }
 
 .overview-grid{
@@ -2478,13 +2495,13 @@ COMPANY
 
   overflow:hidden;
 
-  background:var(--navy);
+  background:var(--color-main);
 
   margin-bottom:18px;
 
-  border-top:1px solid rgba(184,134,11,.46);
+  border-top:1px solid rgba(194,155,56,.38);
 
-  border-bottom:1px solid rgba(170,119,28,.38);
+  border-bottom:1px solid rgba(194,155,56,.25);
 
 }
 
@@ -2518,13 +2535,18 @@ COMPANY
 
 }
 
+
+/* =========================================================
+   GOOGLE MAP
+   ========================================================= */
+
 .company-map{
 
   margin-top:23px;
 
   border:1px solid var(--line);
 
-  background:var(--luxury-white);
+  background:var(--white);
 
   box-shadow:var(--shadow-soft);
 
@@ -2549,13 +2571,16 @@ COMPANY
 }
 
 .company-map-head strong{
-  color:var(--navy);
+
+  color:var(--color-main);
+
   font-size:13px;
+
 }
 
 .company-map-head span{
 
-  color:var(--gold);
+  color:var(--color-accent);
 
   font-size:10px;
 
@@ -2581,7 +2606,7 @@ COMPANY
 
   border-collapse:collapse;
 
-  background:var(--light);
+  background:var(--color-bg-card);
 
 }
 
@@ -2592,7 +2617,9 @@ COMPANY
 }
 
 .company-table tr:first-child{
+
   border-top:none;
+
 }
 
 .company-table th,
@@ -2612,7 +2639,7 @@ COMPANY
 
   width:28%;
 
-  color:var(--navy);
+  color:var(--color-main);
 
   font-weight:800;
 
@@ -2621,25 +2648,27 @@ COMPANY
 }
 
 .company-table td{
-  color:var(--charcoal);
+
+  color:var(--color-text);
+
 }
 
 
-/* =========================
-VISION
-========================= */
+/* =========================================================
+   VISION
+   ========================================================= */
 
 .vision{
 
-  background:var(--light);
+  background:var(--color-bg-card);
 
   text-align:center;
 
   padding:65px 0;
 
-  border-top:1px solid rgba(184,134,11,.28);
+  border-top:1px solid rgba(14,29,56,.08);
 
-  border-bottom:1px solid rgba(170,119,28,.22);
+  border-bottom:1px solid rgba(14,29,56,.08);
 
 }
 
@@ -2672,13 +2701,13 @@ VISION
 }
 
 
-/* =========================
-CONTACT
-========================= */
+/* =========================================================
+   CONTACT
+   ========================================================= */
 
 .contact{
 
-  background:var(--navy);
+  background:var(--color-main);
 
   color:var(--white);
 
@@ -2697,7 +2726,9 @@ CONTACT
 }
 
 .contact .eyebrow{
-  color:var(--gold-light);
+
+  color:var(--color-accent);
+
 }
 
 .contact h2{
@@ -2724,11 +2755,11 @@ CONTACT
 
   background:rgba(255,255,255,.045);
 
-  border:1px solid rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.14);
 
   padding:29px;
 
-  border-top:1px solid rgba(184,134,11,.58);
+  border-top:2px solid var(--color-accent);
 
 }
 
@@ -2747,12 +2778,14 @@ CONTACT
 }
 
 .contact-row:first-child{
+
   border-top:none;
+
 }
 
 .contact-label{
 
-  color:var(--gold-light);
+  color:var(--color-accent);
 
   font-size:10px;
 
@@ -2782,9 +2815,9 @@ CONTACT
 
   padding:15px;
 
-  background:var(--metallic-gold);
+  background:var(--color-accent);
 
-  color:#2D1E08;
+  color:var(--color-main);
 
   text-align:center;
 
@@ -2796,44 +2829,28 @@ CONTACT
 
   transition:.3s;
 
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.45),
-    inset 0 -1px 0 rgba(110,66,0,.24);
-
 }
 
 .mail-button:hover{
 
-  filter:brightness(1.06);
-
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.55),
-    0 6px 16px rgba(184,134,11,.15);
+  background:#AD882F;
 
 }
 
 
-/* =========================
-FOOTER
-========================= */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 footer{
 
-  background:
-    linear-gradient(
-      145deg,
-      #171006 0%,
-      #2A1C09 48%,
-      #120D04 100%
-    );
+  background:#091426;
 
   padding:27px 0;
 
-  border-top:1px solid rgba(184,134,11,.55);
+  border-top:1px solid rgba(194,155,56,.48);
 
   position:relative;
-
-  overflow:hidden;
 
 }
 
@@ -2849,19 +2866,9 @@ footer::before{
 
   width:100%;
 
-  height:1px;
+  height:2px;
 
-  background:
-    linear-gradient(
-      90deg,
-      #B8860B 0%,
-      #E6CA65 30%,
-      #FFF8DC 50%,
-      #E6CA65 70%,
-      #AA771C 100%
-    );
-
-  opacity:.72;
+  background:var(--color-accent);
 
 }
 
@@ -2889,7 +2896,7 @@ footer::before{
 
   gap:10px;
 
-  color:#E6CA65;
+  color:var(--white);
 
   font-size:12px;
 
@@ -2911,108 +2918,16 @@ footer::before{
 
 footer small{
 
-  background:
-    linear-gradient(
-      135deg,
-      #B8860B 0%,
-      #E6CA65 30%,
-      #FFF8DC 50%,
-      #E6CA65 70%,
-      #AA771C 100%
-    );
-
-  -webkit-background-clip:text;
-
-  background-clip:text;
-
-  -webkit-text-fill-color:transparent;
-
-  color:transparent;
+  color:rgba(255,255,255,.52);
 
   font-size:10px;
 
-  opacity:.72;
-
 }
 
 
-/* =========================
-GOLD SHINE
-========================= */
-
-.result-box::before{
-
-  content:"";
-
-  position:absolute;
-
-  inset:0;
-
-  background:
-    linear-gradient(
-      110deg,
-      rgba(255,255,255,0) 30%,
-      rgba(255,255,255,.20) 50%,
-      rgba(255,255,255,0) 70%
-    );
-
-  transform:translateX(-100%);
-
-  transition:transform .8s ease;
-
-  pointer-events:none;
-
-}
-
-.result-box:hover::before{
-
-  transform:translateX(100%);
-
-}
-
-.btn-primary,
-.mail-button{
-
-  position:relative;
-
-  overflow:hidden;
-
-}
-
-.btn-primary::before,
-.mail-button::before{
-
-  content:"";
-
-  position:absolute;
-
-  inset:0;
-
-  background:
-    linear-gradient(
-      110deg,
-      rgba(255,255,255,0) 30%,
-      rgba(255,255,255,.26) 50%,
-      rgba(255,255,255,0) 70%
-    );
-
-  transform:translateX(-100%);
-
-  transition:transform .75s ease;
-
-}
-
-.btn-primary:hover::before,
-.mail-button:hover::before{
-
-  transform:translateX(100%);
-
-}
-
-
-/* =========================
-RESPONSIVE
-========================= */
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
 @media(max-width:1000px){
 
@@ -3075,7 +2990,9 @@ RESPONSIVE
 
   .margin-flow{
     grid-template-columns:repeat(2,1fr);
+
     gap:7px;
+
   }
 
   .margin-node:not(:last-child)::after{
@@ -3146,8 +3063,11 @@ RESPONSIVE
   /* HERO */
 
   .hero{
+
     min-height:100svh;
+
     padding:100px 0 45px;
+
   }
 
   .hero-video video{
@@ -3608,9 +3528,7 @@ RESPONSIVE
   }
 
   .footer-brand{
-
     justify-content:center;
-
   }
 
   footer small{
@@ -3626,6 +3544,11 @@ RESPONSIVE
 
 <body>
 
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
 <header>
 
 <div class="header-inner">
@@ -3633,24 +3556,6 @@ RESPONSIVE
 <a href="#top" class="brand">
 
 <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
-
-<defs>
-
-<linearGradient id="headerGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-
-<stop offset="0%" stop-color="#B8860B"/>
-
-<stop offset="30%" stop-color="#E6CA65"/>
-
-<stop offset="50%" stop-color="#FFF8DC"/>
-
-<stop offset="70%" stop-color="#E6CA65"/>
-
-<stop offset="100%" stop-color="#AA771C"/>
-
-</linearGradient>
-
-</defs>
 
 <circle
 
@@ -3662,7 +3567,7 @@ r="42"
 
 fill="none"
 
-stroke="#0084FF"
+stroke="#C29B38"
 
 stroke-width="6"
 
@@ -3680,7 +3585,7 @@ d="M18 66 L42 30 L54 46 L62 34 L84 66 Z"
 
 fill="none"
 
-stroke="#3B2E16"
+stroke="#0E1D38"
 
 stroke-width="6"
 
@@ -3707,17 +3612,29 @@ stroke-linecap="round"
 
 <ul>
 
-<li><a href="#about">山源とは</a></li>
+<li>
+<a href="#about">山源とは</a>
+</li>
 
-<li><a href="#message">代表メッセージ</a></li>
+<li>
+<a href="#message">代表メッセージ</a>
+</li>
 
-<li><a href="#philosophy">理念</a></li>
+<li>
+<a href="#philosophy">理念</a>
+</li>
 
-<li><a href="#business">事業内容</a></li>
+<li>
+<a href="#business">事業内容</a>
+</li>
 
-<li><a href="#overview">会社概要</a></li>
+<li>
+<a href="#overview">会社概要</a>
+</li>
 
-<li><a href="#contact">お問い合わせ</a></li>
+<li>
+<a href="#contact">お問い合わせ</a>
+</li>
 
 </ul>
 
@@ -3731,13 +3648,26 @@ stroke-linecap="round"
 <main id="top">
 
 
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
 <section class="hero">
 
 <div class="hero-video">
 
-<video autoplay muted loop playsinline preload="auto">
+<video
+autoplay
+muted
+loop
+playsinline
+preload="auto"
+>
 
-<source src="./230103-2_64Dj1XC5.mp4" type="video/mp4">
+<source
+src="./230103-2_64Dj1XC5.mp4"
+type="video/mp4"
+>
 
 お使いのブラウザでは動画を再生できません。
 
@@ -3773,11 +3703,15 @@ RENEWABLE ENERGY COMPANY
 <div class="hero-buttons">
 
 <a href="#business" class="btn btn-primary">
+
 事業内容を見る
+
 </a>
 
 <a href="#contact" class="btn btn-outline">
+
 お問い合わせ
+
 </a>
 
 </div>
@@ -3786,6 +3720,10 @@ RENEWABLE ENERGY COMPANY
 
 </section>
 
+
+<!-- =========================================================
+     ABOUT
+     ========================================================= -->
 
 <section class="about" id="about">
 
@@ -3860,7 +3798,9 @@ ABOUT SANGEN
 <div class="quote">
 
 <span class="quote-label">
+
 CORPORATE PHILOSOPHY
+
 </span>
 
 <h3>
@@ -3921,6 +3861,10 @@ loading="lazy"
 </section>
 
 
+<!-- =========================================================
+     SOLAR
+     ========================================================= -->
+
 <section class="solar-visual">
 
 <div class="solar-visual-image"></div>
@@ -3932,7 +3876,9 @@ loading="lazy"
 <div class="solar-content-inner">
 
 <p class="eyebrow">
+
 SOLAR POWER GENERATION
+
 </p>
 
 <h2>
@@ -3962,6 +3908,10 @@ SOLAR POWER GENERATION
 </section>
 
 
+<!-- =========================================================
+     MESSAGE
+     ========================================================= -->
+
 <section class="message" id="message">
 
 <div class="wrap">
@@ -3983,25 +3933,11 @@ MESSAGE
 
 <div class="person">
 
-<svg class="person-logo" viewBox="0 0 100 100" aria-hidden="true">
-
-<defs>
-
-<linearGradient id="personGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-
-<stop offset="0%" stop-color="#B8860B"/>
-
-<stop offset="30%" stop-color="#E6CA65"/>
-
-<stop offset="50%" stop-color="#FFF8DC"/>
-
-<stop offset="70%" stop-color="#E6CA65"/>
-
-<stop offset="100%" stop-color="#AA771C"/>
-
-</linearGradient>
-
-</defs>
+<svg
+class="person-logo"
+viewBox="0 0 100 100"
+aria-hidden="true"
+>
 
 <circle
 
@@ -4011,7 +3947,7 @@ cy="50"
 
 r="42"
 
-fill="#3B2E16"
+fill="#0E1D38"
 
 />
 
@@ -4025,7 +3961,7 @@ r="32"
 
 fill="none"
 
-stroke="url(#personGoldGradient)"
+stroke="#C29B38"
 
 stroke-width="5"
 
@@ -4048,20 +3984,29 @@ stroke-linejoin="round"
 </svg>
 
 <p class="person-role">
+
 REPRESENTATIVE DIRECTOR
+
 </p>
 
 <p class="person-name">
+
 渕上 哲汰
+
 </p>
 
 <p class="person-en">
+
 Tetsuta Fuchikami
+
 </p>
 
 <p class="person-position">
+
 代表取締役<br>
+
 株式会社山源
+
 </p>
 
 </div>
@@ -4070,7 +4015,9 @@ Tetsuta Fuchikami
 <div class="message-body">
 
 <p>
+
 「正しい在り方で、正しく勝つ。」
+
 </p>
 
 <p>
@@ -4108,7 +4055,9 @@ Tetsuta Fuchikami
 それでも私たちは、
 
 <strong>
+
 誠実であることと、強い会社であることは両立できる
+
 </strong>
 
 と考えています。
@@ -4148,7 +4097,9 @@ Tetsuta Fuchikami
 株式会社山源
 
 <strong>
+
 代表取締役　渕上 哲汰
+
 </strong>
 
 </div>
@@ -4247,6 +4198,10 @@ loading="lazy"
 </section>
 
 
+<!-- =========================================================
+     PHILOSOPHY
+     ========================================================= -->
+
 <section class="philosophy" id="philosophy">
 
 <div class="wrap">
@@ -4287,7 +4242,9 @@ OUR STANCE
 <div class="philosophy-card">
 
 <p class="card-number">
+
 01 / SALES PHILOSOPHY
+
 </p>
 
 <h3>
@@ -4318,7 +4275,9 @@ OUR STANCE
 <div class="philosophy-card">
 
 <p class="card-number">
+
 02 / PRICE
+
 </p>
 
 <h3>
@@ -4345,7 +4304,9 @@ OUR STANCE
 <div class="philosophy-card">
 
 <p class="card-number">
+
 03 / TO CUSTOMERS
+
 </p>
 
 <h3>
@@ -4392,7 +4353,9 @@ FROM THE RIGHT PRODUCT
 </div>
 
 <p class="philosophy-visual-sub">
+
 PRODUCT → INSTALLATION → WARRANTY → PRICE
+
 </p>
 
 </div>
@@ -4546,6 +4509,10 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 
 </section>
 
+
+<!-- =========================================================
+     ISSUES
+     ========================================================= -->
 
 <section class="issue">
 
@@ -4833,6 +4800,10 @@ COST STACKING
 
 </section>
 
+
+<!-- =========================================================
+     STRUCTURE
+     ========================================================= -->
 
 <section class="structure">
 
@@ -5220,6 +5191,10 @@ SANGEN MODEL
 </section>
 
 
+<!-- =========================================================
+     BUSINESS
+     ========================================================= -->
+
 <section class="business" id="business">
 
 <div class="wrap">
@@ -5413,6 +5388,10 @@ loading="lazy"
 
 </section>
 
+
+<!-- =========================================================
+     STRENGTHS
+     ========================================================= -->
 
 <section class="strengths">
 
@@ -5650,6 +5629,10 @@ loading="lazy"
 </section>
 
 
+<!-- =========================================================
+     HISTORY
+     ========================================================= -->
+
 <section class="history">
 
 <div class="wrap">
@@ -5720,6 +5703,10 @@ HISTORY
 
 </section>
 
+
+<!-- =========================================================
+     COMPANY
+     ========================================================= -->
 
 <section class="overview" id="overview">
 
@@ -5815,7 +5802,9 @@ allowfullscreen>
 <th>会社名</th>
 
 <td>
+
 株式会社山源（SANGEN Co., Ltd.）
+
 </td>
 
 </tr>
@@ -5825,7 +5814,9 @@ allowfullscreen>
 <th>代表者</th>
 
 <td>
+
 代表取締役　渕上 哲汰
+
 </td>
 
 </tr>
@@ -5835,7 +5826,9 @@ allowfullscreen>
 <th>設立</th>
 
 <td>
+
 2026年7月
+
 </td>
 
 </tr>
@@ -5845,7 +5838,9 @@ allowfullscreen>
 <th>資本金</th>
 
 <td>
+
 500万円
+
 </td>
 
 </tr>
@@ -5871,7 +5866,9 @@ Park Front 博多駅前 8F
 <th>電話番号</th>
 
 <td>
+
 070-5305-7600
+
 </td>
 
 </tr>
@@ -5881,7 +5878,9 @@ Park Front 博多駅前 8F
 <th>メールアドレス</th>
 
 <td>
+
 info@yamagen21.co.jp
+
 </td>
 
 </tr>
@@ -5911,7 +5910,9 @@ info@yamagen21.co.jp
 <th>取引銀行</th>
 
 <td>
+
 福岡銀行、PayPay銀行、西日本シティ銀行
+
 </td>
 
 </tr>
@@ -5935,7 +5936,9 @@ info@yamagen21.co.jp
 <th>営業エリア</th>
 
 <td>
+
 九州全域を中心に 全国対応
+
 </td>
 
 </tr>
@@ -5948,6 +5951,10 @@ info@yamagen21.co.jp
 
 </section>
 
+
+<!-- =========================================================
+     VISION
+     ========================================================= -->
 
 <section class="vision">
 
@@ -5985,6 +5992,10 @@ BRAND VISION
 
 </section>
 
+
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
 
 <section class="contact" id="contact">
 
@@ -6063,10 +6074,15 @@ Park Front 博多駅前 8F
 
 
 <a
+
 class="mail-button"
+
 href="mailto:info@yamagen21.co.jp"
+
 >
+
 メールでお問い合わせする
+
 </a>
 
 </div>
@@ -6079,9 +6095,9 @@ href="mailto:info@yamagen21.co.jp"
 </main>
 
 
-<!-- =========================
-FOOTER
-========================= -->
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
 
 <footer>
 
@@ -6090,24 +6106,6 @@ FOOTER
 <div class="footer-brand">
 
 <svg viewBox="0 0 100 100">
-
-<defs>
-
-<linearGradient id="footerGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-
-<stop offset="0%" stop-color="#B8860B"/>
-
-<stop offset="30%" stop-color="#E6CA65"/>
-
-<stop offset="50%" stop-color="#FFF8DC"/>
-
-<stop offset="70%" stop-color="#E6CA65"/>
-
-<stop offset="100%" stop-color="#AA771C"/>
-
-</linearGradient>
-
-</defs>
 
 <circle
 
@@ -6119,7 +6117,7 @@ r="42"
 
 fill="none"
 
-stroke="url(#footerGoldGradient)"
+stroke="#C29B38"
 
 stroke-width="6"
 
@@ -6137,7 +6135,7 @@ d="M18 66 L42 30 L54 46 L62 34 L84 66 Z"
 
 fill="none"
 
-stroke="url(#footerGoldGradient)"
+stroke="#FFFFFF"
 
 stroke-width="6"
 
@@ -6150,14 +6148,18 @@ stroke-linecap="round"
 </svg>
 
 <span>
+
 株式会社山源 SANGEN Co., Ltd.
+
 </span>
 
 </div>
 
 
 <small>
+
 © 2026 SANGEN Co., Ltd. All Rights Reserved.
+
 </small>
 
 </div>
