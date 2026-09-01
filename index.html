@@ -18,11 +18,11 @@
 :root{
   --white:#FFFFFF;
 
-  /* 高級感のある白 */
-  --luxury-white:#F5F2EA;
+  /* 高級感のあるウォームホワイト */
+  --luxury-white:#F3F0E8;
 
-  --light:#F0F1F0;
-  --light-gray:#E7E7E3;
+  --light:#EDEEEB;
+  --light-gray:#E3E4DF;
 
   --navy:#0E1A2A;
   --charcoal:#1F2937;
@@ -32,19 +32,19 @@
 
   --red:#E63946;
 
-  /* くすみのある黒系ゴールド */
-  --muted-gold:#8B8064;
-  --muted-gold-light:#B0A58B;
+  /* 黒みのある落ち着いたゴールド */
+  --muted-gold:#75684D;
+  --muted-gold-light:#A79A7B;
 
   --gray:#64748B;
-  --gray-light:#C9C8C2;
+  --gray-light:#C6C5BE;
 
-  /* 暖色系の細い境界線 */
-  --line:#D8D4CB;
+  /* 暖色系の罫線 */
+  --line:#D7D2C6;
 
   --max:1180px;
 
-  --shadow:0 12px 30px rgba(14,26,42,.055);
+  --shadow:0 14px 34px rgba(14,26,42,.055);
   --shadow-soft:0 6px 18px rgba(14,26,42,.035);
 }
 
@@ -109,17 +109,13 @@ h2,
 h3,
 h4{
   font-family:'Shippori Mincho',serif;
-
   color:var(--navy);
-
   font-weight:700;
-
   letter-spacing:.04em;
 }
 
 strong{
   font-weight:800;
-
   color:inherit;
 }
 
@@ -130,19 +126,16 @@ HEADER
 
 header{
   position:fixed;
-
   top:0;
   left:0;
-
   width:100%;
-
   z-index:1000;
 
-  background:rgba(245,242,234,.96);
+  background:rgba(243,240,232,.96);
 
   backdrop-filter:blur(18px);
 
-  border-bottom:1px solid rgba(14,26,42,.07);
+  border-bottom:1px solid rgba(117,104,77,.16);
 }
 
 .header-inner{
@@ -273,7 +266,6 @@ HERO
 
 .hero-video video{
   width:100%;
-
   height:100%;
 
   object-fit:cover;
@@ -432,7 +424,7 @@ SECTION TITLE
 }
 
 .eyebrow{
-  color:var(--blue);
+  color:var(--muted-gold);
 
   font-size:11px;
 
@@ -472,6 +464,10 @@ PHOTO SYSTEM
   position:relative;
 
   min-width:0;
+
+  border-top:1px solid rgba(117,104,77,.30);
+
+  border-bottom:1px solid rgba(117,104,77,.30);
 }
 
 .photo-frame img{
@@ -507,7 +503,9 @@ PHOTO SYSTEM
   z-index:2;
 
   left:22px;
+
   right:22px;
+
   bottom:18px;
 
   color:var(--white);
@@ -608,10 +606,6 @@ ABOUT
   margin-top:28px;
 
   height:390px;
-
-  border-top:1px solid rgba(139,128,100,.35);
-
-  border-bottom:1px solid rgba(139,128,100,.35);
 }
 
 
@@ -637,7 +631,7 @@ SOLAR VISUAL
   inset:0;
 
   background-image:
-    url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2200&q=85");
+    url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=2200&q=85");
 
   background-size:cover;
 
@@ -675,7 +669,7 @@ SOLAR VISUAL
 }
 
 .solar-content .eyebrow{
-  color:var(--white);
+  color:var(--muted-gold-light);
 }
 
 .solar-content h2{
@@ -824,7 +818,7 @@ MESSAGE
 
 /* =========================
 MESSAGE PHOTO
-3枚横並び
+3枚横並び固定
 ========================= */
 
 .message-photo-grid{
@@ -839,10 +833,6 @@ MESSAGE PHOTO
 
 .message-photo-grid .photo-frame{
   height:255px;
-
-  border-top:1px solid rgba(139,128,100,.30);
-
-  border-bottom:1px solid rgba(139,128,100,.30);
 }
 
 
@@ -924,9 +914,9 @@ PHILOSOPHY VISUAL
 
   overflow:hidden;
 
-  border-top:1px solid rgba(139,128,100,.22);
+  border-top:1px solid rgba(117,104,77,.35);
 
-  border-bottom:1px solid rgba(139,128,100,.22);
+  border-bottom:1px solid rgba(117,104,77,.35);
 }
 
 .philosophy-visual::before{
@@ -1028,7 +1018,7 @@ PHILOSOPHY VISUAL
 
   border-radius:50%;
 
-  background:var(--blue);
+  background:var(--muted-gold);
 
   color:var(--white);
 
@@ -1104,7 +1094,7 @@ PHILOSOPHY VISUAL
 
   gap:10px;
 
-  border-top:1px solid rgba(139,128,100,.25);
+  border-top:1px solid rgba(117,104,77,.32);
 }
 
 .product-point-icon{
@@ -1122,7 +1112,7 @@ PHILOSOPHY VISUAL
 
   border-radius:50%;
 
-  background:rgba(139,128,100,.12);
+  background:rgba(117,104,77,.12);
 
   color:var(--muted-gold);
 
@@ -1227,6 +1217,8 @@ ISSUE VISUAL
   border:1px solid var(--line);
 
   box-shadow:var(--shadow);
+
+  border-top:1px solid rgba(117,104,77,.35);
 }
 
 .issue-visual-top{
@@ -1296,9 +1288,9 @@ ISSUE VISUAL
 
   height:16px;
 
-  border-top:2px solid var(--gray-light);
+  border-top:2px solid var(--muted-gold-light);
 
-  border-right:2px solid var(--gray-light);
+  border-right:2px solid var(--muted-gold-light);
 
   transform:translateY(-50%) rotate(45deg);
 
@@ -1310,7 +1302,7 @@ ISSUE VISUAL
 .margin-node-number{
   font-size:10px;
 
-  color:var(--gray);
+  color:var(--muted-gold);
 
   letter-spacing:.14em;
 
@@ -1378,7 +1370,7 @@ ISSUE VISUAL
 }
 
 .margin-meter-label strong{
-  color:var(--navy);
+  color:var(--muted-gold);
 
   font-size:12px;
 }
@@ -1511,7 +1503,7 @@ STRUCTURE
 }
 
 .flow-arrow{
-  color:var(--gray);
+  color:var(--muted-gold);
 
   font-weight:700;
 }
@@ -1753,7 +1745,9 @@ STRUCTURE
 
   background:var(--navy);
 
-  color:var(--white);
+  color:var(--muted-gold-light);
+
+  border:1px solid rgba(167,154,123,.4);
 
   display:flex;
 
@@ -1803,6 +1797,8 @@ STRUCTURE
   background:var(--navy);
 
   text-align:center;
+
+  border-top:1px solid rgba(167,154,123,.28);
 }
 
 .result-number{
@@ -1920,13 +1916,13 @@ BUSINESS
 
 /* =========================
 BUSINESS PHOTO
-3枚の視覚ブロック
+3枚完全横並び
 ========================= */
 
 .business-gallery{
   display:grid;
 
-  grid-template-columns:1.15fr .925fr .925fr;
+  grid-template-columns:repeat(3,1fr);
 
   gap:8px;
 
@@ -1934,19 +1930,11 @@ BUSINESS PHOTO
 }
 
 .business-gallery .photo-frame{
-  height:285px;
-
-  border-top:1px solid rgba(139,128,100,.32);
-
-  border-bottom:1px solid rgba(139,128,100,.32);
+  height:280px;
 }
 
 .business-gallery .photo-caption small{
   color:var(--muted-gold-light);
-}
-
-.business-gallery-large{
-  height:375px !important;
 }
 
 
@@ -2011,7 +1999,7 @@ STRENGTHS
 
 /* =========================
 STRENGTH PHOTO
-3枚横並び
+3枚完全横並び
 ========================= */
 
 .strength-photo-band{
@@ -2026,10 +2014,6 @@ STRENGTH PHOTO
 
 .strength-photo-band .photo-frame{
   height:240px;
-
-  border-top:1px solid rgba(139,128,100,.30);
-
-  border-bottom:1px solid rgba(139,128,100,.30);
 }
 
 
@@ -2107,9 +2091,9 @@ COMPANY
 
   margin-bottom:18px;
 
-  border-top:1px solid rgba(139,128,100,.30);
+  border-top:1px solid rgba(117,104,77,.30);
 
-  border-bottom:1px solid rgba(139,128,100,.30);
+  border-bottom:1px solid rgba(117,104,77,.30);
 }
 
 .overview-image img{
@@ -2135,6 +2119,11 @@ COMPANY
 
   line-height:1.92;
 }
+
+
+/* =========================
+GOOGLE MAP
+========================= */
 
 .company-map{
   margin-top:23px;
@@ -2239,9 +2228,9 @@ VISION
 
   padding:65px 0;
 
-  border-top:1px solid rgba(139,128,100,.16);
+  border-top:1px solid rgba(117,104,77,.16);
 
-  border-bottom:1px solid rgba(139,128,100,.16);
+  border-bottom:1px solid rgba(117,104,77,.16);
 }
 
 .vision-inner{
@@ -2314,7 +2303,7 @@ CONTACT
 
   padding:29px;
 
-  border-top:1px solid rgba(176,165,139,.38);
+  border-top:1px solid rgba(167,154,123,.38);
 }
 
 .contact-row{
@@ -2387,7 +2376,7 @@ footer{
 
   padding:27px 0;
 
-  border-top:1px solid rgba(176,165,139,.22);
+  border-top:1px solid rgba(167,154,123,.25);
 }
 
 .footer-inner{
@@ -2516,23 +2505,15 @@ RESPONSIVE
   }
 
   .business-gallery{
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(3,1fr);
   }
 
-  .business-gallery-large{
-    height:330px !important;
-  }
-
-  .business-gallery-small{
-    display:grid;
-
-    grid-template-rows:1fr 1fr;
-
-    gap:8px;
+  .business-gallery .photo-frame{
+    height:250px;
   }
 
   .strength-photo-band{
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(3,1fr);
   }
 }
 
@@ -2559,7 +2540,6 @@ RESPONSIVE
 
   .brand-mark{
     width:32px;
-
     height:32px;
   }
 
@@ -2632,9 +2612,11 @@ RESPONSIVE
   }
 
   .photo-caption{
-    left:17px;
-    right:17px;
-    bottom:15px;
+    left:15px;
+
+    right:15px;
+
+    bottom:14px;
   }
 
   .photo-caption strong{
@@ -2657,7 +2639,9 @@ RESPONSIVE
   }
 
 
-  /* MESSAGE */
+  /* MESSAGE
+  スマホでも3枚を横並びで固定
+  */
 
   .message-photo-grid{
     grid-template-columns:repeat(3,1fr);
@@ -2673,7 +2657,9 @@ RESPONSIVE
 
   .message-photo-grid .photo-caption{
     left:8px;
+
     right:8px;
+
     bottom:8px;
   }
 
@@ -2823,29 +2809,16 @@ RESPONSIVE
     font-size:21px;
   }
 
+  /* スマホでは縦に見やすくする */
+
   .business-gallery{
     grid-template-columns:1fr;
 
     gap:6px;
   }
 
-  .business-gallery .photo-frame,
-  .business-gallery-large{
-    height:250px !important;
-
-    min-height:250px;
-  }
-
-  .business-gallery-small{
-    grid-template-columns:1fr 1fr;
-
-    grid-template-rows:1fr;
-
-    gap:6px;
-  }
-
-  .business-gallery-small .photo-frame{
-    min-height:165px;
+  .business-gallery .photo-frame{
+    height:250px;
   }
 
 
@@ -2868,13 +2841,15 @@ RESPONSIVE
   }
 
   .strength-photo-band .photo-caption{
-    left:8px;
-    right:8px;
-    bottom:8px;
+    left:7px;
+
+    right:7px;
+
+    bottom:7px;
   }
 
   .strength-photo-band .photo-caption small{
-    font-size:6px;
+    font-size:5px;
   }
 
   .strength-photo-band .photo-caption strong{
@@ -2986,6 +2961,10 @@ RESPONSIVE
 
 }
 
+
+/* =========================
+ACCESSIBILITY
+========================= */
 
 @media(prefers-reduced-motion:reduce){
 
@@ -3102,6 +3081,7 @@ type="video/mp4"
 
 </div>
 
+
 <div class="hero-inner">
 
 <p class="hero-eyebrow">
@@ -3217,8 +3197,8 @@ CORPORATE PHILOSOPHY
 <div class="photo-frame about-photo-wide">
 
 <img
-src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2200&q=85"
-alt="太陽光発電パネル"
+src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2200&q=85"
+alt="都市と建築"
 loading="lazy"
 >
 
@@ -3226,7 +3206,7 @@ loading="lazy"
 
 <div class="photo-caption">
 
-<small>SANGEN / RENEWABLE ENERGY</small>
+<small>SANGEN / CORPORATE IDENTITY</small>
 
 <strong>
 暮らしのインフラを、次の時代へ。
@@ -3424,8 +3404,8 @@ Tetsuta Fuchikami
 <div class="photo-frame">
 
 <img
-src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=1500&q=85"
-alt="ビジネスミーティング"
+src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
+alt="経営会議"
 loading="lazy"
 >
 
@@ -3447,7 +3427,7 @@ loading="lazy"
 <div class="photo-frame">
 
 <img
-src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85"
+src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=85"
 alt="チームミーティング"
 loading="lazy"
 >
@@ -3470,8 +3450,8 @@ loading="lazy"
 <div class="photo-frame">
 
 <img
-src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=85"
-alt="チームワーク"
+src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85"
+alt="チームで働く人々"
 loading="lazy"
 >
 
@@ -4140,7 +4120,6 @@ STRUCTURE COMPARISON
 
 <div class="structure-compare">
 
-
 <div class="compare-side">
 
 <div class="compare-title">
@@ -4466,13 +4445,17 @@ LIFE SUPPORT BUSINESS
 </div>
 
 
+<!--
+3枚の異なる写真を完全横並び
+-->
+
 <div class="business-gallery">
 
-<div class="photo-frame business-gallery-large">
+<div class="photo-frame">
 
 <img
-src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1800&q=85"
-alt="住宅と太陽光発電"
+src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1400&q=85"
+alt="太陽光パネル"
 loading="lazy"
 >
 
@@ -4494,8 +4477,8 @@ loading="lazy"
 <div class="photo-frame">
 
 <img
-src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85"
-alt="事業活動"
+src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85"
+alt="オフィスでの事業活動"
 loading="lazy"
 >
 
@@ -4517,8 +4500,8 @@ loading="lazy"
 <div class="photo-frame">
 
 <img
-src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=85"
-alt="住宅"
+src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1400&q=85"
+alt="住宅と暮らし"
 loading="lazy"
 >
 
@@ -4676,6 +4659,11 @@ STRENGTHS
 </div>
 
 
+<!--
+3枚完全横並び
+すべて異なる写真
+-->
+
 <div class="strength-photo-band">
 
 <div class="photo-frame">
@@ -4705,7 +4693,7 @@ loading="lazy"
 
 <img
 src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=85"
-alt="オフィス"
+alt="モダンなオフィス"
 loading="lazy"
 >
 
@@ -4727,7 +4715,7 @@ loading="lazy"
 <div class="photo-frame">
 
 <img
-src="https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&w=1400&q=85"
+src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85"
 alt="ワークスペース"
 loading="lazy"
 >
@@ -4847,14 +4835,13 @@ COMPANY OVERVIEW
 
 <div class="overview-grid">
 
-
 <div class="overview-side">
 
 <div class="overview-image">
 
 <img
-src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=85"
-alt="太陽光発電パネル"
+src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=85"
+alt="オフィスと企業空間"
 loading="lazy"
 >
 
@@ -5111,6 +5098,10 @@ href="mailto:info@yamagen21.co.jp"
 
 </main>
 
+
+<!-- =========================
+FOOTER
+========================= -->
 
 <footer>
 
