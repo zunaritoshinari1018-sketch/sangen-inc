@@ -18,8 +18,8 @@
 :root{
   --white:#FFFFFF;
   --luxury-white:#F7F5F0;
-  --light:#F1F3F5;
-  --light-gray:#E7EBEE;
+  --light:#F0F2F3;
+  --light-gray:#E5E9EC;
 
   --navy:#0E1A2A;
   --charcoal:#1F2937;
@@ -31,12 +31,12 @@
 
   --gray:#64748B;
   --gray-light:#CBD5E1;
-  --line:#D9DEE3;
+  --line:#D7DDE2;
 
   --max:1180px;
 
-  --shadow:0 14px 36px rgba(14,26,42,.07);
-  --shadow-soft:0 7px 20px rgba(14,26,42,.045);
+  --shadow:0 12px 30px rgba(14,26,42,.06);
+  --shadow-soft:0 6px 18px rgba(14,26,42,.04);
 }
 
 *{
@@ -60,7 +60,7 @@ body{
   color:var(--charcoal);
   background:var(--luxury-white);
 
-  line-height:1.85;
+  line-height:1.82;
   font-weight:400;
 
   -webkit-font-smoothing:antialiased;
@@ -90,20 +90,16 @@ a{
 }
 
 section{
-  padding:50px 0;
+  padding:42px 0;
 }
 
 h1,
 h2,
 h3,
 h4{
-  font-family:'Shippori Mincho',
-  serif;
-
+  font-family:'Shippori Mincho',serif;
   color:var(--navy);
-
   font-weight:700;
-
   letter-spacing:.04em;
 }
 
@@ -119,25 +115,22 @@ HEADER
 
 header{
   position:fixed;
-
   top:0;
   left:0;
-
   width:100%;
-
   z-index:1000;
 
-  background:rgba(247,245,240,.95);
+  background:rgba(247,245,240,.96);
 
   backdrop-filter:blur(18px);
 
-  border-bottom:1px solid rgba(14,26,42,.08);
+  border-bottom:1px solid rgba(14,26,42,.07);
 }
 
 .header-inner{
   width:min(var(--max),calc(100% - 64px));
 
-  min-height:74px;
+  min-height:72px;
 
   margin:auto;
 
@@ -190,7 +183,7 @@ header{
 nav ul{
   display:flex;
 
-  gap:28px;
+  gap:26px;
 
   list-style:none;
 }
@@ -198,7 +191,7 @@ nav ul{
 nav a{
   position:relative;
 
-  font-size:13px;
+  font-size:12px;
 
   letter-spacing:.06em;
 
@@ -237,7 +230,7 @@ HERO
 
   min-height:100svh;
 
-  padding:140px 0 60px;
+  padding:125px 0 48px;
 
   display:flex;
 
@@ -279,10 +272,10 @@ HERO
   background:
     linear-gradient(
       90deg,
-      rgba(0,0,0,.70) 0%,
+      rgba(0,0,0,.72) 0%,
       rgba(0,0,0,.43) 36%,
-      rgba(0,0,0,.14) 70%,
-      rgba(0,0,0,.05) 100%
+      rgba(0,0,0,.12) 72%,
+      rgba(0,0,0,.04) 100%
     );
 
   z-index:1;
@@ -311,13 +304,14 @@ HERO
 
   letter-spacing:.28em;
 
-  margin-bottom:18px;
+  margin-bottom:17px;
 }
 
 .hero-eyebrow::before{
   content:"";
 
   width:42px;
+
   height:1px;
 
   background:var(--blue);
@@ -328,9 +322,9 @@ HERO
 
   font-size:clamp(38px,5.6vw,70px);
 
-  line-height:1.38;
+  line-height:1.34;
 
-  margin-bottom:21px;
+  margin-bottom:20px;
 }
 
 .hero h1 strong{
@@ -346,15 +340,15 @@ HERO
 
   font-size:15px;
 
-  line-height:1.95;
+  line-height:1.92;
 
-  margin-bottom:27px;
+  margin-bottom:25px;
 }
 
 .hero-buttons{
   display:flex;
 
-  gap:12px;
+  gap:11px;
 
   flex-wrap:wrap;
 }
@@ -368,7 +362,7 @@ HERO
 
   min-width:190px;
 
-  padding:14px 29px;
+  padding:13px 28px;
 
   font-size:13px;
 
@@ -394,11 +388,11 @@ HERO
 }
 
 .btn-outline{
-  background:rgba(255,255,255,.06);
+  background:rgba(255,255,255,.05);
 
   color:var(--white);
 
-  border-color:rgba(255,255,255,.62);
+  border-color:rgba(255,255,255,.60);
 }
 
 .btn-outline:hover{
@@ -415,7 +409,7 @@ SECTION TITLE
 .section-head{
   max-width:720px;
 
-  margin-bottom:32px;
+  margin-bottom:28px;
 }
 
 .eyebrow{
@@ -423,32 +417,32 @@ SECTION TITLE
 
   font-size:11px;
 
-  letter-spacing:.26em;
+  letter-spacing:.25em;
 
   font-weight:700;
 
-  margin-bottom:8px;
+  margin-bottom:7px;
 }
 
 .section-head h2{
   font-size:clamp(28px,3.6vw,44px);
 
-  line-height:1.52;
+  line-height:1.5;
 }
 
 .section-head p{
-  margin-top:12px;
+  margin-top:11px;
 
   color:var(--gray);
 
   font-size:14px;
 
-  line-height:1.95;
+  line-height:1.94;
 }
 
 
 /* =========================
-PHOTO IMPACT
+PHOTO SYSTEM
 ========================= */
 
 .photo-frame{
@@ -457,6 +451,8 @@ PHOTO IMPACT
   background:var(--navy);
 
   position:relative;
+
+  min-width:0;
 }
 
 .photo-frame img{
@@ -469,7 +465,7 @@ PHOTO IMPACT
 }
 
 .photo-frame:hover img{
-  transform:scale(1.04);
+  transform:scale(1.035);
 }
 
 .photo-overlay{
@@ -481,7 +477,7 @@ PHOTO IMPACT
     linear-gradient(
       180deg,
       transparent 30%,
-      rgba(14,26,42,.82)
+      rgba(14,26,42,.84)
     );
 }
 
@@ -490,9 +486,9 @@ PHOTO IMPACT
 
   z-index:2;
 
-  left:26px;
-  right:26px;
-  bottom:21px;
+  left:22px;
+  right:22px;
+  bottom:18px;
 
   color:var(--white);
 }
@@ -502,11 +498,11 @@ PHOTO IMPACT
 
   display:block;
 
-  font-size:9px;
+  font-size:8px;
 
   letter-spacing:.22em;
 
-  margin-bottom:4px;
+  margin-bottom:3px;
 }
 
 .photo-caption strong{
@@ -514,9 +510,9 @@ PHOTO IMPACT
 
   font-family:'Shippori Mincho',serif;
 
-  font-size:21px;
+  font-size:19px;
 
-  line-height:1.42;
+  line-height:1.4;
 }
 
 
@@ -531,9 +527,9 @@ ABOUT
 .about-grid{
   display:grid;
 
-  grid-template-columns:1.1fr .9fr;
+  grid-template-columns:1.08fr .92fr;
 
-  gap:52px;
+  gap:45px;
 
   align-items:start;
 }
@@ -543,7 +539,7 @@ ABOUT
 
   font-size:15px;
 
-  margin-bottom:16px;
+  margin-bottom:15px;
 }
 
 .about-text strong{
@@ -555,7 +551,7 @@ ABOUT
 
   border-left:3px solid var(--blue);
 
-  padding:31px 28px;
+  padding:28px 27px;
 
   box-shadow:var(--shadow-soft);
 }
@@ -571,15 +567,15 @@ ABOUT
 
   font-weight:700;
 
-  margin-bottom:13px;
+  margin-bottom:11px;
 }
 
 .quote h3{
   font-size:22px;
 
-  line-height:1.72;
+  line-height:1.7;
 
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 
 .quote p{
@@ -589,9 +585,9 @@ ABOUT
 }
 
 .about-photo-wide{
-  margin-top:32px;
+  margin-top:28px;
 
-  height:410px;
+  height:390px;
 }
 
 .about-photo-wide img{
@@ -606,7 +602,7 @@ SOLAR VISUAL
 .solar-visual{
   position:relative;
 
-  min-height:500px;
+  min-height:480px;
 
   overflow:hidden;
 
@@ -636,9 +632,9 @@ SOLAR VISUAL
   background:
     linear-gradient(
       90deg,
-      rgba(14,26,42,.88) 0%,
+      rgba(14,26,42,.90) 0%,
       rgba(14,26,42,.54) 42%,
-      rgba(14,26,42,.09) 100%
+      rgba(14,26,42,.08) 100%
     );
 }
 
@@ -651,7 +647,7 @@ SOLAR VISUAL
 
   align-items:center;
 
-  min-height:500px;
+  min-height:480px;
 }
 
 .solar-content-inner{
@@ -667,9 +663,9 @@ SOLAR VISUAL
 
   font-size:clamp(30px,4vw,50px);
 
-  line-height:1.52;
+  line-height:1.5;
 
-  margin-bottom:14px;
+  margin-bottom:12px;
 }
 
 .solar-content p{
@@ -679,7 +675,7 @@ SOLAR VISUAL
 
   font-size:14px;
 
-  line-height:1.95;
+  line-height:1.92;
 }
 
 
@@ -694,9 +690,11 @@ MESSAGE
 .message-grid{
   display:grid;
 
-  grid-template-columns:315px 1fr;
+  grid-template-columns:300px 1fr;
 
-  gap:48px;
+  gap:42px;
+
+  align-items:start;
 }
 
 .person{
@@ -704,7 +702,7 @@ MESSAGE
 
   border:1px solid var(--line);
 
-  padding:31px 24px;
+  padding:28px 22px;
 
   text-align:center;
 
@@ -712,11 +710,11 @@ MESSAGE
 }
 
 .person-logo{
-  width:84px;
+  width:82px;
 
-  height:84px;
+  height:82px;
 
-  margin:0 auto 18px;
+  margin:0 auto 17px;
 }
 
 .person-role{
@@ -728,19 +726,19 @@ MESSAGE
 
   font-weight:700;
 
-  margin-bottom:7px;
+  margin-bottom:6px;
 }
 
 .person-name{
   font-family:'Shippori Mincho',serif;
 
-  font-size:23px;
+  font-size:22px;
 
   font-weight:700;
 
   color:var(--navy);
 
-  margin-bottom:4px;
+  margin-bottom:3px;
 }
 
 .person-en{
@@ -750,13 +748,13 @@ MESSAGE
 
   color:var(--gray);
 
-  margin-bottom:16px;
+  margin-bottom:14px;
 }
 
 .person-position{
   border-top:1px solid var(--line);
 
-  padding-top:14px;
+  padding-top:12px;
 
   color:var(--gray);
 
@@ -768,7 +766,7 @@ MESSAGE
 
   font-size:15px;
 
-  margin-bottom:17px;
+  margin-bottom:16px;
 }
 
 .message-body p:first-child{
@@ -780,11 +778,11 @@ MESSAGE
 
   font-weight:700;
 
-  margin-bottom:22px;
+  margin-bottom:20px;
 }
 
 .signature{
-  margin-top:20px;
+  margin-top:18px;
 
   color:var(--gray);
 
@@ -803,30 +801,25 @@ MESSAGE
   margin-top:4px;
 }
 
+
+/* =========================
+MESSAGE PHOTO GRID
+3枚 → 3列横並び
+6枚 → 3列×2行
+========================= */
+
 .message-photo-grid{
   display:grid;
 
-  grid-template-columns:1.2fr .8fr;
+  grid-template-columns:repeat(3,1fr);
 
-  gap:12px;
+  gap:8px;
 
-  margin-top:32px;
+  margin-top:28px;
 }
 
-.message-photo-main{
-  height:325px;
-}
-
-.message-photo-side{
-  display:grid;
-
-  grid-template-rows:1fr 1fr;
-
-  gap:12px;
-}
-
-.message-photo-side .photo-frame{
-  min-height:156px;
+.message-photo-grid .photo-frame{
+  height:255px;
 }
 
 
@@ -849,7 +842,7 @@ PHILOSOPHY
 }
 
 .philosophy-card{
-  padding:31px 25px;
+  padding:28px 23px;
 
   background:var(--luxury-white);
 
@@ -873,15 +866,15 @@ PHILOSOPHY
 
   font-weight:800;
 
-  margin-bottom:13px;
+  margin-bottom:11px;
 }
 
 .philosophy-card h3{
   font-size:19px;
 
-  line-height:1.62;
+  line-height:1.58;
 
-  margin-bottom:11px;
+  margin-bottom:10px;
 }
 
 .philosophy-card p{
@@ -889,7 +882,7 @@ PHILOSOPHY
 
   font-size:13px;
 
-  line-height:1.95;
+  line-height:1.94;
 }
 
 
@@ -898,9 +891,9 @@ PHILOSOPHY VISUAL
 ========================= */
 
 .philosophy-visual{
-  margin-top:35px;
+  margin-top:30px;
 
-  padding:36px;
+  padding:32px;
 
   background:var(--navy);
 
@@ -914,10 +907,11 @@ PHILOSOPHY VISUAL
 
   position:absolute;
 
-  right:28px;
+  right:25px;
+
   top:-32px;
 
-  font-size:170px;
+  font-size:165px;
 
   line-height:1;
 
@@ -939,7 +933,7 @@ PHILOSOPHY VISUAL
 
   gap:25px;
 
-  margin-bottom:25px;
+  margin-bottom:22px;
 }
 
 .philosophy-visual-title{
@@ -947,13 +941,13 @@ PHILOSOPHY VISUAL
 
   font-family:'Shippori Mincho',serif;
 
-  font-size:27px;
+  font-size:26px;
 
-  line-height:1.52;
+  line-height:1.5;
 }
 
 .philosophy-visual-sub{
-  color:rgba(255,255,255,.55);
+  color:rgba(255,255,255,.50);
 
   font-size:10px;
 
@@ -971,17 +965,17 @@ PHILOSOPHY VISUAL
 
   grid-template-columns:repeat(4,1fr);
 
-  gap:8px;
+  gap:7px;
 }
 
 .product-step{
-  min-height:165px;
+  min-height:158px;
 
-  padding:20px 18px;
+  padding:19px 17px;
 
-  background:rgba(255,255,255,.07);
+  background:rgba(255,255,255,.065);
 
-  border:1px solid rgba(255,255,255,.13);
+  border:1px solid rgba(255,255,255,.12);
 
   position:relative;
 }
@@ -991,14 +985,15 @@ PHILOSOPHY VISUAL
 
   position:absolute;
 
-  right:-16px;
+  right:-15px;
 
   top:50%;
 
   transform:translateY(-50%);
 
-  width:30px;
-  height:30px;
+  width:28px;
+
+  height:28px;
 
   border-radius:50%;
 
@@ -1015,6 +1010,8 @@ PHILOSOPHY VISUAL
   z-index:5;
 
   font-weight:800;
+
+  font-size:11px;
 }
 
 .product-step:last-child::after{
@@ -1030,7 +1027,7 @@ PHILOSOPHY VISUAL
 
   font-weight:800;
 
-  margin-bottom:13px;
+  margin-bottom:12px;
 }
 
 .product-step h4{
@@ -1038,17 +1035,17 @@ PHILOSOPHY VISUAL
 
   font-family:'Noto Sans JP',sans-serif;
 
-  font-size:16px;
+  font-size:15px;
 
-  margin-bottom:9px;
+  margin-bottom:8px;
 }
 
 .product-step p{
-  color:rgba(255,255,255,.62);
+  color:rgba(255,255,255,.61);
 
   font-size:11px;
 
-  line-height:1.86;
+  line-height:1.84;
 }
 
 .product-flow-bottom{
@@ -1060,13 +1057,13 @@ PHILOSOPHY VISUAL
 
   grid-template-columns:repeat(3,1fr);
 
-  gap:8px;
+  gap:7px;
 
-  margin-top:8px;
+  margin-top:7px;
 }
 
 .product-point{
-  padding:14px 17px;
+  padding:13px 16px;
 
   background:var(--luxury-white);
 
@@ -1074,12 +1071,13 @@ PHILOSOPHY VISUAL
 
   align-items:center;
 
-  gap:11px;
+  gap:10px;
 }
 
 .product-point-icon{
-  width:30px;
-  height:30px;
+  width:29px;
+
+  height:29px;
 
   flex:none;
 
@@ -1106,8 +1104,6 @@ PHILOSOPHY VISUAL
   color:var(--navy);
 
   font-size:12px;
-
-  margin-bottom:1px;
 }
 
 .product-point span{
@@ -1130,7 +1126,7 @@ ISSUES
 
   grid-template-columns:repeat(4,1fr);
 
-  gap:12px;
+  gap:9px;
 }
 
 .issue-card{
@@ -1138,18 +1134,17 @@ ISSUES
 
   background:var(--luxury-white);
 
-  padding:25px 20px;
+  padding:23px 19px;
 
   border:1px solid var(--line);
 
   box-shadow:var(--shadow-soft);
-
-  overflow:hidden;
 }
 
 .issue-icon{
-  width:42px;
-  height:42px;
+  width:40px;
+
+  height:40px;
 
   display:flex;
 
@@ -1157,23 +1152,23 @@ ISSUES
 
   justify-content:center;
 
-  border:1px solid rgba(230,57,70,.22);
+  border:1px solid rgba(230,57,70,.20);
 
   color:var(--red);
 
   font-weight:900;
 
-  font-size:19px;
+  font-size:18px;
 
-  margin-bottom:15px;
+  margin-bottom:14px;
 }
 
 .issue-card h3{
   font-family:'Noto Sans JP',sans-serif;
 
-  font-size:16px;
+  font-size:15px;
 
-  margin-bottom:8px;
+  margin-bottom:7px;
 }
 
 .issue-card p{
@@ -1181,7 +1176,7 @@ ISSUES
 
   font-size:12px;
 
-  line-height:1.86;
+  line-height:1.84;
 }
 
 
@@ -1190,9 +1185,9 @@ ISSUE VISUAL
 ========================= */
 
 .issue-visual{
-  margin-top:32px;
+  margin-top:28px;
 
-  padding:34px;
+  padding:31px;
 
   background:var(--luxury-white);
 
@@ -1210,7 +1205,7 @@ ISSUE VISUAL
 
   gap:25px;
 
-  margin-bottom:25px;
+  margin-bottom:22px;
 }
 
 .issue-visual-title{
@@ -1218,9 +1213,9 @@ ISSUE VISUAL
 
   font-family:'Shippori Mincho',serif;
 
-  font-size:26px;
+  font-size:25px;
 
-  line-height:1.5;
+  line-height:1.48;
 }
 
 .issue-visual-caption{
@@ -1246,9 +1241,9 @@ ISSUE VISUAL
 .margin-node{
   position:relative;
 
-  min-height:135px;
+  min-height:128px;
 
-  padding:18px 14px;
+  padding:17px 13px;
 
   border:1px solid var(--line);
 
@@ -1264,9 +1259,9 @@ ISSUE VISUAL
 
   top:50%;
 
-  width:17px;
+  width:16px;
 
-  height:17px;
+  height:16px;
 
   border-top:2px solid var(--gray-light);
 
@@ -1286,15 +1281,15 @@ ISSUE VISUAL
 
   letter-spacing:.14em;
 
-  margin-bottom:10px;
+  margin-bottom:9px;
 }
 
 .margin-node h4{
   font-family:'Noto Sans JP',sans-serif;
 
-  font-size:14px;
+  font-size:13px;
 
-  margin-bottom:6px;
+  margin-bottom:5px;
 }
 
 .margin-node p{
@@ -1302,13 +1297,13 @@ ISSUE VISUAL
 
   font-size:10px;
 
-  line-height:1.76;
+  line-height:1.75;
 }
 
 .margin-node.cost{
   background:#FFF8F8;
 
-  border-color:rgba(230,57,70,.22);
+  border-color:rgba(230,57,70,.20);
 }
 
 .margin-node.cost h4{
@@ -1316,17 +1311,17 @@ ISSUE VISUAL
 }
 
 .margin-bar{
-  margin-top:17px;
+  margin-top:15px;
 
   display:grid;
 
   grid-template-columns:1fr 1fr;
 
-  gap:13px;
+  gap:11px;
 }
 
 .margin-meter{
-  padding:15px;
+  padding:14px;
 
   border:1px solid var(--line);
 
@@ -1340,11 +1335,11 @@ ISSUE VISUAL
 
   align-items:center;
 
-  margin-bottom:8px;
+  margin-bottom:7px;
 }
 
 .margin-meter-label span{
-  font-size:11px;
+  font-size:10px;
 
   color:var(--gray);
 }
@@ -1352,7 +1347,7 @@ ISSUE VISUAL
 .margin-meter-label strong{
   color:var(--navy);
 
-  font-size:13px;
+  font-size:12px;
 }
 
 .meter-track{
@@ -1389,15 +1384,15 @@ STRUCTURE
 .structure-intro{
   max-width:750px;
 
-  margin-bottom:34px;
+  margin-bottom:31px;
 }
 
 .structure-intro h2{
   font-size:clamp(28px,3.6vw,44px);
 
-  line-height:1.55;
+  line-height:1.53;
 
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 
 .structure-intro p{
@@ -1411,11 +1406,11 @@ STRUCTURE
 
   grid-template-columns:1fr 1fr;
 
-  gap:16px;
+  gap:12px;
 }
 
 .structure-card{
-  padding:29px;
+  padding:26px;
 
   border:1px solid var(--line);
 
@@ -1437,9 +1432,9 @@ STRUCTURE
 
   font-weight:800;
 
-  margin-bottom:15px;
+  margin-bottom:13px;
 
-  padding:6px 11px;
+  padding:6px 10px;
 
   background:var(--light-gray);
 
@@ -1459,19 +1454,19 @@ STRUCTURE
 
   align-items:center;
 
-  gap:6px;
+  gap:5px;
 
-  margin-top:18px;
+  margin-top:16px;
 }
 
 .flow-item{
-  padding:9px 12px;
+  padding:8px 11px;
 
   background:var(--light);
 
   border:1px solid var(--line);
 
-  font-size:12px;
+  font-size:11px;
 
   color:var(--charcoal);
 }
@@ -1489,17 +1484,17 @@ STRUCTURE
 }
 
 .structure-note{
-  margin-top:17px;
+  margin-top:15px;
 
-  padding:14px;
+  padding:13px;
 
   background:var(--light);
 
   color:var(--gray);
 
-  font-size:12px;
+  font-size:11px;
 
-  line-height:1.86;
+  line-height:1.84;
 }
 
 .structure-card.good .structure-note{
@@ -1512,7 +1507,7 @@ STRUCTURE VISUAL
 ========================= */
 
 .structure-visual{
-  margin-top:36px;
+  margin-top:31px;
 
   position:relative;
 }
@@ -1524,15 +1519,15 @@ STRUCTURE VISUAL
 
   align-items:flex-end;
 
-  margin-bottom:20px;
+  margin-bottom:18px;
 
   gap:25px;
 }
 
 .structure-visual-header h3{
-  font-size:25px;
+  font-size:24px;
 
-  line-height:1.55;
+  line-height:1.52;
 }
 
 .structure-visual-header p{
@@ -1548,7 +1543,7 @@ STRUCTURE VISUAL
 .structure-compare{
   display:grid;
 
-  grid-template-columns:1fr 64px 1fr;
+  grid-template-columns:1fr 58px 1fr;
 
   gap:0;
 
@@ -1560,7 +1555,7 @@ STRUCTURE VISUAL
 
   background:var(--light);
 
-  padding:25px;
+  padding:23px;
 }
 
 .compare-side.good{
@@ -1578,11 +1573,11 @@ STRUCTURE VISUAL
 
   align-items:center;
 
-  margin-bottom:21px;
+  margin-bottom:19px;
 }
 
 .compare-title span{
-  font-size:10px;
+  font-size:9px;
 
   letter-spacing:.2em;
 
@@ -1598,7 +1593,7 @@ STRUCTURE VISUAL
 .compare-title strong{
   font-family:'Shippori Mincho',serif;
 
-  font-size:20px;
+  font-size:19px;
 
   color:var(--navy);
 }
@@ -1614,7 +1609,7 @@ STRUCTURE VISUAL
 .compare-node{
   position:relative;
 
-  padding:14px 16px;
+  padding:13px 15px;
 
   background:var(--luxury-white);
 
@@ -1624,7 +1619,7 @@ STRUCTURE VISUAL
 
   align-items:center;
 
-  gap:13px;
+  gap:12px;
 }
 
 .compare-node:not(:last-child)::after{
@@ -1634,12 +1629,13 @@ STRUCTURE VISUAL
 
   left:50%;
 
-  bottom:-15px;
+  bottom:-14px;
 
   transform:translateX(-50%);
 
-  width:26px;
-  height:26px;
+  width:24px;
+
+  height:24px;
 
   display:flex;
 
@@ -1653,7 +1649,7 @@ STRUCTURE VISUAL
 
   color:var(--white);
 
-  font-size:10px;
+  font-size:9px;
 
   z-index:4;
 }
@@ -1663,8 +1659,9 @@ STRUCTURE VISUAL
 }
 
 .compare-icon{
-  width:34px;
-  height:34px;
+  width:32px;
+
+  height:32px;
 
   flex:none;
 
@@ -1692,7 +1689,7 @@ STRUCTURE VISUAL
 .compare-node strong{
   display:block;
 
-  font-size:13px;
+  font-size:12px;
 
   color:var(--navy);
 }
@@ -1702,7 +1699,7 @@ STRUCTURE VISUAL
 
   color:var(--gray);
 
-  font-size:9px;
+  font-size:8px;
 
   margin-top:1px;
 }
@@ -1720,8 +1717,9 @@ STRUCTURE VISUAL
 .compare-middle::before{
   content:"VS";
 
-  width:44px;
-  height:44px;
+  width:42px;
+
+  height:42px;
 
   border-radius:50%;
 
@@ -1735,7 +1733,7 @@ STRUCTURE VISUAL
 
   justify-content:center;
 
-  font-size:10px;
+  font-size:9px;
 
   font-weight:900;
 
@@ -1766,13 +1764,13 @@ STRUCTURE VISUAL
 
   grid-template-columns:repeat(3,1fr);
 
-  gap:8px;
+  gap:7px;
 
-  margin-top:17px;
+  margin-top:15px;
 }
 
 .result-box{
-  padding:17px;
+  padding:16px;
 
   background:var(--navy);
 
@@ -1784,7 +1782,7 @@ STRUCTURE VISUAL
 
   color:var(--blue);
 
-  font-size:23px;
+  font-size:22px;
 
   font-weight:900;
 
@@ -1798,15 +1796,15 @@ STRUCTURE VISUAL
 
   color:var(--white);
 
-  font-size:12px;
+  font-size:11px;
 
   margin-bottom:2px;
 }
 
 .result-box span{
-  color:rgba(255,255,255,.55);
+  color:rgba(255,255,255,.52);
 
-  font-size:9px;
+  font-size:8px;
 }
 
 
@@ -1823,13 +1821,13 @@ BUSINESS
 
   grid-template-columns:1fr 1fr;
 
-  gap:16px;
+  gap:12px;
 }
 
 .business-card{
   background:var(--luxury-white);
 
-  padding:38px 34px;
+  padding:34px 30px;
 
   border:1px solid var(--line);
 
@@ -1845,13 +1843,13 @@ BUSINESS
 
   font-weight:800;
 
-  margin-bottom:13px;
+  margin-bottom:11px;
 }
 
 .business-card h3{
-  font-size:24px;
+  font-size:23px;
 
-  margin-bottom:12px;
+  margin-bottom:11px;
 }
 
 .business-card .lead{
@@ -1859,7 +1857,7 @@ BUSINESS
 
   font-size:14px;
 
-  margin-bottom:19px;
+  margin-bottom:17px;
 }
 
 .business-card ul{
@@ -1869,9 +1867,9 @@ BUSINESS
 .business-card li{
   color:var(--gray);
 
-  font-size:13.5px;
+  font-size:13px;
 
-  padding:9px 0;
+  padding:8px 0;
 
   border-top:1px solid var(--line);
 }
@@ -1884,25 +1882,31 @@ BUSINESS
   width:5px;
   height:5px;
 
-  margin-right:10px;
+  margin-right:9px;
 
   border-radius:50%;
 
   background:var(--emerald);
 }
 
+
+/* =========================
+BUSINESS PHOTO
+3列を基本化
+========================= */
+
 .business-gallery{
   display:grid;
 
   grid-template-columns:1.4fr .8fr .8fr;
 
-  gap:12px;
+  gap:8px;
 
-  margin-top:34px;
+  margin-top:28px;
 }
 
 .business-gallery-large{
-  height:395px;
+  height:375px;
 }
 
 .business-gallery-small{
@@ -1910,11 +1914,11 @@ BUSINESS
 
   grid-template-rows:1fr 1fr;
 
-  gap:12px;
+  gap:8px;
 }
 
 .business-gallery-small .photo-frame{
-  min-height:191px;
+  min-height:183px;
 }
 
 
@@ -1931,13 +1935,13 @@ STRENGTHS
 
   grid-template-columns:repeat(3,1fr);
 
-  gap:12px;
+  gap:9px;
 }
 
 .strength-card{
   background:var(--light);
 
-  padding:29px 23px;
+  padding:27px 21px;
 
   border:1px solid var(--line);
 
@@ -1953,13 +1957,11 @@ STRENGTHS
 .strength-number{
   color:var(--blue);
 
-  font-family:'Noto Sans JP',sans-serif;
-
-  font-size:26px;
+  font-size:25px;
 
   font-weight:800;
 
-  margin-bottom:8px;
+  margin-bottom:7px;
 }
 
 .strength-card h4{
@@ -1967,7 +1969,7 @@ STRENGTHS
 
   font-size:16px;
 
-  margin-bottom:8px;
+  margin-bottom:7px;
 }
 
 .strength-card p{
@@ -1975,21 +1977,27 @@ STRENGTHS
 
   font-size:13px;
 
-  line-height:1.92;
+  line-height:1.9;
 }
+
+
+/* =========================
+STRENGTH PHOTO
+3列横並び
+========================= */
 
 .strength-photo-band{
   display:grid;
 
   grid-template-columns:repeat(3,1fr);
 
-  gap:12px;
+  gap:8px;
 
-  margin-top:34px;
+  margin-top:28px;
 }
 
 .strength-photo-band .photo-frame{
-  height:250px;
+  height:240px;
 }
 
 
@@ -2008,11 +2016,11 @@ HISTORY
 .history-row{
   display:grid;
 
-  grid-template-columns:160px 1fr;
+  grid-template-columns:150px 1fr;
 
-  gap:32px;
+  gap:28px;
 
-  padding:19px 0;
+  padding:17px 0;
 
   border-bottom:1px solid var(--line);
 }
@@ -2028,7 +2036,7 @@ HISTORY
 .history-event{
   color:var(--gray);
 
-  font-size:14px;
+  font-size:13px;
 }
 
 .history-event strong{
@@ -2036,7 +2044,7 @@ HISTORY
 
   color:var(--navy);
 
-  margin-bottom:3px;
+  margin-bottom:2px;
 }
 
 
@@ -2053,7 +2061,7 @@ COMPANY
 
   grid-template-columns:.8fr 1.2fr;
 
-  gap:48px;
+  gap:45px;
 }
 
 .overview-image{
@@ -2065,7 +2073,7 @@ COMPANY
 
   background:var(--navy);
 
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
 .overview-image img{
@@ -2077,11 +2085,11 @@ COMPANY
 }
 
 .overview-side h3{
-  font-size:22px;
+  font-size:21px;
 
-  line-height:1.8;
+  line-height:1.76;
 
-  margin-bottom:11px;
+  margin-bottom:10px;
 }
 
 .overview-side p{
@@ -2089,11 +2097,16 @@ COMPANY
 
   font-size:13px;
 
-  line-height:1.95;
+  line-height:1.92;
 }
 
+
+/* =========================
+GOOGLE MAP
+========================= */
+
 .company-map{
-  margin-top:25px;
+  margin-top:23px;
 
   border:1px solid var(--line);
 
@@ -2105,7 +2118,7 @@ COMPANY
 }
 
 .company-map-head{
-  padding:15px 18px;
+  padding:14px 17px;
 
   display:flex;
 
@@ -2135,7 +2148,7 @@ COMPANY
 .company-map iframe{
   width:100%;
 
-  height:330px;
+  height:325px;
 
   border:0;
 
@@ -2160,13 +2173,13 @@ COMPANY
 
 .company-table th,
 .company-table td{
-  padding:19px 21px;
+  padding:18px 20px;
 
   text-align:left;
 
   vertical-align:top;
 
-  font-size:14px;
+  font-size:13px;
 }
 
 .company-table th{
@@ -2193,7 +2206,7 @@ VISION
 
   text-align:center;
 
-  padding:75px 0;
+  padding:65px 0;
 }
 
 .vision-inner{
@@ -2205,9 +2218,9 @@ VISION
 .vision h2{
   font-size:clamp(25px,3.5vw,38px);
 
-  line-height:1.82;
+  line-height:1.8;
 
-  margin-bottom:17px;
+  margin-bottom:16px;
 }
 
 .vision p{
@@ -2215,7 +2228,7 @@ VISION
 
   font-size:14px;
 
-  line-height:2;
+  line-height:1.95;
 }
 
 
@@ -2234,7 +2247,7 @@ CONTACT
 
   grid-template-columns:1fr 1fr;
 
-  gap:50px;
+  gap:45px;
 
   align-items:center;
 }
@@ -2248,9 +2261,9 @@ CONTACT
 
   font-size:clamp(25px,3.4vw,38px);
 
-  line-height:1.72;
+  line-height:1.7;
 
-  margin-bottom:16px;
+  margin-bottom:15px;
 }
 
 .contact-description{
@@ -2262,9 +2275,9 @@ CONTACT
 .contact-card{
   background:rgba(255,255,255,.045);
 
-  border:1px solid rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.15);
 
-  padding:31px;
+  padding:29px;
 }
 
 .contact-row{
@@ -2274,9 +2287,9 @@ CONTACT
 
   gap:20px;
 
-  padding:15px 0;
+  padding:14px 0;
 
-  border-top:1px solid rgba(255,255,255,.12);
+  border-top:1px solid rgba(255,255,255,.11);
 }
 
 .contact-row:first-child{
@@ -2306,7 +2319,7 @@ CONTACT
 
   width:100%;
 
-  margin-top:20px;
+  margin-top:19px;
 
   padding:15px;
 
@@ -2335,7 +2348,7 @@ FOOTER
 footer{
   background:#0A111B;
 
-  padding:29px 0;
+  padding:27px 0;
 
   border-top:1px solid rgba(255,255,255,.1);
 }
@@ -2364,6 +2377,7 @@ footer{
 
 .footer-brand svg{
   width:25px;
+
   height:25px;
 }
 
@@ -2412,15 +2426,15 @@ RESPONSIVE
   }
 
   .message-grid{
-    gap:32px;
+    gap:30px;
   }
 
   .overview-grid{
-    gap:32px;
+    gap:30px;
   }
 
   .contact-inner{
-    gap:32px;
+    gap:30px;
   }
 
   .product-flow{
@@ -2437,8 +2451,7 @@ RESPONSIVE
 
   .margin-flow{
     grid-template-columns:repeat(2,1fr);
-
-    gap:8px;
+    gap:7px;
   }
 
   .margin-node:not(:last-child)::after{
@@ -2447,12 +2460,11 @@ RESPONSIVE
 
   .structure-compare{
     grid-template-columns:1fr;
-
-    gap:14px;
+    gap:12px;
   }
 
   .compare-middle{
-    height:50px;
+    height:45px;
   }
 
   .compare-middle::after{
@@ -2469,11 +2481,11 @@ RESPONSIVE
   }
 
   .business-gallery-large{
-    height:350px;
+    height:330px;
   }
 
   .strength-photo-band{
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2,1fr);
   }
 }
 
@@ -2487,11 +2499,11 @@ RESPONSIVE
   }
 
   section{
-    padding:44px 0;
+    padding:38px 0;
   }
 
   .header-inner{
-    min-height:66px;
+    min-height:64px;
   }
 
   .brand-text{
@@ -2509,7 +2521,7 @@ RESPONSIVE
   .hero{
     min-height:100svh;
 
-    padding:105px 0 50px;
+    padding:100px 0 45px;
   }
 
   .hero-video video{
@@ -2520,25 +2532,25 @@ RESPONSIVE
     background:
       linear-gradient(
         90deg,
-        rgba(0,0,0,.77),
-        rgba(0,0,0,.35)
+        rgba(0,0,0,.79),
+        rgba(0,0,0,.34)
       );
   }
 
   .hero h1{
     font-size:35px;
 
-    line-height:1.5;
+    line-height:1.48;
 
-    margin-bottom:19px;
+    margin-bottom:18px;
   }
 
   .hero-lead{
     font-size:13px;
 
-    line-height:1.95;
+    line-height:1.92;
 
-    margin-bottom:23px;
+    margin-bottom:22px;
   }
 
   .hero-buttons{
@@ -2555,7 +2567,7 @@ RESPONSIVE
   /* SECTION */
 
   .section-head{
-    margin-bottom:29px;
+    margin-bottom:27px;
   }
 
   .section-head h2{
@@ -2566,30 +2578,30 @@ RESPONSIVE
   /* PHOTO */
 
   .about-photo-wide{
-    height:275px;
+    height:260px;
 
-    margin-top:28px;
+    margin-top:25px;
   }
 
   .photo-caption{
-    left:19px;
-    right:19px;
-    bottom:16px;
+    left:17px;
+    right:17px;
+    bottom:15px;
   }
 
   .photo-caption strong{
-    font-size:18px;
+    font-size:17px;
   }
 
 
   /* SOLAR */
 
   .solar-visual{
-    min-height:390px;
+    min-height:370px;
   }
 
   .solar-content{
-    min-height:390px;
+    min-height:370px;
   }
 
   .solar-content h2{
@@ -2600,29 +2612,29 @@ RESPONSIVE
   /* MESSAGE */
 
   .message-photo-grid{
-    grid-template-columns:1fr;
+    grid-template-columns:1fr 1fr 1fr;
 
-    gap:10px;
+    gap:5px;
 
-    margin-top:28px;
+    margin-top:25px;
   }
 
-  .message-photo-main{
-    height:260px;
+  .message-photo-grid .photo-frame{
+    height:145px;
   }
 
-  .message-photo-side{
-    grid-template-columns:1fr 1fr;
-
-    grid-template-rows:1fr;
-
-    gap:10px;
+  .message-photo-grid .photo-caption{
+    left:10px;
+    right:10px;
+    bottom:10px;
   }
 
-  .message-photo-side .photo-frame{
-    height:170px;
+  .message-photo-grid .photo-caption small{
+    font-size:6px;
+  }
 
-    min-height:0;
+  .message-photo-grid .photo-caption strong{
+    font-size:12px;
   }
 
 
@@ -2633,15 +2645,15 @@ RESPONSIVE
   }
 
   .philosophy-visual{
-    padding:27px 18px;
+    padding:25px 17px;
 
-    margin-top:30px;
+    margin-top:27px;
   }
 
   .philosophy-visual-head{
     display:block;
 
-    margin-bottom:22px;
+    margin-bottom:21px;
   }
 
   .philosophy-visual-title{
@@ -2651,7 +2663,7 @@ RESPONSIVE
   .philosophy-visual-sub{
     text-align:left;
 
-    margin-top:9px;
+    margin-top:8px;
   }
 
   .product-flow{
@@ -2661,7 +2673,7 @@ RESPONSIVE
   .product-step{
     min-height:auto;
 
-    padding:21px 18px;
+    padding:20px 17px;
   }
 
   .product-flow-bottom{
@@ -2676,15 +2688,15 @@ RESPONSIVE
   }
 
   .issue-visual{
-    margin-top:27px;
+    margin-top:25px;
 
-    padding:23px 17px;
+    padding:22px 16px;
   }
 
   .issue-visual-top{
     display:block;
 
-    margin-bottom:20px;
+    margin-bottom:19px;
   }
 
   .issue-visual-title{
@@ -2694,7 +2706,7 @@ RESPONSIVE
   .issue-visual-caption{
     text-align:left;
 
-    margin-top:9px;
+    margin-top:8px;
   }
 
   .margin-flow{
@@ -2713,17 +2725,17 @@ RESPONSIVE
   /* STRUCTURE */
 
   .structure-card{
-    padding:25px 20px;
+    padding:24px 19px;
   }
 
   .flow-item{
-    font-size:11px;
+    font-size:10px;
 
-    padding:8px 10px;
+    padding:8px 9px;
   }
 
   .structure-visual{
-    margin-top:30px;
+    margin-top:28px;
   }
 
   .structure-visual-header{
@@ -2741,11 +2753,11 @@ RESPONSIVE
   }
 
   .compare-side{
-    padding:21px 16px;
+    padding:20px 15px;
   }
 
   .compare-title strong{
-    font-size:18px;
+    font-size:17px;
   }
 
   .compare-result{
@@ -2756,7 +2768,7 @@ RESPONSIVE
   /* BUSINESS */
 
   .business-card{
-    padding:32px 23px;
+    padding:31px 22px;
   }
 
   .business-card h3{
@@ -2768,7 +2780,7 @@ RESPONSIVE
   }
 
   .business-gallery-large{
-    height:275px;
+    height:260px;
   }
 
   .business-gallery-small{
@@ -2776,11 +2788,11 @@ RESPONSIVE
 
     grid-template-rows:1fr;
 
-    gap:10px;
+    gap:7px;
   }
 
   .business-gallery-small .photo-frame{
-    min-height:175px;
+    min-height:170px;
   }
 
 
@@ -2791,26 +2803,40 @@ RESPONSIVE
   }
 
   .strength-photo-band{
-    grid-template-columns:1fr;
+    grid-template-columns:repeat(3,1fr);
 
-    gap:10px;
+    gap:5px;
 
-    margin-top:27px;
+    margin-top:25px;
   }
 
   .strength-photo-band .photo-frame{
-    height:220px;
+    height:145px;
+  }
+
+  .strength-photo-band .photo-caption{
+    left:8px;
+    right:8px;
+    bottom:8px;
+  }
+
+  .strength-photo-band .photo-caption small{
+    font-size:6px;
+  }
+
+  .strength-photo-band .photo-caption strong{
+    font-size:11px;
   }
 
 
   /* HISTORY */
 
   .history-row{
-    grid-template-columns:95px 1fr;
+    grid-template-columns:90px 1fr;
 
-    gap:15px;
+    gap:14px;
 
-    padding:18px 0;
+    padding:17px 0;
   }
 
   .history-date{
@@ -2818,7 +2844,7 @@ RESPONSIVE
   }
 
   .history-event{
-    font-size:13px;
+    font-size:12px;
   }
 
 
@@ -2835,13 +2861,13 @@ RESPONSIVE
   }
 
   .company-table tr{
-    padding:17px;
+    padding:16px;
   }
 
   .company-table th{
     padding:0 0 6px;
 
-    font-size:12px;
+    font-size:11px;
 
     white-space:normal;
   }
@@ -2849,13 +2875,13 @@ RESPONSIVE
   .company-table td{
     padding:0;
 
-    font-size:14px;
+    font-size:13px;
 
-    line-height:1.9;
+    line-height:1.88;
   }
 
   .company-map{
-    margin-top:22px;
+    margin-top:21px;
   }
 
   .company-map-head{
@@ -2867,21 +2893,21 @@ RESPONSIVE
   }
 
   .company-map iframe{
-    height:270px;
+    height:260px;
   }
 
 
   /* VISION */
 
   .vision{
-    padding:65px 0;
+    padding:60px 0;
   }
 
 
   /* CONTACT */
 
   .contact-card{
-    padding:24px 19px;
+    padding:23px 18px;
   }
 
   .contact-row{
@@ -2907,10 +2933,6 @@ RESPONSIVE
 
 }
 
-
-/* =========================
-ACCESSIBILITY
-========================= */
 
 @media(prefers-reduced-motion:reduce){
 
@@ -3328,9 +3350,11 @@ Tetsuta Fuchikami
 </div>
 
 
+<!-- 3枚は完全横並び -->
+
 <div class="message-photo-grid">
 
-<div class="photo-frame message-photo-main">
+<div class="photo-frame">
 
 <img
 src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=1500&q=85"
@@ -3352,8 +3376,6 @@ loading="lazy"
 
 </div>
 
-
-<div class="message-photo-side">
 
 <div class="photo-frame">
 
@@ -3395,8 +3417,6 @@ loading="lazy"
 <strong>
 会社を育てる。
 </strong>
-
-</div>
 
 </div>
 
@@ -4936,7 +4956,6 @@ BRAND VISION
 <section class="contact" id="contact">
 
 <div class="wrap contact-inner">
-
 
 <div>
 
