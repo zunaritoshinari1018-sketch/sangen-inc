@@ -17,9 +17,9 @@
 
 :root{
   --white:#FFFFFF;
-  --luxury-white:#FAF9F6;
-  --light:#F8FAFC;
-  --light-gray:#F1F5F9;
+  --luxury-white:#F7F5F0;
+  --light:#F3F5F7;
+  --light-gray:#E9EDF1;
 
   --navy:#0E1A2A;
   --charcoal:#1F2937;
@@ -31,12 +31,12 @@
 
   --gray:#64748B;
   --gray-light:#CBD5E1;
-  --line:#E2E8F0;
+  --line:#DCE2E8;
 
   --max:1180px;
 
-  --shadow:0 18px 50px rgba(14,26,42,.08);
-  --shadow-soft:0 10px 30px rgba(14,26,42,.06);
+  --shadow:0 16px 42px rgba(14,26,42,.08);
+  --shadow-soft:0 8px 24px rgba(14,26,42,.055);
 }
 
 *{
@@ -90,7 +90,7 @@ a{
 }
 
 section{
-  padding:82px 0;
+  padding:72px 0;
 }
 
 h1,
@@ -127,9 +127,9 @@ header{
 
   z-index:1000;
 
-  background:rgba(250,249,246,.94);
+  background:rgba(247,245,240,.94);
 
-  backdrop-filter:blur(16px);
+  backdrop-filter:blur(18px);
 
   border-bottom:1px solid rgba(14,26,42,.08);
 }
@@ -137,7 +137,7 @@ header{
 .header-inner{
   width:min(var(--max),calc(100% - 64px));
 
-  min-height:78px;
+  min-height:76px;
 
   margin:auto;
 
@@ -237,7 +237,7 @@ HERO
 
   min-height:100svh;
 
-  padding:150px 0 80px;
+  padding:145px 0 70px;
 
   display:flex;
 
@@ -311,7 +311,7 @@ HERO
 
   letter-spacing:.28em;
 
-  margin-bottom:22px;
+  margin-bottom:20px;
 }
 
 .hero-eyebrow::before{
@@ -330,7 +330,7 @@ HERO
 
   line-height:1.42;
 
-  margin-bottom:25px;
+  margin-bottom:24px;
 }
 
 .hero h1 strong{
@@ -348,7 +348,7 @@ HERO
 
   line-height:2;
 
-  margin-bottom:32px;
+  margin-bottom:30px;
 }
 
 .hero-buttons{
@@ -415,7 +415,7 @@ SECTION TITLE
 .section-head{
   max-width:720px;
 
-  margin-bottom:42px;
+  margin-bottom:38px;
 }
 
 .eyebrow{
@@ -427,7 +427,7 @@ SECTION TITLE
 
   font-weight:700;
 
-  margin-bottom:10px;
+  margin-bottom:9px;
 }
 
 .section-head h2{
@@ -437,7 +437,7 @@ SECTION TITLE
 }
 
 .section-head p{
-  margin-top:16px;
+  margin-top:14px;
 
   color:var(--gray);
 
@@ -449,7 +449,6 @@ SECTION TITLE
 
 /* =========================
 PHOTO IMPACT
-共通
 ========================= */
 
 .photo-frame{
@@ -480,8 +479,8 @@ PHOTO IMPACT
 
   background:linear-gradient(
     180deg,
-    transparent 35%,
-    rgba(14,26,42,.8)
+    transparent 32%,
+    rgba(14,26,42,.82)
   );
 }
 
@@ -492,7 +491,7 @@ PHOTO IMPACT
 
   left:28px;
   right:28px;
-  bottom:24px;
+  bottom:23px;
 
   color:var(--white);
 }
@@ -533,7 +532,7 @@ ABOUT
 
   grid-template-columns:1.1fr .9fr;
 
-  gap:65px;
+  gap:58px;
 
   align-items:start;
 }
@@ -543,7 +542,7 @@ ABOUT
 
   font-size:15px;
 
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
 .about-text strong{
@@ -555,7 +554,7 @@ ABOUT
 
   border-left:4px solid var(--blue);
 
-  padding:38px 34px;
+  padding:34px 31px;
 
   box-shadow:var(--shadow-soft);
 }
@@ -571,15 +570,15 @@ ABOUT
 
   font-weight:700;
 
-  margin-bottom:16px;
+  margin-bottom:14px;
 }
 
 .quote h3{
   font-size:23px;
 
-  line-height:1.75;
+  line-height:1.72;
 
-  margin-bottom:14px;
+  margin-bottom:13px;
 }
 
 .quote p{
@@ -589,9 +588,9 @@ ABOUT
 }
 
 .about-photo-wide{
-  margin-top:50px;
+  margin-top:38px;
 
-  height:430px;
+  height:420px;
 }
 
 .about-photo-wide img{
@@ -606,7 +605,7 @@ SOLAR VISUAL
 .solar-visual{
   position:relative;
 
-  min-height:540px;
+  min-height:510px;
 
   overflow:hidden;
 
@@ -637,7 +636,7 @@ SOLAR VISUAL
     linear-gradient(
       90deg,
       rgba(14,26,42,.88) 0%,
-      rgba(14,26,42,.54) 42%,
+      rgba(14,26,42,.53) 42%,
       rgba(14,26,42,.10) 100%
     );
 }
@@ -651,7 +650,7 @@ SOLAR VISUAL
 
   align-items:center;
 
-  min-height:540px;
+  min-height:510px;
 }
 
 .solar-content-inner{
@@ -669,7 +668,7 @@ SOLAR VISUAL
 
   line-height:1.55;
 
-  margin-bottom:18px;
+  margin-bottom:16px;
 }
 
 .solar-content p{
@@ -696,7 +695,7 @@ MESSAGE
 
   grid-template-columns:330px 1fr;
 
-  gap:60px;
+  gap:55px;
 }
 
 .person{
@@ -704,7 +703,7 @@ MESSAGE
 
   border:1px solid var(--line);
 
-  padding:38px 28px;
+  padding:35px 26px;
 
   text-align:center;
 
@@ -768,7 +767,7 @@ MESSAGE
 
   font-size:15px;
 
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
 .message-body p:first-child{
@@ -780,11 +779,11 @@ MESSAGE
 
   font-weight:700;
 
-  margin-bottom:25px;
+  margin-bottom:24px;
 }
 
 .signature{
-  margin-top:25px;
+  margin-top:23px;
 
   color:var(--gray);
 
@@ -808,13 +807,13 @@ MESSAGE
 
   grid-template-columns:1.2fr .8fr;
 
-  gap:15px;
+  gap:13px;
 
-  margin-top:45px;
+  margin-top:38px;
 }
 
 .message-photo-main{
-  height:360px;
+  height:340px;
 }
 
 .message-photo-side{
@@ -822,11 +821,11 @@ MESSAGE
 
   grid-template-rows:1fr 1fr;
 
-  gap:15px;
+  gap:13px;
 }
 
 .message-photo-side .photo-frame{
-  min-height:172px;
+  min-height:163px;
 }
 
 
@@ -849,7 +848,7 @@ PHILOSOPHY
 }
 
 .philosophy-card{
-  padding:38px 30px;
+  padding:34px 28px;
 
   background:var(--luxury-white);
 
@@ -873,7 +872,7 @@ PHILOSOPHY
 
   font-weight:800;
 
-  margin-bottom:16px;
+  margin-bottom:15px;
 }
 
 .philosophy-card h3{
@@ -881,7 +880,7 @@ PHILOSOPHY
 
   line-height:1.65;
 
-  margin-bottom:13px;
+  margin-bottom:12px;
 }
 
 .philosophy-card p{
@@ -898,9 +897,9 @@ PHILOSOPHY VISUAL
 ========================= */
 
 .philosophy-visual{
-  margin-top:45px;
+  margin-top:42px;
 
-  padding:42px;
+  padding:39px;
 
   background:var(--navy);
 
@@ -939,7 +938,7 @@ PHILOSOPHY VISUAL
 
   gap:30px;
 
-  margin-bottom:30px;
+  margin-bottom:28px;
 }
 
 .philosophy-visual-title{
@@ -949,7 +948,7 @@ PHILOSOPHY VISUAL
 
   font-size:28px;
 
-  line-height:1.6;
+  line-height:1.55;
 }
 
 .philosophy-visual-sub{
@@ -977,7 +976,7 @@ PHILOSOPHY VISUAL
 .product-step{
   min-height:175px;
 
-  padding:23px 20px;
+  padding:22px 19px;
 
   background:rgba(255,255,255,.07);
 
@@ -1130,7 +1129,7 @@ ISSUES
 
   grid-template-columns:repeat(4,1fr);
 
-  gap:15px;
+  gap:14px;
 }
 
 .issue-card{
@@ -1138,7 +1137,7 @@ ISSUES
 
   background:var(--luxury-white);
 
-  padding:30px 22px;
+  padding:28px 21px;
 
   border:1px solid var(--line);
 
@@ -1190,9 +1189,9 @@ ISSUE VISUAL
 ========================= */
 
 .issue-visual{
-  margin-top:42px;
+  margin-top:38px;
 
-  padding:40px;
+  padding:37px;
 
   background:var(--luxury-white);
 
@@ -1210,7 +1209,7 @@ ISSUE VISUAL
 
   gap:30px;
 
-  margin-bottom:30px;
+  margin-bottom:28px;
 }
 
 .issue-visual-title{
@@ -1220,7 +1219,7 @@ ISSUE VISUAL
 
   font-size:27px;
 
-  line-height:1.6;
+  line-height:1.55;
 }
 
 .issue-visual-caption{
@@ -1246,9 +1245,9 @@ ISSUE VISUAL
 .margin-node{
   position:relative;
 
-  min-height:145px;
+  min-height:142px;
 
-  padding:21px 16px;
+  padding:20px 15px;
 
   border:1px solid var(--line);
 
@@ -1286,7 +1285,7 @@ ISSUE VISUAL
 
   letter-spacing:.14em;
 
-  margin-bottom:13px;
+  margin-bottom:12px;
 }
 
 .margin-node h4{
@@ -1316,7 +1315,7 @@ ISSUE VISUAL
 }
 
 .margin-bar{
-  margin-top:20px;
+  margin-top:19px;
 
   display:grid;
 
@@ -1326,7 +1325,7 @@ ISSUE VISUAL
 }
 
 .margin-meter{
-  padding:18px;
+  padding:17px;
 
   border:1px solid var(--line);
 
@@ -1389,15 +1388,15 @@ STRUCTURE
 .structure-intro{
   max-width:750px;
 
-  margin-bottom:42px;
+  margin-bottom:40px;
 }
 
 .structure-intro h2{
   font-size:clamp(28px,3.6vw,44px);
 
-  line-height:1.6;
+  line-height:1.58;
 
-  margin-bottom:15px;
+  margin-bottom:14px;
 }
 
 .structure-intro p{
@@ -1415,7 +1414,7 @@ STRUCTURE
 }
 
 .structure-card{
-  padding:34px;
+  padding:33px;
 
   border:1px solid var(--line);
 
@@ -1512,7 +1511,7 @@ STRUCTURE VISUAL
 ========================= */
 
 .structure-visual{
-  margin-top:45px;
+  margin-top:42px;
 
   position:relative;
 }
@@ -1524,7 +1523,7 @@ STRUCTURE VISUAL
 
   align-items:flex-end;
 
-  margin-bottom:24px;
+  margin-bottom:23px;
 
   gap:30px;
 }
@@ -1560,7 +1559,7 @@ STRUCTURE VISUAL
 
   background:var(--light);
 
-  padding:28px;
+  padding:27px;
 }
 
 .compare-side.good{
@@ -1578,7 +1577,7 @@ STRUCTURE VISUAL
 
   align-items:center;
 
-  margin-bottom:24px;
+  margin-bottom:23px;
 }
 
 .compare-title span{
@@ -1772,7 +1771,7 @@ STRUCTURE VISUAL
 }
 
 .result-box{
-  padding:20px;
+  padding:19px;
 
   background:var(--navy);
 
@@ -1829,7 +1828,7 @@ BUSINESS
 .business-card{
   background:var(--luxury-white);
 
-  padding:42px 38px;
+  padding:40px 36px;
 
   border:1px solid var(--line);
 
@@ -1845,13 +1844,13 @@ BUSINESS
 
   font-weight:800;
 
-  margin-bottom:16px;
+  margin-bottom:15px;
 }
 
 .business-card h3{
   font-size:25px;
 
-  margin-bottom:15px;
+  margin-bottom:14px;
 }
 
 .business-card .lead{
@@ -1859,7 +1858,7 @@ BUSINESS
 
   font-size:14px;
 
-  margin-bottom:22px;
+  margin-bottom:21px;
 }
 
 .business-card ul{
@@ -1891,23 +1890,18 @@ BUSINESS
   background:var(--emerald);
 }
 
-
-/* =========================
-BUSINESS PHOTO GALLERY
-========================= */
-
 .business-gallery{
   display:grid;
 
   grid-template-columns:1.4fr .8fr .8fr;
 
-  gap:14px;
+  gap:13px;
 
-  margin-top:42px;
+  margin-top:38px;
 }
 
 .business-gallery-large{
-  height:440px;
+  height:410px;
 }
 
 .business-gallery-small{
@@ -1915,11 +1909,11 @@ BUSINESS PHOTO GALLERY
 
   grid-template-rows:1fr 1fr;
 
-  gap:14px;
+  gap:13px;
 }
 
 .business-gallery-small .photo-frame{
-  min-height:213px;
+  min-height:198px;
 }
 
 
@@ -1936,13 +1930,13 @@ STRENGTHS
 
   grid-template-columns:repeat(3,1fr);
 
-  gap:15px;
+  gap:14px;
 }
 
 .strength-card{
   background:var(--light);
 
-  padding:35px 27px;
+  padding:32px 25px;
 
   border:1px solid var(--line);
 
@@ -1964,7 +1958,7 @@ STRENGTHS
 
   font-weight:800;
 
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 
 .strength-card h4{
@@ -1972,7 +1966,7 @@ STRENGTHS
 
   font-size:17px;
 
-  margin-bottom:10px;
+  margin-bottom:9px;
 }
 
 .strength-card p{
@@ -1983,23 +1977,18 @@ STRENGTHS
   line-height:1.95;
 }
 
-
-/* =========================
-STRENGTH PHOTO BAND
-========================= */
-
 .strength-photo-band{
   display:grid;
 
   grid-template-columns:repeat(3,1fr);
 
-  gap:14px;
+  gap:13px;
 
-  margin-top:42px;
+  margin-top:38px;
 }
 
 .strength-photo-band .photo-frame{
-  height:280px;
+  height:260px;
 }
 
 
@@ -2022,7 +2011,7 @@ HISTORY
 
   gap:35px;
 
-  padding:23px 0;
+  padding:21px 0;
 
   border-bottom:1px solid var(--line);
 }
@@ -2063,7 +2052,7 @@ COMPANY
 
   grid-template-columns:.8fr 1.2fr;
 
-  gap:55px;
+  gap:52px;
 }
 
 .overview-image{
@@ -2102,13 +2091,8 @@ COMPANY
   line-height:2;
 }
 
-
-/* =========================
-GOOGLE MAP
-========================= */
-
 .company-map{
-  margin-top:30px;
+  margin-top:28px;
 
   border:1px solid var(--line);
 
@@ -2208,7 +2192,7 @@ VISION
 
   text-align:center;
 
-  padding:105px 0;
+  padding:88px 0;
 }
 
 .vision-inner{
@@ -2220,9 +2204,9 @@ VISION
 .vision h2{
   font-size:clamp(25px,3.5vw,38px);
 
-  line-height:1.8;
+  line-height:1.85;
 
-  margin-bottom:20px;
+  margin-bottom:19px;
 }
 
 .vision p{
@@ -2249,7 +2233,7 @@ CONTACT
 
   grid-template-columns:1fr 1fr;
 
-  gap:60px;
+  gap:55px;
 
   align-items:center;
 }
@@ -2279,7 +2263,7 @@ CONTACT
 
   border:1px solid rgba(255,255,255,.16);
 
-  padding:35px;
+  padding:34px;
 }
 
 .contact-row{
@@ -2350,7 +2334,7 @@ FOOTER
 footer{
   background:#0A111B;
 
-  padding:32px 0;
+  padding:30px 0;
 
   border-top:1px solid rgba(255,255,255,.1);
 }
@@ -2487,8 +2471,8 @@ RESPONSIVE
     height:360px;
   }
 
-  .business-gallery-small{
-    display:grid;
+  .strength-photo-band{
+    grid-template-columns:1fr 1fr;
   }
 }
 
@@ -2502,7 +2486,7 @@ RESPONSIVE
   }
 
   section{
-    padding:65px 0;
+    padding:58px 0;
   }
 
   .header-inner{
@@ -2524,7 +2508,7 @@ RESPONSIVE
   .hero{
     min-height:100svh;
 
-    padding:120px 0 65px;
+    padding:112px 0 60px;
   }
 
   .hero-video video{
@@ -2545,7 +2529,7 @@ RESPONSIVE
 
     line-height:1.52;
 
-    margin-bottom:22px;
+    margin-bottom:21px;
   }
 
   .hero-lead{
@@ -2553,7 +2537,7 @@ RESPONSIVE
 
     line-height:2;
 
-    margin-bottom:27px;
+    margin-bottom:26px;
   }
 
   .hero-buttons{
@@ -2570,7 +2554,7 @@ RESPONSIVE
   /* SECTION */
 
   .section-head{
-    margin-bottom:35px;
+    margin-bottom:32px;
   }
 
   .section-head h2{
@@ -2581,15 +2565,15 @@ RESPONSIVE
   /* PHOTO */
 
   .about-photo-wide{
-    height:290px;
+    height:285px;
 
-    margin-top:35px;
+    margin-top:32px;
   }
 
   .photo-caption{
     left:20px;
     right:20px;
-    bottom:18px;
+    bottom:17px;
   }
 
   .photo-caption strong{
@@ -2600,11 +2584,11 @@ RESPONSIVE
   /* SOLAR */
 
   .solar-visual{
-    min-height:410px;
+    min-height:405px;
   }
 
   .solar-content{
-    min-height:410px;
+    min-height:405px;
   }
 
   .solar-content h2{
@@ -2619,11 +2603,11 @@ RESPONSIVE
 
     gap:12px;
 
-    margin-top:35px;
+    margin-top:32px;
   }
 
   .message-photo-main{
-    height:280px;
+    height:275px;
   }
 
   .message-photo-side{
@@ -2644,13 +2628,13 @@ RESPONSIVE
   /* PHILOSOPHY */
 
   .philosophy-visual{
-    padding:30px 20px;
+    padding:28px 19px;
   }
 
   .philosophy-visual-head{
     display:block;
 
-    margin-bottom:25px;
+    margin-bottom:23px;
   }
 
   .philosophy-visual-title{
@@ -2685,15 +2669,15 @@ RESPONSIVE
   }
 
   .issue-visual{
-    margin-top:30px;
+    margin-top:28px;
 
-    padding:25px 18px;
+    padding:24px 17px;
   }
 
   .issue-visual-top{
     display:block;
 
-    margin-bottom:22px;
+    margin-bottom:21px;
   }
 
   .issue-visual-title{
@@ -2703,7 +2687,7 @@ RESPONSIVE
   .issue-visual-caption{
     text-align:left;
 
-    margin-top:10px;
+    margin-top:9px;
   }
 
   .margin-flow{
@@ -2722,7 +2706,7 @@ RESPONSIVE
   /* STRUCTURE */
 
   .structure-card{
-    padding:28px 22px;
+    padding:27px 21px;
   }
 
   .flow-item{
@@ -2732,7 +2716,7 @@ RESPONSIVE
   }
 
   .structure-visual{
-    margin-top:35px;
+    margin-top:33px;
   }
 
   .structure-visual-header{
@@ -2750,7 +2734,7 @@ RESPONSIVE
   }
 
   .compare-side{
-    padding:23px 17px;
+    padding:22px 17px;
   }
 
   .compare-title strong{
@@ -2765,7 +2749,7 @@ RESPONSIVE
   /* BUSINESS */
 
   .business-card{
-    padding:35px 25px;
+    padding:34px 24px;
   }
 
   .business-card h3{
@@ -2777,7 +2761,7 @@ RESPONSIVE
   }
 
   .business-gallery-large{
-    height:290px;
+    height:285px;
   }
 
   .business-gallery-small{
@@ -2789,7 +2773,7 @@ RESPONSIVE
   }
 
   .business-gallery-small .photo-frame{
-    min-height:190px;
+    min-height:185px;
   }
 
 
@@ -2804,11 +2788,11 @@ RESPONSIVE
 
     gap:12px;
 
-    margin-top:30px;
+    margin-top:29px;
   }
 
   .strength-photo-band .photo-frame{
-    height:240px;
+    height:235px;
   }
 
 
@@ -2881,7 +2865,7 @@ RESPONSIVE
   /* VISION */
 
   .vision{
-    padding:80px 0;
+    padding:75px 0;
   }
 
 
@@ -2914,12 +2898,31 @@ RESPONSIVE
 
 }
 
+
+/* =========================
+ACCESSIBILITY
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    animation-duration:.001ms !important;
+
+    transition-duration:.001ms !important;
+  }
+}
+
 </style>
 </head>
 
 
 <body>
-
 
 <header>
 
@@ -4234,6 +4237,7 @@ SANGEN MODEL
 
 </div>
 
+
 <div class="result-box">
 
 <span class="result-number">
@@ -4249,6 +4253,7 @@ SANGEN MODEL
 </span>
 
 </div>
+
 
 <div class="result-box">
 
@@ -4788,6 +4793,7 @@ COMPANY OVERVIEW
 
 <div class="overview-grid">
 
+
 <div class="overview-side">
 
 <div class="overview-image">
@@ -4972,6 +4978,7 @@ CONTACT
 <section class="contact" id="contact">
 
 <div class="wrap contact-inner">
+
 
 <div>
 
