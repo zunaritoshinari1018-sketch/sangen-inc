@@ -90,7 +90,7 @@ a{
 }
 
 section{
-  padding:120px 0;
+  padding:82px 0;
 }
 
 h1,
@@ -311,7 +311,7 @@ HERO
 
   letter-spacing:.28em;
 
-  margin-bottom:28px;
+  margin-bottom:22px;
 }
 
 .hero-eyebrow::before{
@@ -328,9 +328,9 @@ HERO
 
   font-size:clamp(38px,5.6vw,70px);
 
-  line-height:1.5;
+  line-height:1.42;
 
-  margin-bottom:30px;
+  margin-bottom:25px;
 }
 
 .hero h1 strong{
@@ -348,7 +348,7 @@ HERO
 
   line-height:2;
 
-  margin-bottom:40px;
+  margin-bottom:32px;
 }
 
 .hero-buttons{
@@ -368,7 +368,7 @@ HERO
 
   min-width:190px;
 
-  padding:16px 30px;
+  padding:15px 30px;
 
   font-size:13px;
 
@@ -415,7 +415,7 @@ SECTION TITLE
 .section-head{
   max-width:720px;
 
-  margin-bottom:60px;
+  margin-bottom:42px;
 }
 
 .eyebrow{
@@ -427,23 +427,96 @@ SECTION TITLE
 
   font-weight:700;
 
-  margin-bottom:14px;
+  margin-bottom:10px;
 }
 
 .section-head h2{
   font-size:clamp(28px,3.6vw,44px);
 
-  line-height:1.6;
+  line-height:1.55;
 }
 
 .section-head p{
-  margin-top:20px;
+  margin-top:16px;
 
   color:var(--gray);
 
   font-size:14px;
 
   line-height:2;
+}
+
+
+/* =========================
+PHOTO IMPACT
+共通
+========================= */
+
+.photo-frame{
+  overflow:hidden;
+
+  background:var(--navy);
+
+  position:relative;
+}
+
+.photo-frame img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.photo-frame:hover img{
+  transform:scale(1.045);
+}
+
+.photo-overlay{
+  position:absolute;
+
+  inset:0;
+
+  background:linear-gradient(
+    180deg,
+    transparent 35%,
+    rgba(14,26,42,.8)
+  );
+}
+
+.photo-caption{
+  position:absolute;
+
+  z-index:2;
+
+  left:28px;
+  right:28px;
+  bottom:24px;
+
+  color:var(--white);
+}
+
+.photo-caption small{
+  color:#8EC8FF;
+
+  display:block;
+
+  font-size:9px;
+
+  letter-spacing:.22em;
+
+  margin-bottom:5px;
+}
+
+.photo-caption strong{
+  display:block;
+
+  font-family:'Shippori Mincho',serif;
+
+  font-size:22px;
+
+  line-height:1.45;
 }
 
 
@@ -460,7 +533,9 @@ ABOUT
 
   grid-template-columns:1.1fr .9fr;
 
-  gap:80px;
+  gap:65px;
+
+  align-items:start;
 }
 
 .about-text p{
@@ -468,7 +543,7 @@ ABOUT
 
   font-size:15px;
 
-  margin-bottom:24px;
+  margin-bottom:20px;
 }
 
 .about-text strong{
@@ -480,7 +555,7 @@ ABOUT
 
   border-left:4px solid var(--blue);
 
-  padding:44px 38px;
+  padding:38px 34px;
 
   box-shadow:var(--shadow-soft);
 }
@@ -496,21 +571,31 @@ ABOUT
 
   font-weight:700;
 
-  margin-bottom:18px;
+  margin-bottom:16px;
 }
 
 .quote h3{
   font-size:23px;
 
-  line-height:1.8;
+  line-height:1.75;
 
-  margin-bottom:15px;
+  margin-bottom:14px;
 }
 
 .quote p{
   color:var(--gray);
 
   font-size:12px;
+}
+
+.about-photo-wide{
+  margin-top:50px;
+
+  height:430px;
+}
+
+.about-photo-wide img{
+  object-position:center 55%;
 }
 
 
@@ -521,11 +606,13 @@ SOLAR VISUAL
 .solar-visual{
   position:relative;
 
-  min-height:520px;
+  min-height:540px;
 
   overflow:hidden;
 
   background:var(--navy);
+
+  padding:0;
 }
 
 .solar-visual-image{
@@ -549,9 +636,9 @@ SOLAR VISUAL
   background:
     linear-gradient(
       90deg,
-      rgba(14,26,42,.82) 0%,
-      rgba(14,26,42,.42) 45%,
-      rgba(14,26,42,.08) 100%
+      rgba(14,26,42,.88) 0%,
+      rgba(14,26,42,.54) 42%,
+      rgba(14,26,42,.10) 100%
     );
 }
 
@@ -564,7 +651,7 @@ SOLAR VISUAL
 
   align-items:center;
 
-  min-height:520px;
+  min-height:540px;
 }
 
 .solar-content-inner{
@@ -578,11 +665,11 @@ SOLAR VISUAL
 .solar-content h2{
   color:var(--white);
 
-  font-size:clamp(28px,4vw,48px);
+  font-size:clamp(30px,4vw,50px);
 
-  line-height:1.7;
+  line-height:1.55;
 
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
 .solar-content p{
@@ -609,7 +696,7 @@ MESSAGE
 
   grid-template-columns:330px 1fr;
 
-  gap:70px;
+  gap:60px;
 }
 
 .person{
@@ -617,7 +704,7 @@ MESSAGE
 
   border:1px solid var(--line);
 
-  padding:42px 30px;
+  padding:38px 28px;
 
   text-align:center;
 
@@ -629,7 +716,7 @@ MESSAGE
 
   height:90px;
 
-  margin:0 auto 22px;
+  margin:0 auto 20px;
 }
 
 .person-role{
@@ -641,7 +728,7 @@ MESSAGE
 
   font-weight:700;
 
-  margin-bottom:10px;
+  margin-bottom:8px;
 }
 
 .person-name{
@@ -663,13 +750,13 @@ MESSAGE
 
   color:var(--gray);
 
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
 .person-position{
   border-top:1px solid var(--line);
 
-  padding-top:18px;
+  padding-top:16px;
 
   color:var(--gray);
 
@@ -681,7 +768,7 @@ MESSAGE
 
   font-size:15px;
 
-  margin-bottom:23px;
+  margin-bottom:20px;
 }
 
 .message-body p:first-child{
@@ -693,11 +780,11 @@ MESSAGE
 
   font-weight:700;
 
-  margin-bottom:30px;
+  margin-bottom:25px;
 }
 
 .signature{
-  margin-top:30px;
+  margin-top:25px;
 
   color:var(--gray);
 
@@ -714,6 +801,32 @@ MESSAGE
   font-size:18px;
 
   margin-top:5px;
+}
+
+.message-photo-grid{
+  display:grid;
+
+  grid-template-columns:1.2fr .8fr;
+
+  gap:15px;
+
+  margin-top:45px;
+}
+
+.message-photo-main{
+  height:360px;
+}
+
+.message-photo-side{
+  display:grid;
+
+  grid-template-rows:1fr 1fr;
+
+  gap:15px;
+}
+
+.message-photo-side .photo-frame{
+  min-height:172px;
 }
 
 
@@ -736,7 +849,7 @@ PHILOSOPHY
 }
 
 .philosophy-card{
-  padding:45px 35px;
+  padding:38px 30px;
 
   background:var(--luxury-white);
 
@@ -760,15 +873,15 @@ PHILOSOPHY
 
   font-weight:800;
 
-  margin-bottom:20px;
+  margin-bottom:16px;
 }
 
 .philosophy-card h3{
   font-size:19px;
 
-  line-height:1.7;
+  line-height:1.65;
 
-  margin-bottom:15px;
+  margin-bottom:13px;
 }
 
 .philosophy-card p{
@@ -780,13 +893,12 @@ PHILOSOPHY
 }
 
 
-/* =========================================================
-PHILOSOPHY VISUAL INFO
-「正しい商品から始まる」部分のみ視覚情報を強化
-========================================================= */
+/* =========================
+PHILOSOPHY VISUAL
+========================= */
 
 .philosophy-visual{
-  margin-top:55px;
+  margin-top:45px;
 
   padding:42px;
 
@@ -827,7 +939,7 @@ PHILOSOPHY VISUAL INFO
 
   gap:30px;
 
-  margin-bottom:35px;
+  margin-bottom:30px;
 }
 
 .philosophy-visual-title{
@@ -859,13 +971,13 @@ PHILOSOPHY VISUAL INFO
 
   grid-template-columns:repeat(4,1fr);
 
-  gap:12px;
+  gap:10px;
 }
 
 .product-step{
-  min-height:185px;
+  min-height:175px;
 
-  padding:25px 22px;
+  padding:23px 20px;
 
   background:rgba(255,255,255,.07);
 
@@ -879,14 +991,14 @@ PHILOSOPHY VISUAL INFO
 
   position:absolute;
 
-  right:-18px;
+  right:-17px;
 
   top:50%;
 
   transform:translateY(-50%);
 
-  width:34px;
-  height:34px;
+  width:32px;
+  height:32px;
 
   border-radius:50%;
 
@@ -918,7 +1030,7 @@ PHILOSOPHY VISUAL INFO
 
   font-weight:800;
 
-  margin-bottom:18px;
+  margin-bottom:16px;
 }
 
 .product-step h4{
@@ -928,7 +1040,7 @@ PHILOSOPHY VISUAL INFO
 
   font-size:16px;
 
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 
 .product-step p{
@@ -948,13 +1060,13 @@ PHILOSOPHY VISUAL INFO
 
   grid-template-columns:repeat(3,1fr);
 
-  gap:12px;
+  gap:10px;
 
-  margin-top:12px;
+  margin-top:10px;
 }
 
 .product-point{
-  padding:17px 20px;
+  padding:15px 18px;
 
   background:var(--luxury-white);
 
@@ -962,12 +1074,12 @@ PHILOSOPHY VISUAL INFO
 
   align-items:center;
 
-  gap:13px;
+  gap:12px;
 }
 
 .product-point-icon{
-  width:34px;
-  height:34px;
+  width:32px;
+  height:32px;
 
   flex:none;
 
@@ -983,7 +1095,7 @@ PHILOSOPHY VISUAL INFO
 
   color:var(--blue);
 
-  font-size:13px;
+  font-size:12px;
 
   font-weight:900;
 }
@@ -995,7 +1107,7 @@ PHILOSOPHY VISUAL INFO
 
   font-size:12px;
 
-  margin-bottom:2px;
+  margin-bottom:1px;
 }
 
 .product-point span{
@@ -1018,7 +1130,7 @@ ISSUES
 
   grid-template-columns:repeat(4,1fr);
 
-  gap:18px;
+  gap:15px;
 }
 
 .issue-card{
@@ -1026,16 +1138,18 @@ ISSUES
 
   background:var(--luxury-white);
 
-  padding:35px 25px;
+  padding:30px 22px;
 
   border:1px solid var(--line);
 
   box-shadow:var(--shadow-soft);
+
+  overflow:hidden;
 }
 
 .issue-icon{
-  width:46px;
-  height:46px;
+  width:44px;
+  height:44px;
 
   display:flex;
 
@@ -1051,15 +1165,15 @@ ISSUES
 
   font-size:20px;
 
-  margin-bottom:22px;
+  margin-bottom:18px;
 }
 
 .issue-card h3{
   font-family:'Noto Sans JP',sans-serif;
 
-  font-size:17px;
+  font-size:16px;
 
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 
 .issue-card p{
@@ -1071,15 +1185,14 @@ ISSUES
 }
 
 
-/* =========================================================
-ISSUE VISUAL INFO
-「高額な中間マージン」の視覚情報を強化
-========================================================= */
+/* =========================
+ISSUE VISUAL
+========================= */
 
 .issue-visual{
-  margin-top:50px;
+  margin-top:42px;
 
-  padding:45px;
+  padding:40px;
 
   background:var(--luxury-white);
 
@@ -1097,7 +1210,7 @@ ISSUE VISUAL INFO
 
   gap:30px;
 
-  margin-bottom:35px;
+  margin-bottom:30px;
 }
 
 .issue-visual-title{
@@ -1133,9 +1246,9 @@ ISSUE VISUAL INFO
 .margin-node{
   position:relative;
 
-  min-height:155px;
+  min-height:145px;
 
-  padding:23px 18px;
+  padding:21px 16px;
 
   border:1px solid var(--line);
 
@@ -1173,7 +1286,7 @@ ISSUE VISUAL INFO
 
   letter-spacing:.14em;
 
-  margin-bottom:15px;
+  margin-bottom:13px;
 }
 
 .margin-node h4{
@@ -1181,7 +1294,7 @@ ISSUE VISUAL INFO
 
   font-size:14px;
 
-  margin-bottom:8px;
+  margin-bottom:7px;
 }
 
 .margin-node p{
@@ -1203,17 +1316,17 @@ ISSUE VISUAL INFO
 }
 
 .margin-bar{
-  margin-top:22px;
+  margin-top:20px;
 
   display:grid;
 
   grid-template-columns:1fr 1fr;
 
-  gap:18px;
+  gap:15px;
 }
 
 .margin-meter{
-  padding:20px;
+  padding:18px;
 
   border:1px solid var(--line);
 
@@ -1227,7 +1340,7 @@ ISSUE VISUAL INFO
 
   align-items:center;
 
-  margin-bottom:10px;
+  margin-bottom:9px;
 }
 
 .margin-meter-label span{
@@ -1243,7 +1356,7 @@ ISSUE VISUAL INFO
 }
 
 .meter-track{
-  height:10px;
+  height:9px;
 
   background:var(--light-gray);
 
@@ -1276,7 +1389,7 @@ STRUCTURE
 .structure-intro{
   max-width:750px;
 
-  margin-bottom:55px;
+  margin-bottom:42px;
 }
 
 .structure-intro h2{
@@ -1284,7 +1397,7 @@ STRUCTURE
 
   line-height:1.6;
 
-  margin-bottom:18px;
+  margin-bottom:15px;
 }
 
 .structure-intro p{
@@ -1298,11 +1411,11 @@ STRUCTURE
 
   grid-template-columns:1fr 1fr;
 
-  gap:24px;
+  gap:20px;
 }
 
 .structure-card{
-  padding:40px;
+  padding:34px;
 
   border:1px solid var(--line);
 
@@ -1324,7 +1437,7 @@ STRUCTURE
 
   font-weight:800;
 
-  margin-bottom:22px;
+  margin-bottom:18px;
 
   padding:7px 12px;
 
@@ -1346,13 +1459,13 @@ STRUCTURE
 
   align-items:center;
 
-  gap:8px;
+  gap:7px;
 
-  margin-top:25px;
+  margin-top:21px;
 }
 
 .flow-item{
-  padding:11px 14px;
+  padding:10px 13px;
 
   background:var(--light);
 
@@ -1376,9 +1489,9 @@ STRUCTURE
 }
 
 .structure-note{
-  margin-top:25px;
+  margin-top:20px;
 
-  padding:18px;
+  padding:16px;
 
   background:var(--light);
 
@@ -1394,13 +1507,12 @@ STRUCTURE
 }
 
 
-/* =========================================================
+/* =========================
 STRUCTURE VISUAL
-「流通構造を、シンプルに。」を大型比較図へ
-========================================================= */
+========================= */
 
 .structure-visual{
-  margin-top:55px;
+  margin-top:45px;
 
   position:relative;
 }
@@ -1412,7 +1524,7 @@ STRUCTURE VISUAL
 
   align-items:flex-end;
 
-  margin-bottom:28px;
+  margin-bottom:24px;
 
   gap:30px;
 }
@@ -1436,7 +1548,7 @@ STRUCTURE VISUAL
 .structure-compare{
   display:grid;
 
-  grid-template-columns:1fr 80px 1fr;
+  grid-template-columns:1fr 70px 1fr;
 
   gap:0;
 
@@ -1448,7 +1560,7 @@ STRUCTURE VISUAL
 
   background:var(--light);
 
-  padding:32px;
+  padding:28px;
 }
 
 .compare-side.good{
@@ -1466,7 +1578,7 @@ STRUCTURE VISUAL
 
   align-items:center;
 
-  margin-bottom:28px;
+  margin-bottom:24px;
 }
 
 .compare-title span{
@@ -1502,7 +1614,7 @@ STRUCTURE VISUAL
 .compare-node{
   position:relative;
 
-  padding:18px 20px;
+  padding:16px 18px;
 
   background:var(--luxury-white);
 
@@ -1512,7 +1624,7 @@ STRUCTURE VISUAL
 
   align-items:center;
 
-  gap:15px;
+  gap:14px;
 }
 
 .compare-node:not(:last-child)::after{
@@ -1522,12 +1634,12 @@ STRUCTURE VISUAL
 
   left:50%;
 
-  bottom:-17px;
+  bottom:-16px;
 
   transform:translateX(-50%);
 
-  width:30px;
-  height:30px;
+  width:28px;
+  height:28px;
 
   display:flex;
 
@@ -1541,7 +1653,7 @@ STRUCTURE VISUAL
 
   color:var(--white);
 
-  font-size:11px;
+  font-size:10px;
 
   z-index:4;
 }
@@ -1551,8 +1663,8 @@ STRUCTURE VISUAL
 }
 
 .compare-icon{
-  width:38px;
-  height:38px;
+  width:36px;
+  height:36px;
 
   flex:none;
 
@@ -1566,7 +1678,7 @@ STRUCTURE VISUAL
 
   color:var(--navy);
 
-  font-size:12px;
+  font-size:11px;
 
   font-weight:900;
 }
@@ -1608,8 +1720,8 @@ STRUCTURE VISUAL
 .compare-middle::before{
   content:"VS";
 
-  width:48px;
-  height:48px;
+  width:46px;
+  height:46px;
 
   border-radius:50%;
 
@@ -1623,7 +1735,7 @@ STRUCTURE VISUAL
 
   justify-content:center;
 
-  font-size:11px;
+  font-size:10px;
 
   font-weight:900;
 
@@ -1654,13 +1766,13 @@ STRUCTURE VISUAL
 
   grid-template-columns:repeat(3,1fr);
 
-  gap:12px;
+  gap:10px;
 
-  margin-top:24px;
+  margin-top:20px;
 }
 
 .result-box{
-  padding:22px;
+  padding:20px;
 
   background:var(--navy);
 
@@ -1672,13 +1784,13 @@ STRUCTURE VISUAL
 
   color:var(--blue);
 
-  font-size:25px;
+  font-size:24px;
 
   font-weight:900;
 
   line-height:1.2;
 
-  margin-bottom:6px;
+  margin-bottom:5px;
 }
 
 .result-box strong{
@@ -1688,7 +1800,7 @@ STRUCTURE VISUAL
 
   font-size:12px;
 
-  margin-bottom:4px;
+  margin-bottom:3px;
 }
 
 .result-box span{
@@ -1711,13 +1823,13 @@ BUSINESS
 
   grid-template-columns:1fr 1fr;
 
-  gap:22px;
+  gap:20px;
 }
 
 .business-card{
   background:var(--luxury-white);
 
-  padding:50px 45px;
+  padding:42px 38px;
 
   border:1px solid var(--line);
 
@@ -1733,13 +1845,13 @@ BUSINESS
 
   font-weight:800;
 
-  margin-bottom:18px;
+  margin-bottom:16px;
 }
 
 .business-card h3{
   font-size:25px;
 
-  margin-bottom:18px;
+  margin-bottom:15px;
 }
 
 .business-card .lead{
@@ -1747,7 +1859,7 @@ BUSINESS
 
   font-size:14px;
 
-  margin-bottom:25px;
+  margin-bottom:22px;
 }
 
 .business-card ul{
@@ -1759,7 +1871,7 @@ BUSINESS
 
   font-size:13.5px;
 
-  padding:12px 0;
+  padding:10px 0;
 
   border-top:1px solid var(--line);
 }
@@ -1781,6 +1893,37 @@ BUSINESS
 
 
 /* =========================
+BUSINESS PHOTO GALLERY
+========================= */
+
+.business-gallery{
+  display:grid;
+
+  grid-template-columns:1.4fr .8fr .8fr;
+
+  gap:14px;
+
+  margin-top:42px;
+}
+
+.business-gallery-large{
+  height:440px;
+}
+
+.business-gallery-small{
+  display:grid;
+
+  grid-template-rows:1fr 1fr;
+
+  gap:14px;
+}
+
+.business-gallery-small .photo-frame{
+  min-height:213px;
+}
+
+
+/* =========================
 STRENGTHS
 ========================= */
 
@@ -1793,13 +1936,13 @@ STRENGTHS
 
   grid-template-columns:repeat(3,1fr);
 
-  gap:18px;
+  gap:15px;
 }
 
 .strength-card{
   background:var(--light);
 
-  padding:40px 30px;
+  padding:35px 27px;
 
   border:1px solid var(--line);
 
@@ -1821,7 +1964,7 @@ STRENGTHS
 
   font-weight:800;
 
-  margin-bottom:15px;
+  margin-bottom:12px;
 }
 
 .strength-card h4{
@@ -1829,7 +1972,7 @@ STRENGTHS
 
   font-size:17px;
 
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 
 .strength-card p{
@@ -1838,6 +1981,25 @@ STRENGTHS
   font-size:13px;
 
   line-height:1.95;
+}
+
+
+/* =========================
+STRENGTH PHOTO BAND
+========================= */
+
+.strength-photo-band{
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:14px;
+
+  margin-top:42px;
+}
+
+.strength-photo-band .photo-frame{
+  height:280px;
 }
 
 
@@ -1860,7 +2022,7 @@ HISTORY
 
   gap:35px;
 
-  padding:27px 0;
+  padding:23px 0;
 
   border-bottom:1px solid var(--line);
 }
@@ -1901,7 +2063,7 @@ COMPANY
 
   grid-template-columns:.8fr 1.2fr;
 
-  gap:65px;
+  gap:55px;
 }
 
 .overview-image{
@@ -1913,7 +2075,7 @@ COMPANY
 
   background:var(--navy);
 
-  margin-bottom:25px;
+  margin-bottom:22px;
 }
 
 .overview-image img{
@@ -1929,7 +2091,7 @@ COMPANY
 
   line-height:1.8;
 
-  margin-bottom:15px;
+  margin-bottom:13px;
 }
 
 .overview-side p{
@@ -1940,54 +2102,13 @@ COMPANY
   line-height:2;
 }
 
-.company-table{
-  width:100%;
-
-  border-collapse:collapse;
-
-  background:var(--light);
-}
-
-.company-table tr{
-  border-top:1px solid var(--line);
-}
-
-.company-table tr:first-child{
-  border-top:none;
-}
-
-.company-table th,
-.company-table td{
-  padding:22px 24px;
-
-  text-align:left;
-
-  vertical-align:top;
-
-  font-size:14px;
-}
-
-.company-table th{
-  width:28%;
-
-  color:var(--navy);
-
-  font-weight:800;
-
-  white-space:nowrap;
-}
-
-.company-table td{
-  color:var(--charcoal);
-}
-
 
 /* =========================
 GOOGLE MAP
 ========================= */
 
 .company-map{
-  margin-top:35px;
+  margin-top:30px;
 
   border:1px solid var(--line);
 
@@ -1999,7 +2120,7 @@ GOOGLE MAP
 }
 
 .company-map-head{
-  padding:18px 22px;
+  padding:16px 20px;
 
   display:flex;
 
@@ -2036,6 +2157,47 @@ GOOGLE MAP
   display:block;
 }
 
+.company-table{
+  width:100%;
+
+  border-collapse:collapse;
+
+  background:var(--light);
+}
+
+.company-table tr{
+  border-top:1px solid var(--line);
+}
+
+.company-table tr:first-child{
+  border-top:none;
+}
+
+.company-table th,
+.company-table td{
+  padding:20px 22px;
+
+  text-align:left;
+
+  vertical-align:top;
+
+  font-size:14px;
+}
+
+.company-table th{
+  width:28%;
+
+  color:var(--navy);
+
+  font-weight:800;
+
+  white-space:nowrap;
+}
+
+.company-table td{
+  color:var(--charcoal);
+}
+
 
 /* =========================
 VISION
@@ -2045,6 +2207,8 @@ VISION
   background:var(--light);
 
   text-align:center;
+
+  padding:105px 0;
 }
 
 .vision-inner{
@@ -2056,9 +2220,9 @@ VISION
 .vision h2{
   font-size:clamp(25px,3.5vw,38px);
 
-  line-height:1.9;
+  line-height:1.8;
 
-  margin-bottom:25px;
+  margin-bottom:20px;
 }
 
 .vision p{
@@ -2085,7 +2249,7 @@ CONTACT
 
   grid-template-columns:1fr 1fr;
 
-  gap:70px;
+  gap:60px;
 
   align-items:center;
 }
@@ -2099,9 +2263,9 @@ CONTACT
 
   font-size:clamp(25px,3.4vw,38px);
 
-  line-height:1.8;
+  line-height:1.75;
 
-  margin-bottom:22px;
+  margin-bottom:18px;
 }
 
 .contact-description{
@@ -2115,7 +2279,7 @@ CONTACT
 
   border:1px solid rgba(255,255,255,.16);
 
-  padding:40px;
+  padding:35px;
 }
 
 .contact-row{
@@ -2125,7 +2289,7 @@ CONTACT
 
   gap:20px;
 
-  padding:18px 0;
+  padding:16px 0;
 
   border-top:1px solid rgba(255,255,255,.12);
 }
@@ -2157,9 +2321,9 @@ CONTACT
 
   width:100%;
 
-  margin-top:25px;
+  margin-top:22px;
 
-  padding:17px;
+  padding:16px;
 
   background:var(--blue);
 
@@ -2186,7 +2350,7 @@ FOOTER
 footer{
   background:#0A111B;
 
-  padding:35px 0;
+  padding:32px 0;
 
   border-top:1px solid rgba(255,255,255,.1);
 }
@@ -2263,15 +2427,15 @@ RESPONSIVE
   }
 
   .message-grid{
-    gap:40px;
+    gap:35px;
   }
 
   .overview-grid{
-    gap:40px;
+    gap:35px;
   }
 
   .contact-inner{
-    gap:40px;
+    gap:35px;
   }
 
   .product-flow{
@@ -2288,6 +2452,7 @@ RESPONSIVE
 
   .margin-flow{
     grid-template-columns:repeat(2,1fr);
+
     gap:10px;
   }
 
@@ -2297,11 +2462,12 @@ RESPONSIVE
 
   .structure-compare{
     grid-template-columns:1fr;
-    gap:20px;
+
+    gap:15px;
   }
 
   .compare-middle{
-    height:60px;
+    height:55px;
   }
 
   .compare-middle::after{
@@ -2311,6 +2477,18 @@ RESPONSIVE
   .compare-middle::before{
     width:42px;
     height:42px;
+  }
+
+  .business-gallery{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .business-gallery-large{
+    height:360px;
+  }
+
+  .business-gallery-small{
+    display:grid;
   }
 }
 
@@ -2324,7 +2502,7 @@ RESPONSIVE
   }
 
   section{
-    padding:82px 0;
+    padding:65px 0;
   }
 
   .header-inner{
@@ -2337,7 +2515,6 @@ RESPONSIVE
 
   .brand-mark{
     width:32px;
-
     height:32px;
   }
 
@@ -2347,7 +2524,7 @@ RESPONSIVE
   .hero{
     min-height:100svh;
 
-    padding:120px 0 70px;
+    padding:120px 0 65px;
   }
 
   .hero-video video{
@@ -2366,9 +2543,9 @@ RESPONSIVE
   .hero h1{
     font-size:35px;
 
-    line-height:1.55;
+    line-height:1.52;
 
-    margin-bottom:24px;
+    margin-bottom:22px;
   }
 
   .hero-lead{
@@ -2376,7 +2553,7 @@ RESPONSIVE
 
     line-height:2;
 
-    margin-bottom:30px;
+    margin-bottom:27px;
   }
 
   .hero-buttons{
@@ -2393,7 +2570,7 @@ RESPONSIVE
   /* SECTION */
 
   .section-head{
-    margin-bottom:42px;
+    margin-bottom:35px;
   }
 
   .section-head h2{
@@ -2401,14 +2578,33 @@ RESPONSIVE
   }
 
 
+  /* PHOTO */
+
+  .about-photo-wide{
+    height:290px;
+
+    margin-top:35px;
+  }
+
+  .photo-caption{
+    left:20px;
+    right:20px;
+    bottom:18px;
+  }
+
+  .photo-caption strong{
+    font-size:18px;
+  }
+
+
   /* SOLAR */
 
   .solar-visual{
-    min-height:430px;
+    min-height:410px;
   }
 
   .solar-content{
-    min-height:430px;
+    min-height:410px;
   }
 
   .solar-content h2{
@@ -2416,19 +2612,69 @@ RESPONSIVE
   }
 
 
-  /* CONTENT */
+  /* MESSAGE */
 
-  .about-text p,
-  .message-body p{
-    font-size:14px;
+  .message-photo-grid{
+    grid-template-columns:1fr;
+
+    gap:12px;
+
+    margin-top:35px;
   }
 
-  .quote{
-    padding:32px 25px;
+  .message-photo-main{
+    height:280px;
   }
 
-  .quote h3{
-    font-size:20px;
+  .message-photo-side{
+    grid-template-columns:1fr 1fr;
+
+    grid-template-rows:1fr;
+
+    gap:12px;
+  }
+
+  .message-photo-side .photo-frame{
+    height:180px;
+
+    min-height:0;
+  }
+
+
+  /* PHILOSOPHY */
+
+  .philosophy-visual{
+    padding:30px 20px;
+  }
+
+  .philosophy-visual-head{
+    display:block;
+
+    margin-bottom:25px;
+  }
+
+  .philosophy-visual-title{
+    font-size:21px;
+  }
+
+  .philosophy-visual-sub{
+    text-align:left;
+
+    margin-top:10px;
+  }
+
+  .product-flow{
+    grid-template-columns:1fr;
+  }
+
+  .product-step{
+    min-height:auto;
+
+    padding:22px 19px;
+  }
+
+  .product-flow-bottom{
+    grid-template-columns:1fr;
   }
 
 
@@ -2438,22 +2684,45 @@ RESPONSIVE
     grid-template-columns:1fr;
   }
 
+  .issue-visual{
+    margin-top:30px;
 
-  /* BUSINESS */
-
-  .business-card{
-    padding:40px 27px;
+    padding:25px 18px;
   }
 
-  .business-card h3{
-    font-size:22px;
+  .issue-visual-top{
+    display:block;
+
+    margin-bottom:22px;
+  }
+
+  .issue-visual-title{
+    font-size:21px;
+  }
+
+  .issue-visual-caption{
+    text-align:left;
+
+    margin-top:10px;
+  }
+
+  .margin-flow{
+    grid-template-columns:1fr;
+  }
+
+  .margin-node{
+    min-height:auto;
+  }
+
+  .margin-bar{
+    grid-template-columns:1fr;
   }
 
 
   /* STRUCTURE */
 
   .structure-card{
-    padding:30px 24px;
+    padding:28px 22px;
   }
 
   .flow-item{
@@ -2462,11 +2731,84 @@ RESPONSIVE
     padding:9px 10px;
   }
 
+  .structure-visual{
+    margin-top:35px;
+  }
+
+  .structure-visual-header{
+    display:block;
+  }
+
+  .structure-visual-header h3{
+    font-size:21px;
+  }
+
+  .structure-visual-header p{
+    text-align:left;
+
+    margin-top:9px;
+  }
+
+  .compare-side{
+    padding:23px 17px;
+  }
+
+  .compare-title strong{
+    font-size:18px;
+  }
+
+  .compare-result{
+    grid-template-columns:1fr;
+  }
+
+
+  /* BUSINESS */
+
+  .business-card{
+    padding:35px 25px;
+  }
+
+  .business-card h3{
+    font-size:22px;
+  }
+
+  .business-gallery{
+    grid-template-columns:1fr;
+  }
+
+  .business-gallery-large{
+    height:290px;
+  }
+
+  .business-gallery-small{
+    grid-template-columns:1fr 1fr;
+
+    grid-template-rows:1fr;
+
+    gap:12px;
+  }
+
+  .business-gallery-small .photo-frame{
+    min-height:190px;
+  }
+
 
   /* STRENGTH */
 
   .strength-grid{
     grid-template-columns:1fr;
+  }
+
+  .strength-photo-band{
+    grid-template-columns:1fr;
+
+    gap:12px;
+
+    margin-top:30px;
+  }
+
+  .strength-photo-band .photo-frame{
+    height:240px;
   }
 
 
@@ -2500,11 +2842,11 @@ RESPONSIVE
   }
 
   .company-table tr{
-    padding:20px;
+    padding:18px;
   }
 
   .company-table th{
-    padding:0 0 8px;
+    padding:0 0 7px;
 
     font-size:12px;
 
@@ -2520,7 +2862,7 @@ RESPONSIVE
   }
 
   .company-map{
-    margin-top:25px;
+    margin-top:23px;
   }
 
   .company-map-head{
@@ -2536,111 +2878,17 @@ RESPONSIVE
   }
 
 
-  /* VISUAL INFO */
+  /* VISION */
 
-  .philosophy-visual{
-    padding:30px 20px;
-  }
-
-  .philosophy-visual-head{
-    display:block;
-
-    margin-bottom:25px;
-  }
-
-  .philosophy-visual-title{
-    font-size:21px;
-  }
-
-  .philosophy-visual-sub{
-    text-align:left;
-
-    margin-top:10px;
-  }
-
-  .product-flow{
-    grid-template-columns:1fr;
-  }
-
-  .product-step{
-    min-height:auto;
-
-    padding:23px 20px;
-  }
-
-  .product-flow-bottom{
-    grid-template-columns:1fr;
-  }
-
-  .issue-visual{
-    margin-top:35px;
-
-    padding:27px 18px;
-  }
-
-  .issue-visual-top{
-    display:block;
-
-    margin-bottom:25px;
-  }
-
-  .issue-visual-title{
-    font-size:21px;
-  }
-
-  .issue-visual-caption{
-    text-align:left;
-
-    margin-top:10px;
-  }
-
-  .margin-flow{
-    grid-template-columns:1fr;
-  }
-
-  .margin-node{
-    min-height:auto;
-  }
-
-  .margin-bar{
-    grid-template-columns:1fr;
-  }
-
-  .structure-visual{
-    margin-top:35px;
-  }
-
-  .structure-visual-header{
-    display:block;
-  }
-
-  .structure-visual-header h3{
-    font-size:21px;
-  }
-
-  .structure-visual-header p{
-    text-align:left;
-
-    margin-top:10px;
-  }
-
-  .compare-side{
-    padding:24px 18px;
-  }
-
-  .compare-title strong{
-    font-size:18px;
-  }
-
-  .compare-result{
-    grid-template-columns:1fr;
+  .vision{
+    padding:80px 0;
   }
 
 
   /* CONTACT */
 
   .contact-card{
-    padding:27px 22px;
+    padding:25px 20px;
   }
 
   .contact-row{
@@ -2666,31 +2914,12 @@ RESPONSIVE
 
 }
 
-
-/* =========================
-ACCESSIBILITY
-========================= */
-
-@media(prefers-reduced-motion:reduce){
-
-  html{
-    scroll-behavior:auto;
-  }
-
-  *,
-  *::before,
-  *::after{
-    animation-duration:.001ms !important;
-
-    transition-duration:.001ms !important;
-  }
-}
-
 </style>
-
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -2754,7 +2983,13 @@ stroke-linecap="round"
 
 </header>
 
+
 <main id="top">
+
+
+<!-- =========================
+HERO
+========================= -->
 
 <section class="hero">
 
@@ -2811,6 +3046,11 @@ RENEWABLE ENERGY COMPANY
 
 </section>
 
+
+<!-- =========================
+ABOUT
+========================= -->
+
 <section class="about" id="about">
 
 <div class="wrap">
@@ -2826,6 +3066,7 @@ ABOUT SANGEN
 </h2>
 
 </div>
+
 
 <div class="about-grid">
 
@@ -2861,6 +3102,7 @@ ABOUT SANGEN
 
 </div>
 
+
 <div class="quote">
 
 <span class="quote-label">
@@ -2883,9 +3125,37 @@ CORPORATE PHILOSOPHY
 
 </div>
 
+
+<div class="photo-frame about-photo-wide">
+
+<img
+src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2200&q=85"
+alt="太陽光発電パネル"
+loading="lazy"
+>
+
+<div class="photo-overlay"></div>
+
+<div class="photo-caption">
+
+<small>SANGEN / RENEWABLE ENERGY</small>
+
+<strong>
+暮らしのインフラを、次の時代へ。
+</strong>
+
+</div>
+
+</div>
+
 </div>
 
 </section>
+
+
+<!-- =========================
+SOLAR VISUAL
+========================= -->
 
 <section class="solar-visual">
 
@@ -2919,6 +3189,11 @@ SOLAR POWER GENERATION
 
 </section>
 
+
+<!-- =========================
+MESSAGE
+========================= -->
+
 <section class="message" id="message">
 
 <div class="wrap">
@@ -2935,6 +3210,7 @@ MESSAGE
 
 </div>
 
+
 <div class="message-grid">
 
 <div class="person">
@@ -2943,7 +3219,6 @@ MESSAGE
 class="person-logo"
 viewBox="0 0 100 100"
 aria-hidden="true"
-
 >
 
 <circle
@@ -2990,6 +3265,7 @@ Tetsuta Fuchikami
 </p>
 
 </div>
+
 
 <div class="message-body">
 
@@ -3054,9 +3330,91 @@ Tetsuta Fuchikami
 
 </div>
 
+
+<div class="message-photo-grid">
+
+<div class="photo-frame message-photo-main">
+
+<img
+src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=1500&q=85"
+alt="ビジネスミーティング"
+loading="lazy"
+>
+
+<div class="photo-overlay"></div>
+
+<div class="photo-caption">
+
+<small>TRUST</small>
+
+<strong>
+信頼を積み重ねる。
+</strong>
+
+</div>
+
+</div>
+
+
+<div class="message-photo-side">
+
+<div class="photo-frame">
+
+<img
+src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85"
+alt="チームミーティング"
+loading="lazy"
+>
+
+<div class="photo-overlay"></div>
+
+<div class="photo-caption">
+
+<small>PEOPLE</small>
+
+<strong>
+人を育てる。
+</strong>
+
+</div>
+
+</div>
+
+
+<div class="photo-frame">
+
+<img
+src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=85"
+alt="チームワーク"
+loading="lazy"
+>
+
+<div class="photo-overlay"></div>
+
+<div class="photo-caption">
+
+<small>GROWTH</small>
+
+<strong>
+会社を育てる。
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </section>
+
+
+<!-- =========================
+PHILOSOPHY
+========================= -->
 
 <section class="philosophy" id="philosophy">
 
@@ -3083,6 +3441,7 @@ OUR STANCE
 
 </div>
 
+
 <div class="philosophy-grid">
 
 <div class="philosophy-card">
@@ -3106,6 +3465,7 @@ OUR STANCE
 
 </div>
 
+
 <div class="philosophy-card">
 
 <p class="card-number">
@@ -3124,6 +3484,7 @@ OUR STANCE
 </p>
 
 </div>
+
 
 <div class="philosophy-card">
 
@@ -3145,6 +3506,7 @@ OUR STANCE
 </div>
 
 </div>
+
 
 <div class="philosophy-visual">
 
@@ -3169,6 +3531,7 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 
 </div>
 
+
 <div class="product-flow">
 
 <div class="product-step">
@@ -3188,6 +3551,7 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 
 </div>
 
+
 <div class="product-step">
 
 <p class="product-step-number">
@@ -3205,6 +3569,7 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 
 </div>
 
+
 <div class="product-step">
 
 <p class="product-step-number">
@@ -3221,6 +3586,7 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 </p>
 
 </div>
+
 
 <div class="product-step">
 
@@ -3241,6 +3607,7 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 
 </div>
 
+
 <div class="product-flow-bottom">
 
 <div class="product-point">
@@ -3256,6 +3623,7 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 
 </div>
 
+
 <div class="product-point">
 
 <div class="product-point-icon">
@@ -3268,6 +3636,7 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 </div>
 
 </div>
+
 
 <div class="product-point">
 
@@ -3289,6 +3658,11 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 </div>
 
 </section>
+
+
+<!-- =========================
+ISSUES
+========================= -->
 
 <section class="issue">
 
@@ -3312,6 +3686,7 @@ INDUSTRY ISSUES
 
 </div>
 
+
 <div class="issue-grid">
 
 <div class="issue-card">
@@ -3331,6 +3706,7 @@ INDUSTRY ISSUES
 
 </div>
 
+
 <div class="issue-card">
 
 <div class="issue-icon">
@@ -3348,6 +3724,7 @@ INDUSTRY ISSUES
 
 </div>
 
+
 <div class="issue-card">
 
 <div class="issue-icon">
@@ -3364,6 +3741,7 @@ INDUSTRY ISSUES
 </p>
 
 </div>
+
 
 <div class="issue-card">
 
@@ -3384,6 +3762,7 @@ INDUSTRY ISSUES
 
 </div>
 
+
 <div class="issue-visual">
 
 <div class="issue-visual-top">
@@ -3399,6 +3778,7 @@ INDUSTRY ISSUES
 </p>
 
 </div>
+
 
 <div class="margin-flow">
 
@@ -3418,6 +3798,7 @@ INDUSTRY ISSUES
 
 </div>
 
+
 <div class="margin-node cost">
 
 <p class="margin-node-number">
@@ -3433,6 +3814,7 @@ INDUSTRY ISSUES
 </p>
 
 </div>
+
 
 <div class="margin-node cost">
 
@@ -3451,6 +3833,7 @@ INDUSTRY ISSUES
 
 </div>
 
+
 <div class="margin-node cost">
 
 <p class="margin-node-number">
@@ -3466,6 +3849,7 @@ INDUSTRY ISSUES
 </p>
 
 </div>
+
 
 <div class="margin-node">
 
@@ -3484,6 +3868,7 @@ INDUSTRY ISSUES
 </div>
 
 </div>
+
 
 <div class="margin-bar">
 
@@ -3508,6 +3893,7 @@ LOW COST
 </div>
 
 </div>
+
 
 <div class="margin-meter">
 
@@ -3539,6 +3925,11 @@ COST STACKING
 
 </section>
 
+
+<!-- =========================
+STRUCTURE
+========================= -->
+
 <section class="structure">
 
 <div class="wrap">
@@ -3560,6 +3951,7 @@ STRUCTURE REFORM
 </p>
 
 </div>
+
 
 <div class="structure-grid">
 
@@ -3602,6 +3994,7 @@ STRUCTURE REFORM
 
 </div>
 
+
 <div class="structure-card good">
 
 <span class="structure-label">
@@ -3636,6 +4029,7 @@ STRUCTURE REFORM
 
 </div>
 
+
 <div class="structure-visual">
 
 <div class="structure-visual-header">
@@ -3659,7 +4053,9 @@ STRUCTURE COMPARISON
 
 </div>
 
+
 <div class="structure-compare">
+
 
 <div class="compare-side">
 
@@ -3674,6 +4070,7 @@ GENERAL MODEL
 </strong>
 
 </div>
+
 
 <div class="compare-flow">
 
@@ -3690,6 +4087,7 @@ GENERAL MODEL
 
 </div>
 
+
 <div class="compare-node">
 
 <div class="compare-icon">
@@ -3702,6 +4100,7 @@ GENERAL MODEL
 </div>
 
 </div>
+
 
 <div class="compare-node">
 
@@ -3716,6 +4115,7 @@ GENERAL MODEL
 
 </div>
 
+
 <div class="compare-node">
 
 <div class="compare-icon">
@@ -3728,6 +4128,7 @@ GENERAL MODEL
 </div>
 
 </div>
+
 
 <div class="compare-node">
 
@@ -3746,7 +4147,9 @@ GENERAL MODEL
 
 </div>
 
+
 <div class="compare-middle"></div>
+
 
 <div class="compare-side good">
 
@@ -3761,6 +4164,7 @@ SANGEN MODEL
 </strong>
 
 </div>
+
 
 <div class="compare-flow">
 
@@ -3777,6 +4181,7 @@ SANGEN MODEL
 
 </div>
 
+
 <div class="compare-node">
 
 <div class="compare-icon">
@@ -3789,6 +4194,7 @@ SANGEN MODEL
 </div>
 
 </div>
+
 
 <div class="compare-node">
 
@@ -3808,6 +4214,7 @@ SANGEN MODEL
 </div>
 
 </div>
+
 
 <div class="compare-result">
 
@@ -3867,6 +4274,11 @@ SANGEN MODEL
 
 </section>
 
+
+<!-- =========================
+BUSINESS
+========================= -->
+
 <section class="business" id="business">
 
 <div class="wrap">
@@ -3888,6 +4300,7 @@ BUSINESS
 </p>
 
 </div>
+
 
 <div class="business-grid">
 
@@ -3927,6 +4340,7 @@ MAIN BUSINESS
 
 </div>
 
+
 <div class="business-card">
 
 <p class="business-number">
@@ -3965,9 +4379,114 @@ LIFE SUPPORT BUSINESS
 
 </div>
 
+
+<div class="business-gallery">
+
+<div class="photo-frame business-gallery-large">
+
+<img
+src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1800&q=85"
+alt="住宅と太陽光発電"
+loading="lazy"
+>
+
+<div class="photo-overlay"></div>
+
+<div class="photo-caption">
+
+<small>ENERGY</small>
+
+<strong>
+再生可能エネルギー
+</strong>
+
+</div>
+
+</div>
+
+
+<div class="business-gallery-small">
+
+<div class="photo-frame">
+
+<img
+src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85"
+alt="事業活動"
+loading="lazy"
+>
+
+<div class="photo-overlay"></div>
+
+<div class="photo-caption">
+
+<small>BUSINESS</small>
+
+<strong>
+事業をつくる。
+</strong>
+
+</div>
+
+</div>
+
+
+<div class="photo-frame">
+
+<img
+src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=85"
+alt="住宅"
+loading="lazy"
+>
+
+<div class="photo-overlay"></div>
+
+<div class="photo-caption">
+
+<small>LIFE</small>
+
+<strong>
+暮らしを支える。
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="photo-frame">
+
+<img
+src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=85"
+alt="住宅設備工事"
+loading="lazy"
+>
+
+<div class="photo-overlay"></div>
+
+<div class="photo-caption">
+
+<small>SUPPORT</small>
+
+<strong>
+住まいに寄り添う。
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </section>
+
+
+<!-- =========================
+STRENGTHS
+========================= -->
 
 <section class="strengths">
 
@@ -3984,6 +4503,7 @@ STRENGTHS
 </h2>
 
 </div>
+
 
 <div class="strength-grid">
 
@@ -4004,6 +4524,7 @@ STRENGTHS
 
 </div>
 
+
 <div class="strength-card">
 
 <p class="strength-number">
@@ -4020,6 +4541,7 @@ STRENGTHS
 </p>
 
 </div>
+
 
 <div class="strength-card">
 
@@ -4038,6 +4560,7 @@ STRENGTHS
 
 </div>
 
+
 <div class="strength-card">
 
 <p class="strength-number">
@@ -4055,6 +4578,7 @@ STRENGTHS
 
 </div>
 
+
 <div class="strength-card">
 
 <p class="strength-number">
@@ -4071,6 +4595,7 @@ STRENGTHS
 </p>
 
 </div>
+
 
 <div class="strength-card">
 
@@ -4091,9 +4616,87 @@ STRENGTHS
 
 </div>
 
+
+<div class="strength-photo-band">
+
+<div class="photo-frame">
+
+<img
+src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1400&q=85"
+alt="チームで働く人々"
+loading="lazy"
+>
+
+<div class="photo-overlay"></div>
+
+<div class="photo-caption">
+
+<small>TEAM</small>
+
+<strong>
+人が、会社をつくる。
+</strong>
+
+</div>
+
+</div>
+
+
+<div class="photo-frame">
+
+<img
+src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=85"
+alt="オフィス"
+loading="lazy"
+>
+
+<div class="photo-overlay"></div>
+
+<div class="photo-caption">
+
+<small>ORGANIZATION</small>
+
+<strong>
+組織として成長する。
+</strong>
+
+</div>
+
+</div>
+
+
+<div class="photo-frame">
+
+<img
+src="https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&w=1400&q=85"
+alt="ワークスペース"
+loading="lazy"
+>
+
+<div class="photo-overlay"></div>
+
+<div class="photo-caption">
+
+<small>TRUST</small>
+
+<strong>
+長期的な関係を築く。
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </section>
+
+
+<!-- =========================
+HISTORY
+========================= -->
 
 <section class="history">
 
@@ -4110,6 +4713,7 @@ HISTORY
 </h2>
 
 </div>
+
 
 <div class="history-list">
 
@@ -4132,6 +4736,7 @@ HISTORY
 </span>
 
 </div>
+
 
 <div class="history-row">
 
@@ -4159,6 +4764,11 @@ HISTORY
 
 </section>
 
+
+<!-- =========================
+COMPANY
+========================= -->
+
 <section class="overview" id="overview">
 
 <div class="wrap">
@@ -4175,6 +4785,7 @@ COMPANY OVERVIEW
 
 </div>
 
+
 <div class="overview-grid">
 
 <div class="overview-side">
@@ -4185,7 +4796,6 @@ COMPANY OVERVIEW
 src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=85"
 alt="太陽光発電パネル"
 loading="lazy"
-
 >
 
 </div>
@@ -4201,6 +4811,7 @@ loading="lazy"
 目の前の家庭の暮らしと、その先にある未来。
 その両方に価値を提供することが、山源の目指す姿です。
 </p>
+
 
 <div class="company-map">
 
@@ -4226,6 +4837,7 @@ allowfullscreen>
 </div>
 
 </div>
+
 
 <table class="company-table">
 
@@ -4321,6 +4933,11 @@ info@yamagen21.co.jp
 
 </section>
 
+
+<!-- =========================
+VISION
+========================= -->
+
 <section class="vision">
 
 <div class="wrap vision-inner">
@@ -4347,6 +4964,11 @@ BRAND VISION
 
 </section>
 
+
+<!-- =========================
+CONTACT
+========================= -->
+
 <section class="contact" id="contact">
 
 <div class="wrap contact-inner">
@@ -4370,6 +4992,7 @@ CONTACT
 
 </div>
 
+
 <div class="contact-card">
 
 <div class="contact-row">
@@ -4384,6 +5007,7 @@ TEL
 
 </div>
 
+
 <div class="contact-row">
 
 <span class="contact-label">
@@ -4395,6 +5019,7 @@ info@yamagen21.co.jp
 </span>
 
 </div>
+
 
 <div class="contact-row">
 
@@ -4409,6 +5034,7 @@ Park Front 博多駅前 8F
 
 </div>
 
+
 <a
 class="mail-button"
 href="mailto:info@yamagen21.co.jp"
@@ -4422,7 +5048,13 @@ href="mailto:info@yamagen21.co.jp"
 
 </section>
 
+
 </main>
+
+
+<!-- =========================
+FOOTER
+========================= -->
 
 <footer>
 
@@ -4465,6 +5097,7 @@ stroke-linejoin="round"
 </div>
 
 </footer>
+
 
 </body>
 </html>
