@@ -433,7 +433,7 @@ nav a:hover::after{
 
   max-width:650px;
 
-  color:rgba(255,255,255,.88);
+  color:rgba(255,255,255,.90);
 
   font-size:15px;
 
@@ -552,7 +552,7 @@ nav a:hover::after{
 
   margin-top:11px;
 
-  color:var(--gray);
+  color:#555E6B;
 
   font-size:14px;
 
@@ -735,7 +735,7 @@ nav a:hover::after{
 
 .quote p{
 
-  color:var(--gray);
+  color:#555E6B;
 
   font-size:12px;
 
@@ -841,7 +841,7 @@ nav a:hover::after{
 
   max-width:570px;
 
-  color:rgba(255,255,255,.82);
+  color:rgba(255,255,255,.84);
 
   font-size:14px;
 
@@ -1083,7 +1083,7 @@ nav a:hover::after{
 
 .philosophy-card p{
 
-  color:var(--gray);
+  color:#555E6B;
 
   font-size:13px;
 
@@ -1280,7 +1280,7 @@ nav a:hover::after{
 
 .product-step p{
 
-  color:rgba(255,255,255,.62);
+  color:rgba(255,255,255,.66);
 
   font-size:11px;
 
@@ -1435,7 +1435,7 @@ nav a:hover::after{
 
 .issue-card p{
 
-  color:var(--gray);
+  color:#555E6B;
 
   font-size:12px;
 
@@ -1492,7 +1492,7 @@ nav a:hover::after{
 
 .issue-visual-caption{
 
-  color:var(--gray);
+  color:#555E6B;
 
   font-size:11px;
 
@@ -1578,7 +1578,7 @@ nav a:hover::after{
 
 .margin-node p{
 
-  color:var(--gray);
+  color:#555E6B;
 
   font-size:10px;
 
@@ -1638,7 +1638,7 @@ nav a:hover::after{
 
   font-size:10px;
 
-  color:var(--gray);
+  color:#555E6B;
 
 }
 
@@ -1707,11 +1707,16 @@ nav a:hover::after{
 
 .structure-intro p{
 
-  color:var(--gray);
+  color:#555E6B;
 
   font-size:14px;
 
 }
+
+
+/* =========================================================
+   STRUCTURE COMPARISON CARDS
+   ========================================================= */
 
 .structure-grid{
 
@@ -1821,7 +1826,7 @@ nav a:hover::after{
 
   background:var(--color-bg-card);
 
-  color:var(--gray);
+  color:#555E6B;
 
   font-size:11px;
 
@@ -1834,6 +1839,11 @@ nav a:hover::after{
   border-left:3px solid var(--color-accent);
 
 }
+
+
+/* =========================================================
+   NEW: STRUCTURE VISUAL COMPARISON
+   ========================================================= */
 
 .structure-visual{
 
@@ -1867,333 +1877,273 @@ nav a:hover::after{
 
 .structure-visual-header p{
 
-  color:var(--gray);
+  color:#555E6B;
 
   font-size:11px;
 
-  max-width:350px;
+  max-width:420px;
 
   text-align:right;
 
 }
 
-.structure-compare{
-
-  display:grid;
-
-  grid-template-columns:1fr 58px 1fr;
-
-  gap:0;
-
-  align-items:stretch;
-
-}
-
-.compare-side{
+.structure-compare-table{
 
   border:1px solid var(--line);
-
-  background:var(--color-bg-card);
-
-  padding:23px;
-
-}
-
-.compare-side.good{
-
-  border:2px solid var(--color-accent);
-
-  background:#FBFAF5;
-
-  box-shadow:var(--shadow);
-
-}
-
-.compare-title{
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:center;
-
-  margin-bottom:19px;
-
-}
-
-.compare-title span{
-
-  font-size:9px;
-
-  letter-spacing:.2em;
-
-  font-weight:800;
-
-  color:var(--gray);
-
-}
-
-.compare-side.good .compare-title span{
-
-  color:var(--color-accent);
-
-}
-
-.compare-title strong{
-
-  font-family:'Shippori Mincho',serif;
-
-  font-size:19px;
-
-  color:var(--color-main);
-
-}
-
-.compare-flow{
-
-  display:flex;
-
-  flex-direction:column;
-
-  gap:0;
-
-}
-
-.compare-node{
-
-  position:relative;
-
-  padding:13px 15px;
 
   background:var(--white);
 
-  border:1px solid var(--line);
+  box-shadow:var(--shadow-soft);
 
-  display:flex;
-
-  align-items:center;
-
-  gap:12px;
+  overflow:hidden;
 
 }
 
-.compare-node:not(:last-child)::after{
+.structure-compare-head{
 
-  content:"↓";
+  display:grid;
 
-  position:absolute;
-
-  left:50%;
-
-  bottom:-14px;
-
-  transform:translateX(-50%);
-
-  width:24px;
-
-  height:24px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  border-radius:50%;
+  grid-template-columns:1.3fr .85fr .85fr;
 
   background:var(--color-main);
 
   color:var(--white);
 
-  font-size:9px;
+}
 
-  z-index:4;
+.structure-compare-head > div{
+
+  padding:15px 17px;
+
+  font-size:11px;
+
+  font-weight:800;
+
+  letter-spacing:.06em;
+
+  border-right:1px solid rgba(255,255,255,.10);
 
 }
 
-.compare-side.good .compare-node:not(:last-child)::after{
+.structure-compare-head > div:last-child{
 
-  background:var(--color-accent);
-
-  color:var(--color-main);
+  border-right:none;
 
 }
 
-.compare-icon{
+.structure-compare-row{
 
-  width:32px;
+  display:grid;
 
-  height:32px;
+  grid-template-columns:1.3fr .85fr .85fr;
 
-  flex:none;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  background:var(--gray-light);
-
-  color:var(--color-main);
-
-  font-size:10px;
-
-  font-weight:900;
+  border-top:1px solid var(--line);
 
 }
 
-.compare-side.good .compare-icon{
+.structure-compare-row:first-child{
 
-  background:rgba(194,155,56,.12);
-
-  color:var(--color-accent);
+  border-top:none;
 
 }
 
-.compare-node strong{
+.structure-compare-row > div{
 
-  display:block;
+  padding:15px 17px;
 
   font-size:12px;
 
-  color:var(--color-main);
+  color:#555E6B;
 
-}
-
-.compare-node span{
-
-  display:block;
-
-  color:var(--gray);
-
-  font-size:8px;
-
-  margin-top:1px;
-
-}
-
-.compare-middle{
+  border-right:1px solid var(--line);
 
   display:flex;
 
   align-items:center;
 
-  justify-content:center;
+}
 
-  position:relative;
+.structure-compare-row > div:last-child{
+
+  border-right:none;
 
 }
 
-.compare-middle::before{
+.structure-compare-row .item-title{
 
-  content:"VS";
+  color:var(--color-main);
 
-  width:42px;
+  font-weight:800;
 
-  height:42px;
+}
 
-  border-radius:50%;
+.structure-compare-row .general{
 
-  background:var(--color-main);
+  background:#FAFAFB;
+
+}
+
+.structure-compare-row .sangen{
+
+  background:#FBFAF5;
+
+  color:var(--color-main);
+
+  font-weight:700;
+
+}
+
+.structure-compare-row .sangen strong{
 
   color:var(--color-accent);
 
-  border:1px solid rgba(194,155,56,.62);
+}
 
-  display:flex;
+.structure-check{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:7px;
+
+  color:var(--color-main);
+
+  font-weight:700;
+
+}
+
+.structure-check::before{
+
+  content:"✓";
+
+  display:inline-flex;
+
+  width:21px;
+
+  height:21px;
 
   align-items:center;
 
   justify-content:center;
 
-  font-size:9px;
+  border-radius:50%;
+
+  background:rgba(194,155,56,.14);
+
+  color:var(--color-accent);
+
+  font-size:11px;
 
   font-weight:900;
 
-  letter-spacing:.08em;
+}
 
-  position:relative;
+.structure-cross{
 
-  z-index:2;
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:7px;
 
 }
 
-.compare-middle::after{
+.structure-cross::before{
 
-  content:"";
+  content:"―";
 
-  position:absolute;
+  display:inline-flex;
 
-  top:50%;
+  width:21px;
 
-  left:0;
+  height:21px;
 
-  width:100%;
+  align-items:center;
 
-  height:1px;
+  justify-content:center;
 
-  background:var(--line);
+  border-radius:50%;
+
+  background:rgba(107,114,128,.10);
+
+  color:#8A919B;
+
+  font-size:11px;
+
+  font-weight:900;
 
 }
 
-.compare-result{
+.structure-benefit-grid{
 
   display:grid;
 
   grid-template-columns:repeat(3,1fr);
 
-  gap:7px;
+  gap:8px;
 
-  margin-top:15px;
+  margin-top:9px;
 
 }
 
-.result-box{
+.structure-benefit{
 
-  padding:16px;
+  padding:18px 16px;
 
   background:var(--color-main);
-
-  text-align:center;
 
   border-top:2px solid var(--color-accent);
 
 }
 
-.result-number{
+.structure-benefit-number{
 
   display:block;
 
   color:var(--color-accent);
 
-  font-size:22px;
+  font-size:10px;
 
-  font-weight:900;
+  letter-spacing:.18em;
 
-  line-height:1.2;
+  font-weight:800;
 
-  margin-bottom:4px;
+  margin-bottom:6px;
 
 }
 
-.result-box strong{
-
-  display:block;
+.structure-benefit h4{
 
   color:var(--white);
 
-  font-size:11px;
+  font-family:'Noto Sans JP',sans-serif;
 
-  margin-bottom:2px;
+  font-size:14px;
+
+  margin-bottom:6px;
 
 }
 
-.result-box span{
+.structure-benefit p{
 
-  color:rgba(255,255,255,.56);
+  color:rgba(255,255,255,.68);
 
-  font-size:8px;
+  font-size:10px;
+
+  line-height:1.78;
+
+}
+
+.structure-visual-note{
+
+  margin-top:11px;
+
+  color:#6B7280;
+
+  font-size:10px;
+
+  line-height:1.8;
 
 }
 
@@ -2254,7 +2204,7 @@ nav a:hover::after{
 
 .business-card .lead{
 
-  color:var(--gray);
+  color:#555E6B;
 
   font-size:14px;
 
@@ -2381,7 +2331,7 @@ nav a:hover::after{
 
 .strength-card p{
 
-  color:var(--gray);
+  color:#555E6B;
 
   font-size:13px;
 
@@ -2527,18 +2477,13 @@ nav a:hover::after{
 
 .overview-side p{
 
-  color:var(--gray);
+  color:#555E6B;
 
   font-size:13px;
 
   line-height:1.92;
 
 }
-
-
-/* =========================================================
-   GOOGLE MAP
-   ========================================================= */
 
 .company-map{
 
@@ -2692,7 +2637,7 @@ nav a:hover::after{
 
 .vision p{
 
-  color:var(--gray);
+  color:#555E6B;
 
   font-size:14px;
 
@@ -2932,7 +2877,9 @@ footer small{
 @media(max-width:1000px){
 
   nav{
+
     display:none;
+
   }
 
   .about-grid,
@@ -2945,50 +2892,73 @@ footer small{
   }
 
   .business-grid{
+
     grid-template-columns:1fr;
+
   }
 
   .philosophy-grid{
+
     grid-template-columns:1fr;
+
   }
 
   .strength-grid{
+
     grid-template-columns:repeat(2,1fr);
+
   }
 
   .issue-grid{
+
     grid-template-columns:repeat(2,1fr);
+
   }
 
   .structure-grid{
+
     grid-template-columns:1fr;
+
   }
 
   .message-grid{
+
     gap:30px;
+
   }
 
   .overview-grid{
+
     gap:30px;
+
   }
 
   .contact-inner{
+
     gap:30px;
+
   }
 
   .product-flow{
+
     grid-template-columns:repeat(2,1fr);
+
   }
 
   .product-step::after{
+
     display:none;
+
   }
 
   .product-flow-bottom{
+
     grid-template-columns:1fr;
+
   }
 
   .margin-flow{
+
     grid-template-columns:repeat(2,1fr);
 
     gap:7px;
@@ -2996,37 +2966,40 @@ footer small{
   }
 
   .margin-node:not(:last-child)::after{
+
     display:none;
+
   }
 
-  .structure-compare{
+  .structure-compare-head,
+  .structure-compare-row{
+
+    grid-template-columns:1.1fr .95fr .95fr;
+
+  }
+
+  .structure-benefit-grid{
+
     grid-template-columns:1fr;
-    gap:12px;
-  }
 
-  .compare-middle{
-    height:45px;
-  }
-
-  .compare-middle::after{
-    display:none;
-  }
-
-  .compare-middle::before{
-    width:40px;
-    height:40px;
   }
 
   .business-gallery{
+
     grid-template-columns:repeat(3,1fr);
+
   }
 
   .business-gallery .photo-frame{
+
     height:250px;
+
   }
 
   .strength-photo-band{
+
     grid-template-columns:repeat(3,1fr);
+
   }
 
 }
@@ -3043,20 +3016,29 @@ footer small{
   }
 
   section{
+
     padding:38px 0;
+
   }
 
   .header-inner{
+
     min-height:64px;
+
   }
 
   .brand-text{
+
     font-size:17px;
+
   }
 
   .brand-mark{
+
     width:32px;
+
     height:32px;
+
   }
 
 
@@ -3071,7 +3053,9 @@ footer small{
   }
 
   .hero-video video{
+
     object-fit:cover;
+
   }
 
   .hero-video::after{
@@ -3114,18 +3098,24 @@ footer small{
   }
 
   .btn{
+
     width:100%;
+
   }
 
 
   /* SECTION */
 
   .section-head{
+
     margin-bottom:27px;
+
   }
 
   .section-head h2{
+
     font-size:28px;
+
   }
 
 
@@ -3150,22 +3140,30 @@ footer small{
   }
 
   .photo-caption strong{
+
     font-size:17px;
+
   }
 
 
   /* SOLAR */
 
   .solar-visual{
+
     min-height:370px;
+
   }
 
   .solar-content{
+
     min-height:370px;
+
   }
 
   .solar-content h2{
+
     font-size:28px;
+
   }
 
 
@@ -3182,7 +3180,9 @@ footer small{
   }
 
   .message-photo-grid .photo-frame{
+
     height:145px;
+
   }
 
   .message-photo-grid .photo-caption{
@@ -3196,18 +3196,24 @@ footer small{
   }
 
   .message-photo-grid .photo-caption small{
+
     font-size:6px;
+
   }
 
   .message-photo-grid .photo-caption strong{
+
     font-size:11px;
+
   }
 
 
   /* PHILOSOPHY */
 
   .philosophy-grid{
+
     grid-template-columns:1fr;
+
   }
 
   .philosophy-visual{
@@ -3227,7 +3233,9 @@ footer small{
   }
 
   .philosophy-visual-title{
+
     font-size:20px;
+
   }
 
   .philosophy-visual-sub{
@@ -3239,7 +3247,9 @@ footer small{
   }
 
   .product-flow{
+
     grid-template-columns:1fr;
+
   }
 
   .product-step{
@@ -3251,14 +3261,18 @@ footer small{
   }
 
   .product-flow-bottom{
+
     grid-template-columns:1fr;
+
   }
 
 
   /* ISSUE */
 
   .issue-grid{
+
     grid-template-columns:1fr;
+
   }
 
   .issue-visual{
@@ -3278,7 +3292,9 @@ footer small{
   }
 
   .issue-visual-title{
+
     font-size:20px;
+
   }
 
   .issue-visual-caption{
@@ -3290,22 +3306,30 @@ footer small{
   }
 
   .margin-flow{
+
     grid-template-columns:1fr;
+
   }
 
   .margin-node{
+
     min-height:auto;
+
   }
 
   .margin-bar{
+
     grid-template-columns:1fr;
+
   }
 
 
   /* STRUCTURE */
 
   .structure-card{
+
     padding:24px 19px;
+
   }
 
   .flow-item{
@@ -3317,15 +3341,21 @@ footer small{
   }
 
   .structure-visual{
+
     margin-top:28px;
+
   }
 
   .structure-visual-header{
+
     display:block;
+
   }
 
   .structure-visual-header h3{
+
     font-size:20px;
+
   }
 
   .structure-visual-header p{
@@ -3336,27 +3366,47 @@ footer small{
 
   }
 
-  .compare-side{
-    padding:20px 15px;
+  .structure-compare-table{
+
+    overflow-x:auto;
+
   }
 
-  .compare-title strong{
-    font-size:17px;
+  .structure-compare-head,
+  .structure-compare-row{
+
+    min-width:620px;
+
   }
 
-  .compare-result{
+  .structure-compare-head > div,
+  .structure-compare-row > div{
+
+    padding:13px 12px;
+
+    font-size:10px;
+
+  }
+
+  .structure-benefit-grid{
+
     grid-template-columns:1fr;
+
   }
 
 
   /* BUSINESS */
 
   .business-card{
+
     padding:31px 22px;
+
   }
 
   .business-card h3{
+
     font-size:21px;
+
   }
 
   .business-gallery{
@@ -3368,14 +3418,18 @@ footer small{
   }
 
   .business-gallery .photo-frame{
+
     height:250px;
+
   }
 
 
   /* STRENGTH */
 
   .strength-grid{
+
     grid-template-columns:1fr;
+
   }
 
   .strength-photo-band{
@@ -3389,7 +3443,9 @@ footer small{
   }
 
   .strength-photo-band .photo-frame{
+
     height:145px;
+
   }
 
   .strength-photo-band .photo-caption{
@@ -3403,11 +3459,15 @@ footer small{
   }
 
   .strength-photo-band .photo-caption small{
+
     font-size:5px;
+
   }
 
   .strength-photo-band .photo-caption strong{
+
     font-size:10px;
+
   }
 
 
@@ -3424,11 +3484,15 @@ footer small{
   }
 
   .history-date{
+
     font-size:12px;
+
   }
 
   .history-event{
+
     font-size:12px;
+
   }
 
 
@@ -3447,7 +3511,9 @@ footer small{
   }
 
   .company-table tr{
+
     padding:16px;
+
   }
 
   .company-table th{
@@ -3471,7 +3537,9 @@ footer small{
   }
 
   .company-map{
+
     margin-top:21px;
+
   }
 
   .company-map-head{
@@ -3485,21 +3553,27 @@ footer small{
   }
 
   .company-map iframe{
+
     height:260px;
+
   }
 
 
   /* VISION */
 
   .vision{
+
     padding:60px 0;
+
   }
 
 
   /* CONTACT */
 
   .contact-card{
+
     padding:23px 18px;
+
   }
 
   .contact-row{
@@ -3528,11 +3602,15 @@ footer small{
   }
 
   .footer-brand{
+
     justify-content:center;
+
   }
 
   footer small{
+
     font-size:9px;
+
   }
 
 }
@@ -3696,7 +3774,7 @@ RENEWABLE ENERGY COMPANY
 
 株式会社山源は、太陽光発電・蓄電池を中心とした再生可能エネルギー事業を通じて、
 
-人を育て、信頼を積み、人と資源が集まる「源」となることを目指す会社です。
+人を育て、信頼を積み、人と資源が集まる会社を目指しています。
 
 </p>
 
@@ -3762,15 +3840,15 @@ ABOUT SANGEN
 
 その周辺領域として、新電力、ウォーターサーバー、不動産仲介、
 
-生活関連商品など、暮らしに関係するサービスを展開しています。
+生活関連商品など、暮らしに関わるサービスを展開しています。
 
 </p>
 
 <p>
 
-山源が目指しているのは、単に商品を販売する会社でも、
+山源が大切にしているのは、
 
-単に売上の大きな会社でもありません。
+商品を売ることだけではありません。
 
 </p>
 
@@ -3778,7 +3856,7 @@ ABOUT SANGEN
 
 <strong>
 
-人を育て、信頼を積み、人と資源が集まる「源」となる。
+お客様が理解し、納得したうえで選べること。
 
 </strong>
 
@@ -3786,9 +3864,9 @@ ABOUT SANGEN
 
 <p>
 
-良い人、良い情報、良い取引先、良い商品や技術が集まり、
+そのために、商品・施工・保証・価格をできるだけ分かりやすく整理し、
 
-それらを社会にとって新しい価値へと変えていく。
+長く信頼していただける関係をつくることを重視しています。
 
 </p>
 
@@ -3813,13 +3891,13 @@ CORPORATE PHILOSOPHY
 
 <p>
 
-企業は結局「人」でできている。
-
 短期的な利益だけを追うのではなく、
 
-目の前の一件だけでなく信頼を積み重ねる。
+一つひとつの取引で信頼を積み重ねる。
 
-その先に、お客様・社員・取引先・社会への価値があります。
+お客様・社員・取引先との関係を、
+
+長期的な財産として育てていきます。
 
 </p>
 
@@ -3848,7 +3926,7 @@ loading="lazy"
 
 <strong>
 
-暮らしのインフラを、次の時代へ。
+暮らしに関わるサービスを、確かな品質で。
 
 </strong>
 
@@ -3876,9 +3954,7 @@ loading="lazy"
 <div class="solar-content-inner">
 
 <p class="eyebrow">
-
 SOLAR POWER GENERATION
-
 </p>
 
 <h2>
@@ -3893,11 +3969,11 @@ SOLAR POWER GENERATION
 
 住宅用太陽光発電・蓄電池を通じて、
 
-エネルギーをより身近な選択肢へ。
+家庭の電気の使い方を見直す選択肢をご提案します。
 
-山源は、再生可能エネルギーの普及を通じて、
+住宅環境や電力使用状況を確認し、
 
-新しい暮らしの価値を提案します。
+必要な設備を考えることを大切にしています。
 
 </p>
 
@@ -4024,11 +4100,9 @@ Tetsuta Fuchikami
 
 山源は、太陽光発電・蓄電池という高額な商品を扱う会社です。
 
-だからこそ、お客様との間に生まれやすい情報格差を利用するのではなく、
+だからこそ、お客様との間にある情報差を利用するのではなく、
 
-知ってもらったうえで選んでいただく。
-
-そういう商売のかたちにこだわっています。
+商品や条件を理解していただいたうえで選んでいただくことを大切にしています。
 
 </p>
 
@@ -4036,59 +4110,47 @@ Tetsuta Fuchikami
 
 強引な営業をしない。
 
-嘘をついて売らない。
+必要のない商品を勧めない。
 
-お客様が理解していない状態で契約を取らない。
-
-</p>
-
-<p>
-
-当たり前のことのようですが、
-
-この業界において簡単なことではないと感じています。
+分からないことを分からないまま契約に進めない。
 
 </p>
 
 <p>
 
-それでも私たちは、
+販売することだけを目的にするのではなく、
 
-<strong>
+お客様が判断できる材料をきちんと提示する。
 
-誠実であることと、強い会社であることは両立できる
-
-</strong>
-
-と考えています。
+それが、私たちの営業の基本です。
 
 </p>
 
 <p>
 
-仕入れ・流通・販売のコストを見直し、
+また、商品価格だけでなく、
 
-企業努力によって生まれた余力をお客様への価格に還元する。
-
-安売りではなく、正しい商品を正しい価格でお届けする。
+仕入れ・流通・販売にかかるコストも見直しています。
 
 </p>
 
 <p>
 
-そしてもう一つ、
+経由する事業者や工程を整理し、
 
-私たちが大切にしているのは「人」です。
+できるだけ分かりやすい形で価格と内容をご説明する。
+
+その積み重ねが、適正な提案につながると考えています。
 
 </p>
 
 <p>
 
-企業は結局、人でできています。
+そして、会社をつくるのは人です。
 
-目の前の一件だけでなく信頼を積み重ね、
+目の前の契約だけではなく、
 
-人を育てることで会社を育てていく。
+お客様、社員、取引先との信頼を積み重ねていきます。
 
 </p>
 
@@ -4184,7 +4246,7 @@ loading="lazy"
 <small>GROWTH</small>
 
 <strong>
-会社を育てる。
+組織として成長する。
 </strong>
 
 </div>
@@ -4222,15 +4284,13 @@ OUR STANCE
 
 <p>
 
-特に太陽光発電は高額な商品であり、
+太陽光発電は高額な商品だからこそ、
 
-お客様には「適正価格が分からない」
+価格・性能・施工・保証を比較して判断することが重要です。
 
-「本当に必要か判断しづらい」といった情報格差が生まれやすい領域です。
+山源は、判断材料を整理し、
 
-山源は、その差を利用するのではなく、
-
-正しく伝えたうえで選ばれる会社を目指します。
+お客様が納得して選べる提案を目指します。
 
 </p>
 
@@ -4242,9 +4302,7 @@ OUR STANCE
 <div class="philosophy-card">
 
 <p class="card-number">
-
 01 / SALES PHILOSOPHY
-
 </p>
 
 <h3>
@@ -4261,11 +4319,11 @@ OUR STANCE
 
 強引な営業をしない。
 
-情報格差を利用して高く売らない。
+必要のない商品を勧めない。
 
-お客様が理解し、納得したうえで選んでいただく。
+商品・施工・保証・価格を確認したうえで、
 
-それでも選ばれる会社になることを大切にしています。
+納得して選んでいただくことを重視します。
 
 </p>
 
@@ -4275,9 +4333,7 @@ OUR STANCE
 <div class="philosophy-card">
 
 <p class="card-number">
-
 02 / PRICE
-
 </p>
 
 <h3>
@@ -4290,11 +4346,13 @@ OUR STANCE
 
 <p>
 
-「安売り」ではなく「企業努力による適正価格」。
+仕入れ・流通・販売の工程を見直し、
 
-仕入れ・流通・販売コストを見直し、
+何にいくら掛かっているのかを整理。
 
-生まれた余力をお客様への価格に還元します。
+価格だけではなく、
+
+内容とのバランスを確認して提案します。
 
 </p>
 
@@ -4304,9 +4362,7 @@ OUR STANCE
 <div class="philosophy-card">
 
 <p class="card-number">
-
 03 / TO CUSTOMERS
-
 </p>
 
 <h3>
@@ -4319,11 +4375,11 @@ OUR STANCE
 
 <p>
 
-すでに他社から提案を受けているお客様も歓迎します。
+すでに他社から提案を受けている場合も歓迎します。
 
-メーカー・容量・施工内容・保証などを同等条件で比較し、
+メーカー・容量・施工内容・保証などを確認し、
 
-山源だからこそ出せる価格をご提案します。
+条件を揃えて比較できるよう整理します。
 
 </p>
 
@@ -4344,9 +4400,9 @@ FROM THE RIGHT PRODUCT
 
 <h3 class="philosophy-visual-title">
 
-正しい商品から始まる。<br>
+商品・施工・保証・価格を、<br>
 
-正しい判断を、正しい提案へ。
+順番に確認する。
 
 </h3>
 
@@ -4370,14 +4426,14 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 </p>
 
 <h4>
-商品を正しく選ぶ
+商品を確認
 </h4>
 
 <p>
 
-メーカー・性能・容量・住宅環境などを確認。
+メーカー・性能・容量・住宅環境を確認し、
 
-「売りたい商品」ではなく「必要な商品」を基準に考えます。
+必要な設備かどうかを判断します。
 
 </p>
 
@@ -4396,9 +4452,9 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 
 <p>
 
-屋根形状・設置条件・施工内容などを確認し、
+屋根形状・設置条件・施工内容を確認し、
 
-価格だけでは判断できない部分まで整理します。
+工事の条件を整理します。
 
 </p>
 
@@ -4412,14 +4468,14 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 </p>
 
 <h4>
-保証・サポート
+保証を確認
 </h4>
 
 <p>
 
-設備導入後まで考え、
+保証期間・保証範囲・メンテナンスなど、
 
-保証内容・メンテナンス・相談先を明確にします。
+導入後の条件を確認します。
 
 </p>
 
@@ -4433,14 +4489,14 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 </p>
 
 <h4>
-適正価格で提示
+価格を確認
 </h4>
 
 <p>
 
 商品・施工・保証を確認したうえで、
 
-何にいくら掛かっているのかを分かりやすく提示します。
+総額と内訳を分かりやすく提示します。
 
 </p>
 
@@ -4530,11 +4586,11 @@ INDUSTRY ISSUES
 
 <p>
 
-太陽光発電を取り巻く環境には、
+太陽光発電では、価格や条件を比較しづらいことが、
 
-お客様が判断しづらい構造的な課題があります。
+購入判断を難しくする要因の一つになります。
 
-山源は、その課題から目を背けません。
+山源は、比較しやすい情報整理を重視します。
 
 </p>
 
@@ -4555,9 +4611,9 @@ INDUSTRY ISSUES
 
 <p>
 
-複数の事業者を経由することで、
+複数の事業者を経由する場合、
 
-本来の商品価値とは関係のないコストが発生するケースがあります。
+各工程で流通・営業などのコストが発生する可能性があります。
 
 </p>
 
@@ -4576,9 +4632,9 @@ INDUSTRY ISSUES
 
 <p>
 
-同じような設備でも、
+設備内容が同じように見えても、
 
-販売会社によって価格差が大きくなることがあります。
+商品・施工・保証などの条件が異なれば価格も変わります。
 
 </p>
 
@@ -4597,9 +4653,9 @@ INDUSTRY ISSUES
 
 <p>
 
-お客様の生活や住宅環境に適していない商品まで
+住宅環境や電力使用状況に合わない設備まで
 
-提案されることがあります。
+提案されるケースがあります。
 
 </p>
 
@@ -4618,9 +4674,9 @@ INDUSTRY ISSUES
 
 <p>
 
-契約後の相談先やメンテナンス体制が
+契約後の相談先や保証条件が分かりにくいと、
 
-分かりづらいケースがあります。
+導入後の不安につながります。
 
 </p>
 
@@ -4635,17 +4691,17 @@ INDUSTRY ISSUES
 
 <h3 class="issue-visual-title">
 
-「商品価格」だけではなく、<br>
+「価格」だけではなく、<br>
 
-「流通にかかるコスト」を見る。
+「価格が決まるまで」を見る。
 
 </h3>
 
 <p class="issue-visual-caption">
 
-複数の事業者が介在するほど、
+事業者が増えるほど、販売・管理・営業などの工程が増える可能性があります。
 
-販売・管理・営業などのコストが積み重なる可能性があります。
+山源は、流通経路そのものを整理して考えます。
 
 </p>
 
@@ -4682,7 +4738,7 @@ INDUSTRY ISSUES
 </h4>
 
 <p>
-流通・販売に関わるコストが発生。
+流通・販売機能を担う事業者。
 </p>
 
 </div>
@@ -4700,9 +4756,9 @@ INDUSTRY ISSUES
 
 <p>
 
-さらに事業者を経由することで、
+複数の事業者を経由することで、
 
-コストが積み重なる可能性。
+工程が増える可能性があります。
 
 </p>
 
@@ -4720,7 +4776,7 @@ INDUSTRY ISSUES
 </h4>
 
 <p>
-営業活動・販売活動に伴うコスト。
+顧客への提案・販売を担う事業者。
 </p>
 
 </div>
@@ -4737,7 +4793,7 @@ INDUSTRY ISSUES
 </h4>
 
 <p>
-最終的な購入価格を負担する。
+最終的な購入・契約を判断します。
 </p>
 
 </div>
@@ -4752,11 +4808,11 @@ INDUSTRY ISSUES
 <div class="margin-meter-label">
 
 <span>
-シンプルな流通構造
+経路がシンプルな場合
 </span>
 
 <strong>
-LOW COST
+LOWER COMPLEXITY
 </strong>
 
 </div>
@@ -4775,11 +4831,11 @@ LOW COST
 <div class="margin-meter-label">
 
 <span>
-複数事業者を経由する構造
+経由工程が多い場合
 </span>
 
 <strong>
-COST STACKING
+HIGHER COMPLEXITY
 </strong>
 
 </div>
@@ -4817,17 +4873,21 @@ STRUCTURE REFORM
 
 <h2>
 
-高いのは、商品ではなく、<br>
+販売構造をシンプルに。<br>
 
-販売構造だ。
+価格と内容を、分かりやすく。
 
 </h2>
 
 <p>
 
-山源は、流通構造そのものを見直すことで、
+山源が重視しているのは、
 
-お客様へより適正な価格で商品を届けることを目指します。
+「とにかく安くする」ことではありません。
+
+誰が、どの工程を担っているのかを整理し、
+
+お客様が価格と内容を比較しやすい状態をつくることです。
 
 </p>
 
@@ -4843,7 +4903,7 @@ STRUCTURE REFORM
 </span>
 
 <h3>
-多くの事業者を経由する構造
+複数の事業者を経由するケース
 </h3>
 
 <div class="flow">
@@ -4870,9 +4930,9 @@ STRUCTURE REFORM
 
 <div class="structure-note">
 
-複数の事業者が介在することで、
+複数の事業者が関わる場合、
 
-流通・販売に関わるコストが積み重なる可能性があります。
+流通・販売・管理などの工程が増える可能性があります。
 
 </div>
 
@@ -4886,7 +4946,7 @@ STRUCTURE REFORM
 </span>
 
 <h3>
-メーカーからお客様へ、よりシンプルに。
+経路を整理してお客様へ
 </h3>
 
 <div class="flow">
@@ -4905,11 +4965,9 @@ STRUCTURE REFORM
 
 <div class="structure-note">
 
-流通構造をシンプルにすることで、
+経路をシンプルに整理することで、
 
-販売に関わる余分なコストを抑え、
-
-お客様への価格還元を目指します。
+商品・施工・保証・価格を一つの窓口で説明しやすくします。
 
 </div>
 
@@ -4917,6 +4975,10 @@ STRUCTURE REFORM
 
 </div>
 
+
+<!-- =========================================================
+     NEW STRUCTURE VISUAL
+     ========================================================= -->
 
 <div class="structure-visual">
 
@@ -4929,260 +4991,212 @@ STRUCTURE COMPARISON
 </p>
 
 <h3>
-流通構造を、シンプルに。
+一般的な構造と、山源の違い
 </h3>
 
 </div>
 
 <p>
 
-「誰を経由しているのか」を可視化することで、
+「どちらが安いか」だけではなく、
 
-価格が生まれる構造そのものを比較します。
+お客様が比較・判断しやすい構造になっているかを見える化します。
 
 </p>
 
 </div>
 
 
-<div class="structure-compare">
+<div class="structure-compare-table">
 
-<div class="compare-side">
+<div class="structure-compare-head">
 
-<div class="compare-title">
+<div>
+比較項目
+</div>
 
-<span>
-GENERAL MODEL
-</span>
-
-<strong>
+<div>
 一般的な販売構造
-</strong>
-
-</div>
-
-
-<div class="compare-flow">
-
-<div class="compare-node">
-
-<div class="compare-icon">
-01
 </div>
 
 <div>
-
-<strong>メーカー</strong>
-
-<span>製品の製造・供給</span>
-
+山源
 </div>
 
 </div>
 
 
-<div class="compare-node">
+<div class="structure-compare-row">
 
-<div class="compare-icon">
-02
+<div class="item-title">
+経由する事業者
 </div>
 
-<div>
-
-<strong>一次代理店</strong>
-
-<span>流通・販売機能</span>
-
+<div class="general">
+複数の事業者を経由するケース
 </div>
 
-</div>
-
-
-<div class="compare-node">
-
-<div class="compare-icon">
-03
-</div>
-
-<div>
-
-<strong>二次代理店</strong>
-
-<span>販売・営業機能</span>
-
+<div class="sangen">
+<strong>メーカー → 山源 → お客様</strong>
 </div>
 
 </div>
 
 
-<div class="compare-node">
+<div class="structure-compare-row">
 
-<div class="compare-icon">
-04
+<div class="item-title">
+価格の説明
 </div>
 
-<div>
-
-<strong>営業会社</strong>
-
-<span>顧客への販売</span>
-
+<div class="general">
+<span class="structure-cross">
+工程ごとの確認が必要
+</span>
 </div>
 
-</div>
-
-
-<div class="compare-node">
-
-<div class="compare-icon">
-05
-</div>
-
-<div>
-
-<strong>お客様</strong>
-
-<span>最終購入</span>
-
-</div>
-
-</div>
-
+<div class="sangen">
+<span class="structure-check">
+一つの窓口で整理
+</span>
 </div>
 
 </div>
 
 
-<div class="compare-middle"></div>
+<div class="structure-compare-row">
+
+<div class="item-title">
+商品・施工条件
+</div>
+
+<div class="general">
+事業者ごとに確認が必要な場合
+</div>
+
+<div class="sangen">
+<span class="structure-check">
+まとめて確認
+</span>
+</div>
+
+</div>
 
 
-<div class="compare-side good">
+<div class="structure-compare-row">
 
-<div class="compare-title">
+<div class="item-title">
+見積り比較
+</div>
 
-<span>
-SANGEN MODEL
+<div class="general">
+条件を揃える必要がある
+</div>
+
+<div class="sangen">
+<span class="structure-check">
+条件を揃えて比較しやすい
+</span>
+</div>
+
+</div>
+
+
+<div class="structure-compare-row">
+
+<div class="item-title">
+導入後の相談先
+</div>
+
+<div class="general">
+契約先・施工先の確認が必要
+</div>
+
+<div class="sangen">
+<span class="structure-check">
+相談窓口を明確化
+</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="structure-benefit-grid">
+
+<div class="structure-benefit">
+
+<span class="structure-benefit-number">
+01 / PRICE
 </span>
 
-<strong>
-山源の構造
-</strong>
+<h4>
+価格の内訳を整理
+</h4>
+
+<p>
+
+商品・施工・保証など、
+
+何に費用がかかっているのかを確認しやすくします。
+
+</p>
 
 </div>
 
 
-<div class="compare-flow">
+<div class="structure-benefit">
 
-<div class="compare-node">
-
-<div class="compare-icon">
-01
-</div>
-
-<div>
-
-<strong>メーカー</strong>
-
-<span>製品の製造・供給</span>
-
-</div>
-
-</div>
-
-
-<div class="compare-node">
-
-<div class="compare-icon">
-02
-</div>
-
-<div>
-
-<strong>山源</strong>
-
-<span>提案・販売・サポート</span>
-
-</div>
-
-</div>
-
-
-<div class="compare-node">
-
-<div class="compare-icon">
-03
-</div>
-
-<div>
-
-<strong>お客様</strong>
-
-<span>最終購入</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="compare-result">
-
-<div class="result-box">
-
-<span class="result-number">
-01
+<span class="structure-benefit-number">
+02 / COMPARISON
 </span>
 
-<strong>
-経由する事業者を整理
-</strong>
+<h4>
+他社と比較しやすい
+</h4>
 
-<span>
-流通構造を可視化
-</span>
+<p>
 
-</div>
+メーカー・容量・施工条件・保証を揃え、
 
+条件差による価格差を確認しやすくします。
 
-<div class="result-box">
-
-<span class="result-number">
-02
-</span>
-
-<strong>
-余分なコストを抑える
-</strong>
-
-<span>
-販売構造をシンプルに
-</span>
+</p>
 
 </div>
 
 
-<div class="result-box">
+<div class="structure-benefit">
 
-<span class="result-number">
-03
+<span class="structure-benefit-number">
+03 / SUPPORT
 </span>
 
-<strong>
-価格への還元を目指す
-</strong>
+<h4>
+窓口を明確にする
+</h4>
 
-<span>
-企業努力をお客様へ
-</span>
+<p>
+
+販売時だけでなく、
+
+導入後も相談先が分かる状態をつくります。
+
+</p>
 
 </div>
 
 </div>
+
+
+<p class="structure-visual-note">
+
+※販売構造や価格差は、商品・施工条件・契約形態などによって異なります。
+
+山源では、条件を揃えたうえで比較することを重視しています。
+
+</p>
 
 </div>
 
@@ -5211,11 +5225,11 @@ BUSINESS
 
 <p>
 
-太陽光を入口として商品を売り込むのではなく、
+太陽光発電を入口に、
 
-「住まいと暮らしについて相談できる会社」へ。
+住まいと暮らしに関わるサービスを幅広く扱っています。
 
-二つの事業領域で、暮らしに関わる価値を提供します。
+必要なものを必要な形で提案することを基本としています。
 
 </p>
 
@@ -5235,7 +5249,7 @@ MAIN BUSINESS
 </h3>
 
 <p class="lead">
-山源ブランドの中心となる事業領域です。
+山源の中心となる事業領域です。
 </p>
 
 <ul>
@@ -5272,7 +5286,7 @@ LIFE SUPPORT BUSINESS
 </h3>
 
 <p class="lead">
-太陽光の先にある、暮らし全体への広がりです。
+住まいに関わるサービスを横断して提案します。
 </p>
 
 <ul>
@@ -5424,9 +5438,9 @@ STRENGTHS
 
 <p>
 
-仕入れ・流通・販売コストを徹底的に見直し、
+仕入れ・流通・販売コストを見直し、
 
-お客様へ還元します。
+条件に応じた適正価格の提案を行います。
 
 </p>
 
@@ -5447,7 +5461,7 @@ STRENGTHS
 
 訪問、電話、紹介など複数の顧客接点を持ち、
 
-自ら市場を開拓できます。
+市場やお客様の声を直接捉えます。
 
 </p>
 
@@ -5510,7 +5524,7 @@ STRENGTHS
 
 営業を属人的な能力だけにせず、
 
-人を育て、組織として成長します。
+人を育て、組織として対応できる体制をつくります。
 
 </p>
 
@@ -5529,7 +5543,7 @@ STRENGTHS
 
 <p>
 
-一度の契約より、
+一度の契約だけではなく、
 
 長期的な関係を重視します。
 
@@ -6074,11 +6088,8 @@ Park Front 博多駅前 8F
 
 
 <a
-
 class="mail-button"
-
 href="mailto:info@yamagen21.co.jp"
-
 >
 
 メールでお問い合わせする
