@@ -9,7 +9,7 @@
 
 <title>株式会社山源 | 再生可能エネルギー事業</title>
 
-<meta name="description" content="株式会社山源は、太陽光発電・蓄電池を中心とした住宅設備・エネルギー商材の販売代理店として、お客様に適した製品・プランをご提案しています。">
+<meta name="description" content="株式会社山源は、太陽光発電・蓄電池をはじめとする住宅設備・エネルギー商材の販売代理店として、お客様に適した製品・プランをご提案しています。">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -357,9 +357,9 @@ nav a:hover::after{
   background:
     linear-gradient(
       90deg,
-      rgba(0,0,0,.72) 0%,
-      rgba(0,0,0,.43) 36%,
-      rgba(0,0,0,.12) 72%,
+      rgba(0,0,0,.74) 0%,
+      rgba(0,0,0,.47) 38%,
+      rgba(0,0,0,.14) 72%,
       rgba(0,0,0,.04) 100%
     );
 
@@ -391,7 +391,7 @@ nav a:hover::after{
 
   font-size:11px;
 
-  letter-spacing:.28em;
+  letter-spacing:.16em;
 
   margin-bottom:17px;
 
@@ -413,11 +413,13 @@ nav a:hover::after{
 
   color:var(--white);
 
-  font-size:clamp(38px,5.6vw,70px);
+  font-size:clamp(28px,4.2vw,54px);
 
-  line-height:1.34;
+  line-height:1.55;
 
-  margin-bottom:20px;
+  margin-bottom:22px;
+
+  max-width:880px;
 
 }
 
@@ -431,13 +433,13 @@ nav a:hover::after{
 
 .hero-lead{
 
-  max-width:650px;
+  max-width:780px;
 
   color:rgba(255,255,255,.90);
 
   font-size:15px;
 
-  line-height:1.92;
+  line-height:2;
 
   margin-bottom:25px;
 
@@ -532,7 +534,7 @@ nav a:hover::after{
 
   font-size:11px;
 
-  letter-spacing:.25em;
+  letter-spacing:.16em;
 
   font-weight:800;
 
@@ -638,7 +640,7 @@ nav a:hover::after{
 
   font-size:8px;
 
-  letter-spacing:.22em;
+  letter-spacing:.12em;
 
   margin-bottom:3px;
 
@@ -715,7 +717,7 @@ nav a:hover::after{
 
   font-size:10px;
 
-  letter-spacing:.24em;
+  letter-spacing:.18em;
 
   font-weight:800;
 
@@ -902,7 +904,7 @@ nav a:hover::after{
 
   font-size:10px;
 
-  letter-spacing:.2em;
+  letter-spacing:.18em;
 
   font-weight:800;
 
@@ -971,6 +973,18 @@ nav a:hover::after{
   line-height:1.75;
 
   margin-bottom:22px;
+
+}
+
+.message-body > p:last-of-type{
+
+  margin-bottom:22px;
+
+}
+
+.message-body > p strong{
+
+  color:var(--color-main);
 
 }
 
@@ -1047,7 +1061,7 @@ nav a:hover::after{
 
   font-size:11px;
 
-  letter-spacing:.2em;
+  letter-spacing:.12em;
 
   font-weight:800;
 
@@ -1160,7 +1174,7 @@ nav a:hover::after{
 
   font-size:10px;
 
-  letter-spacing:.16em;
+  letter-spacing:.08em;
 
   text-align:right;
 
@@ -1240,7 +1254,7 @@ nav a:hover::after{
 
   font-size:10px;
 
-  letter-spacing:.18em;
+  letter-spacing:.12em;
 
   color:var(--color-accent);
 
@@ -1544,7 +1558,7 @@ nav a:hover::after{
 
   color:var(--color-accent);
 
-  letter-spacing:.14em;
+  letter-spacing:.10em;
 
   margin-bottom:9px;
 
@@ -1679,7 +1693,7 @@ nav a:hover::after{
 
   max-width:750px;
 
-  margin-bottom:31px;
+  margin-bottom:0;
 
 }
 
@@ -1698,581 +1712,6 @@ nav a:hover::after{
   color:#555E6B;
 
   font-size:14px;
-
-}
-
-
-/* =========================================================
-   STRUCTURE COMPARISON
-   ========================================================= */
-
-.structure-visual{
-
-  margin-top:31px;
-
-  position:relative;
-
-}
-
-.structure-visual-header{
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:flex-end;
-
-  margin-bottom:18px;
-
-  gap:25px;
-
-}
-
-.structure-visual-header h3{
-
-  font-size:24px;
-
-  line-height:1.52;
-
-}
-
-.structure-visual-header p{
-
-  color:#555E6B;
-
-  font-size:11px;
-
-  max-width:430px;
-
-  text-align:right;
-
-}
-
-
-/* -------------------------
-   FLOW COMPARISON
-   ------------------------- */
-
-.structure-flow-compare{
-
-  display:grid;
-
-  grid-template-columns:1fr 60px 1fr;
-
-  gap:0;
-
-  align-items:stretch;
-
-  margin-bottom:12px;
-
-}
-
-.flow-compare-side{
-
-  border:1px solid var(--line);
-
-  background:var(--color-bg-card);
-
-  padding:23px;
-
-}
-
-.flow-compare-side.sangen{
-
-  border:2px solid var(--color-accent);
-
-  background:#FBFAF5;
-
-}
-
-.flow-compare-title{
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:center;
-
-  gap:15px;
-
-  padding-bottom:14px;
-
-  margin-bottom:15px;
-
-  border-bottom:1px solid var(--line);
-
-}
-
-.flow-compare-title span{
-
-  font-size:9px;
-
-  letter-spacing:.18em;
-
-  font-weight:800;
-
-  color:var(--gray);
-
-}
-
-.flow-compare-side.sangen .flow-compare-title span{
-
-  color:var(--color-accent);
-
-}
-
-.flow-compare-title strong{
-
-  font-family:'Shippori Mincho',serif;
-
-  font-size:18px;
-
-  color:var(--color-main);
-
-}
-
-.flow-compare-list{
-
-  display:flex;
-
-  align-items:center;
-
-  flex-wrap:wrap;
-
-  gap:5px;
-
-}
-
-.flow-chip{
-
-  padding:9px 12px;
-
-  background:var(--white);
-
-  border:1px solid var(--line);
-
-  font-size:11px;
-
-  font-weight:700;
-
-  color:var(--color-main);
-
-}
-
-.flow-chip.cost-chip{
-
-  color:var(--color-alert);
-
-  background:#FFF7F7;
-
-  border-color:rgba(211,47,47,.18);
-
-}
-
-.flow-chip.accent-chip{
-
-  background:rgba(194,155,56,.10);
-
-  border-color:rgba(194,155,56,.28);
-
-  color:var(--color-accent);
-
-}
-
-.flow-chip-arrow{
-
-  color:var(--color-accent);
-
-  font-weight:800;
-
-}
-
-.flow-compare-note{
-
-  margin-top:14px;
-
-  color:#555E6B;
-
-  font-size:10px;
-
-  line-height:1.8;
-
-}
-
-.flow-compare-middle{
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  position:relative;
-
-}
-
-.flow-compare-middle::before{
-
-  content:"VS";
-
-  width:42px;
-
-  height:42px;
-
-  border-radius:50%;
-
-  background:var(--color-main);
-
-  color:var(--color-accent);
-
-  border:1px solid rgba(194,155,56,.62);
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  font-size:9px;
-
-  font-weight:900;
-
-  letter-spacing:.08em;
-
-  position:relative;
-
-  z-index:2;
-
-}
-
-
-/* -------------------------
-   COST VISUAL
-   ------------------------- */
-
-.cost-visual{
-
-  border:1px solid var(--line);
-
-  background:var(--white);
-
-  padding:25px;
-
-  margin-top:9px;
-
-}
-
-.cost-visual-header{
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:flex-end;
-
-  gap:20px;
-
-  margin-bottom:20px;
-
-}
-
-.cost-visual-header h4{
-
-  font-family:'Noto Sans JP',sans-serif;
-
-  color:var(--color-main);
-
-  font-size:16px;
-
-}
-
-.cost-visual-header p{
-
-  color:#6B7280;
-
-  font-size:10px;
-
-  text-align:right;
-
-  max-width:410px;
-
-  line-height:1.75;
-
-}
-
-.cost-grid{
-
-  display:grid;
-
-  grid-template-columns:repeat(4,1fr);
-
-  gap:8px;
-
-}
-
-.cost-item{
-
-  background:var(--color-bg-card);
-
-  border:1px solid var(--line);
-
-  padding:14px 10px;
-
-  text-align:center;
-
-  min-height:90px;
-
-}
-
-.cost-item .title{
-
-  color:#666;
-
-  font-size:10px;
-
-  line-height:1.5;
-
-  margin-bottom:7px;
-
-}
-
-.cost-item .rate{
-
-  font-weight:800;
-
-  color:var(--color-main);
-
-  font-size:13px;
-
-  line-height:1.4;
-
-}
-
-.cost-item.relevant{
-
-  background:#FBFAF5;
-
-  border-color:rgba(194,155,56,.28);
-
-}
-
-.cost-item.relevant .rate{
-
-  color:var(--color-accent);
-
-}
-
-.cost-note{
-
-  margin-top:17px;
-
-  padding-top:13px;
-
-  border-top:1px solid var(--line);
-
-  color:#6B7280;
-
-  font-size:10px;
-
-  line-height:1.8;
-
-}
-
-
-/* -------------------------
-   COST REDUCTION FLOW
-   ------------------------- */
-
-.cost-reduction{
-
-  display:grid;
-
-  grid-template-columns:1fr 70px 1fr;
-
-  gap:0;
-
-  align-items:center;
-
-  margin-top:10px;
-
-}
-
-.cost-reduction-side{
-
-  padding:18px;
-
-  border:1px solid var(--line);
-
-  background:var(--color-bg-card);
-
-}
-
-.cost-reduction-side.sangen{
-
-  background:#FBFAF5;
-
-  border:2px solid var(--color-accent);
-
-}
-
-.cost-reduction-title{
-
-  font-size:11px;
-
-  font-weight:800;
-
-  color:var(--color-main);
-
-  margin-bottom:12px;
-
-}
-
-.cost-reduction-side.sangen .cost-reduction-title{
-
-  color:var(--color-accent);
-
-}
-
-.reduction-points{
-
-  display:grid;
-
-  gap:7px;
-
-}
-
-.reduction-point{
-
-  display:flex;
-
-  align-items:center;
-
-  gap:8px;
-
-  padding:9px 10px;
-
-  background:var(--white);
-
-  border:1px solid var(--line);
-
-  font-size:10px;
-
-  color:#555E6B;
-
-}
-
-.reduction-point::before{
-
-  content:"";
-
-  width:7px;
-
-  height:7px;
-
-  border-radius:50%;
-
-  background:#9AA2AD;
-
-  flex:none;
-
-}
-
-.cost-reduction-side.sangen .reduction-point::before{
-
-  background:var(--color-accent);
-
-}
-
-.cost-reduction-middle{
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  color:var(--color-accent);
-
-  font-weight:900;
-
-  font-size:20px;
-
-}
-
-
-/* -------------------------
-   BENEFIT GRID
-   ------------------------- */
-
-.structure-benefit-grid{
-
-  display:grid;
-
-  grid-template-columns:repeat(3,1fr);
-
-  gap:8px;
-
-  margin-top:9px;
-
-}
-
-.structure-benefit{
-
-  padding:18px 16px;
-
-  background:var(--color-main);
-
-  border-top:2px solid var(--color-accent);
-
-}
-
-.structure-benefit-number{
-
-  display:block;
-
-  color:var(--color-accent);
-
-  font-size:10px;
-
-  letter-spacing:.18em;
-
-  font-weight:800;
-
-  margin-bottom:6px;
-
-}
-
-.structure-benefit h4{
-
-  color:var(--white);
-
-  font-family:'Noto Sans JP',sans-serif;
-
-  font-size:14px;
-
-  margin-bottom:6px;
-
-}
-
-.structure-benefit p{
-
-  color:rgba(255,255,255,.68);
-
-  font-size:10px;
-
-  line-height:1.78;
-
-}
-
-.structure-visual-note{
-
-  margin-top:11px;
-
-  color:#6B7280;
-
-  font-size:10px;
-
-  line-height:1.8;
 
 }
 
@@ -2315,7 +1754,7 @@ nav a:hover::after{
 
   font-size:11px;
 
-  letter-spacing:.2em;
+  letter-spacing:.12em;
 
   font-weight:800;
 
@@ -2863,7 +2302,7 @@ nav a:hover::after{
 
   font-size:10px;
 
-  letter-spacing:.2em;
+  letter-spacing:.14em;
 
   font-weight:800;
 
@@ -3100,54 +2539,6 @@ footer small{
 
   }
 
-  .structure-flow-compare{
-
-    grid-template-columns:1fr;
-
-    gap:12px;
-
-  }
-
-  .flow-compare-middle{
-
-    height:45px;
-
-  }
-
-  .flow-compare-middle::before{
-
-    width:40px;
-
-    height:40px;
-
-  }
-
-  .cost-grid{
-
-    grid-template-columns:repeat(2,1fr);
-
-  }
-
-  .cost-reduction{
-
-    grid-template-columns:1fr;
-
-    gap:10px;
-
-  }
-
-  .cost-reduction-middle{
-
-    height:35px;
-
-  }
-
-  .structure-benefit-grid{
-
-    grid-template-columns:1fr;
-
-  }
-
   .business-gallery{
 
     grid-template-columns:repeat(3,1fr);
@@ -3227,19 +2618,19 @@ footer small{
     background:
       linear-gradient(
         90deg,
-        rgba(0,0,0,.79),
-        rgba(0,0,0,.34)
+        rgba(0,0,0,.80),
+        rgba(0,0,0,.35)
       );
 
   }
 
   .hero h1{
 
-    font-size:35px;
+    font-size:27px;
 
-    line-height:1.48;
+    line-height:1.65;
 
-    margin-bottom:18px;
+    margin-bottom:19px;
 
   }
 
@@ -3247,7 +2638,7 @@ footer small{
 
     font-size:13px;
 
-    line-height:1.92;
+    line-height:1.95;
 
     margin-bottom:22px;
 
@@ -3452,125 +2843,6 @@ footer small{
   }
 
   .margin-bar{
-
-    grid-template-columns:1fr;
-
-  }
-
-
-  /* STRUCTURE */
-
-  .structure-card{
-
-    padding:24px 19px;
-
-  }
-
-  .flow-item{
-
-    font-size:10px;
-
-    padding:8px 9px;
-
-  }
-
-  .structure-visual{
-
-    margin-top:28px;
-
-  }
-
-  .structure-visual-header{
-
-    display:block;
-
-  }
-
-  .structure-visual-header h3{
-
-    font-size:20px;
-
-  }
-
-  .structure-visual-header p{
-
-    text-align:left;
-
-    margin-top:8px;
-
-  }
-
-  .structure-flow-compare{
-
-    grid-template-columns:1fr;
-
-  }
-
-  .flow-compare-middle{
-
-    height:42px;
-
-  }
-
-  .flow-compare-side{
-
-    padding:18px 15px;
-
-  }
-
-  .flow-compare-title{
-
-    display:block;
-
-  }
-
-  .flow-compare-title strong{
-
-    display:block;
-
-    margin-top:6px;
-
-  }
-
-  .cost-visual{
-
-    padding:18px 15px;
-
-  }
-
-  .cost-visual-header{
-
-    display:block;
-
-  }
-
-  .cost-visual-header p{
-
-    text-align:left;
-
-    margin-top:7px;
-
-  }
-
-  .cost-grid{
-
-    grid-template-columns:repeat(2,1fr);
-
-  }
-
-  .cost-item{
-
-    min-height:82px;
-
-  }
-
-  .cost-reduction{
-
-    grid-template-columns:1fr;
-
-  }
-
-  .structure-benefit-grid{
 
     grid-template-columns:1fr;
 
@@ -3940,23 +3212,29 @@ type="video/mp4"
 
 <p class="hero-eyebrow">
 
-RENEWABLE ENERGY COMPANY
+太陽光発電・蓄電池をはじめとする住宅設備・エネルギー商材の販売代理店
 
 </p>
 
 <h1>
 
-正しい在り方で、<br>
+お客様の立場に立つこと。<br>
 
-<strong>正しく勝つ。</strong>
+必要なものを正しく提案し、必要のないものを無理に勧めないこと。
 
 </h1>
 
 <p class="hero-lead">
 
-株式会社山源は、太陽光発電・蓄電池をはじめとする住宅設備・エネルギー商材の販売代理店として、
+商品やサービスについて十分な情報を提供し、納得して選択していただくこと。
 
-お客様に適した製品・プランをご提案しています。
+<br>
+
+取引先との約束を守り、一つひとつの仕事に誠実に向き合うこと。
+
+<br>
+
+こうした当たり前を、誰よりも高い水準で積み重ねる企業でありたいと考えています。
 
 </p>
 
@@ -3992,7 +3270,7 @@ RENEWABLE ENERGY COMPANY
 <div class="section-head">
 
 <p class="eyebrow">
-ABOUT SANGEN
+山源について
 </p>
 
 <h2>
@@ -4012,17 +3290,15 @@ ABOUT SANGEN
 
 <strong>太陽光発電・蓄電池を中心とした再生可能エネルギー事業</strong>
 
-を主軸に、住まいと暮らしに関わるサービスを提供する会社です。
+を主軸に、住宅設備・エネルギー商材を扱う販売代理店です。
 
 </p>
 
 <p>
 
-現在の主力事業は住宅用太陽光発電・蓄電池。
+お客様の住宅環境やご希望を確認したうえで、
 
-その周辺領域として、新電力、ウォーターサーバーなど、
-
-暮らしに関わるサービスを展開しています。
+必要な製品やプランを検討し、分かりやすくご提案することを重視しています。
 
 </p>
 
@@ -4046,7 +3322,7 @@ ABOUT SANGEN
 
 <p>
 
-そのために、商品・施工・保証・価格をできるだけ分かりやすく整理し、
+そのために、商品・施工・保証・価格について必要な情報を整理し、
 
 長く信頼していただける関係をつくることを重視しています。
 
@@ -4059,7 +3335,7 @@ ABOUT SANGEN
 
 <span class="quote-label">
 
-CORPORATE PHILOSOPHY
+企業理念
 
 </span>
 
@@ -4102,7 +3378,7 @@ loading="lazy"
 
 <div class="photo-caption">
 
-<small>SANGEN / CORPORATE IDENTITY</small>
+<small>山源 / 企業姿勢</small>
 
 <strong>
 
@@ -4134,7 +3410,7 @@ loading="lazy"
 <div class="solar-content-inner">
 
 <p class="eyebrow">
-SOLAR POWER GENERATION
+太陽光発電
 </p>
 
 <h2>
@@ -4175,7 +3451,7 @@ SOLAR POWER GENERATION
 <div class="section-head">
 
 <p class="eyebrow">
-MESSAGE
+代表メッセージ
 </p>
 
 <h2>
@@ -4241,7 +3517,7 @@ stroke-linejoin="round"
 
 <p class="person-role">
 
-REPRESENTATIVE DIRECTOR
+代表取締役
 
 </p>
 
@@ -4382,7 +3658,7 @@ Tetsuta Fuchikami
 <div class="section-head">
 
 <p class="eyebrow">
-OUR STANCE
+私たちの姿勢
 </p>
 
 <h2>
@@ -4413,7 +3689,7 @@ OUR STANCE
 <div class="philosophy-card">
 
 <p class="card-number">
-01 / SALES PHILOSOPHY
+01 / 営業方針
 </p>
 
 <h3>
@@ -4444,7 +3720,7 @@ OUR STANCE
 <div class="philosophy-card">
 
 <p class="card-number">
-02 / PRICE
+02 / 価格
 </p>
 
 <h3>
@@ -4473,7 +3749,7 @@ OUR STANCE
 <div class="philosophy-card">
 
 <p class="card-number">
-03 / TO CUSTOMERS
+03 / お客様へ
 </p>
 
 <h3>
@@ -4506,7 +3782,7 @@ OUR STANCE
 <div>
 
 <p class="eyebrow">
-FROM THE RIGHT PRODUCT
+適正な提案
 </p>
 
 <h3 class="philosophy-visual-title">
@@ -4521,7 +3797,7 @@ FROM THE RIGHT PRODUCT
 
 <p class="philosophy-visual-sub">
 
-PRODUCT → INSTALLATION → WARRANTY → PRICE
+商品 → 施工 → 保証 → 価格
 
 </p>
 
@@ -4533,7 +3809,7 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 <div class="product-step">
 
 <p class="product-step-number">
-01 / PRODUCT
+01 / 商品
 </p>
 
 <h4>
@@ -4554,7 +3830,7 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 <div class="product-step">
 
 <p class="product-step-number">
-02 / INSTALLATION
+02 / 施工
 </p>
 
 <h4>
@@ -4575,7 +3851,7 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 <div class="product-step">
 
 <p class="product-step-number">
-03 / WARRANTY
+03 / 保証
 </p>
 
 <h4>
@@ -4596,7 +3872,7 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 <div class="product-step">
 
 <p class="product-step-number">
-04 / PRICE
+04 / 価格
 </p>
 
 <h4>
@@ -4688,7 +3964,7 @@ PRODUCT → INSTALLATION → WARRANTY → PRICE
 <div class="section-head">
 
 <p class="eyebrow">
-INDUSTRY ISSUES
+業界の課題
 </p>
 
 <h2>
@@ -4826,7 +4102,7 @@ INDUSTRY ISSUES
 <div class="margin-node">
 
 <p class="margin-node-number">
-01 / SOURCE
+01 / 仕入れ
 </p>
 
 <h4>
@@ -4843,7 +4119,7 @@ INDUSTRY ISSUES
 <div class="margin-node cost">
 
 <p class="margin-node-number">
-02 / DISTRIBUTION
+02 / 流通
 </p>
 
 <h4>
@@ -4860,7 +4136,7 @@ INDUSTRY ISSUES
 <div class="margin-node cost">
 
 <p class="margin-node-number">
-03 / DISTRIBUTION
+03 / 流通
 </p>
 
 <h4>
@@ -4877,7 +4153,7 @@ INDUSTRY ISSUES
 <div class="margin-node cost">
 
 <p class="margin-node-number">
-04 / SALES
+04 / 販売
 </p>
 
 <h4>
@@ -4894,7 +4170,7 @@ INDUSTRY ISSUES
 <div class="margin-node">
 
 <p class="margin-node-number">
-05 / CUSTOMER
+05 / お客様
 </p>
 
 <h4>
@@ -4921,7 +4197,7 @@ INDUSTRY ISSUES
 </span>
 
 <strong>
-LOWER COMPLEXITY
+工程を整理
 </strong>
 
 </div>
@@ -4944,7 +4220,7 @@ LOWER COMPLEXITY
 </span>
 
 <strong>
-HIGHER COMPLEXITY
+工程が増加
 </strong>
 
 </div>
@@ -4977,7 +4253,7 @@ HIGHER COMPLEXITY
 <div class="structure-intro">
 
 <p class="eyebrow">
-STRUCTURE REFORM
+販売・価格への考え方
 </p>
 
 <h2>
@@ -5004,404 +4280,6 @@ STRUCTURE REFORM
 
 </div>
 
-
-<div class="structure-visual">
-
-<div class="structure-visual-header">
-
-<div>
-
-<p class="eyebrow">
-STRUCTURE COMPARISON
-</p>
-
-<h3>
-販売構造とコストの違い
-</h3>
-
-</div>
-
-<p>
-
-販売価格は商品・施工条件・仕入条件・契約形態などによって異なります。
-
-ここでは、販売構造によってコストが発生するポイントを比較します。
-
-</p>
-
-</div>
-
-
-<!-- =========================================================
-     FLOW COMPARISON
-     ========================================================= -->
-
-<div class="structure-flow-compare">
-
-
-<div class="flow-compare-side">
-
-<div class="flow-compare-title">
-
-<span>
-OTHER SALES COMPANIES
-</span>
-
-<strong>
-他の営業会社
-</strong>
-
-</div>
-
-
-<div class="flow-compare-list">
-
-<span class="flow-chip">
-メーカー
-</span>
-
-<span class="flow-chip-arrow">
-→
-</span>
-
-<span class="flow-chip cost-chip">
-一次代理店
-</span>
-
-<span class="flow-chip-arrow">
-→
-</span>
-
-<span class="flow-chip cost-chip">
-二次代理店
-</span>
-
-<span class="flow-chip-arrow">
-→
-</span>
-
-<span class="flow-chip cost-chip">
-営業会社
-</span>
-
-<span class="flow-chip-arrow">
-→
-</span>
-
-<span class="flow-chip">
-お客様
-</span>
-
-</div>
-
-<p class="flow-compare-note">
-
-複数の事業者を経由することで、
-
-各事業者の利益・営業費・管理費などが価格に含まれる可能性があります。
-
-</p>
-
-</div>
-
-
-<div class="flow-compare-middle"></div>
-
-
-<div class="flow-compare-side sangen">
-
-<div class="flow-compare-title">
-
-<span>
-SANGEN
-</span>
-
-<strong>
-山源の販売体制
-</strong>
-
-</div>
-
-
-<div class="flow-compare-list">
-
-<span class="flow-chip">
-仕入先・取引先
-</span>
-
-<span class="flow-chip-arrow">
-→
-</span>
-
-<span class="flow-chip accent-chip">
-山源
-</span>
-
-<span class="flow-chip-arrow">
-→
-</span>
-
-<span class="flow-chip">
-お客様
-</span>
-
-</div>
-
-<p class="flow-compare-note">
-
-仕入先・取引先との関係を踏まえ、
-
-販売・流通工程を整理。
-
-可能な範囲で不要な中間コストを見直します。
-
-</p>
-
-</div>
-
-</div>
-
-
-<!-- =========================================================
-     COST STRUCTURE
-     ========================================================= -->
-
-<div class="cost-visual">
-
-<div class="cost-visual-header">
-
-<h4>
-販売価格に含まれるコスト構造の比較イメージ
-</h4>
-
-<p>
-
-下記は共有いただいた参考資料の数値を反映した「一般的な構造の一例」です。
-
-すべての企業・案件に当てはまる固定値ではありません。
-
-</p>
-
-</div>
-
-
-<div class="cost-grid">
-
-<div class="cost-item">
-
-<div class="title">
-メーカー利益
-</div>
-
-<div class="rate">
-約10〜20%
-</div>
-
-</div>
-
-
-<div class="cost-item">
-
-<div class="title">
-一次代理店利益
-</div>
-
-<div class="rate">
-約10〜20%
-</div>
-
-</div>
-
-
-<div class="cost-item">
-
-<div class="title">
-二次代理店利益
-</div>
-
-<div class="rate">
-約10〜20%
-</div>
-
-</div>
-
-
-<div class="cost-item relevant">
-
-<div class="title">
-営業会社利益・経費
-</div>
-
-<div class="rate">
-約20〜30%
-</div>
-
-</div>
-
-</div>
-
-
-<p class="cost-note">
-
-※上記数値は参考モデルであり、実際の利益率・販売手数料・経費率を示すものではありません。
-
-商流、仕入条件、施工内容、販売方法等によって大きく異なります。
-
-</p>
-
-</div>
-
-
-<!-- =========================================================
-     COST REDUCTION VISUAL
-     ========================================================= -->
-
-<div class="cost-reduction">
-
-<div class="cost-reduction-side">
-
-<div class="cost-reduction-title">
-
-他の営業会社
-
-</div>
-
-<div class="reduction-points">
-
-<div class="reduction-point">
-複数の販売・流通工程
-</div>
-
-<div class="reduction-point">
-各工程の利益・経費
-</div>
-
-<div class="reduction-point">
-価格へのコスト反映
-</div>
-
-</div>
-
-</div>
-
-
-<div class="cost-reduction-middle">
-
-→
-
-</div>
-
-
-<div class="cost-reduction-side sangen">
-
-<div class="cost-reduction-title">
-
-山源
-
-</div>
-
-<div class="reduction-points">
-
-<div class="reduction-point">
-販売・流通工程を整理
-</div>
-
-<div class="reduction-point">
-不要な工程を見直す
-</div>
-
-<div class="reduction-point">
-コスト削減の余地をつくる
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- =========================================================
-     BENEFITS
-     ========================================================= -->
-
-<div class="structure-benefit-grid">
-
-<div class="structure-benefit">
-
-<span class="structure-benefit-number">
-01 / COST
-</span>
-
-<h4>
-中間コストを見直す
-</h4>
-
-<p>
-
-販売・流通工程を確認し、
-
-不要な工程やコストを削減できる余地を探します。
-
-</p>
-
-</div>
-
-
-<div class="structure-benefit">
-
-<span class="structure-benefit-number">
-02 / COMPARISON
-</span>
-
-<h4>
-条件を揃えて比較する
-</h4>
-
-<p>
-
-メーカー・容量・施工条件・保証などを揃え、
-
-価格だけではなく内容まで比較できる状態をつくります。
-
-</p>
-
-</div>
-
-
-<div class="structure-benefit">
-
-<span class="structure-benefit-number">
-03 / VALUE
-</span>
-
-<h4>
-適正価格につなげる
-</h4>
-
-<p>
-
-単純な安売りではなく、
-
-必要な商品を適正な条件で提供することを重視します。
-
-</p>
-
-</div>
-
-</div>
-
-
-<p class="structure-visual-note">
-
-※山源がすべての案件で同一の商流・仕入条件となることを意味するものではありません。
-
-商品・施工条件・仕入条件・契約形態に応じて販売構造は異なります。
-
-</p>
-
-</div>
-
 </div>
 
 </section>
@@ -5418,7 +4296,7 @@ SANGEN
 <div class="section-head">
 
 <p class="eyebrow">
-BUSINESS
+事業内容
 </p>
 
 <h2>
@@ -5443,7 +4321,7 @@ BUSINESS
 <div class="business-card">
 
 <p class="business-number">
-MAIN BUSINESS
+主力事業
 </p>
 
 <h3>
@@ -5480,7 +4358,7 @@ MAIN BUSINESS
 <div class="business-card">
 
 <p class="business-number">
-LIFE SUPPORT BUSINESS
+生活支援事業
 </p>
 
 <h3>
@@ -5530,7 +4408,7 @@ loading="lazy"
 
 <div class="photo-caption">
 
-<small>ENERGY</small>
+<small>エネルギー</small>
 
 <strong>
 再生可能エネルギー
@@ -5557,7 +4435,7 @@ loading="lazy"
 
 <div class="photo-caption">
 
-<small>BUSINESS</small>
+<small>事業</small>
 
 <strong>
 事業をつくる。
@@ -5584,7 +4462,7 @@ loading="lazy"
 
 <div class="photo-caption">
 
-<small>LIFE</small>
+<small>暮らし</small>
 
 <strong>
 暮らしを支える。
@@ -5612,7 +4490,7 @@ loading="lazy"
 <div class="section-head">
 
 <p class="eyebrow">
-STRENGTHS
+山源の強み
 </p>
 
 <h2>
@@ -5770,7 +4648,7 @@ loading="lazy"
 
 <div class="photo-caption">
 
-<small>TEAM</small>
+<small>チーム</small>
 
 <strong>
 人が、会社をつくる。
@@ -5797,7 +4675,7 @@ loading="lazy"
 
 <div class="photo-caption">
 
-<small>ORGANIZATION</small>
+<small>組織</small>
 
 <strong>
 組織として成長する。
@@ -5824,7 +4702,7 @@ loading="lazy"
 
 <div class="photo-caption">
 
-<small>TRUST</small>
+<small>信頼</small>
 
 <strong>
 長期的な関係を築く。
@@ -5852,7 +4730,7 @@ loading="lazy"
 <div class="section-head">
 
 <p class="eyebrow">
-HISTORY
+沿革
 </p>
 
 <h2>
@@ -5927,7 +4805,7 @@ HISTORY
 <div class="section-head">
 
 <p class="eyebrow">
-COMPANY OVERVIEW
+会社概要
 </p>
 
 <h2>
@@ -5985,7 +4863,7 @@ loading="lazy"
 </strong>
 
 <span>
-FUKUOKA / HAKATA
+福岡県福岡市博多区
 </span>
 
 </div>
@@ -6171,7 +5049,7 @@ info@yamagen21.co.jp
 <div class="wrap vision-inner">
 
 <p class="eyebrow">
-BRAND VISION
+ブランドビジョン
 </p>
 
 <h2>
@@ -6214,7 +5092,7 @@ BRAND VISION
 <div>
 
 <p class="eyebrow">
-CONTACT
+お問い合わせ
 </p>
 
 <h2>
@@ -6243,7 +5121,7 @@ CONTACT
 <div class="contact-row">
 
 <span class="contact-label">
-TEL
+電話
 </span>
 
 <span class="contact-value">
@@ -6256,7 +5134,7 @@ TEL
 <div class="contact-row">
 
 <span class="contact-label">
-MAIL
+メール
 </span>
 
 <span class="contact-value">
@@ -6269,7 +5147,7 @@ info@yamagen21.co.jp
 <div class="contact-row">
 
 <span class="contact-label">
-ADDRESS
+所在地
 </span>
 
 <span class="contact-value">
