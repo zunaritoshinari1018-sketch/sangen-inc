@@ -1,25 +1,23 @@
-```html
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>株式会社山源 | 再生可能エネルギー事業</title>
 
-<meta
-  name="description"
-  content="株式会社山源は、太陽光発電・蓄電池を中心とした住宅設備・エネルギー商材の販売代理店として、お客様に適した製品・プランをご提案しています。"
->
+<meta name="description" content="株式会社山源は、太陽光発電・蓄電池を中心とした住宅設備・エネルギー商材の販売代理店として、お客様に適した製品・プランをご提案しています。">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Shippori+Mincho:wght@400;500;600;700&display=swap"
-  rel="stylesheet"
->
+<link href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 
 <style>
@@ -29,18 +27,31 @@
    ========================================================= */
 
 :root{
+
   --color-main:#0E1D38;
+
   --color-accent:#C29B38;
+
   --color-bg-card:#F5F6F8;
+
   --color-text:#333333;
+
   --color-alert:#D32F2F;
+
   --white:#FFFFFF;
+
   --gray:#6B7280;
+
   --gray-light:#D9DDE4;
+
   --line:#D9DDE4;
+
   --max:1180px;
+
   --shadow:0 14px 34px rgba(14,29,56,.07);
+
   --shadow-soft:0 6px 18px rgba(14,29,56,.045);
+
 }
 
 
@@ -49,16 +60,23 @@
    ========================================================= */
 
 *{
+
   margin:0;
+
   padding:0;
+
   box-sizing:border-box;
+
 }
 
 html{
+
   scroll-behavior:smooth;
+
 }
 
 body{
+
   font-family:
     'Noto Sans JP',
     -apple-system,
@@ -66,52 +84,80 @@ body{
     'Helvetica Neue',
     Arial,
     sans-serif;
+
   color:var(--color-text);
+
   background:var(--white);
+
   line-height:1.82;
+
   font-weight:400;
+
   -webkit-font-smoothing:antialiased;
+
   overflow-x:hidden;
+
 }
 
 img,
 video{
+
   display:block;
+
   max-width:100%;
+
 }
 
 a{
+
   color:inherit;
+
   text-decoration:none;
+
 }
 
 button,
 a{
+
   -webkit-tap-highlight-color:transparent;
+
 }
 
 .wrap{
+
   width:min(var(--max),calc(100% - 64px));
+
   margin:auto;
+
 }
 
 section{
+
   padding:42px 0;
+
 }
 
 h1,
 h2,
 h3,
 h4{
+
   font-family:'Shippori Mincho',serif;
+
   color:var(--color-main);
+
   font-weight:700;
+
   letter-spacing:.04em;
+
 }
 
 strong{
+
   font-weight:800;
+
   color:inherit;
+
 }
 
 
@@ -120,80 +166,137 @@ strong{
    ========================================================= */
 
 header{
+
   position:fixed;
+
   top:0;
+
   left:0;
+
   width:100%;
+
   z-index:1000;
+
   background:rgba(255,255,255,.96);
+
   backdrop-filter:blur(18px);
+
   border-bottom:1px solid rgba(14,29,56,.10);
+
 }
 
 .header-inner{
+
   width:min(var(--max),calc(100% - 64px));
+
   min-height:72px;
+
   margin:auto;
+
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
+
 }
 
 .brand{
+
   display:flex;
+
   align-items:center;
+
   gap:12px;
+
 }
 
 .brand-mark{
+
   width:40px;
+
   height:40px;
+
 }
 
 .brand-text{
+
   font-family:'Shippori Mincho',serif;
+
   font-size:20px;
+
   font-weight:700;
+
   letter-spacing:.12em;
+
   color:var(--color-main);
+
 }
 
 .brand-text small{
+
   display:block;
+
   font-family:'Noto Sans JP',sans-serif;
+
   font-size:8px;
+
   letter-spacing:.28em;
+
   color:var(--gray);
+
   font-weight:500;
+
 }
 
 nav ul{
+
   display:flex;
+
   gap:26px;
+
   list-style:none;
+
 }
 
 nav a{
+
   position:relative;
+
   font-size:12px;
+
   letter-spacing:.06em;
+
   color:var(--color-main);
+
   padding:4px 0;
+
 }
 
 nav a::after{
+
   content:"";
+
   position:absolute;
+
   left:0;
+
   bottom:0;
+
   width:0;
+
   height:2px;
+
   background:var(--color-accent);
+
   transition:.3s;
+
 }
 
 nav a:hover::after{
+
   width:100%;
+
 }
 
 
@@ -202,34 +305,57 @@ nav a:hover::after{
    ========================================================= */
 
 .hero{
+
   position:relative;
+
   min-height:100svh;
+
   padding:125px 0 48px;
+
   display:flex;
+
   align-items:center;
+
   overflow:hidden;
+
   background:var(--color-main);
+
 }
 
 .hero-video{
+
   position:absolute;
+
   inset:0;
+
   z-index:0;
+
   background:#000;
+
   overflow:hidden;
+
 }
 
 .hero-video video{
+
   width:100%;
+
   height:100%;
+
   object-fit:cover;
+
   object-position:center center;
+
 }
 
 .hero-video::after{
+
   content:"";
+
   position:absolute;
+
   inset:0;
+
   background:
     linear-gradient(
       90deg,
@@ -238,98 +364,165 @@ nav a:hover::after{
       rgba(0,0,0,.12) 72%,
       rgba(0,0,0,.04) 100%
     );
+
   z-index:1;
+
 }
 
 .hero-inner{
+
   position:relative;
+
   z-index:2;
+
   width:min(var(--max),calc(100% - 64px));
+
   margin:auto;
+
 }
 
 .hero-eyebrow{
+
   display:flex;
+
   align-items:center;
+
   gap:14px;
+
   color:var(--white);
+
   font-size:11px;
+
   letter-spacing:.28em;
+
   margin-bottom:17px;
+
 }
 
 .hero-eyebrow::before{
+
   content:"";
+
   width:42px;
+
   height:2px;
+
   background:var(--color-accent);
+
 }
 
 .hero h1{
+
   color:var(--white);
+
   font-size:clamp(38px,5.6vw,70px);
+
   line-height:1.34;
+
   margin-bottom:20px;
+
 }
 
 .hero h1 strong{
+
   color:var(--white);
+
   font-weight:900;
+
 }
 
 .hero-lead{
+
   max-width:760px;
+
   color:rgba(255,255,255,.92);
+
   font-size:15px;
+
   line-height:2;
+
   margin-bottom:25px;
+
 }
 
 .hero-lead strong{
+
   display:block;
+
   color:var(--white);
+
   font-weight:800;
+
 }
 
 .hero-buttons{
+
   display:flex;
+
   gap:11px;
+
   flex-wrap:wrap;
+
 }
 
 .btn{
+
   display:inline-flex;
+
   align-items:center;
+
   justify-content:center;
+
   min-width:190px;
+
   padding:13px 28px;
+
   font-size:13px;
+
   letter-spacing:.1em;
+
   border:1px solid transparent;
+
   transition:.3s;
+
 }
 
 .btn-primary{
+
   background:var(--color-accent);
+
   color:var(--color-main);
+
   border-color:var(--color-accent);
+
   font-weight:800;
+
 }
 
 .btn-primary:hover{
+
   background:#AD882F;
+
   border-color:#AD882F;
+
 }
 
 .btn-outline{
+
   background:rgba(255,255,255,.04);
+
   color:var(--white);
+
   border-color:rgba(255,255,255,.62);
+
 }
 
 .btn-outline:hover{
+
   background:var(--white);
+
   color:var(--color-main);
+
 }
 
 
@@ -338,28 +531,45 @@ nav a:hover::after{
    ========================================================= */
 
 .section-head{
+
   max-width:720px;
+
   margin-bottom:28px;
+
 }
 
 .eyebrow{
+
   color:var(--color-accent);
+
   font-size:11px;
+
   letter-spacing:.25em;
+
   font-weight:800;
+
   margin-bottom:7px;
+
 }
 
 .section-head h2{
+
   font-size:clamp(28px,3.6vw,44px);
+
   line-height:1.5;
+
 }
 
 .section-head p{
+
   margin-top:11px;
+
   color:#555E6B;
+
   font-size:14px;
+
   line-height:1.94;
+
 }
 
 
@@ -368,58 +578,94 @@ nav a:hover::after{
    ========================================================= */
 
 .photo-frame{
+
   overflow:hidden;
+
   background:var(--color-main);
+
   position:relative;
+
   min-width:0;
+
   border-top:1px solid rgba(194,155,56,.38);
+
   border-bottom:1px solid rgba(194,155,56,.25);
+
 }
 
 .photo-frame img{
+
   width:100%;
+
   height:100%;
+
   object-fit:cover;
+
   transition:transform .8s cubic-bezier(.2,.7,.2,1);
+
 }
 
 .photo-frame:hover img{
+
   transform:scale(1.035);
+
 }
 
 .photo-overlay{
+
   position:absolute;
+
   inset:0;
+
   background:
     linear-gradient(
       180deg,
       transparent 28%,
       rgba(14,29,56,.86)
     );
+
 }
 
 .photo-caption{
+
   position:absolute;
+
   z-index:2;
+
   left:22px;
+
   right:22px;
+
   bottom:18px;
+
   color:var(--white);
+
 }
 
 .photo-caption small{
+
   color:var(--color-accent);
+
   display:block;
+
   font-size:8px;
+
   letter-spacing:.22em;
+
   margin-bottom:3px;
+
 }
 
 .photo-caption strong{
+
   display:block;
+
   font-family:'Shippori Mincho',serif;
+
   font-size:19px;
+
   line-height:1.4;
+
 }
 
 
@@ -428,56 +674,91 @@ nav a:hover::after{
    ========================================================= */
 
 .about{
+
   background:var(--white);
+
 }
 
 .about-grid{
+
   display:grid;
+
   grid-template-columns:1.08fr .92fr;
+
   gap:45px;
+
   align-items:start;
+
 }
 
 .about-text p{
+
   color:var(--color-text);
+
   font-size:15px;
+
   margin-bottom:15px;
+
 }
 
 .about-text strong{
+
   color:var(--color-main);
+
 }
 
 .quote{
+
   background:var(--color-bg-card);
+
   border-left:3px solid var(--color-accent);
+
   padding:28px 27px;
+
   box-shadow:var(--shadow-soft);
+
 }
 
 .quote-label{
+
   display:block;
+
   color:var(--color-accent);
+
   font-size:10px;
+
   letter-spacing:.24em;
+
   font-weight:800;
+
   margin-bottom:11px;
+
 }
 
 .quote h3{
+
   font-size:22px;
+
   line-height:1.7;
+
   margin-bottom:10px;
+
 }
 
 .quote p{
+
   color:#555E6B;
+
   font-size:12px;
+
 }
 
 .about-photo-wide{
+
   margin-top:28px;
+
   height:390px;
+
 }
 
 
@@ -486,25 +767,40 @@ nav a:hover::after{
    ========================================================= */
 
 .solar-visual{
+
   position:relative;
+
   min-height:480px;
+
   overflow:hidden;
+
   background:var(--color-main);
+
   padding:0;
+
 }
 
 .solar-visual-image{
+
   position:absolute;
+
   inset:0;
+
   background-image:
     url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=2200&q=85");
+
   background-size:cover;
+
   background-position:center;
+
 }
 
 .solar-visual-overlay{
+
   position:absolute;
+
   inset:0;
+
   background:
     linear-gradient(
       90deg,
@@ -512,36 +808,57 @@ nav a:hover::after{
       rgba(14,29,56,.61) 42%,
       rgba(14,29,56,.12) 100%
     );
+
 }
 
 .solar-content{
+
   position:relative;
+
   z-index:2;
+
   display:flex;
+
   align-items:center;
+
   min-height:480px;
+
 }
 
 .solar-content-inner{
+
   max-width:680px;
+
 }
 
 .solar-content .eyebrow{
+
   color:var(--color-accent);
+
 }
 
 .solar-content h2{
+
   color:var(--white);
+
   font-size:clamp(30px,4vw,50px);
+
   line-height:1.5;
+
   margin-bottom:12px;
+
 }
 
 .solar-content p{
+
   max-width:570px;
+
   color:rgba(255,255,255,.84);
+
   font-size:14px;
+
   line-height:1.92;
+
 }
 
 
@@ -550,87 +867,147 @@ nav a:hover::after{
    ========================================================= */
 
 .message{
+
   background:var(--color-bg-card);
+
 }
 
 .message-grid{
+
   display:grid;
+
   grid-template-columns:300px 1fr;
+
   gap:42px;
+
   align-items:start;
+
 }
 
 .person{
+
   background:var(--white);
+
   border:1px solid var(--line);
+
   padding:28px 22px;
+
   text-align:center;
+
   box-shadow:var(--shadow-soft);
+
 }
 
 .person-logo{
+
   width:82px;
+
   height:82px;
+
   margin:0 auto 17px;
+
 }
 
 .person-role{
+
   color:var(--color-accent);
+
   font-size:10px;
+
   letter-spacing:.2em;
+
   font-weight:800;
+
   margin-bottom:6px;
+
 }
 
 .person-name{
+
   font-family:'Shippori Mincho',serif;
+
   font-size:22px;
+
   font-weight:700;
+
   color:var(--color-main);
+
   margin-bottom:3px;
+
 }
 
 .person-en{
+
   font-size:10px;
+
   letter-spacing:.14em;
+
   color:var(--gray);
+
   margin-bottom:14px;
+
 }
 
 .person-position{
+
   border-top:1px solid var(--line);
+
   padding-top:12px;
+
   color:var(--gray);
+
   font-size:12px;
+
 }
 
 .message-body p{
+
   color:var(--color-text);
+
   font-size:15px;
+
   margin-bottom:16px;
+
 }
 
 .message-body p:first-child{
+
   color:var(--color-main);
+
   font-family:'Shippori Mincho',serif;
+
   font-size:21px;
+
   font-weight:800;
+
   line-height:1.75;
+
   margin-bottom:22px;
+
 }
 
 .signature{
+
   margin-top:18px;
+
   color:var(--gray);
+
   font-size:13px;
+
 }
 
 .signature strong{
+
   display:block;
+
   color:var(--color-main);
+
   font-family:'Shippori Mincho',serif;
+
   font-size:18px;
+
   margin-top:4px;
+
 }
 
 
@@ -639,46 +1016,75 @@ nav a:hover::after{
    ========================================================= */
 
 .philosophy{
+
   background:var(--white);
+
 }
 
 .philosophy-grid{
+
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   border-top:1px solid var(--line);
+
   border-left:1px solid var(--line);
+
 }
 
 .philosophy-card{
+
   padding:28px 23px;
+
   background:var(--white);
+
   border-right:1px solid var(--line);
+
   border-bottom:1px solid var(--line);
+
   transition:.3s;
+
 }
 
 .philosophy-card:hover{
+
   background:var(--color-bg-card);
+
 }
 
 .card-number{
+
   color:var(--color-accent);
+
   font-size:11px;
+
   letter-spacing:.2em;
+
   font-weight:800;
+
   margin-bottom:11px;
+
 }
 
 .philosophy-card h3{
+
   font-size:19px;
+
   line-height:1.58;
+
   margin-bottom:10px;
+
 }
 
 .philosophy-card p{
+
   color:#555E6B;
+
   font-size:13px;
+
   line-height:1.94;
+
 }
 
 
@@ -687,155 +1093,271 @@ nav a:hover::after{
    ========================================================= */
 
 .philosophy-visual{
+
   margin-top:30px;
+
   padding:32px;
+
   background:var(--color-main);
+
   position:relative;
+
   overflow:hidden;
+
   border-top:1px solid rgba(194,155,56,.5);
+
   border-bottom:1px solid rgba(194,155,56,.32);
+
 }
 
 .philosophy-visual::before{
+
   content:"01";
+
   position:absolute;
+
   right:25px;
+
   top:-32px;
+
   font-size:165px;
+
   line-height:1;
+
   font-weight:900;
+
   color:rgba(255,255,255,.035);
+
 }
 
 .philosophy-visual-head{
+
   position:relative;
+
   z-index:2;
+
   display:flex;
+
   justify-content:space-between;
+
   align-items:flex-end;
+
   gap:25px;
+
   margin-bottom:22px;
+
 }
 
 .philosophy-visual-head .eyebrow{
+
   color:var(--color-accent);
+
 }
 
 .philosophy-visual-title{
+
   color:var(--white);
+
   font-family:'Shippori Mincho',serif;
+
   font-size:26px;
+
   line-height:1.5;
+
 }
 
 .philosophy-visual-sub{
+
   color:rgba(255,255,255,.52);
+
   font-size:10px;
+
   letter-spacing:.10em;
+
   text-align:right;
+
 }
 
 .product-flow{
+
   position:relative;
+
   z-index:2;
+
   display:grid;
+
   grid-template-columns:repeat(4,1fr);
+
   gap:7px;
+
 }
 
 .product-step{
+
   min-height:190px;
+
   padding:19px 17px;
+
   background:rgba(255,255,255,.055);
+
   border:1px solid rgba(255,255,255,.12);
+
   position:relative;
+
 }
 
 .product-step::after{
+
   content:"→";
+
   position:absolute;
+
   right:-15px;
+
   top:50%;
+
   transform:translateY(-50%);
+
   width:28px;
+
   height:28px;
+
   border-radius:50%;
+
   background:var(--color-accent);
+
   color:var(--color-main);
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
   z-index:5;
+
   font-weight:800;
+
   font-size:11px;
+
 }
 
 .product-step:last-child::after{
+
   display:none;
+
 }
 
 .product-step-number{
+
   font-size:10px;
+
   letter-spacing:.18em;
+
   color:var(--color-accent);
+
   font-weight:800;
+
   margin-bottom:12px;
+
 }
 
 .product-step h4{
+
   color:var(--white);
+
   font-family:'Noto Sans JP',sans-serif;
+
   font-size:15px;
+
   margin-bottom:8px;
+
 }
 
 .product-step p{
+
   color:rgba(255,255,255,.66);
+
   font-size:11px;
+
   line-height:1.84;
+
 }
 
 .product-flow-bottom{
+
   position:relative;
+
   z-index:2;
+
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:7px;
+
   margin-top:7px;
+
 }
 
 .product-point{
+
   padding:13px 16px;
+
   background:var(--white);
+
   display:flex;
+
   align-items:center;
+
   gap:10px;
+
   border-top:1px solid rgba(194,155,56,.34);
+
 }
 
 .product-point-icon{
+
   width:29px;
+
   height:29px;
+
   flex:none;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
   border-radius:50%;
+
   background:rgba(194,155,56,.14);
+
   color:var(--color-accent);
+
   font-size:11px;
+
   font-weight:900;
+
 }
 
 .product-point strong{
+
   display:block;
+
   color:var(--color-main);
+
   font-size:12px;
+
 }
 
 .product-point span{
+
   color:var(--gray);
+
   font-size:10px;
+
 }
 
 
@@ -844,183 +1366,309 @@ nav a:hover::after{
    ========================================================= */
 
 .issue{
+
   background:var(--color-bg-card);
+
 }
 
 .issue-grid{
+
   display:grid;
+
   grid-template-columns:repeat(4,1fr);
+
   gap:9px;
+
 }
 
 .issue-card{
+
   position:relative;
+
   background:var(--white);
+
   padding:23px 19px;
+
   border:1px solid var(--line);
+
   box-shadow:var(--shadow-soft);
+
 }
 
 .issue-icon{
+
   width:40px;
+
   height:40px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
   border:1px solid rgba(211,47,47,.22);
+
   color:var(--color-alert);
+
   font-weight:900;
+
   font-size:18px;
+
   margin-bottom:14px;
+
 }
 
 .issue-card h3{
+
   font-family:'Noto Sans JP',sans-serif;
+
   font-size:15px;
+
   margin-bottom:7px;
+
 }
 
 .issue-card p{
+
   color:#555E6B;
+
   font-size:12px;
+
   line-height:1.84;
+
 }
 
 .issue-visual{
+
   margin-top:28px;
+
   padding:31px;
+
   background:var(--white);
+
   border:1px solid var(--line);
+
   box-shadow:var(--shadow);
+
   border-top:1px solid rgba(194,155,56,.38);
+
 }
 
 .issue-visual-top{
+
   display:flex;
+
   justify-content:space-between;
+
   align-items:flex-end;
+
   gap:25px;
+
   margin-bottom:22px;
+
 }
 
 .issue-visual-title{
+
   color:var(--color-main);
+
   font-family:'Shippori Mincho',serif;
+
   font-size:25px;
+
   line-height:1.48;
+
 }
 
 .issue-visual-caption{
+
   color:#555E6B;
+
   font-size:11px;
+
   text-align:right;
+
   max-width:360px;
+
 }
 
 .margin-flow{
+
   display:grid;
+
   grid-template-columns:repeat(5,1fr);
+
   align-items:stretch;
+
   gap:0;
+
 }
 
 .margin-node{
+
   position:relative;
+
   min-height:128px;
+
   padding:17px 13px;
+
   border:1px solid var(--line);
+
   background:var(--color-bg-card);
+
 }
 
 .margin-node:not(:last-child)::after{
+
   content:"";
+
   position:absolute;
+
   right:-9px;
+
   top:50%;
+
   width:16px;
+
   height:16px;
+
   border-top:2px solid var(--color-accent);
+
   border-right:2px solid var(--color-accent);
+
   transform:translateY(-50%) rotate(45deg);
+
   background:var(--color-bg-card);
+
   z-index:3;
+
 }
 
 .margin-node-number{
+
   font-size:10px;
+
   color:var(--color-accent);
+
   letter-spacing:.14em;
+
   margin-bottom:9px;
+
 }
 
 .margin-node h4{
+
   font-family:'Noto Sans JP',sans-serif;
+
   font-size:13px;
+
   margin-bottom:5px;
+
 }
 
 .margin-node p{
+
   color:#555E6B;
+
   font-size:10px;
+
   line-height:1.75;
+
 }
 
 .margin-node.cost{
+
   background:#FFF7F7;
+
   border-color:rgba(211,47,47,.20);
+
 }
 
 .margin-node.cost h4{
+
   color:var(--color-alert);
+
 }
 
 .margin-bar{
+
   margin-top:15px;
+
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:11px;
+
 }
 
 .margin-meter{
+
   padding:14px;
+
   border:1px solid var(--line);
+
   background:var(--color-bg-card);
+
 }
 
 .margin-meter-label{
+
   display:flex;
+
   justify-content:space-between;
+
   align-items:center;
+
   margin-bottom:7px;
+
 }
 
 .margin-meter-label span{
+
   font-size:10px;
+
   color:#555E6B;
+
 }
 
 .margin-meter-label strong{
+
   color:var(--color-accent);
+
   font-size:12px;
+
 }
 
 .meter-track{
+
   height:8px;
+
   background:var(--gray-light);
+
   overflow:hidden;
+
 }
 
 .meter-fill{
+
   height:100%;
+
   background:var(--color-alert);
+
 }
 
 .meter-fill.short{
+
   width:32%;
+
 }
 
 .meter-fill.long{
+
   width:86%;
+
 }
 
 
@@ -1029,48 +1677,77 @@ nav a:hover::after{
    ========================================================= */
 
 .structure{
+
   background:var(--white);
+
 }
 
 .structure-intro{
+
   max-width:760px;
+
   margin-bottom:31px;
+
 }
 
 .structure-intro h2{
+
   font-size:clamp(28px,3.6vw,44px);
+
   line-height:1.53;
+
   margin-bottom:10px;
+
 }
 
 .structure-intro p{
+
   color:#555E6B;
+
   font-size:14px;
+
 }
 
 .structure-visual{
+
   margin-top:31px;
+
   position:relative;
+
 }
 
 .structure-visual-header{
+
   display:flex;
+
   justify-content:space-between;
+
   align-items:flex-end;
+
   margin-bottom:18px;
+
   gap:25px;
+
 }
 
 .structure-visual-header h3{
+
   font-size:24px;
+
   line-height:1.52;
+
 }
 
 .structure-visual-header p{
+
   color:#555E6B;
+
   font-size:11px;
+
   max-width:430px;
+
   text-align:right;
+
 }
 
 
@@ -1079,481 +1756,281 @@ nav a:hover::after{
    ========================================================= */
 
 .savings-visual{
+
   margin-top:12px;
+
   border:1px solid var(--line);
+
   background:var(--white);
+
   box-shadow:var(--shadow-soft);
+
   overflow:hidden;
+
 }
 
 .savings-header{
+
   padding:19px 21px;
+
   background:var(--color-main);
+
   display:flex;
+
   justify-content:space-between;
+
   align-items:center;
+
   gap:20px;
+
 }
 
 .savings-header h4{
+
   color:var(--white);
+
   font-family:'Noto Sans JP',sans-serif;
+
   font-size:16px;
+
 }
 
 .savings-header span{
+
   color:var(--color-accent);
+
   font-size:10px;
+
   letter-spacing:.10em;
+
   font-weight:800;
+
 }
 
 .savings-body{
+
   padding:23px 21px 21px;
+
 }
 
 .savings-summary{
+
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:11px;
+
   margin-bottom:22px;
+
 }
 
 .savings-card{
+
   padding:19px;
+
   background:var(--color-bg-card);
+
   border:1px solid var(--line);
+
 }
 
 .savings-card.highlight{
+
   background:#FBFAF5;
+
   border:2px solid var(--color-accent);
+
 }
 
 .savings-card-label{
+
   color:#6B7280;
+
   font-size:10px;
+
   letter-spacing:.10em;
+
   font-weight:800;
+
   margin-bottom:7px;
+
 }
 
 .savings-card.highlight .savings-card-label{
+
   color:var(--color-accent);
+
 }
 
 .savings-card-value{
+
   color:var(--color-main);
+
   font-family:'Shippori Mincho',serif;
+
   font-size:30px;
+
   font-weight:700;
+
   line-height:1.2;
+
 }
 
 .savings-card.highlight .savings-card-value{
+
   color:var(--color-accent);
+
 }
 
 .savings-card-text{
+
   margin-top:6px;
+
   color:#555E6B;
+
   font-size:11px;
+
   line-height:1.7;
+
 }
 
 .savings-graph-title{
+
   color:var(--color-main);
+
   font-size:12px;
+
   font-weight:800;
+
   margin-bottom:13px;
+
 }
 
 .savings-row{
+
   display:grid;
+
   grid-template-columns:145px 1fr 95px;
+
   gap:12px;
+
   align-items:center;
+
   margin-bottom:14px;
+
 }
 
 .savings-row:last-child{
+
   margin-bottom:0;
+
 }
 
 .savings-row-label{
+
   color:var(--color-main);
+
   font-size:11px;
+
   font-weight:700;
+
 }
 
 .savings-track{
+
   position:relative;
+
   height:22px;
+
   background:#E7EBEF;
+
   overflow:hidden;
+
 }
 
 .savings-fill{
+
   height:100%;
+
 }
 
 .savings-fill.cost-high{
+
   width:100%;
+
   background:#8B93A0;
+
 }
 
 .savings-fill.cost-low{
+
   width:70%;
+
   background:var(--color-accent);
+
 }
 
 .savings-row-value{
+
   text-align:right;
+
   font-size:11px;
+
   color:#6B7280;
+
   font-weight:700;
+
 }
 
 .savings-row-value strong{
+
   color:var(--color-accent);
+
 }
 
 .savings-foot{
+
   margin-top:18px;
+
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:7px;
+
 }
 
 .savings-point{
+
   padding:13px 12px;
+
   background:var(--color-main);
+
   border-top:2px solid var(--color-accent);
+
 }
 
 .savings-point strong{
+
   display:block;
+
   color:var(--color-accent);
+
   font-size:11px;
+
   margin-bottom:4px;
+
 }
 
 .savings-point span{
+
   color:rgba(255,255,255,.72);
+
   font-size:10px;
+
   line-height:1.7;
-}
 
-
-/* =========================================================
-   FLOW COMPARISON
-   ※ 元HTMLに対して不足していたCSSを追加
-   ========================================================= */
-
-.structure-flow-compare{
-  display:grid;
-  grid-template-columns:1fr 42px 1fr;
-  align-items:stretch;
-  gap:0;
-  margin-top:26px;
-}
-
-.flow-compare-side{
-  padding:25px;
-  background:var(--color-bg-card);
-  border:1px solid var(--line);
-  box-shadow:var(--shadow-soft);
-}
-
-.flow-compare-side.sangen{
-  background:#FBFAF5;
-  border-color:rgba(194,155,56,.45);
-}
-
-.flow-compare-title{
-  display:flex;
-  flex-direction:column;
-  gap:3px;
-  margin-bottom:19px;
-}
-
-.flow-compare-title span{
-  color:var(--color-accent);
-  font-size:9px;
-  letter-spacing:.18em;
-  font-weight:800;
-}
-
-.flow-compare-title strong{
-  color:var(--color-main);
-  font-family:'Shippori Mincho',serif;
-  font-size:21px;
-  line-height:1.45;
-}
-
-.flow-compare-list{
-  display:flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:7px;
-}
-
-.flow-chip{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:39px;
-  padding:7px 12px;
-  background:var(--white);
-  border:1px solid var(--line);
-  color:var(--color-main);
-  font-size:11px;
-  font-weight:700;
-  text-align:center;
-}
-
-.flow-chip.cost-chip{
-  background:#FFF7F7;
-  border-color:rgba(211,47,47,.20);
-  color:var(--color-alert);
-}
-
-.flow-chip.accent-chip{
-  background:var(--color-accent);
-  border-color:var(--color-accent);
-  color:var(--color-main);
-}
-
-.flow-chip-arrow{
-  color:var(--color-accent);
-  font-size:15px;
-  font-weight:800;
-}
-
-.flow-compare-note{
-  margin-top:18px;
-  color:#555E6B;
-  font-size:11px;
-  line-height:1.85;
-}
-
-.flow-compare-middle{
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.flow-compare-middle::before{
-  content:"VS";
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:32px;
-  height:32px;
-  border-radius:50%;
-  background:var(--color-main);
-  color:var(--white);
-  font-size:9px;
-  letter-spacing:.08em;
-  font-weight:800;
-}
-
-
-/* =========================================================
-   COST STRUCTURE
-   ※ 元HTMLに対して不足していたCSSを追加
-   ========================================================= */
-
-.cost-visual{
-  margin-top:28px;
-  padding:29px;
-  background:var(--color-main);
-  border-top:1px solid rgba(194,155,56,.55);
-  border-bottom:1px solid rgba(194,155,56,.30);
-  box-shadow:var(--shadow);
-}
-
-.cost-visual-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  gap:25px;
-  margin-bottom:20px;
-}
-
-.cost-visual-header h4{
-  color:var(--white);
-  font-size:22px;
-  line-height:1.5;
-}
-
-.cost-visual-header p{
-  max-width:430px;
-  color:rgba(255,255,255,.62);
-  font-size:10px;
-  line-height:1.8;
-  text-align:right;
-}
-
-.cost-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:7px;
-}
-
-.cost-item{
-  min-height:118px;
-  padding:20px 16px;
-  background:rgba(255,255,255,.055);
-  border:1px solid rgba(255,255,255,.12);
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-}
-
-.cost-item.relevant{
-  background:rgba(194,155,56,.11);
-  border-color:rgba(194,155,56,.52);
-}
-
-.cost-item .title{
-  color:rgba(255,255,255,.76);
-  font-size:11px;
-  font-weight:700;
-  line-height:1.7;
-}
-
-.cost-item .rate{
-  margin-top:13px;
-  color:var(--color-accent);
-  font-family:'Shippori Mincho',serif;
-  font-size:25px;
-  font-weight:700;
-}
-
-.cost-item.relevant .rate{
-  color:var(--white);
-}
-
-.cost-visual-note{
-  margin-top:15px;
-  padding:13px 15px;
-  background:rgba(255,255,255,.045);
-  border-left:2px solid var(--color-accent);
-  color:rgba(255,255,255,.66);
-  font-size:10px;
-  line-height:1.8;
-}
-
-
-/* =========================================================
-   COST REDUCTION FLOW
-   ※ 元HTMLに対して不足していたCSSを追加
-   ========================================================= */
-
-.cost-reduction{
-  margin-top:12px;
-  display:grid;
-  grid-template-columns:1fr 65px 1fr;
-  align-items:stretch;
-  gap:0;
-}
-
-.cost-reduction-side{
-  background:var(--color-bg-card);
-  border:1px solid var(--line);
-  padding:23px;
-}
-
-.cost-reduction-side.sangen{
-  background:#FBFAF5;
-  border-color:rgba(194,155,56,.42);
-}
-
-.cost-reduction-title{
-  color:var(--color-main);
-  font-family:'Shippori Mincho',serif;
-  font-size:20px;
-  font-weight:700;
-  margin-bottom:13px;
-}
-
-.cost-reduction-side.sangen .cost-reduction-title{
-  color:var(--color-accent);
-}
-
-.reduction-points{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:6px;
-}
-
-.reduction-point{
-  min-height:58px;
-  padding:12px 10px;
-  background:var(--white);
-  border:1px solid var(--line);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:#555E6B;
-  font-size:10px;
-  line-height:1.65;
-}
-
-.cost-reduction-middle{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--color-accent);
-  font-size:25px;
-  font-weight:800;
-}
-
-
-/* =========================================================
-   BENEFITS
-   ※ 元HTMLに対して不足していたCSSを追加
-   ========================================================= */
-
-.structure-benefit-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:8px;
-  margin-top:12px;
-}
-
-.structure-benefit{
-  padding:25px 21px;
-  background:var(--white);
-  border:1px solid var(--line);
-  box-shadow:var(--shadow-soft);
-  border-top:2px solid var(--color-accent);
-}
-
-.structure-benefit-number{
-  display:block;
-  color:var(--color-accent);
-  font-size:10px;
-  letter-spacing:.18em;
-  font-weight:800;
-  margin-bottom:10px;
-}
-
-.structure-benefit h4{
-  color:var(--color-main);
-  font-family:'Shippori Mincho',serif;
-  font-size:19px;
-  line-height:1.55;
-  margin-bottom:9px;
-}
-
-.structure-benefit p{
-  color:#555E6B;
-  font-size:11px;
-  line-height:1.85;
 }
 
 
@@ -1562,71 +2039,117 @@ nav a:hover::after{
    ========================================================= */
 
 .business{
+
   background:var(--color-bg-card);
+
 }
 
 .business-grid{
+
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:12px;
+
 }
 
 .business-card{
+
   background:var(--white);
+
   padding:34px 30px;
+
   border:1px solid var(--line);
+
   box-shadow:var(--shadow-soft);
+
 }
 
 .business-number{
+
   color:var(--color-accent);
+
   font-size:11px;
+
   letter-spacing:.2em;
+
   font-weight:800;
+
   margin-bottom:11px;
+
 }
 
 .business-card h3{
+
   font-size:23px;
+
   margin-bottom:11px;
+
 }
 
 .business-card .lead{
+
   color:#555E6B;
+
   font-size:14px;
+
   margin-bottom:17px;
+
 }
 
 .business-card ul{
+
   list-style:none;
+
 }
 
 .business-card li{
+
   color:var(--color-text);
+
   font-size:13px;
+
   padding:8px 0;
+
   border-top:1px solid var(--line);
+
 }
 
 .business-card li::before{
+
   content:"";
+
   display:inline-block;
+
   width:5px;
+
   height:5px;
+
   margin-right:9px;
+
   border-radius:50%;
+
   background:var(--color-accent);
+
 }
 
 .business-gallery{
+
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:8px;
+
   margin-top:28px;
+
 }
 
 .business-gallery .photo-frame{
+
   height:280px;
+
 }
 
 
@@ -1635,55 +2158,89 @@ nav a:hover::after{
    ========================================================= */
 
 .strengths{
+
   background:var(--white);
+
 }
 
 .strength-grid{
+
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:9px;
+
 }
 
 .strength-card{
+
   background:var(--color-bg-card);
+
   padding:27px 21px;
+
   border:1px solid var(--line);
+
   transition:.3s;
+
 }
 
 .strength-card:hover{
+
   transform:translateY(-2px);
+
   box-shadow:var(--shadow-soft);
+
 }
 
 .strength-number{
+
   color:var(--color-accent);
+
   font-size:25px;
+
   font-weight:800;
+
   margin-bottom:7px;
+
 }
 
 .strength-card h4{
+
   font-family:'Noto Sans JP',sans-serif;
+
   font-size:16px;
+
   margin-bottom:7px;
+
 }
 
 .strength-card p{
+
   color:#555E6B;
+
   font-size:13px;
+
   line-height:1.9;
+
 }
 
 .strength-photo-band{
+
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:8px;
+
   margin-top:28px;
+
 }
 
 .strength-photo-band .photo-frame{
+
   height:240px;
+
 }
 
 
@@ -1692,36 +2249,57 @@ nav a:hover::after{
    ========================================================= */
 
 .history{
+
   background:var(--color-bg-card);
+
 }
 
 .history-list{
+
   border-top:1px solid var(--line);
+
 }
 
 .history-row{
+
   display:grid;
+
   grid-template-columns:150px 1fr;
+
   gap:28px;
+
   padding:17px 0;
+
   border-bottom:1px solid var(--line);
+
 }
 
 .history-date{
+
   color:var(--color-accent);
+
   font-weight:700;
+
   font-size:14px;
+
 }
 
 .history-event{
+
   color:var(--color-text);
+
   font-size:13px;
+
 }
 
 .history-event strong{
+
   display:block;
+
   color:var(--color-main);
+
   margin-bottom:2px;
+
 }
 
 
@@ -1730,109 +2308,180 @@ nav a:hover::after{
    ========================================================= */
 
 .overview{
+
   background:var(--white);
+
 }
 
 .overview-grid{
+
   display:grid;
+
   grid-template-columns:.8fr 1.2fr;
+
   gap:45px;
+
 }
 
 .overview-image{
+
   position:relative;
+
   aspect-ratio:16/10;
+
   overflow:hidden;
+
   background:var(--color-main);
+
   margin-bottom:18px;
+
   border-top:1px solid rgba(194,155,56,.38);
+
   border-bottom:1px solid rgba(194,155,56,.25);
+
 }
 
 .overview-image img{
+
   width:100%;
+
   height:100%;
+
   object-fit:cover;
+
 }
 
 .overview-side h3{
+
   font-size:21px;
+
   line-height:1.76;
+
   margin-bottom:10px;
+
 }
 
 .overview-side p{
+
   color:#555E6B;
+
   font-size:13px;
+
   line-height:1.92;
+
 }
 
 .company-map{
+
   margin-top:23px;
+
   border:1px solid var(--line);
+
   background:var(--white);
+
   box-shadow:var(--shadow-soft);
+
   overflow:hidden;
+
 }
 
 .company-map-head{
+
   padding:14px 17px;
+
   display:flex;
+
   justify-content:space-between;
+
   align-items:center;
+
   gap:20px;
+
   border-bottom:1px solid var(--line);
+
 }
 
 .company-map-head strong{
+
   color:var(--color-main);
+
   font-size:13px;
+
 }
 
 .company-map-head span{
+
   color:var(--color-accent);
+
   font-size:10px;
+
   letter-spacing:.08em;
+
 }
 
 .company-map iframe{
+
   width:100%;
+
   height:325px;
+
   border:0;
+
   display:block;
+
 }
 
 .company-table{
+
   width:100%;
+
   border-collapse:collapse;
+
   background:var(--color-bg-card);
+
 }
 
 .company-table tr{
+
   border-top:1px solid var(--line);
+
 }
 
 .company-table tr:first-child{
+
   border-top:none;
+
 }
 
 .company-table th,
 .company-table td{
+
   padding:18px 20px;
+
   text-align:left;
+
   vertical-align:top;
+
   font-size:13px;
+
 }
 
 .company-table th{
+
   width:28%;
+
   color:var(--color-main);
+
   font-weight:800;
+
   white-space:nowrap;
+
 }
 
 .company-table td{
+
   color:var(--color-text);
+
 }
 
 
@@ -1841,28 +2490,45 @@ nav a:hover::after{
    ========================================================= */
 
 .vision{
+
   background:var(--color-bg-card);
+
   text-align:center;
+
   padding:65px 0;
+
   border-top:1px solid rgba(14,29,56,.08);
+
   border-bottom:1px solid rgba(14,29,56,.08);
+
 }
 
 .vision-inner{
+
   max-width:800px;
+
   margin:auto;
+
 }
 
 .vision h2{
+
   font-size:clamp(25px,3.5vw,38px);
+
   line-height:1.8;
+
   margin-bottom:16px;
+
 }
 
 .vision p{
+
   color:#555E6B;
+
   font-size:14px;
+
   line-height:1.95;
+
 }
 
 
@@ -1871,81 +2537,135 @@ nav a:hover::after{
    ========================================================= */
 
 .contact{
+
   background:var(--color-main);
+
   color:var(--white);
+
 }
 
 .contact-inner{
+
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:45px;
+
   align-items:center;
+
 }
 
 .contact .eyebrow{
+
   color:var(--color-accent);
+
 }
 
 .contact h2{
+
   color:var(--white);
+
   font-size:clamp(25px,3.4vw,38px);
+
   line-height:1.7;
+
   margin-bottom:15px;
+
 }
 
 .contact-description{
+
   color:rgba(255,255,255,.72);
+
   font-size:14px;
+
 }
 
 .contact-card{
+
   background:rgba(255,255,255,.045);
+
   border:1px solid rgba(255,255,255,.14);
+
   padding:29px;
+
   border-top:2px solid var(--color-accent);
+
 }
 
 .contact-row{
+
   display:flex;
+
   justify-content:space-between;
+
   gap:20px;
+
   padding:14px 0;
+
   border-top:1px solid rgba(255,255,255,.11);
+
 }
 
 .contact-row:first-child{
+
   border-top:none;
+
 }
 
 .contact-label{
+
   color:var(--color-accent);
+
   font-size:10px;
+
   letter-spacing:.2em;
+
   font-weight:800;
+
 }
 
 .contact-value{
+
   color:var(--white);
+
   font-size:14px;
+
   text-align:right;
+
 }
 
 .mail-button{
+
   display:block;
+
   width:100%;
+
   margin-top:19px;
+
   padding:15px;
+
   background:var(--color-accent);
+
   color:var(--color-main);
+
   text-align:center;
+
   font-size:13px;
+
   letter-spacing:.12em;
+
   font-weight:800;
+
   transition:.3s;
+
 }
 
 .mail-button:hover{
+
   background:#AD882F;
+
 }
 
 
@@ -1954,50 +2674,85 @@ nav a:hover::after{
    ========================================================= */
 
 footer{
+
   background:#091426;
+
   padding:27px 0;
+
   border-top:1px solid rgba(194,155,56,.48);
+
   position:relative;
+
 }
 
 footer::before{
+
   content:"";
+
   position:absolute;
+
   top:0;
+
   left:0;
+
   width:100%;
+
   height:2px;
+
   background:var(--color-accent);
+
 }
 
 .footer-inner{
+
   display:flex;
+
   justify-content:space-between;
+
   align-items:center;
+
   gap:20px;
+
   position:relative;
+
   z-index:1;
+
 }
 
 .footer-brand{
+
   display:flex;
+
   align-items:center;
+
   gap:10px;
+
   color:var(--white);
+
   font-size:12px;
+
   font-weight:600;
+
   letter-spacing:.04em;
+
 }
 
 .footer-brand svg{
+
   width:25px;
+
   height:25px;
+
   flex:none;
+
 }
 
 footer small{
+
   color:rgba(255,255,255,.52);
+
   font-size:10px;
+
 }
 
 
@@ -2008,119 +2763,130 @@ footer small{
 @media(max-width:1000px){
 
   nav{
+
     display:none;
+
   }
 
   .about-grid,
   .message-grid,
   .overview-grid,
   .contact-inner{
+
     grid-template-columns:1fr;
+
   }
 
   .business-grid{
+
     grid-template-columns:1fr;
+
   }
 
   .philosophy-grid{
+
     grid-template-columns:1fr;
+
   }
 
   .strength-grid{
+
     grid-template-columns:repeat(2,1fr);
+
   }
 
   .issue-grid{
+
     grid-template-columns:repeat(2,1fr);
+
   }
 
   .message-grid{
+
     gap:30px;
+
   }
 
   .overview-grid{
+
     gap:30px;
+
   }
 
   .contact-inner{
+
     gap:30px;
+
   }
 
   .product-flow{
+
     grid-template-columns:repeat(2,1fr);
+
   }
 
   .product-step::after{
+
     display:none;
+
   }
 
   .product-flow-bottom{
+
     grid-template-columns:1fr;
+
   }
 
   .margin-flow{
+
     grid-template-columns:repeat(2,1fr);
+
     gap:7px;
+
   }
 
   .margin-node:not(:last-child)::after{
+
     display:none;
+
   }
 
   .cost-grid{
+
     grid-template-columns:repeat(2,1fr);
+
   }
 
   .savings-summary{
+
     grid-template-columns:1fr 1fr;
+
   }
 
   .savings-foot{
+
     grid-template-columns:1fr;
+
   }
 
   .business-gallery{
+
     grid-template-columns:repeat(3,1fr);
+
   }
 
   .business-gallery .photo-frame{
+
     height:250px;
+
   }
 
   .strength-photo-band{
+
     grid-template-columns:repeat(3,1fr);
+
   }
 
-  .structure-flow-compare{
-    grid-template-columns:1fr;
-    gap:10px;
-  }
-
-  .flow-compare-middle{
-    min-height:36px;
-  }
-
-  .cost-reduction{
-    grid-template-columns:1fr;
-    gap:8px;
-  }
-
-  .cost-reduction-middle{
-    min-height:36px;
-  }
-
-  .structure-benefit-grid{
-    grid-template-columns:1fr;
-  }
-
-  .cost-visual-header{
-    display:block;
-  }
-
-  .cost-visual-header p{
-    margin-top:8px;
-    text-align:left;
-  }
 }
 
 
@@ -2129,369 +2895,471 @@ footer small{
   .wrap,
   .header-inner,
   .hero-inner{
+
     width:calc(100% - 36px);
+
   }
 
   section{
+
     padding:38px 0;
+
   }
 
   .header-inner{
+
     min-height:64px;
+
   }
 
   .brand-text{
+
     font-size:17px;
+
   }
 
   .brand-mark{
+
     width:32px;
+
     height:32px;
+
   }
 
 
   /* HERO */
 
   .hero{
+
     min-height:100svh;
+
     padding:100px 0 45px;
+
   }
 
   .hero-video video{
+
     object-fit:cover;
+
   }
 
   .hero-video::after{
+
     background:
       linear-gradient(
         90deg,
         rgba(0,0,0,.79),
         rgba(0,0,0,.34)
       );
+
   }
 
   .hero h1{
+
     font-size:35px;
+
     line-height:1.48;
+
     margin-bottom:18px;
+
   }
 
   .hero-lead{
+
     font-size:13px;
+
     line-height:1.95;
+
     margin-bottom:22px;
+
   }
 
   .hero-buttons{
+
     flex-direction:column;
+
     align-items:stretch;
+
   }
 
   .btn{
+
     width:100%;
+
   }
 
 
   /* SECTION */
 
   .section-head{
+
     margin-bottom:27px;
+
   }
 
   .section-head h2{
+
     font-size:28px;
+
   }
 
 
   /* PHOTO */
 
   .about-photo-wide{
+
     height:260px;
+
     margin-top:25px;
+
   }
 
   .photo-caption{
+
     left:15px;
+
     right:15px;
+
     bottom:14px;
+
   }
 
   .photo-caption strong{
+
     font-size:17px;
+
   }
 
 
   /* SOLAR */
 
   .solar-visual{
+
     min-height:370px;
+
   }
 
   .solar-content{
+
     min-height:370px;
+
   }
 
   .solar-content h2{
+
     font-size:28px;
+
   }
 
 
   /* MESSAGE */
 
   .message-body p:first-child{
+
     font-size:19px;
+
     line-height:1.75;
+
   }
 
 
   /* PHILOSOPHY */
 
   .philosophy-grid{
+
     grid-template-columns:1fr;
+
   }
 
   .philosophy-visual{
+
     padding:25px 17px;
+
     margin-top:27px;
+
   }
 
   .philosophy-visual-head{
+
     display:block;
+
     margin-bottom:21px;
+
   }
 
   .philosophy-visual-title{
+
     font-size:20px;
+
   }
 
   .philosophy-visual-sub{
+
     text-align:left;
+
     margin-top:8px;
+
     line-height:1.8;
+
   }
 
   .product-flow{
+
     grid-template-columns:1fr;
+
   }
 
   .product-step{
+
     min-height:auto;
+
     padding:20px 17px;
+
   }
 
   .product-flow-bottom{
+
     grid-template-columns:1fr;
+
   }
 
 
   /* ISSUE */
 
   .issue-grid{
+
     grid-template-columns:1fr;
+
   }
 
   .issue-visual{
+
     margin-top:25px;
+
     padding:22px 16px;
+
   }
 
   .issue-visual-top{
+
     display:block;
+
     margin-bottom:19px;
+
   }
 
   .issue-visual-title{
+
     font-size:20px;
+
   }
 
   .issue-visual-caption{
+
     text-align:left;
+
     margin-top:8px;
+
   }
 
   .margin-flow{
+
     grid-template-columns:1fr;
+
   }
 
   .margin-node{
+
     min-height:auto;
+
   }
 
   .margin-bar{
+
     grid-template-columns:1fr;
+
   }
 
 
   /* STRUCTURE */
 
   .structure-visual{
+
     margin-top:28px;
+
   }
 
   .structure-visual-header{
+
     display:block;
+
   }
 
   .structure-visual-header h3{
+
     font-size:20px;
+
   }
 
   .structure-visual-header p{
+
     text-align:left;
+
     margin-top:8px;
+
   }
 
   .savings-visual{
+
     margin-top:10px;
+
   }
 
   .savings-header{
+
     display:block;
+
   }
 
   .savings-header span{
+
     display:block;
+
     margin-top:5px;
+
   }
 
   .savings-body{
+
     padding:18px 15px;
+
   }
 
   .savings-summary{
+
     grid-template-columns:1fr;
+
   }
 
   .savings-card-value{
+
     font-size:27px;
+
   }
 
   .savings-row{
+
     grid-template-columns:1fr;
+
     gap:6px;
+
   }
 
   .savings-row-value{
+
     text-align:left;
-  }
 
-  .flow-compare-side{
-    padding:19px 16px;
-  }
-
-  .flow-compare-title strong{
-    font-size:18px;
-  }
-
-  .flow-compare-list{
-    gap:5px;
-  }
-
-  .flow-chip{
-    min-height:36px;
-    font-size:10px;
-    padding:6px 9px;
-  }
-
-  .flow-chip-arrow{
-    font-size:13px;
-  }
-
-  .cost-visual{
-    margin-top:24px;
-    padding:22px 16px;
-  }
-
-  .cost-grid{
-    grid-template-columns:1fr;
-  }
-
-  .cost-item{
-    min-height:94px;
-  }
-
-  .cost-visual-header h4{
-    font-size:19px;
-  }
-
-  .cost-reduction-side{
-    padding:19px 16px;
-  }
-
-  .reduction-points{
-    grid-template-columns:1fr;
-  }
-
-  .structure-benefit-grid{
-    grid-template-columns:1fr;
   }
 
 
   /* BUSINESS */
 
   .business-card{
+
     padding:31px 22px;
+
   }
 
   .business-card h3{
+
     font-size:21px;
+
   }
 
   .business-gallery{
+
     grid-template-columns:1fr;
+
     gap:6px;
+
   }
 
   .business-gallery .photo-frame{
+
     height:250px;
+
   }
 
 
   /* STRENGTH */
 
   .strength-grid{
+
     grid-template-columns:1fr;
+
   }
 
   .strength-photo-band{
+
     grid-template-columns:repeat(3,1fr);
+
     gap:5px;
+
     margin-top:25px;
+
   }
 
   .strength-photo-band .photo-frame{
+
     height:145px;
+
   }
 
   .strength-photo-band .photo-caption{
+
     left:7px;
+
     right:7px;
+
     bottom:7px;
+
   }
 
   .strength-photo-band .photo-caption small{
+
     font-size:5px;
+
   }
 
   .strength-photo-band .photo-caption strong{
+
     font-size:10px;
+
   }
 
 
   /* HISTORY */
 
   .history-row{
+
     grid-template-columns:90px 1fr;
+
     gap:14px;
+
     padding:17px 0;
+
   }
 
   .history-date{
+
     font-size:12px;
+
   }
 
   .history-event{
+
     font-size:12px;
+
   }
 
 
@@ -2502,76 +3370,114 @@ footer small{
   .company-table tr,
   .company-table th,
   .company-table td{
+
     display:block;
+
     width:100%;
+
   }
 
   .company-table tr{
+
     padding:16px;
+
   }
 
   .company-table th{
+
     padding:0 0 6px;
+
     font-size:11px;
+
     white-space:normal;
+
   }
 
   .company-table td{
+
     padding:0;
+
     font-size:13px;
+
     line-height:1.88;
+
   }
 
   .company-map{
+
     margin-top:21px;
+
   }
 
   .company-map-head{
+
     align-items:flex-start;
+
     flex-direction:column;
+
     gap:4px;
+
   }
 
   .company-map iframe{
+
     height:260px;
+
   }
 
 
   /* VISION */
 
   .vision{
+
     padding:60px 0;
+
   }
 
 
   /* CONTACT */
 
   .contact-card{
+
     padding:23px 18px;
+
   }
 
   .contact-row{
+
     flex-direction:column;
+
     align-items:flex-start;
+
     gap:4px;
+
   }
 
 
   /* FOOTER */
 
   .footer-inner{
+
     flex-direction:column;
+
     justify-content:center;
+
     text-align:center;
+
     gap:12px;
+
   }
 
   .footer-brand{
+
     justify-content:center;
+
   }
 
   footer small{
+
     font-size:9px;
+
   }
 
 }
@@ -2597,24 +3503,41 @@ footer small{
 <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
 
 <circle
+
 cx="50"
+
 cy="50"
+
 r="42"
+
 fill="none"
+
 stroke="#C29B38"
+
 stroke-width="6"
+
 stroke-dasharray="220 264"
+
 stroke-dashoffset="-40"
+
 transform="rotate(-90 50 50)"
+
 />
 
 <path
+
 d="M18 66 L42 30 L54 46 L62 34 L84 66 Z"
+
 fill="none"
+
 stroke="#0E1D38"
+
 stroke-width="6"
+
 stroke-linejoin="round"
+
 stroke-linecap="round"
+
 />
 
 </svg>
@@ -2701,12 +3624,15 @@ type="video/mp4"
 <div class="hero-inner">
 
 <p class="hero-eyebrow">
+
 RENEWABLE ENERGY COMPANY
+
 </p>
 
 <h1>
 
 正しい在り方で、<br>
+
 <strong>正しく勝つ。</strong>
 
 </h1>
@@ -2736,11 +3662,15 @@ RENEWABLE ENERGY COMPANY
 <div class="hero-buttons">
 
 <a href="#business" class="btn btn-primary">
+
 事業内容を見る
+
 </a>
 
 <a href="#contact" class="btn btn-outline">
+
 お問い合わせ
+
 </a>
 
 </div>
@@ -2776,31 +3706,49 @@ ABOUT SANGEN
 <div class="about-text">
 
 <p>
+
 株式会社山源は、
+
 <strong>太陽光発電・蓄電池を中心とした再生可能エネルギー事業</strong>
+
 を主軸に、住まいと暮らしに関わるサービスを提供する会社です。
+
 </p>
 
 <p>
+
 現在の主力事業は住宅用太陽光発電・蓄電池。
+
 その周辺領域として、新電力、ウォーターサーバーなど、
+
 暮らしに関わるサービスを展開しています。
+
 </p>
 
 <p>
+
 山源が大切にしているのは、
+
 商品を売ることだけではありません。
+
 </p>
 
 <p>
+
 <strong>
+
 お客様が理解し、納得したうえで選べること。
+
 </strong>
+
 </p>
 
 <p>
+
 そのために、商品・施工・保証・価格をできるだけ分かりやすく整理し、
+
 長く信頼していただける関係をつくることを重視しています。
+
 </p>
 
 </div>
@@ -2809,18 +3757,27 @@ ABOUT SANGEN
 <div class="quote">
 
 <span class="quote-label">
+
 CORPORATE PHILOSOPHY
+
 </span>
 
 <h3>
+
 日本一の信頼を積み、<br>
+
 人と資源が集まる源となる。
+
 </h3>
 
 <p>
+
 短期的な利益ではなく、長く続く信頼を積み重ねる。
+
 その信頼を起点に、人・情報・資源が集まり、
+
 新たな価値が生まれる「源」となることを目指します。
+
 </p>
 
 </div>
@@ -2831,9 +3788,13 @@ CORPORATE PHILOSOPHY
 <div class="photo-frame about-photo-wide">
 
 <img
+
 src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2200&q=85"
+
 alt="都市と建築"
+
 loading="lazy"
+
 >
 
 <div class="photo-overlay"></div>
@@ -2843,7 +3804,9 @@ loading="lazy"
 <small>SANGEN / CORPORATE IDENTITY</small>
 
 <strong>
+
 暮らしに関わるサービスを、確かな品質で。
+
 </strong>
 
 </div>
@@ -2874,15 +3837,23 @@ SOLAR POWER GENERATION
 </p>
 
 <h2>
+
 太陽の力を、<br>
+
 暮らしの力へ。
+
 </h2>
 
 <p>
+
 住宅用太陽光発電・蓄電池を通じて、
+
 家庭の電気の使い方を見直す選択肢をご提案します。
+
 住宅環境や電力使用状況を確認し、
+
 必要な設備を考えることを大切にしています。
+
 </p>
 
 </div>
@@ -2924,46 +3895,73 @@ aria-hidden="true"
 >
 
 <circle
+
 cx="50"
+
 cy="50"
+
 r="42"
+
 fill="#0E1D38"
+
 />
 
 <circle
+
 cx="50"
+
 cy="50"
+
 r="32"
+
 fill="none"
+
 stroke="#C29B38"
+
 stroke-width="5"
+
 />
 
 <path
+
 d="M25 67 L43 39 L52 51 L61 42 L76 67 Z"
+
 fill="none"
+
 stroke="#fff"
+
 stroke-width="5"
+
 stroke-linejoin="round"
+
 />
 
 </svg>
 
 <p class="person-role">
+
 REPRESENTATIVE DIRECTOR
+
 </p>
 
 <p class="person-name">
+
 渕上 哲汰
+
 </p>
 
 <p class="person-en">
+
 Tetsuta Fuchikami
+
 </p>
 
 <p class="person-position">
+
 代表取締役<br>
+
 株式会社山源
+
 </p>
 
 </div>
@@ -2972,64 +3970,93 @@ Tetsuta Fuchikami
 <div class="message-body">
 
 <p>
+
 「なぜ、同じ商品なのに、これほどまでに価格が違うのか。」
+
 </p>
 
 <p>
+
 太陽光発電・蓄電池の業界に携わり、私が最初に抱いた疑問でした。
+
 </p>
 
 <p>
+
 同じような商品であっても、販売する会社や提案方法によって価格は大きく異なる。
+
 そして、その違いを十分に理解する機会がないまま、高額な契約をされているお客様も少なくありません。
+
 </p>
 
 <p>
+
 私は、その現実に大きな違和感を覚えました。
+
 </p>
 
 <p>
+
 専門知識を持つ企業と、お客様との間に情報の差があること自体は避けられません。
+
 </p>
 
 <p>
+
 しかし、その情報の差が、販売する側だけの利益になってはいけない。
+
 </p>
 
 <p>
+
 良い商品を、適正な価格で届ける。
+
 </p>
 
 <p>
+
 必要な情報を正しく伝え、お客様自身が理解し、納得したうえで選択できる環境をつくる。
+
 </p>
 
 <p>
+
 当たり前のことかもしれません。
+
 </p>
 
 <p>
+
 しかし、その当たり前を、本当に当たり前にできる会社をつくりたい。
+
 </p>
 
 <p>
+
 それが、私が株式会社山源を立ち上げた理由の一つです。
+
 </p>
 
 <p>
-<strong>
-家族や大切な人に勧められない商品・価格・提案を、お客様に提供することはしません。
-お客様にとって本当に価値のある商品を、適正価格で、誠実に届けることが私たちの使命です。
-</strong>
-</p>
 
+<strong>
+
+家族や大切な人に勧められない商品・価格・提案を、お客様に提供することはしません。
+
+お客様にとって本当に価値のある商品を、適正価格で、誠実に届けることが私たちの使命です。
+
+</strong>
+
+</p>
 
 <div class="signature">
 
 株式会社山源
 
 <strong>
+
 代表取締役　渕上 哲汰
+
 </strong>
 
 </div>
@@ -3058,15 +4085,23 @@ OUR STANCE
 </p>
 
 <h2>
+
 誠実であることと、<br>
+
 強い会社であることは両立できる。
+
 </h2>
 
 <p>
+
 太陽光発電は高額な商品だからこそ、
+
 価格・性能・施工・保証を比較して判断することが重要です。
+
 山源は、判断材料を整理し、
+
 お客様が納得して選べる提案を目指します。
+
 </p>
 
 </div>
@@ -3081,16 +4116,25 @@ OUR STANCE
 </p>
 
 <h3>
+
 正しい商品を、<br>
+
 正しい価格で、<br>
+
 正しい方法で。
+
 </h3>
 
 <p>
+
 家族や大切な人に勧められない商品・価格・提案を、
+
 お客様に提供することはしません。
+
 お客様にとって本当に価値のある商品を、
+
 適正価格で、誠実に届けることを重視します。
+
 </p>
 
 </div>
@@ -3103,15 +4147,23 @@ OUR STANCE
 </p>
 
 <h3>
+
 企業努力を、<br>
+
 お客様の価格へ。
+
 </h3>
 
 <p>
+
 仕入れ・流通・販売の工程を見直し、
+
 何にいくら掛かっているのかを整理。
+
 価格だけではなく、
+
 内容とのバランスを確認して提案します。
+
 </p>
 
 </div>
@@ -3124,14 +4176,21 @@ OUR STANCE
 </p>
 
 <h3>
+
 他社のお見積りを、<br>
+
 お持ちください。
+
 </h3>
 
 <p>
+
 すでに他社から提案を受けている場合も歓迎します。
+
 メーカー・容量・施工内容・保証などを確認し、
+
 条件を揃えて比較できるよう整理します。
+
 </p>
 
 </div>
@@ -3150,14 +4209,19 @@ OUR STANCE
 </p>
 
 <h3 class="philosophy-visual-title">
+
 商品・施工・保証・価格を、<br>
+
 一つずつ確認する。
+
 </h3>
 
 </div>
 
 <p class="philosophy-visual-sub">
+
 商品 → 施工 → 保証 → 価格
+
 </p>
 
 </div>
@@ -3176,8 +4240,11 @@ OUR STANCE
 </h4>
 
 <p>
+
 メーカー・性能・容量・住宅環境を踏まえ、
+
 お客様に適した製品を選定します。
+
 </p>
 
 </div>
@@ -3194,8 +4261,11 @@ OUR STANCE
 </h4>
 
 <p>
+
 屋根形状・設置環境・施工内容を踏まえ、
+
 適切な施工条件を整理します。
+
 </p>
 
 </div>
@@ -3212,8 +4282,11 @@ OUR STANCE
 </h4>
 
 <p>
+
 製品保証・施工保証・保証期間・保証範囲など、
+
 導入後に関わる条件を精査します。
+
 </p>
 
 </div>
@@ -3230,8 +4303,11 @@ OUR STANCE
 </h4>
 
 <p>
+
 商品・施工・保証を総合的に踏まえ、
+
 総額と内訳を明確にご提示します。
+
 </p>
 
 </div>
@@ -3250,6 +4326,7 @@ OUR STANCE
 <div>
 
 <strong>商品比較</strong>
+
 <span>メーカー・容量・性能を確認</span>
 
 </div>
@@ -3266,6 +4343,7 @@ OUR STANCE
 <div>
 
 <strong>施工比較</strong>
+
 <span>施工条件・内容を確認</span>
 
 </div>
@@ -3282,6 +4360,7 @@ OUR STANCE
 <div>
 
 <strong>価格比較</strong>
+
 <span>総額と内訳を確認</span>
 
 </div>
@@ -3316,9 +4395,13 @@ INDUSTRY ISSUES
 </h2>
 
 <p>
+
 太陽光発電では、価格や条件を比較しづらいことが、
+
 購入判断を難しくする要因の一つになります。
+
 山源は、比較しやすい情報整理を重視します。
+
 </p>
 
 </div>
@@ -3337,8 +4420,11 @@ INDUSTRY ISSUES
 </h3>
 
 <p>
+
 複数の事業者を経由する場合、
+
 各工程で流通・営業などのコストが発生する可能性があります。
+
 </p>
 
 </div>
@@ -3355,8 +4441,11 @@ INDUSTRY ISSUES
 </h3>
 
 <p>
+
 設備内容が同じように見えても、
+
 商品・施工・保証などの条件が異なれば価格も変わります。
+
 </p>
 
 </div>
@@ -3373,8 +4462,11 @@ INDUSTRY ISSUES
 </h3>
 
 <p>
+
 住宅環境や電力使用状況に合わない設備まで
+
 提案されるケースがあります。
+
 </p>
 
 </div>
@@ -3391,8 +4483,11 @@ INDUSTRY ISSUES
 </h3>
 
 <p>
+
 契約後の相談先や保証条件が分かりにくいと、
+
 導入後の不安につながります。
+
 </p>
 
 </div>
@@ -3405,14 +4500,21 @@ INDUSTRY ISSUES
 <div class="issue-visual-top">
 
 <h3 class="issue-visual-title">
+
 「価格」だけではなく、<br>
+
 「価格が決まるまで」を見る。
+
 </h3>
 
 <p class="issue-visual-caption">
+
 販売・流通に関わる工程が増えるほど、
+
 コストや情報伝達の複雑さが増す可能性があります。
+
 山源は、工程そのものを見直します。
+
 </p>
 
 </div>
@@ -3578,16 +4680,25 @@ STRUCTURE REFORM
 </p>
 
 <h2>
+
 販売・流通の工程を見直し、<br>
+
 余分なコストを抑える。
+
 </h2>
 
 <p>
+
 山源が重視しているのは、
+
 「とにかく安くする」ことではありません。
+
 販売・流通に関わる工程を見直し、
+
 必要なコストと不要なコストを整理することです。
+
 そのうえで、商品・施工・保証・価格を分かりやすくご提示します。
+
 </p>
 
 </div>
@@ -3610,9 +4721,13 @@ STRUCTURE REFORM
 </div>
 
 <p>
+
 仕入先・取引先の形態は案件によって異なります。
+
 山源では、特定の仕入経路に限定せず、
+
 販売・流通工程を整理し、コスト削減の余地をつくります。
+
 </p>
 
 </div>
@@ -3652,8 +4767,11 @@ STRUCTURE REFORM
 </div>
 
 <div class="savings-card-text">
+
 メーカー・一次代理店・二次代理店・営業会社など、
+
 各工程の利益・経費を単純合算した参考レンジ。
+
 </div>
 
 </div>
@@ -3662,17 +4780,19 @@ STRUCTURE REFORM
 <div class="savings-card highlight">
 
 <div class="savings-card-label">
-山源 / 見直し対象の考え方
+山源 / 削減対象の考え方
 </div>
 
 <div class="savings-card-value">
-約20〜30%
+最大30%
 </div>
 
 <div class="savings-card-text">
+
 営業会社における利益・経費として示された
+
 約20〜30%の部分を、見直し対象の一つとして考えます。
-実際の削減幅は案件ごとに異なります。
+
 </div>
 
 </div>
@@ -3688,7 +4808,7 @@ STRUCTURE REFORM
 <div class="savings-row">
 
 <div class="savings-row-label">
-複数工程を基準化
+一般的な複数工程
 </div>
 
 <div class="savings-track">
@@ -3707,20 +4827,17 @@ STRUCTURE REFORM
 <div class="savings-row">
 
 <div class="savings-row-label">
-営業会社部分の見直し対象
+山源の工程見直し
 </div>
 
 <div class="savings-track">
 
-<div
-class="savings-fill cost-low"
-style="width:30%;"
-></div>
+<div class="savings-fill cost-low"></div>
 
 </div>
 
 <div class="savings-row-value">
-<strong>約20〜30%</strong>
+<strong>約70</strong>
 </div>
 
 </div>
@@ -3730,12 +4847,10 @@ style="width:30%;"
 
 <div class="savings-point">
 
-<strong>
-約20〜30%
-</strong>
+<strong>約20〜30%</strong>
 
 <span>
-営業・販売に関わる利益・経費の見直し対象
+営業・販売に関わる利益・経費の見直し余地
 </span>
 
 </div>
@@ -3743,9 +4858,7 @@ style="width:30%;"
 
 <div class="savings-point">
 
-<strong>
-工程を整理
-</strong>
+<strong>工程を整理</strong>
 
 <span>
 販売・流通の過程を確認し、不要なコストを見直す
@@ -3756,9 +4869,7 @@ style="width:30%;"
 
 <div class="savings-point">
 
-<strong>
-価格へ反映
-</strong>
+<strong>価格へ反映</strong>
 
 <span>
 削減できた余力を適正価格につなげる
@@ -3778,7 +4889,6 @@ style="width:30%;"
      ========================================================= -->
 
 <div class="structure-flow-compare">
-
 
 <div class="flow-compare-side">
 
@@ -3835,11 +4945,14 @@ OTHER SALES COMPANIES
 
 </div>
 
-
 <p class="flow-compare-note">
+
 複数の事業者を経由することで、
+
 各事業者の利益・営業費・管理費などが
+
 販売価格に含まれる可能性があります。
+
 </p>
 
 </div>
@@ -3887,11 +5000,14 @@ SANGEN
 
 </div>
 
-
 <p class="flow-compare-note">
+
 仕入先・取引先の形態に応じて、
+
 販売・流通工程を整理。
+
 可能な範囲で不要な中間コストを見直します。
+
 </p>
 
 </div>
@@ -3912,17 +5028,17 @@ SANGEN
 </h4>
 
 <p>
+
 販売・流通工程ごとの利益・経費として、
+
 参考資料に示された数値を反映しています。
-あくまで参考レンジであり、
-案件ごとの実際の価格構成を示すものではありません。
+
 </p>
 
 </div>
 
 
 <div class="cost-grid">
-
 
 <div class="cost-item">
 
@@ -3975,14 +5091,6 @@ SANGEN
 
 </div>
 
-
-</div>
-
-
-<div class="cost-visual-note">
-※ 上記の数値は販売・流通構造を理解するための参考レンジです。
-各項目の割合は取引条件・商品・施工内容・契約形態等によって異なり、
-単純合算した数値がそのまま最終販売価格に占める割合を意味するものではありません。
 </div>
 
 </div>
@@ -3994,13 +5102,13 @@ SANGEN
 
 <div class="cost-reduction">
 
-
 <div class="cost-reduction-side">
 
 <div class="cost-reduction-title">
-他の営業会社
-</div>
 
+他の営業会社
+
+</div>
 
 <div class="reduction-points">
 
@@ -4022,16 +5130,19 @@ SANGEN
 
 
 <div class="cost-reduction-middle">
+
 →
+
 </div>
 
 
 <div class="cost-reduction-side sangen">
 
 <div class="cost-reduction-title">
-山源
-</div>
 
+山源
+
+</div>
 
 <div class="reduction-points">
 
@@ -4060,7 +5171,6 @@ SANGEN
 
 <div class="structure-benefit-grid">
 
-
 <div class="structure-benefit">
 
 <span class="structure-benefit-number">
@@ -4072,8 +5182,11 @@ SANGEN
 </h4>
 
 <p>
+
 販売・流通工程を確認し、
+
 不要な工程やコストを削減できる余地を探します。
+
 </p>
 
 </div>
@@ -4090,8 +5203,11 @@ SANGEN
 </h4>
 
 <p>
+
 メーカー・容量・施工条件・保証などを揃え、
+
 価格だけではなく内容まで比較できる状態をつくります。
+
 </p>
 
 </div>
@@ -4108,14 +5224,16 @@ SANGEN
 </h4>
 
 <p>
+
 単純な安売りではなく、
+
 必要な商品を適正な条件で提供することを重視します。
+
 </p>
 
 </div>
 
 </div>
-
 
 </div>
 
@@ -4143,16 +5261,19 @@ BUSINESS
 </h2>
 
 <p>
+
 太陽光発電・蓄電池を中心に、
+
 住宅設備・エネルギー商材を扱う販売代理店として、
+
 お客様の住宅環境や条件に合わせた製品・プランをご提案します。
+
 </p>
 
 </div>
 
 
 <div class="business-grid">
-
 
 <div class="business-card">
 
@@ -4228,22 +5349,23 @@ LIFE SUPPORT BUSINESS
 
 <div class="business-gallery">
 
-
 <div class="photo-frame">
 
 <img
+
 src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1400&q=85"
+
 alt="太陽光パネル"
+
 loading="lazy"
+
 >
 
 <div class="photo-overlay"></div>
 
 <div class="photo-caption">
 
-<small>
-ENERGY
-</small>
+<small>ENERGY</small>
 
 <strong>
 再生可能エネルギー
@@ -4257,18 +5379,20 @@ ENERGY
 <div class="photo-frame">
 
 <img
+
 src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85"
+
 alt="オフィスでの事業活動"
+
 loading="lazy"
+
 >
 
 <div class="photo-overlay"></div>
 
 <div class="photo-caption">
 
-<small>
-BUSINESS
-</small>
+<small>BUSINESS</small>
 
 <strong>
 事業をつくる。
@@ -4282,18 +5406,20 @@ BUSINESS
 <div class="photo-frame">
 
 <img
+
 src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1400&q=85"
+
 alt="住宅と暮らし"
+
 loading="lazy"
+
 >
 
 <div class="photo-overlay"></div>
 
 <div class="photo-caption">
 
-<small>
-LIFE
-</small>
+<small>LIFE</small>
 
 <strong>
 暮らしを支える。
@@ -4333,7 +5459,6 @@ STRENGTHS
 
 <div class="strength-grid">
 
-
 <div class="strength-card">
 
 <p class="strength-number">
@@ -4345,8 +5470,11 @@ STRENGTHS
 </h4>
 
 <p>
+
 仕入れ・流通・販売コストを見直し、
+
 条件に応じた適正価格の提案を行います。
+
 </p>
 
 </div>
@@ -4363,8 +5491,11 @@ STRENGTHS
 </h4>
 
 <p>
+
 訪問、電話、紹介など複数の顧客接点を持ち、
+
 市場やお客様の声を直接捉えます。
+
 </p>
 
 </div>
@@ -4381,8 +5512,11 @@ STRENGTHS
 </h4>
 
 <p>
+
 単一商品を売るのではなく、
+
 住宅や生活状況に合わせて提案します。
+
 </p>
 
 </div>
@@ -4399,8 +5533,11 @@ STRENGTHS
 </h4>
 
 <p>
+
 太陽光だけでなく、電力やウォーターサーバーなど、
+
 暮らしに関わるサービスをご提案します。
+
 </p>
 
 </div>
@@ -4417,8 +5554,11 @@ STRENGTHS
 </h4>
 
 <p>
+
 営業を属人的な能力だけにせず、
+
 人を育て、組織として対応できる体制をつくります。
+
 </p>
 
 </div>
@@ -4435,8 +5575,11 @@ STRENGTHS
 </h4>
 
 <p>
+
 一度の契約だけではなく、
+
 長期的な関係を重視します。
+
 </p>
 
 </div>
@@ -4446,22 +5589,23 @@ STRENGTHS
 
 <div class="strength-photo-band">
 
-
 <div class="photo-frame">
 
 <img
+
 src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1400&q=85"
+
 alt="チームで働く人々"
+
 loading="lazy"
+
 >
 
 <div class="photo-overlay"></div>
 
 <div class="photo-caption">
 
-<small>
-TEAM
-</small>
+<small>TEAM</small>
 
 <strong>
 人が、会社をつくる。
@@ -4475,18 +5619,20 @@ TEAM
 <div class="photo-frame">
 
 <img
+
 src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=85"
+
 alt="モダンなオフィス"
+
 loading="lazy"
+
 >
 
 <div class="photo-overlay"></div>
 
 <div class="photo-caption">
 
-<small>
-ORGANIZATION
-</small>
+<small>ORGANIZATION</small>
 
 <strong>
 組織として成長する。
@@ -4500,18 +5646,20 @@ ORGANIZATION
 <div class="photo-frame">
 
 <img
+
 src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85"
+
 alt="ワークスペース"
+
 loading="lazy"
+
 >
 
 <div class="photo-overlay"></div>
 
 <div class="photo-caption">
 
-<small>
-TRUST
-</small>
+<small>TRUST</small>
 
 <strong>
 長期的な関係を築く。
@@ -4551,7 +5699,6 @@ HISTORY
 
 <div class="history-list">
 
-
 <div class="history-row">
 
 <span class="history-date">
@@ -4565,7 +5712,9 @@ HISTORY
 </strong>
 
 福岡県福岡市博多区にて、
+
 太陽光発電・蓄電池を中心とした
+
 再生可能エネルギー事業を目的に設立。
 
 </span>
@@ -4586,7 +5735,9 @@ HISTORY
 </strong>
 
 住宅用太陽光発電・蓄電池を主軸に、
+
 新電力、ウォーターサーバーなど、
+
 住まいと暮らしに関わるサービスへ事業を広げてまいります。
 
 </span>
@@ -4623,30 +5774,40 @@ COMPANY OVERVIEW
 
 <div class="overview-grid">
 
-
 <div class="overview-side">
 
 <div class="overview-image">
 
 <img
+
 src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=85"
+
 alt="オフィスと企業空間"
+
 loading="lazy"
+
 >
 
 </div>
 
-
 <h3>
+
 再生可能エネルギーを、<br>
+
 未来のために。
+
 </h3>
 
 <p>
+
 一軒の太陽光発電設備は小さくても、
+
 それが何千、何万世帯と広がれば社会は変わります。
+
 目の前の家庭の暮らしと、その先にある未来。
+
 その両方に価値を提供することが、山源の目指す姿です。
+
 </p>
 
 
@@ -4665,10 +5826,15 @@ FUKUOKA / HAKATA
 </div>
 
 <iframe
+
 src="https://maps.google.com/maps?q=%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E5%8D%9A%E5%A4%9A%E5%8C%BA%E5%8D%9A%E5%A4%9A%E9%A7%85%E5%89%8D1%E4%B8%81%E7%9B%AE23-2&output=embed"
+
 loading="lazy"
+
 referrerpolicy="no-referrer-when-downgrade"
+
 allowfullscreen>
+
 </iframe>
 
 </div>
@@ -4680,148 +5846,144 @@ allowfullscreen>
 
 <tr>
 
-<th>
-会社名
-</th>
+<th>会社名</th>
 
 <td>
+
 株式会社山源（SANGEN Co., Ltd.）
+
 </td>
 
 </tr>
 
-
 <tr>
 
-<th>
-代表者
-</th>
+<th>代表者</th>
 
 <td>
+
 代表取締役　渕上 哲汰
+
 </td>
 
 </tr>
 
-
 <tr>
 
-<th>
-設立
-</th>
+<th>設立</th>
 
 <td>
+
 2026年7月
+
 </td>
 
 </tr>
 
-
 <tr>
 
-<th>
-資本金
-</th>
+<th>資本金</th>
 
 <td>
+
 500万円
+
 </td>
 
 </tr>
 
-
 <tr>
 
-<th>
-所在地
-</th>
+<th>所在地</th>
 
 <td>
+
 〒812-0011<br>
+
 福岡県福岡市博多区博多駅前1丁目23-2<br>
+
 Park Front 博多駅前 8F
+
 </td>
 
 </tr>
 
-
 <tr>
 
-<th>
-電話番号
-</th>
+<th>電話番号</th>
 
 <td>
+
 070-5305-7600
+
 </td>
 
 </tr>
 
-
 <tr>
 
-<th>
-メールアドレス
-</th>
+<th>メールアドレス</th>
 
 <td>
+
 info@yamagen21.co.jp
+
 </td>
 
 </tr>
 
-
 <tr>
 
-<th>
-事業内容
-</th>
+<th>事業内容</th>
 
 <td>
+
 太陽光発電システム・蓄電池の販売・施工・保守<br>
+
 電力・ガス・通信等ライフライン商材の販売<br>
+
 法人向け営業支援・コンサルティング<br>
+
 住宅リフォーム・省エネ関連機器の販売
+
 </td>
 
 </tr>
 
-
 <tr>
 
-<th>
-取引銀行
-</th>
+<th>取引銀行</th>
 
 <td>
+
 福岡銀行、PayPay銀行、西日本シティ銀行
+
 </td>
 
 </tr>
 
-
 <tr>
 
-<th>
-加盟団体・資格
-</th>
+<th>加盟団体・資格</th>
 
 <td>
+
 一般社団法人 太陽光発電協会（準備中）<br>
+
 建設業許可 取得準備中（電気工事業）
+
 </td>
 
 </tr>
 
-
 <tr>
 
-<th>
-営業エリア
-</th>
+<th>営業エリア</th>
 
 <td>
+
 九州全域を中心に 全国対応
+
 </td>
 
 </tr>
@@ -4848,17 +6010,27 @@ BRAND VISION
 </p>
 
 <h2>
+
 人・情報・資源が集まり、<br>
+
 新しい価値が生まれる源へ。
+
 </h2>
 
 <p>
+
 山源だから相談する。
+
 山源だから買う。
+
 山源だから一緒に仕事をする。
+
 <br>
+
 そう言っていただける会社を、
+
 長期的なゴールとして目指しています。
+
 </p>
 
 </div>
@@ -4881,14 +6053,21 @@ CONTACT
 </p>
 
 <h2>
+
 他社のお見積りをお持ちの方も、<br>
+
 まずはご相談ください。
+
 </h2>
 
 <p class="contact-description">
+
 太陽光発電・蓄電池の導入、
+
 電気料金のご相談など、
+
 お気軽にお問い合わせください。
+
 </p>
 
 </div>
@@ -4929,18 +6108,26 @@ ADDRESS
 </span>
 
 <span class="contact-value">
+
 福岡県福岡市博多区博多駅前1丁目23-2<br>
+
 Park Front 博多駅前 8F
+
 </span>
 
 </div>
 
 
 <a
+
 class="mail-button"
+
 href="mailto:info@yamagen21.co.jp"
+
 >
+
 メールでお問い合わせする
+
 </a>
 
 </div>
@@ -4966,37 +6153,58 @@ href="mailto:info@yamagen21.co.jp"
 <svg viewBox="0 0 100 100">
 
 <circle
+
 cx="50"
+
 cy="50"
+
 r="42"
+
 fill="none"
+
 stroke="#C29B38"
+
 stroke-width="6"
+
 stroke-dasharray="220 264"
+
 stroke-dashoffset="-40"
+
 transform="rotate(-90 50 50)"
+
 />
 
 <path
+
 d="M18 66 L42 30 L54 46 L62 34 L84 66 Z"
+
 fill="none"
+
 stroke="#FFFFFF"
+
 stroke-width="6"
+
 stroke-linejoin="round"
+
 stroke-linecap="round"
+
 />
 
 </svg>
 
 <span>
+
 株式会社山源 SANGEN Co., Ltd.
+
 </span>
 
 </div>
 
 
 <small>
+
 © 2026 SANGEN Co., Ltd. All Rights Reserved.
+
 </small>
 
 </div>
@@ -5005,5 +6213,5 @@ stroke-linecap="round"
 
 
 </body>
+
 </html>
-```
