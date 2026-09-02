@@ -106,6 +106,8 @@ body{
 
   overflow-x:hidden;
 
+  text-wrap:pretty;
+
 }
 
 img,
@@ -163,6 +165,8 @@ h4{
   font-weight:700;
 
   letter-spacing:.04em;
+
+  text-wrap:balance;
 
 }
 
@@ -2376,7 +2380,19 @@ footer small{
 
   }
 
-  .hero-video::after{
+  .hero-video::before{
+  content:"";
+  position:absolute;
+  right:0;
+  bottom:0;
+  width:190px;
+  height:85px;
+  background:linear-gradient(135deg,transparent 0%,rgba(0,0,0,.94) 58%,#000 100%);
+  z-index:2;
+  pointer-events:none;
+}
+
+ .hero-video::after{
 
     background:
 
@@ -2762,6 +2778,11 @@ footer small{
 
   /* CONTACT */
 
+  .contact h2{
+    font-size:24px;
+    line-height:1.65;
+  }
+
   .contact-card{
 
     padding:23px 18px;
@@ -2958,7 +2979,7 @@ RENEWABLE ENERGY COMPANY
 
 <h1>
 
-正しい在り方で、<br>
+正しい在り方で、
 
 <strong>正しく勝つ。</strong>
 
@@ -3106,7 +3127,7 @@ CORPORATE PHILOSOPHY
 
 <h3>
 
-日本一の信頼を積み、<br>
+日本一の信頼を積み、
 
 人と資源が集まる源となる。
 
@@ -3180,7 +3201,7 @@ SOLAR POWER GENERATION
 
 <h2>
 
-太陽の力を、<br>
+太陽の力を、
 
 暮らしの力へ。
 
@@ -3420,7 +3441,7 @@ OUR STANCE
 
 <h2>
 
-誠実であることと、<br>
+誠実であることと、
 
 強い会社であることは両立できる。
 
@@ -3454,9 +3475,9 @@ OUR STANCE
 
 <h3>
 
-正しい商品を、<br>
+正しい商品を、
 
-正しい価格で、<br>
+正しい価格で、
 
 正しい方法で。
 
@@ -3488,7 +3509,7 @@ OUR STANCE
 
 <h3>
 
-企業努力を、<br>
+企業努力を、
 
 お客様の価格へ。
 
@@ -3520,7 +3541,7 @@ OUR STANCE
 
 <h3>
 
-他社のお見積りを、<br>
+他社のお見積りを、
 
 お持ちください。
 
@@ -3556,7 +3577,7 @@ OUR STANCE
 
 <h3 class="philosophy-visual-title">
 
-商品・施工・保証・価格を、<br>
+商品・施工・保証・価格を、
 
 一つずつ確認する。
 
@@ -4528,7 +4549,7 @@ loading="lazy"
 
 <h3>
 
-再生可能エネルギーを、<br>
+再生可能エネルギーを、
 
 未来のために。
 
@@ -4629,7 +4650,7 @@ allowfullscreen>
 
 <td>
 
-500万円
+100万円
 
 </td>
 
@@ -4687,36 +4708,6 @@ info@sangen21.jp
 
 <tr>
 
-<th>取引銀行</th>
-
-<td>
-
-福岡銀行、PayPay銀行、西日本シティ銀行
-
-</td>
-
-</tr>
-
-
-
-<tr>
-
-<th>加盟団体・資格</th>
-
-<td>
-
-一般社団法人 太陽光発電協会（準備中）<br>
-
-建設業許可 取得準備中（電気工事業）
-
-</td>
-
-</tr>
-
-
-
-<tr>
-
 <th>営業エリア</th>
 
 <td>
@@ -4753,7 +4744,7 @@ BRAND VISION
 
 <h2>
 
-人・情報・資源が集まり、<br>
+人・情報・資源が集まり、
 
 新しい価値が生まれる源へ。
 
@@ -4766,8 +4757,6 @@ BRAND VISION
 山源だから買う。
 
 山源だから一緒に仕事をする。
-
-<br>
 
 そう言っていただける会社を、
 
@@ -4799,9 +4788,7 @@ CONTACT
 
 <h2>
 
-他社のお見積りをお持ちの方も、<br>
-
-まずはご相談ください。
+他社のお見積りをお持ちの方も、まずはご相談ください。
 
 </h2>
 
